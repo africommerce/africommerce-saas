@@ -1,1 +1,1 @@
-Set up project structure for frontend
+Installed required dependencies for React
