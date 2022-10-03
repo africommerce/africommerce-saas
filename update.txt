@@ -1,1 +1,1 @@
-Installed required dependencies for React
+Configured routing with React Router
