@@ -1,1 +1,1 @@
-Configured routing with React Router
+Created authentication context and provider
