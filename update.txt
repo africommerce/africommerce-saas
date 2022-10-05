@@ -1,1 +1,1 @@
-Created authentication context and provider
+Designed user registration UI
