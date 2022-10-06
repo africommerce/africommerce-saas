@@ -1,1 +1,1 @@
-Designed user registration UI
+Implemented user signup with API integration
