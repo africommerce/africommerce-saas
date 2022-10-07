@@ -1,1 +1,1 @@
-Implemented user signup with API integration
+Set up JWT authentication handling
