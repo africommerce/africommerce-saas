@@ -1,1 +1,1 @@
-Set up JWT authentication handling
+Added protected routes for authenticated users
