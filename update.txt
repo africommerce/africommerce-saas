@@ -1,1 +1,1 @@
-Added protected routes for authenticated users
+Created login page with API integration
