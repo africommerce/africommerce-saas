@@ -1,1 +1,1 @@
-Created reusable authentication components
+Added password hashing on backend for security
