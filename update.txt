@@ -1,1 +1,1 @@
-Added password hashing on backend for security
+Implemented JWT token storage in localStorage
