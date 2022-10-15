@@ -1,1 +1,1 @@
-Implemented JWT token storage in localStorage
+Implemented token refresh mechanism
