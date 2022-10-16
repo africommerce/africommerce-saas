@@ -1,1 +1,1 @@
-Implemented token refresh mechanism
+Tested registration and login flows
