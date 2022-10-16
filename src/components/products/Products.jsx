@@ -189,9 +189,9 @@ const Container = styled.div`
   width: 100%;
 `;
 const Products = () => {
-  const [loading, setLoading] = useState();
+  // const [loading, setLoading] = useState();
   const [data, setData] = useState([]);
-  const [visible, setVisible] = useState(5);
+  // const [visible, setVisible] = useState(5);
 
   const slideLeft = (e) => {
     var slider = document.getElementById('slider');
