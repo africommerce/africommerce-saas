@@ -8,7 +8,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/product/:id" element={<ProductDetail />} />
-      <Route path="/registration" element={<Registration />} />
+      <Route path="/auth" element={<Registration />} />
       <Route path="*" element={<p>Page not found</p>} />
     </Routes>
   );

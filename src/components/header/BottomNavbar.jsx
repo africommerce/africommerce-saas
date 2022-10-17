@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const BottomNavbars = styled.div`
@@ -18,7 +19,6 @@ export const BottomNavbar = () => {
   return (
     <BottomNavbars>
       <ul>
-        {' '}
         <li>Home</li>
         <li>Flash Sale</li>
         <li>Blogs</li>

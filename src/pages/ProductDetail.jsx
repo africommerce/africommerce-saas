@@ -9,6 +9,7 @@ import {
 import { Button, Divider, Rating } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import InnerImageZoom from 'react-inner-image-zoom';
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
 
