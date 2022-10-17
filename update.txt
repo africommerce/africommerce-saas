@@ -1,1 +1,1 @@
-Tested registration and login flows
+Fixed UI validation bugs in auth forms
