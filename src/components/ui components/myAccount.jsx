@@ -7,26 +7,26 @@ export const MyAccount = () => {
       <Heading>MY ACCOUNT</Heading>
       <hr></hr>
       <Details>
-        <ListItem to="/login">
-          <Links to="/return">Login</Links>
+        <ListItem>
+          <Links to="/auth">Login</Links>
         </ListItem>
         <ListItem>
-          <Links to="/return">Order History</Links>
+          <Links to="/order-history">Order History</Links>
         </ListItem>
         <ListItem>
           <Links to="/wishlist">My Wishlist</Links>
         </ListItem>
         <ListItem>
-          <Links to="/order">Track Order</Links>
+          <Links to="/track-order">Track Order</Links>
         </ListItem>
         <ListItem>
-          <Links to="/seller">Be an affiliate partner</Links>
+          <Links to="/partner">Be an affiliate partner</Links>
         </ListItem>
 
         <Heading>BE A SELLER</Heading>
         <hr></hr>
 
-        <ButtonSub style={{marginTop:"5px"}}>Apply Now</ButtonSub>
+        <ButtonSub style={{ marginTop: '5px' }}>Apply Now</ButtonSub>
       </Details>
     </Content>
   );
