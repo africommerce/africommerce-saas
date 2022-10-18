@@ -1,1 +1,1 @@
-Fixed UI validation bugs in auth forms
+Improved form validation for security
