@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const BottomNavbars = styled.div`
@@ -11,6 +12,10 @@ const BottomNavbars = styled.div`
     display: flex;
     list-style-type: none;
     gap: 2em;
+    a {
+      text-decoration: none;
+      color: gray;
+    }
   }
 `;
 
@@ -19,13 +24,29 @@ export const BottomNavbar = () => {
     <BottomNavbars>
       <ul>
         {' '}
-        <li>Home</li>
-        <li>Flash Sale</li>
-        <li>Blogs</li>
-        <li>All Brands</li>
-        <li>All Categories</li>
-        <li>All Sellers</li>
-        <li>Coupons</li>
+        <Link to="/">
+          <li>Home</li>
+        </Link>
+        <Link to="/flash-sale">
+          <li>Flash Sale</li>
+        </Link>
+        <Link to="/blog">
+          <li>Blogs</li>
+        </Link>
+        <Link to="/all-brands">
+          <li>All Brands</li>
+        </Link>
+        <Link to="/all-categories">
+          {' '}
+          <li>All Categories</li>
+        </Link>
+        <Link to="/all-sellers">
+          <li>All Sellers</li>
+        </Link>
+        <Link to="/coupons">
+          {' '}
+          <li>Coupons</li>
+        </Link>
       </ul>
     </BottomNavbars>
   );

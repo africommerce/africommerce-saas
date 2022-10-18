@@ -3,9 +3,9 @@ import { QuickLinks } from './ui components/quickLinks';
 import { ContactInfo } from './ui components/contactInfo';
 import { Subscribe } from './ui components/subscribe';
 import { FooterEnd } from './ui components/footerEnd';
-import {Policy } from './ui components/policy';
+import { Policy } from './ui components/policy';
 
-import { Grid} from '@mui/material';
+import { Grid } from '@mui/material';
 
 import styled from 'styled-components';
 
@@ -14,15 +14,15 @@ const Container = styled.div`
   margin: 0;
   background-color: #111723;
   padding: 30px;
-  color : #fff;
-  font-size : 13px;
-  font-family : "sens-sarif"
+  color: #fff;
+  font-size: 13px;
+  font-family: 'sens-sarif';
 `;
 
 export const Footer = () => {
   return (
-    <main style={{marginTop: "10px"}}>
-    <Policy/>
+    <main style={{ marginTop: '10px' }}>
+      <Policy />
       <Container>
         <Grid container spacing={3}>
           <Grid item md={4} sm={9}>

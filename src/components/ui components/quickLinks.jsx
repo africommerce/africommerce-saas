@@ -33,19 +33,19 @@ export const QuickLinks = () => {
       <hr></hr>
       <Details>
         <ListItem>
-          <Links to="/policy">Support Policy Page</Links>
+          <Links to="/support-policy">Support Policy Page</Links>
         </ListItem>
         <ListItem>
-          <Links to="/return">Return Policy Page</Links>
+          <Links to="/return-policy">Return Policy Page</Links>
         </ListItem>
         <ListItem>
-          <Links to="/about">About Us</Links>
+          <Links to="/about-us">About Us</Links>
         </ListItem>
         <ListItem>
-          <Links to="/privacy">Privacy Policy Page</Links>
+          <Links to="/privacy-policy">Privacy Policy Page</Links>
         </ListItem>
         <ListItem>
-          <Links to="/seller">Seller Policy Page</Links>
+          <Links to="/sellers-policy">Seller Policy Page</Links>
         </ListItem>
         <ListItem>
           <Links to="/terms">Terms Conditions Page</Links>
