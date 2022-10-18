@@ -5,7 +5,6 @@ import FlipCameraAndroidIcon from '@mui/icons-material/FlipCameraAndroid';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
-
 const SearchNavbars = styled.div`
   width: 100%;
   display: grid;
@@ -15,6 +14,8 @@ const SearchNavbars = styled.div`
   max-width: 90%;
   margin: 0 auto;
   padding: 1em 0;
+  max-width: 100%;
+
   border-color: var(--soft-secondary) !important;
   border-bottom: 1px solid #dee2e6 !important;
 `;
