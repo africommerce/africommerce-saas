@@ -1,1 +1,1 @@
-Improved form validation for security
+Updated dependencies for security patches
