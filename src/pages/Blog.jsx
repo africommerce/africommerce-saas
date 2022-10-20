@@ -32,7 +32,7 @@ export const Blog = () => {
           </li>
           <span>/</span>
           <li style={{ display: 'inline', marginLeft: '5px' }}>
-            <Link style={{ textDecoration: 'none' }} to="/flash-sale">
+            <Link style={{ textDecoration: 'none' }} to="/blog">
               "Blog"
             </Link>
           </li>
