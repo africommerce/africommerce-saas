@@ -93,8 +93,8 @@ export const CenterHero = () => {
         </Carousel>
       </CenterTop>
       <CenterButtom>
-        {CartegoryImage.map((el) => (
-          <CardContainer key={el.title}>
+        {CartegoryImage.map((el, i) => (
+          <CardContainer key={`${el.title + i}`}>
             <Card>
               <CardImage src={el.src} alt="" />
               <CartTitle>{el.title}</CartTitle>

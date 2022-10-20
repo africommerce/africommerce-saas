@@ -118,8 +118,8 @@ export const RightHero = () => {
         <Header>Todays Deal</Header>
       </HeaderContainer>
       <CardContainer>
-        {images.map((card) => (
-          <Card key={card.id}>
+        {images.map((card, i) => (
+          <Card key={i}>
             <CardLeft>
               <CardImage src={card.src} alt="" />
             </CardLeft>
