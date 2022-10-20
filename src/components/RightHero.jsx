@@ -119,7 +119,7 @@ export const RightHero = () => {
       </HeaderContainer>
       <CardContainer>
         {images.map((card) => (
-          <Card>
+          <Card key={card.id}>
             <CardLeft>
               <CardImage src={card.src} alt="" />
             </CardLeft>
