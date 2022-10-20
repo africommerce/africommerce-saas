@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router';
 import Login from '../components/auth/Login';
 import Registration from '../components/auth/Registration';
+
 import { AboutUs } from '../pages/AboutUs';
 import { AffliatePartner } from '../pages/AffliatePartner';
 import { AllBrand } from '../pages/AllBrand';
@@ -34,7 +35,7 @@ export const MasterRoutes = () => {
       <Route path="/all-sellers" element={<AllSellers />} />
       <Route path="/all-brands" element={<AllBrand />} />
       <Route path="/seller" element={<Seller />} />
-      <Route path="/coupons" element={<Coupons />} />
+      <Route path="coupons" element={<Coupons />} />
       <Route path="/return-policy" element={<ReturnPolicy />} />
       <Route path="/support-policy" element={<SupportPolicy />} />
       <Route path="/about-us" element={<AboutUs />} />

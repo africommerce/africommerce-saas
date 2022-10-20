@@ -189,9 +189,9 @@ const Container = styled.div`
   width: 100%;
 `;
 const Products = () => {
-  const [loading, setLoading] = useState();
+  // const [loading, setLoading] = useState();
   const [data, setData] = useState([]);
-  const [visible, setVisible] = useState(5);
+  // const [visible, setVisible] = useState(5);
 
   const slideLeft = (e) => {
     var slider = document.getElementById('slider');
@@ -231,16 +231,17 @@ const Products = () => {
         {data.map((values) => {
           return (
             <Link
+              key={values.id}
               to={`/product/${values.id}`}
               style={{ textDecoration: 'none', color: 'gray' }}
             >
-              <Card key={values.id}>
+              <Card>
                 <Promo>
                   <h3>OFF</h3>
                   <p>20%</p>
                 </Promo>
                 <Image>
-                  <img src={values.image} />
+                  <img src={values.image} alt="" />
                 </Image>
 
                 <Price>
