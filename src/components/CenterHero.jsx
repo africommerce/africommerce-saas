@@ -94,7 +94,7 @@ export const CenterHero = () => {
       </CenterTop>
       <CenterButtom>
         {CartegoryImage.map((el) => (
-          <CardContainer>
+          <CardContainer key={el.title}>
             <Card>
               <CardImage src={el.src} alt="" />
               <CartTitle>{el.title}</CartTitle>

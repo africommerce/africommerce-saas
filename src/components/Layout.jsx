@@ -16,7 +16,7 @@ const Container = styled.div`
 const Children = styled.div`
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 200px;
+  margin-top: 170px;
 `;
 export const Layout = (props) => {
   return (

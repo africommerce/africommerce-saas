@@ -9,11 +9,20 @@ import {
 import { Button, Divider, Rating } from '@mui/material';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-
 import { Link, useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { ProductButtom } from '../components/products/ProductButtom';
 
 const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  margin: 0 auto;
+  align-items: center;
+`;
+
+const TopContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 90vw;
@@ -22,7 +31,7 @@ const Container = styled.div`
   align-items: center;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-  background: white;
+  border-radius: 10px;
 `;
 
 const ProductContainer = styled.div`
@@ -61,10 +70,6 @@ const ProductInfo = styled.div`
   flex: 5;
 `;
 
-const ProductButtom = styled.div`
-  display: flex;
-`;
-
 const LeftSlideContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -94,7 +99,8 @@ const ProductImageContainer = styled.div`
 const MainImage = styled.img`
   display: flex;
   overflow: hidden;
-  max-width: 500px;
+  width: 100%;
+  max-width: 400px;
   min-width: 300px;
   justify-content: center;
   align-items: center;
@@ -244,8 +250,6 @@ export const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const param = useParams();
 
-  console.log(param.id);
-
   const addQuantityHadler = () => {
     setQuantity((prev) => prev + 1);
   };
@@ -266,265 +270,263 @@ export const ProductDetail = () => {
     })
       .then((res) => {
         setData(res.data);
-        console.log(res.data);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+      .catch((err) => {});
     return () => {};
   }, [setData, param.id]);
 
   return (
     <Container>
-      <ProductContainer>
-        <LeftSlide>
-          <LeftSlideContainer>
-            {images.map((image) => (
-              <LeftSlideImage key={image.title} src={data.image} />
-            ))}
-          </LeftSlideContainer>
-        </LeftSlide>
-        <ProductImage>
-          <ProductImageContainer>
-            <MainImage src={data.image} alt="" />
-          </ProductImageContainer>
-        </ProductImage>
-        <ProductInfo>
-          <ProductName>
-            <Title>{data.title}</Title>
-            <Rate>
-              <Rating />
-              (0 review)
-            </Rate>
-            <span>
-              Estimate Shipping Time: <span>5 Days</span>
-            </span>
-            <Divider style={{ marginTop: '10px' }} />
-          </ProductName>
-          <Info>
-            <InfoProperty>
-              Sold by <span>Africommerce</span>
-            </InfoProperty>
-            <InfoValue>
-              <Button
-                style={{
-                  color: 'red',
-                  textTransform: 'capitalize',
-                  background: 'rgb(252,224,217)',
-                }}
-              >
-                Message Seller
-              </Button>
-              <SellerLogo />
-            </InfoValue>
-          </Info>
-          <PriceContainer>
-            <div>
-              <div>Price</div>
-              <div className="price-property">
-                ${500}
-                <span>/pc</span>
-              </div>
-            </div>
-            <div>
-              <div>Discount</div>
-              <div className="price-property">
-                ${400} <span>/pc</span>
-              </div>
-            </div>
-            <div>
-              <div>Club Points</div>
-              <div className="price-property">
-                <Button
-                  style={{ background: 'rgb(252,224,217)', color: 'red' }}
-                >
-                  245
-                </Button>
-              </div>
-            </div>
-          </PriceContainer>
-          <Divider />
-          <Sizing>
-            <div>
-              <div>Size</div>
-              <div className="price-property">
-                {['M', 'L', 'XL', 'XXl'].map((btn) => (
-                  <Button>{btn}</Button>
-                ))}
-              </div>
-            </div>
-            <div>
-              <div>Quantity</div>
-              <div className="price-property">
-                <button
-                  onClick={addQuantityHadler}
-                  style={{
-                    width: '30px',
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.26)',
-                    cursor: 'pointer',
-                    height: '30px',
-                    alignItems: 'center',
-                    borderRadius: '50%',
-                    border: 'none',
-                    padding: '5px',
-                  }}
-                >
-                  +
-                </button>
-                <QuantityInput type="text" min={1} value={quantity} />
-                <button
-                  onClick={removeQuantityHadler}
-                  style={{
-                    width: '30px',
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.26)',
-                    cursor: 'pointer',
-                    height: '30px',
-                    alignItems: 'center',
-                    borderRadius: '50%',
-                    border: 'none',
-                    padding: '5px',
-                  }}
-                >
-                  -
-                </button>
-              </div>
-            </div>
-          </Sizing>
-          <Divider />
-          <Total>
-            <div>
-              <div>Total Price</div>
-              <div className="price-property">${400 * quantity}</div>
-            </div>
-            <div>
-              <div>
-                {' '}
-                <button
-                  style={{
-                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.26)',
-                    cursor: 'pointer',
-                    alignItems: 'center',
-                    border: 'none',
-                    width: '100px',
-                    background: '#FF0000',
-                    color: 'white',
-                    borderRadius: '10px',
-                    fontWeight: 'bold',
-                    justifyContent: 'center',
-                    padding: '10px',
-                  }}
-                >
-                  Check Item
-                </button>
-              </div>
-            </div>
-            <div>
-              <div>
-                <Link to="/">Add to wishlist</Link>
-              </div>
-              <div className="price-property">
-                {/* <Link to="/">Add to compare</Link> */}
-              </div>
-            </div>
-            <div>
-              <div>Refund</div>
-              <div className="price-property">
-                <img
-                  src="../../../assets/refund-sticker.jpg"
-                  alt="refund sticker"
+      <TopContainer>
+        <ProductContainer>
+          <LeftSlide>
+            <LeftSlideContainer>
+              {images.map((image) => (
+                <LeftSlideImage
+                  key={image.title}
+                  style={{ cursor: 'pointer' }}
+                  src={data.image}
                 />
-                <Link
+              ))}
+            </LeftSlideContainer>
+          </LeftSlide>
+          <ProductImage>
+            <ProductImageContainer>
+              <MainImage src={data.image} alt="" />
+            </ProductImageContainer>
+          </ProductImage>
+          <ProductInfo>
+            <ProductName>
+              <Title>{data.title}</Title>
+              <Rate>
+                <Rating />
+                (0 review)
+              </Rate>
+              <span>
+                Estimate Shipping Time: <span>5 Days</span>
+              </span>
+              <Divider style={{ marginTop: '10px' }} />
+            </ProductName>
+            <Info>
+              <InfoProperty>
+                Sold by <span>Africommerce</span>
+              </InfoProperty>
+              <InfoValue>
+                <Button
                   style={{
-                    textDecoration: 'none',
-                    color: 'rgb(230,46,4)',
-                    fontSize: '15px',
+                    color: 'red',
+                    textTransform: 'capitalize',
+                    background: 'rgb(252,224,217)',
                   }}
-                  to="/"
                 >
-                  View Policy
-                </Link>
+                  Message Seller
+                </Button>
+                <SellerLogo />
+              </InfoValue>
+            </Info>
+            <PriceContainer>
+              <div>
+                <div>Price</div>
+                <div className="price-property">
+                  ${500}
+                  <span>/pc</span>
+                </div>
               </div>
-            </div>
-            <div>
-              <div>Share </div>
-              <div className="price-property">
-                {' '}
-                <SocialMedia>
-                  <div>
-                    <Facebook
-                      style={{
-                        background: 'rgb(59,89,152)',
-                        width: '30px',
-                        height: '30px',
-                        color: 'white',
-                        padding: '5px',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <Twitter
-                      style={{
-                        background: 'rgb(0,172,237)',
-                        width: '30px',
-                        height: '30px',
-                        color: 'white',
-                        padding: '5px',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <Email
-                      style={{
-                        background: 'rgb(52,144,243)',
-                        width: '30px',
-                        height: '30px',
-                        color: 'white',
-                        padding: '5px',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <LinkedIn
-                      style={{
-                        background: '#007BB6',
-                        width: '30px',
-                        height: '30px',
-                        color: 'white',
-                        padding: '5px',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                      }}
-                    />
-                  </div>
-                  <div>
-                    <WhatsApp
-                      style={{
-                        background: '#29A628',
-                        width: '30px',
-                        height: '30px',
-                        color: 'white',
-                        padding: '5px',
-                        borderRadius: '5px',
-                        cursor: 'pointer',
-                      }}
-                    />
-                  </div>
-                </SocialMedia>
+              <div>
+                <div>Discount</div>
+                <div className="price-property">
+                  ${400} <span>/pc</span>
+                </div>
               </div>
-            </div>
-          </Total>
-        </ProductInfo>
-      </ProductContainer>
-      <ProductButtom>
-        <div>Top Selling Products</div>
-        <div>Product Detail</div>
-      </ProductButtom>
+              <div>
+                <div>Club Points</div>
+                <div className="price-property">
+                  <Button
+                    style={{ background: 'rgb(252,224,217)', color: 'red' }}
+                  >
+                    245
+                  </Button>
+                </div>
+              </div>
+            </PriceContainer>
+            <Divider />
+            <Sizing>
+              <div>
+                <div>Size</div>
+                <div className="price-property">
+                  {['M', 'L', 'XL', 'XXl'].map((btn) => (
+                    <Button>{btn}</Button>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <div>Quantity</div>
+                <div className="price-property">
+                  <button
+                    onClick={addQuantityHadler}
+                    style={{
+                      width: '30px',
+                      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.26)',
+                      cursor: 'pointer',
+                      height: '30px',
+                      alignItems: 'center',
+                      borderRadius: '50%',
+                      border: 'none',
+                      padding: '5px',
+                    }}
+                  >
+                    +
+                  </button>
+                  <QuantityInput type="text" min={1} value={quantity} />
+                  <button
+                    onClick={removeQuantityHadler}
+                    style={{
+                      width: '30px',
+                      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.26)',
+                      cursor: 'pointer',
+                      height: '30px',
+                      alignItems: 'center',
+                      borderRadius: '50%',
+                      border: 'none',
+                      padding: '5px',
+                    }}
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+            </Sizing>
+            <Divider />
+            <Total>
+              <div>
+                <div>Total Price</div>
+                <div className="price-property">${400 * quantity}</div>
+              </div>
+              <div>
+                <div>
+                  {' '}
+                  <button
+                    style={{
+                      boxShadow: '0 2px 8px rgba(0, 0, 0, 0.26)',
+                      cursor: 'pointer',
+                      alignItems: 'center',
+                      border: 'none',
+                      width: '100px',
+                      background: '#FF0000',
+                      color: 'white',
+                      borderRadius: '10px',
+                      fontWeight: 'bold',
+                      justifyContent: 'center',
+                      padding: '10px',
+                    }}
+                  >
+                    Check Item
+                  </button>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <Link to="/">Add to wishlist</Link>
+                </div>
+                <div className="price-property"></div>
+              </div>
+              <div>
+                <div>Refund</div>
+                <div className="price-property">
+                  <img
+                    src="../../../assets/refund-sticker.jpg"
+                    alt="refund sticker"
+                  />
+                  <Link
+                    style={{
+                      textDecoration: 'none',
+                      color: 'rgb(230,46,4)',
+                      fontSize: '15px',
+                    }}
+                    to="/"
+                  >
+                    View Policy
+                  </Link>
+                </div>
+              </div>
+              <div>
+                <div>Share </div>
+                <div className="price-property">
+                  {' '}
+                  <SocialMedia>
+                    <div>
+                      <Facebook
+                        style={{
+                          background: 'rgb(59,89,152)',
+                          width: '30px',
+                          height: '30px',
+                          color: 'white',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          cursor: 'pointer',
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <Twitter
+                        style={{
+                          background: 'rgb(0,172,237)',
+                          width: '30px',
+                          height: '30px',
+                          color: 'white',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          cursor: 'pointer',
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <Email
+                        style={{
+                          background: 'rgb(52,144,243)',
+                          width: '30px',
+                          height: '30px',
+                          color: 'white',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          cursor: 'pointer',
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <LinkedIn
+                        style={{
+                          background: '#007BB6',
+                          width: '30px',
+                          height: '30px',
+                          color: 'white',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          cursor: 'pointer',
+                        }}
+                      />
+                    </div>
+                    <div>
+                      <WhatsApp
+                        style={{
+                          background: '#29A628',
+                          width: '30px',
+                          height: '30px',
+                          color: 'white',
+                          padding: '5px',
+                          borderRadius: '5px',
+                          cursor: 'pointer',
+                        }}
+                      />
+                    </div>
+                  </SocialMedia>
+                </div>
+              </div>
+            </Total>
+          </ProductInfo>
+        </ProductContainer>
+      </TopContainer>
+      <ProductButtom />
     </Container>
   );
 };
