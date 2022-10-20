@@ -1,179 +1,38 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import { Divider, Rating } from '@mui/material';
-import styled from 'styled-components';
-import { SellerHome } from '../components/seller/SellerHome';
-import { SellerTopSellPage } from '../components/seller/SellerTopSellPage';
-import { SellerAllProducts } from '../components/seller/SellerAllProducts';
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
-
+import React from 'react';
+import trendwarehouse from '../assests/sellers/trendwarehouse.png';
+import musicmart from '../assests/sellers/music-mart.png';
+import createandconquer from '../assests/sellers/createandconquer.png';
+import electrowave from '../assests/sellers/electrowave.png';
+import applestore from '../assests/sellers/applestore.png';
+import jhonson from '../assests/sellers/jhonson.jpg';
+import lavishlook from '../assests/sellers/philips.jpg';
+import adiddas from '../assests/sellers/addidas.jpg';
+import louisvuiton from '../assests/sellers/louisvuitton.jpg';
+import filonAsset from '../assests/sellers/filon-asset.png';
+import classes from '../styles/Sellers.module.css';
+import Sellers from '../components/sellers/sellers';
+import SellersHead from '../components/sellers/sellersHead';
+export const Seller = () => {
+  const sellers = [
+    { id: 1, name: 'filon asset store', rating: 5, img: filonAsset },
+    { id: 2, name: 'trend warehouse', rating: 5, img: trendwarehouse },
+    { id: 3, name: 'music mart', rating: 5, img: musicmart },
+    { id: 4, name: 'create & conquer', rating: 5, img: createandconquer },
+    { id: 5, name: 'electrowave', rating: 5, img: electrowave },
+    { id: 6, name: 'apple store', rating: 5, img: applestore },
+    { id: 7, name: 'jhonson', rating: 5, img: jhonson },
+    { id: 8, name: 'lavish look', rating: 5, img: lavishlook },
+    { id: 9, name: 'adiddas', rating: 5, img: adiddas },
+    { id: 10, name: 'louis vuitton', rating: 5, img: louisvuiton },
+  ];
   return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
+    <div className={classes.Sellers}>
+      <div className={classes.Sellers__Content}>
+        <SellersHead />
+        <Sellers Sellers={sellers} />
+      </div>
     </div>
   );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
 };
 
-function a11yProps(index) {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  };
-}
-function BasicTabs() {
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
-  return (
-    <Box sx={{ width: '100%' }}>
-      <Box
-        sx={{ borderBottom: 1, borderColor: 'divider', background: 'white' }}
-      >
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-          style={{ background: 'white', width: '80%', margin: '0 auto' }}
-        >
-          <Tab
-            style={{
-              fontWeight: 'bold',
-              color: 'black',
-              textTransform: 'capitalize',
-              fontSize: '1rem',
-            }}
-            label="Store Home"
-            {...a11yProps(0)}
-          />
-          <Tab
-            style={{
-              fontWeight: 'bold',
-              color: 'black',
-              textTransform: 'capitalize',
-              fontSize: '1rem',
-            }}
-            label="Top Selling"
-            {...a11yProps(1)}
-          />
-          <Tab
-            style={{
-              fontWeight: 'bold',
-              color: 'black',
-              textTransform: 'capitalize',
-              fontSize: '1rem',
-            }}
-            label="All Products"
-            {...a11yProps(2)}
-          />
-        </Tabs>
-      </Box>
-      <TabPanel value={value} index={0}>
-        <SellerHome />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <SellerTopSellPage />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <SellerAllProducts />
-      </TabPanel>
-    </Box>
-  );
-}
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  width: 100vw;
-  max-width: 100%;
-  margin: 0 auto;
-  /* gap: 1rem; */
-  position: relative;
-  align-items: center;
-`;
-const Header = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  background: white;
-  min-height: 150px;
-
-  gap: 1rem;
-  .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    img {
-      display: flex;
-      width: auto;
-      align-items: center;
-      max-width: 50px;
-    }
-  }
-  .info {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-
-    gap: 5px;
-    .title {
-      display: flex;
-      font-weight: bolder;
-      font-size: 1rem;
-      text-transform: uppercase;
-      flex-wrap: wrap;
-    }
-  }
-`;
-
-export const Seller = () => {
-  return (
-    <Container>
-      <Header>
-        <div className="logo">
-          <img src="../../assets/logo2.png" alt="" />
-        </div>
-        <div className="info">
-          <span className="title">Africommerce</span>
-          <span className="rating">
-            <Rating />
-          </span>
-          <span className="address">
-            Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi 96522 (257)
-            563-7401
-          </span>
-        </div>
-      </Header>
-      <Divider />
-
-      <Divider />
-      <BasicTabs />
-    </Container>
-  );
-};
+export default Seller;
