@@ -1,135 +1,153 @@
-# Africommerce (Repo: `Africommerce`)
-
+<h1 align="center">Africommerce</h4>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-)
+<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-) -->
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+## Introduction
 
-<h4 align="center">An Online store for evryone </h4>
+<p> AfriCommerce is a Software As Service E-commerce platform that allows all signed up users in Africa to own their own <mark style="background-color:green">customized store </mark>  and connects buyers to prospective sellers for free. </p>
 
-<p align="center">
+<!-- <p align="center">
   <a href="https://github.com/iamkelv/africommerce" target="blank">
-</a>
+</a> -->
+## 🧰 Technologies Used
 
-Please support the work by giving the repository a ⭐, contributing to it, and/or sponsoring using the `Sponsor` button at the top 😍. You can also follow us on Twitter [@Africacommerce](https://twitter.com/).
+- Backend Development
+  - NodeJS 
+  - Express
+  - MongoDB
+  
+- Frontend Development
+  - HTML 
+  - CSS
+  - ReactJs
 
-## 🏗️ How to Set up `Africommerce` for Development?
 
-You may want to set up the `Africommerce` repo for the following reasons:
+## 🏗️ How to Set up `Africommerce` for Development
 
-- You want to contribute to the `Africommerce` repo in general. Please check the [Contribution Guide](./CONTRIBUTING.md) to get started.
+You may want to set up the `Africommerce` repository for the following reasons:
 
-Here is a quick overview of the `Africommerce` repo setup:
+- You want to contribute to the `Africommerce` repo in general. To contribute to this project, please check the [Contribution Guide](./CONTRIBUTING.md) to get started.
+- You want to use it as part of your own personal project.
 
-### 🍴 Fork and Clone the Repo
+### Prerequisite
 
-First, you need to fork the `Africommerce` repo. You can do this by clicking the `Fork` button on the top right corner of the repo. If you are new to forking, please watch this [YouTube Guide](https://www.youtube.com/) to get started.
+In order to setup this project, you need prior knowledge on how to;
+  - Use an IDE of your choice (VSCode, Sublime, Atom, etc)
+  - Basic knowledge on how to use Github (fork, clone, pull, push)
+  
+Here is a quick overview on how to setup the `Africommerce` repository as a contributor:
 
-Once forked, you can clone the repo by clicking the `Clone or Download` button on the top right corner of the forked repo.
+- ### 🍴 Fork and Clone the Repository
+  
+  - First, you need to fork the `Africommerce` repository by clicking the `Fork` button on the top right corner of the repository. 
+  - Next, you clone the forked repository by clicking the `code` button and then selecting the clone option.
+  
+  ⚠️ Please change the directory after cloning the repository using the ` cd <folder-name> ` command. In our case, the command to be ran is  `cd africommerce-saas`
 
-Please change the directory after cloning the repository using the `cd <folder-name>` command.
 
-### ⬇️ Install Dependencies
+- ### Track the original repository as a remote of the forked Repository
+  - To track the original repository as a remote of the forked Repository run this command;
+   ```
+    git remote add upstream git@github.com:africommerce/africommerce-saas.git
+    git fetch upstream
+   ```
+  ⚠️ Please skip this step, if you are setting this project for your personal use.
 
-Next, install the dependencies by running the following command in the `react-play` repo:
+- ### ⬇️ Install Dependencies
+   Next, install the dependencies by running the following command in the folder containing the  `Africommerce` repository:
+   ```bash
+   npm install 
+   ```
+   Or
+   ```bash
+   yarn install 
+   ```
+   > **Note**: `Africommerce` runs on React 18. However, some of our dependencies are yet to upgrade to version 18. So please use the following command when you face difficulties installing the dependencies.
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
-```bash
-npm install
-```
+  - ### ⛓️ Create a `.env` file at the root of your project folder with the following content </h3>
 
-Or
+    ```bash
 
-```bash
-yarn install
-```
+    ```
 
-> **Note**: `ReactPlay` runs on React 18. However, some of our dependencies are yet to upgrade to version 18. So please use the following command when you face difficulties installing the dependencies.
+- ### 🦄 Start the Development Mode
 
-```bash
-npm install --legacy-peer-deps
-```
+  Use the following command to start the app in the development mode:
 
-### ⛓️ Create a `.env` file at the root of your project folder with the following content
+  ```bash
+  npm start
+  ```
 
-```bash
+  Or
 
-```
+  ```bash
+  yarn start
+  ```
 
-### 🦄 Start the Development Mode
+  It runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Use the following command to start the app in the development mode:
+  The page will reload when you make changes. You may also see any lint errors in the console.
 
-```bash
-npm start
-```
+- ### 🧱 Build the App for Production
 
-Or
+  Use the following command to build the app for production:
 
-```bash
-yarn start
-```
+  ```bash
+  npm run build
+  ```
 
-It runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  Or
 
-The page will reload when you make changes. You may also see any lint errors in the console.
+  ```bash
+  yarn build
+  ```
 
-### 🧱 Build the App for Production
+  THis command builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
 
-Use the following command to build the app for production:
+- ### 🚀 Deploy
 
-```bash
-npm run build
-```
+  You can deploy the app to `Vercel` or `Netlify` with a single click.
 
-Or
+  <a href="https://vercel.com/new/project?template=https://github.com/iamkelv/africommerce/">
+  <img src="https://vercel.com/button" height="37.5px" />
+  </a>
+  <a href="https://app.netlify.com/start/deploy?repository=https://github.com/iamkelv/africommerce/">
+  <img src="https://www.netlify.com/img/deploy/button.svg" height="37.5px" />
+  </a>
 
-```bash
-yarn build
-```
-
-It builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
-
-### 🚀 Deploy
-
-You can deploy the app to `Vercel` or `Netlify` with a single click.
-
-<a href="https://vercel.com/new/project?template=https://github.com/iamkelv/africommerce/">
-<img src="https://vercel.com/button" height="37.5px" />
-</a>
-<a href="https://app.netlify.com/start/deploy?repository=https://github.com/iamkelv/africommerce/">
-<img src="https://www.netlify.com/img/deploy/button.svg" height="37.5px" />
-</a>
 
 ## 🤝 Contributing to `Africommerce`
 
-Any kind of positive contribution is welcome! Please help us to grow by contributing to the project.
-
-If you wish to contribute, you can,
+Please help us to grow by contributing to the project. If you wish to contribute, you can;
 
 - Suggest a Feature
-- Test the app, and help it improve.
+- Test the app and help in optimizing it.
 - Improve the app, fix bugs, etc.
 - Improve documentation.
 - Create content about Africommerce and share it with the world.
 
+Any kind of positive contribution is highly appreciated! 
+
 > Please read [`CONTRIBUTING`](CONTRIBUTING.md) for details on our [`CODE OF CONDUCT`](CODE_OF_CONDUCT.md), and the process for submitting pull requests to us.
 
-## Launching africacomerce Rewards
 
-Contributed to africacomerce? Here is a big thank you from our community to you.
-Claim your badge and showcase them with pride.
-Let us inspire more folks !
-
-![africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
-
-### **[Claim Now!](https://aviyel.com/projects/43/africoommerce/rewards)**
-
+<!-- Support -->
 ## 🙏 Support
 
-We all need support and motivation. `africommerce` is not an exception. Please give this project a ⭐️ to encourage and show that you liked it. Don't forget to leave a star ⭐️ before you move away.
+Please support the work by:
 
-If you found the app helpful, consider supporting us with a coffee.
+- Giving the repository a ⭐
+- Contributing to it
+- [Sponsoring the project](https://../CONTRIBUTING.md/). 
+- Follow us on Twitter [@Africacommerce](https://twitter.com/).
+
+
+If you found the software helpful, consider supporting by buying us coffee ☕
 
 <a href="https://www.buymeacoffee.com/">
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50px">
@@ -137,9 +155,17 @@ If you found the app helpful, consider supporting us with a coffee.
 
 ---
 
-<h3 align="center">
-A ⭐️ to <b>africommerce</b> is to make us more 💪 stronger and motivated.
-</h3>
+
+## Launching `Africommerce` Rewards
+
+Contributed to Africommerce? Here is a big **Thank you** from our community to you.
+Claim your badge and showcase them with pride on any of your social media profile.
+Let us inspire more folks!
+
+![africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
+
+### **[Claim Now!](https://aviyel.com/projects/43/africoommerce/rewards)**
+
 
 ## Contributors ✨
 
@@ -160,3 +186,4 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 # africommerce-saas
 # africommerce-saas
 # africommerce-saas
+
