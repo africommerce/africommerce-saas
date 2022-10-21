@@ -37,35 +37,37 @@ In order to setup this project, you need prior knowledge on how to;
   - Use an IDE of your choice (VSCode, Sublime, Atom, etc)
   - Basic knowledge on how to use Github (fork, clone, pull, push)
   
-Here is a quick overview on how to setup the `Africommerce` repository for use on your own personal project:
+Here is a quick overview on how to setup the `Africommerce` repository as a contributor:
 
-  - ### 🍴 Fork and Clone the Repository
-    
-    - First, you need to fork the `Africommerce` repository by clicking the `Fork` button on the top right corner of the repository. 
+- ### 🍴 Fork and Clone the Repository
+  
+  - First, you need to fork the `Africommerce` repository by clicking the `Fork` button on the top right corner of the repository. 
+  - Next, you clone the forked repository by clicking the `code` button and then selecting the clone option.
+  
+  ⚠️ Please change the directory after cloning the repository using the ` cd <folder-name> ` command. In our case, the command to be ran is  `cd africommerce-saas`
 
-    - Next, you clone the repository by clicking the `Clone or Download` button on the top right corner of the forked repo.
 
-    ⚠️ Please change the directory after cloning the repository using the ` cd <folder-name> ` command.
+- ### Track the original repository as a remote of the forked Repository
+  - To track the original repository as a remote of the forked Repository run this command;
+   ```
+    git remote add upstream git@github.com:africommerce/africommerce-saas.git
+    git fetch upstream
+   ```
+  ⚠️ Please skip this step, if you are setting this project for your personal use.
 
- - ### ⬇️ Install Dependencies
-
-    Next, install the dependencies by running the following command in the folder containing the  `Africommerce` repository:
-
-    ```bash
-    npm install 
-    ```
-
-    Or
-
-    ```bash
-    yarn install 
-    ```
-
-    > **Note**: `Africommerce` runs on React 18. However, some of our dependencies are yet to upgrade to version 18. So please use the following command when you face difficulties installing the dependencies.
-
-    ```bash
-    npm install --legacy-peer-deps
-    ```
+- ### ⬇️ Install Dependencies
+   Next, install the dependencies by running the following command in the folder containing the  `Africommerce` repository:
+   ```bash
+   npm install 
+   ```
+   Or
+   ```bash
+   yarn install 
+   ```
+   > **Note**: `Africommerce` runs on React 18. However, some of our dependencies are yet to upgrade to version 18. So please use the following command when you face difficulties installing the dependencies.
+   ```bash
+   npm install --legacy-peer-deps
+   ```
 
   - ### ⛓️ Create a `.env` file at the root of your project folder with the following content </h3>
 
