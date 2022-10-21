@@ -1,1 +1,1 @@
-Refactored components for better scalability
+Set up global error handling and toast notifications
