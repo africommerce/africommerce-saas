@@ -1,10 +1,5 @@
-import { useState } from 'react';
-import {
-  ArrowBack,
-  ArrowCircleDown,
-  KeyboardArrowLeft,
-  KeyboardArrowRight,
-} from '@mui/icons-material';
+// import { useState } from 'react';
+import { KeyboardArrowLeft, KeyboardArrowRight } from '@mui/icons-material';
 import { Rating } from '@mui/material';
 import { Box } from '@mui/system';
 import { Link } from 'react-router-dom';
@@ -84,7 +79,7 @@ const Wrapper = styled.div`
   transition: all 700ms ease;
 `;
 export const RelatedProduct = () => {
-  const [initial, setInitial] = useState(0);
+  // const [initial, setInitial] = useState(0);
 
   const slideLeft = (e) => {
     var slider = document.getElementById('slider');

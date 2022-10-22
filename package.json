@@ -22,6 +22,7 @@
     "react-elastic-carousel": "^0.11.5",
     "react-icons": "^4.6.0",
     "react-material-ui-carousel": "^3.4.2",
+    "react-multi-carousel": "^2.8.2",
     "react-redux": "^8.0.4",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.4.2",
