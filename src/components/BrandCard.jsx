@@ -1,40 +1,37 @@
-import { Paper, Card,Box , ImageListItem, ImageList} from "@mui/material";
+import { Card, Box, ImageListItem, ImageList } from '@mui/material';
 
-export default function(){
-    return(<div>
-       <ImageList  cols={5}>
-      {itemData.map((item) => (
-       
-        <Box  sx={{m:1 ,
-        '&:hover': {
-          
-          boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
-          cursor:"pointer",
-        }}} >
-        <Card variant="outlined" sx={{px:3, py:1}} >
-          <ImageListItem key={item.img}  >
-          <img
-            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
-          />
-        </ImageListItem>
-        </Card>
-        </Box>
-      ))}
-    </ImageList>
-
-     
-    </div>);
+export default function BrandCard() {
+  return (
+    <div>
+      <ImageList cols={5}>
+        {itemData.map((item) => (
+          <Box
+            sx={{
+              m: 1,
+              '&:hover': {
+                boxShadow: 'rgba(0, 0, 0, 0.1) 0px 4px 12px',
+                cursor: 'pointer',
+              },
+            }}
+          >
+            <Card variant="outlined" sx={{ px: 3, py: 1 }}>
+              <ImageListItem key={item.img}>
+                <img
+                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
+                  srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
+                  alt={item.title}
+                  loading="lazy"
+                />
+              </ImageListItem>
+            </Card>
+          </Box>
+        ))}
+      </ImageList>
+    </div>
+  );
 }
 
-
-
-
-
 const itemData = [
-  
   {
     img: 'https://i.ibb.co/X2fZ7VH/ford.jpg',
     title: 'ford',
@@ -86,7 +83,6 @@ const itemData = [
   {
     img: 'https://i.ibb.co/MNbwwbB/yamaha.jpg',
     title: 'yamaha',
-   
   },
   {
     img: 'https://i.ibb.co/1bhZGsL/brighton.jpg',
@@ -107,7 +103,6 @@ const itemData = [
   {
     img: 'https://i.ibb.co/dpnxLfb/bucketfet-logo.jpg',
     title: 'bucketfet',
-   
   },
   {
     img: 'https://i.ibb.co/gMpSPxR/jl-logo.jpg',
@@ -185,7 +180,6 @@ const itemData = [
   {
     img: 'https://i.ibb.co/34730xW/corsair.jpg',
     title: 'corsair',
-   
   },
   {
     img: 'https://i.ibb.co/ZBz2Px9/microsoft.jpg',
@@ -206,7 +200,6 @@ const itemData = [
   {
     img: 'https://i.ibb.co/k676m33/ck.jpg',
     title: 'ck',
-   
   },
   {
     img: 'https://i.ibb.co/0fdkJ6G/litte-pet.jpg',
@@ -284,7 +277,6 @@ const itemData = [
   {
     img: 'https://i.ibb.co/ZYYrkg9/pampers.jpg',
     title: 'pampers',
-   
   },
   {
     img: 'https://i.ibb.co/G0CgbSM/belly-baby.jpg',
@@ -305,7 +297,6 @@ const itemData = [
   {
     img: 'https://i.ibb.co/2MXyTBs/loreal-log.jpg',
     title: 'loreal-log',
-   
   },
   {
     img: 'https://i.ibb.co/0fdkJ6G/zhxbpLX/dove-logo.jpg',
@@ -349,7 +340,6 @@ const itemData = [
     title: 'jade',
   },
 
-
   {
     img: 'https://i.ibb.co/WPKC7KK/apato.jpg',
     title: 'apato',
@@ -373,8 +363,7 @@ const itemData = [
   {
     img: 'https://i.ibb.co/dWsGGJs/horse-logo.jpg',
     title: 'horse-logo',
-  }
-,
+  },
   {
     img: 'https://i.ibb.co/k9Ymczn/joules.jpg',
     title: 'joules',
@@ -402,12 +391,9 @@ const itemData = [
   {
     img: 'https://i.ibb.co/Z2fDssf/oneplus.jpg',
     title: 'oneplus',
-    
   },
   {
-    
     img: 'https://i.ibb.co/sgnkb7r/roll-royce.jpg',
     title: 'roll-royce',
-  }
-
+  },
 ];
