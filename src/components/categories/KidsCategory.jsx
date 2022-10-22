@@ -59,6 +59,7 @@ function KidsCategory() {
           <BodyHeading>Baby & Mother</BodyHeading>
           <BodyList>Carriers</BodyList>
           <BodyList>Baby Care</BodyList>
+          <BodyList>Baby Bags</BodyList>
         </BodyContent>
 
       </Body1>
