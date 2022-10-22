@@ -58,7 +58,6 @@ function CarCategory() {
           <BodyList>Luxury SUV</BodyList>
           <BodyList>Off-road SUV</BodyList>
           <BodyList>Mini SUV</BodyList>
-          <BodyList>Midsize SUV</BodyList>
         </BodyContent>
 
         <BodyContent>
