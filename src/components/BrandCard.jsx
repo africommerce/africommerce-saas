@@ -1,9 +1,8 @@
-import { Paper ,Grid, Card,Box , ImageListItem, ImageList} from "@mui/material";
+import { Paper, Card,Box , ImageListItem, ImageList} from "@mui/material";
 
 export default function(){
-  // const arrOfBrands = ["audi", "toyota", "bmw"];
     return(<div>
-       <ImageList  cols={5} gap={12}  sx={{gridTemplateColumns:"repeat(auto-fill, minmax(200px, 1fr)) "}}>
+       <ImageList  cols={5}>
       {itemData.map((item) => (
        
         <Box  sx={{m:1 ,
