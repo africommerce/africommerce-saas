@@ -48,6 +48,7 @@ export const MasterRoutes = () => {
       <Route path="/wishlist" element={<WishList />} />
       <Route path="/track-order" element={<TrackOrder />} />
       <Route path="/order-history" element={<OrderHistory />} />
+      <Route path="/allbrand" element={<AllBrand/>}/>
 
       <Route path="*" element={<p>Page not found</p>} />
     </Routes>
