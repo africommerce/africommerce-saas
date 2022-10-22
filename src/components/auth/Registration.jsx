@@ -1,6 +1,8 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
-import { Typography, Button, Link, Box, Checkbox } from '@mui/material';
+
+import { Typography, Button, Box, Checkbox } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Registration = () => {
   return (
@@ -85,7 +87,7 @@ const Registration = () => {
             Already have an account?
           </Typography>
           <Box sx={{ typography: 'body1' }}>
-            <Link href="/" sx={{ color: '#E62E04', textDecoration: 'none' }}>
+            <Link to="/auth" sx={{ color: '#E62E04', textDecoration: 'none' }}>
               Login
             </Link>
           </Box>
