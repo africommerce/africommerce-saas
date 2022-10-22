@@ -57,7 +57,7 @@ const CategoriesTitle = styled.div`
 `;
 
 export const LeftHero = () => {
-  const [menu, setMenu] = useState(false);
+  const [menu] = useState(false);
   return (
     <Left>
       <CategoriesWrapper>

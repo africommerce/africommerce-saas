@@ -4,8 +4,8 @@ import SearchIcon from '@mui/icons-material/Search';
 import FlipCameraAndroidIcon from '@mui/icons-material/FlipCameraAndroid';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import { useDispatch, useSelector } from 'react-redux';
-import { cartAction } from '../../store/cart-slice';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { cartAction } from '../../store/cart-slice';
 import { Badge } from '@mui/material';
 
 const SearchNavbars = styled.div`
@@ -84,7 +84,7 @@ const Logo = styled.img`
 `;
 export const SearchNavbar = () => {
   // CART FROM STORE CART SLICE
-  const cart = useSelector((state) => state.cart.items.length);
+  // const cart = useSelector((state) => state.cart.items.length);
 
   return (
     <SearchNavbars>
@@ -126,7 +126,7 @@ export const SearchNavbar = () => {
         </div>
         <div className="options-list" style={{ cursor: 'pointer' }}>
           <div>
-            <Badge badgeContent={cart} color="primary">
+            <Badge badgeContent={0} color="primary">
               <ShoppingCartOutlinedIcon />
             </Badge>
           </div>

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { redirect } from 'react-router-dom';
-import { Navigate, Route, Routes } from 'react-router';
+// import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 import { Login } from '../components/auth/Login';
 import Registration from '../components/auth/Registration';
 
@@ -26,7 +26,7 @@ import { TrackOrder } from '../pages/TrackOrder';
 import { WishList } from '../pages/WishList';
 
 export const MasterRoutes = () => {
-  const [isLogged, setIsLogged] = useState(false);
+  //const [isLogged, setIsLogged] = useState(false);
   return (
     <Routes>
       <Route path="/" element={<Home />} />
@@ -52,7 +52,7 @@ export const MasterRoutes = () => {
       <Route path="/wishlist" element={<WishList />} />
       <Route path="/track-order" element={<TrackOrder />} />
       <Route path="/order-history" element={<OrderHistory />} />
-      <Route path="/allbrand" element={<AllBrand/>}/>
+      <Route path="/allbrand" element={<AllBrand />} />
 
       <Route path="*" element={<p>Page not found</p>} />
     </Routes>
