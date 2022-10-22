@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import PhoneIcon from '@mui/icons-material/Phone';
+import { Link } from 'react-router-dom';
 
 const TopNavbars = styled.div`
   display: flex;
@@ -110,10 +111,14 @@ export const TopNavbar = () => {
             <PhoneIcon style={{ fontSize: '13px' }} />
             <Span>Helps Line +903 343333</Span>
           </Phone>
-          <Line></Line>
-          <Log>Login</Log>
-          <Line></Line>
-          <Reg>Registration</Reg>
+          <Line />
+          <Link to="/auth" style={{ textDecoration: 'none' }}>
+            <Log>Login</Log>
+          </Link>
+          <Line />
+          <Link to="/auth" style={{ textDecoration: 'none' }}>
+            <Reg>Registration</Reg>
+          </Link>
         </Container2>
       </TopNavbars>
     </>
