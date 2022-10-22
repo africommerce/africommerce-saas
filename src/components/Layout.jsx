@@ -1,6 +1,7 @@
 import { Footer } from './Footer';
 import { NavBar } from './header/NavBar';
 import styled from 'styled-components';
+import { useLocation } from 'react-router-dom';
 
 const Container = styled.div`
   height: auto;
@@ -19,11 +20,19 @@ const Children = styled.div`
   margin-top: 170px;
 `;
 export const Layout = (props) => {
+  const location = useLocation();
+  console.log(location.pathname);
   return (
     <Container>
-      <NavBar />
-      <Children>{props.children}</Children>
-      <Footer />
+      {location.pathname === '/admin' ? (
+        <Children>{props.children}</Children>
+      ) : (
+        <div>
+          <NavBar />
+          <Children>{props.children}</Children>
+          <Footer />
+        </div>
+      )}
     </Container>
   );
 };
