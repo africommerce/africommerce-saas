@@ -21,7 +21,7 @@ const Children = styled.div`
 `;
 export const Layout = (props) => {
   const location = useLocation();
-  console.log(location.pathname);
+
   return (
     <Container>
       {location.pathname === '/admin' ? (
