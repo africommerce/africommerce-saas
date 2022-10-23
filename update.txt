@@ -1,1 +1,1 @@
-Optimized JWT handling for performance
+Improved API request handling with Axios interceptors
