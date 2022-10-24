@@ -2,11 +2,20 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   display: flex;
+  margin: 0 auto;
   flex: 7;
-  background: green;
-  height: 100vh;
-  flex-direction: column;
 `;
+
 export const Body = () => {
-  return <Container>Body</Container>;
+  return (
+    <Container>
+      <div className="nav">
+        <div className="nav__wrapper">
+          {' '}
+          <div className="left">Left</div>
+          <div className="right">Right</div>
+        </div>
+      </div>
+    </Container>
+  );
 };

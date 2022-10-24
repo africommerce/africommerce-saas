@@ -1,11 +1,4 @@
-import {
-  Facebook,
-  Google,
-  Twitter,
-  VerifiedUser,
-  YouTube,
-} from '@mui/icons-material';
-import { Divider, Rating } from '@mui/material';
+import { Rating } from '@mui/material';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
