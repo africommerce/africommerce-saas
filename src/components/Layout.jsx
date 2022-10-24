@@ -21,10 +21,10 @@ const Children = styled.div`
 `;
 export const Layout = (props) => {
   const location = useLocation();
-  console.log(location.pathname);
   return (
     <Container>
-      {location.pathname === '/admin' ? (
+      {location.pathname === '/admin' ||
+      location.pathname.includes("/auth-seller") ? (
         <Children>{props.children}</Children>
       ) : (
         <div>
