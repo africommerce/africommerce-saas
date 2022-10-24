@@ -24,7 +24,8 @@ export const Layout = (props) => {
 
   return (
     <Container>
-      {location.pathname === '/admin' ? (
+      {location.pathname === '/admin' ||
+      location.pathname.includes("/auth-seller") ? (
         <Children>{props.children}</Children>
       ) : (
         <div>
