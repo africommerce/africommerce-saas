@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { redirect } from 'react-router-dom';
-import { Navigate, Route, Routes } from 'react-router';
+// import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
 import { Login } from '../components/auth/Login';
 import Registration from '../components/auth/Registration';
 
@@ -32,7 +32,7 @@ import { SellerUploads } from '../pages/seller/SellerUploads';
 import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
 
 export const MasterRoutes = () => {
-  const [isLogged, setIsLogged] = useState(false);
+  //const [isLogged, setIsLogged] = useState(false);
   return (
     <Routes>
       <Route path="/" element={<Home />} />
