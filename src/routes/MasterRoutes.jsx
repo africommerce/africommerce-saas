@@ -15,6 +15,7 @@ import { Home } from '../pages/Home';
 import { OrderHistory } from '../pages/OrderHistory';
 import { PrivacyPolicy } from '../pages/PrivacyPolicy';
 import { ProductDetail } from '../pages/ProductDetail';
+import PurchaseHistory from '../pages/purchase';
 import { ReturnPolicy } from '../pages/ReturnPolicy';
 import { Seller } from '../pages/Seller';
 import { SellersPolicy } from '../pages/SellersPolicy';
@@ -48,7 +49,7 @@ export const MasterRoutes = () => {
       <Route path="/wishlist" element={<WishList />} />
       <Route path="/track-order" element={<TrackOrder />} />
       <Route path="/order-history" element={<OrderHistory />} />
-
+      <Route path="purchase" element={<PurchaseHistory />} />
       <Route path="*" element={<p>Page not found</p>} />
     </Routes>
   );
