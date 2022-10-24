@@ -6,6 +6,7 @@ import Registration from '../components/auth/Registration';
 
 import { AboutUs } from '../pages/AboutUs';
 import { AdminDashboard } from '../pages/admin/AdminDashboard';
+import { AuthSeller } from '../pages/seller/AuthSeller';
 import { AffliatePartner } from '../pages/AffliatePartner';
 import { AllBrand } from '../pages/AllBrand';
 import { AllCategories } from '../pages/AllCategories';
@@ -24,6 +25,11 @@ import { SupportPolicy } from '../pages/SupportPolicy';
 import { Terms } from '../pages/Terms';
 import { TrackOrder } from '../pages/TrackOrder';
 import { WishList } from '../pages/WishList';
+import { SellerOrders } from '../pages/seller/SellerOrders';
+import { SellerProducts } from '../pages/seller/SellerProducts';
+import { SellerPos } from '../pages/seller/SellerPos';
+import { SellerUploads } from '../pages/seller/SellerUploads';
+import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
 
 export const MasterRoutes = () => {
   const [isLogged, setIsLogged] = useState(false);
@@ -31,6 +37,13 @@ export const MasterRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="/auth-seller" element={<AuthSeller />}>
+        <Route path="orders" element={<SellerOrders/>} ></Route>
+        <Route path="products" element={<SellerProducts/>} ></Route>
+        <Route path='pos' element={<SellerPos/>} ></Route>
+        <Route path="uploads" element={<SellerUploads/>} ></Route>
+        <Route path="auction" element={<SellerAuction/>} ></Route>
+      </Route>
       <Route path="/product/:id" element={<ProductDetail />} />
       <Route path="/flash-sale" element={<FlashSale />} />
       <Route path="/blog" element={<Blog />} />
@@ -52,7 +65,7 @@ export const MasterRoutes = () => {
       <Route path="/wishlist" element={<WishList />} />
       <Route path="/track-order" element={<TrackOrder />} />
       <Route path="/order-history" element={<OrderHistory />} />
-      <Route path="/allbrand" element={<AllBrand/>}/>
+      <Route path="/allbrand" element={<AllBrand />} />
 
       <Route path="*" element={<p>Page not found</p>} />
     </Routes>
