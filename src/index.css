@@ -80,3 +80,84 @@ code {
     flex-direction: column;
   }
 }
+
+
+/*mobile toggler*/
+.hamburger-sign {
+  position: relative;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  background: 0 0;
+  outline: 0 !important;
+  width: 24px;
+  height: 24px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.hamburger-sign span {
+  display: block;
+  position: absolute;
+  top: 5px;
+  height: 2px;
+  min-height: 2px;
+  width: 100%;
+  border-radius: 2px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background: #484f66;
+}
+
+.hamburger-sign span:before,
+.hamburger-sign span:after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  min-height: 2px;
+  content: "";
+  border-radius: 2px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background: #484f66;
+}
+
+.hamburger-sign.light span,
+.hamburger-sign.light span:before,
+.hamburger-sign.light span:after {
+  background: #fff;
+}
+
+.hamburger-sign span:before {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  left: auto;
+  left: 0;
+  width: 50%;
+  top: -8px;
+}
+
+.hamburger-sign span:after {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  left: auto;
+  left: 0;
+  width: 75%;
+  bottom: -9px;
+}
+
+
+.flexcontainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexitem {
+  width: 28%
+}
