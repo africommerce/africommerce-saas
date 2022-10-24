@@ -10,11 +10,7 @@ const Sellers = (props) => {
           return (
             <div className={classes.SellerBox} key={seller.id}>
               <div className={classes.SellerBox__Left}>
-                <img
-                  src={seller.img}
-                  alt="Seller-image"
-                  className={classes.SellerImage}
-                />
+                <img src={seller.img} alt="" className={classes.SellerImage} />
               </div>
               <div className={classes.SellerBox__Right}>
                 <h3 className={classes.SellerBox__Head}>{seller.name}</h3>

@@ -1,14 +1,14 @@
-import React from 'react'
+import React from 'react';
 import Registration from '../components/auth/Registration';
-import Login from "../components/auth/Login";
+import Login from '../components/auth';
 
 const Auth = () => {
   return (
     <div>
       <Registration />
-      <Login/>
+      <Login />
     </div>
-  )
-}
+  );
+};
 
-export default Auth
+export default Auth;
