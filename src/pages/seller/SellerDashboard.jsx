@@ -1,1 +1,8 @@
-// All components for this page are to be created in components/sellerdashboard folder
+import React from 'react'
+
+export const SellerDashboard = () => {
+  return (
+    <div>SellerDashboard</div>
+  )
+}
+
