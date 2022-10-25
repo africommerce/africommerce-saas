@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
+
 
 const Container = styled.div`
   padding: 1% 5% 5%;
