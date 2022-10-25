@@ -29,9 +29,7 @@ const Section2 = styled.div`
   background: white;
   text-align: justify;
   `
-const P1 = styled.h2`
-margin-bottom: 2%;
-`
+
 const P2 = styled.p`
 margin-bottom: 2%;
 `
