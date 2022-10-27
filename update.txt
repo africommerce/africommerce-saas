@@ -1,1 +1,1 @@
-Fixed minor UI bugs and improved user experience
+Enhanced security with role-based access control
