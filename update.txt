@@ -1,1 +1,1 @@
-Enhanced security with role-based access control
+Updated project documentation for frontend
