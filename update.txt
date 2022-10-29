@@ -1,1 +1,1 @@
-Updated project documentation for frontend
+Deployed frontend to local development server
