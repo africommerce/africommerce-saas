@@ -21,12 +21,12 @@ const Children = styled.div`
 `;
 export const Layout = (props) => {
   const location = useLocation();
-
   return (
     <Container>
-      {location.pathname === '/admin' ||
-      location.pathname.includes("/auth-seller") ? (
-        <Children>{props.children}</Children>
+      {location.pathname.includes('/admin') ? (
+        <Children style={{ position: 'relative', top: '-170px' }}>
+          {props.children}
+        </Children>
       ) : (
         <div>
           <NavBar />
