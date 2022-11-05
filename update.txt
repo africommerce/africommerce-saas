@@ -1,1 +1,1 @@
-Added input validation for profile fields
+Updated user context with profile changes
