@@ -1,1 +1,1 @@
-Updated user context with profile changes
+Handled API errors and success responses
