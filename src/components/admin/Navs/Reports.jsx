@@ -26,7 +26,14 @@ const MenuList = styled.ul`
     }
   }
 `;
-export default function MenuAccordions({ title, icon, items }) {
+export default function ReportMenu({
+  list,
+  title,
+  icon,
+  link,
+
+  items,
+}) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -85,6 +92,7 @@ export default function MenuAccordions({ title, icon, items }) {
                       {list.name}
                     </li>
                   </Link>
+                  {/* <Outlet /> */}
                 </>
               ))}
             </MenuList>
