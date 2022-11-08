@@ -1,1 +1,1 @@
-Refactored profile update logic for reusability
+Improved UI feedback on profile updates
