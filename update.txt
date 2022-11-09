@@ -1,1 +1,1 @@
-Improved UI feedback on profile updates
+Implemented loading states for profile updates
