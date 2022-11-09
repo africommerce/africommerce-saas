@@ -30,6 +30,9 @@ import { SellerProducts } from '../pages/seller/SellerProducts';
 import { SellerPos } from '../pages/seller/SellerPos';
 import { SellerUploads } from '../pages/seller/SellerUploads';
 import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
+import Dashboard from '../pages/user/userDashboard';
+import  PurchaseHistoryMain  from "../pages/PurchaseHistoryMain";
+import Download from '../pages/Download';
 
 export const MasterRoutes = () => {
   //const [isLogged, setIsLogged] = useState(false);
@@ -38,11 +41,11 @@ export const MasterRoutes = () => {
       <Route path="/" element={<Home />} />
       <Route path="/admin" element={<AdminDashboard />} />
       <Route path="/auth-seller" element={<AuthSeller />}>
-        <Route path="orders" element={<SellerOrders/>} ></Route>
-        <Route path="products" element={<SellerProducts/>} ></Route>
-        <Route path='pos' element={<SellerPos/>} ></Route>
-        <Route path="uploads" element={<SellerUploads/>} ></Route>
-        <Route path="auction" element={<SellerAuction/>} ></Route>
+        <Route path="orders" element={<SellerOrders />}></Route>
+        <Route path="products" element={<SellerProducts />}></Route>
+        <Route path="pos" element={<SellerPos />}></Route>
+        <Route path="uploads" element={<SellerUploads />}></Route>
+        <Route path="auction" element={<SellerAuction />}></Route>
       </Route>
       <Route path="/product/:id" element={<ProductDetail />} />
       <Route path="/flash-sale" element={<FlashSale />} />
@@ -53,11 +56,14 @@ export const MasterRoutes = () => {
       <Route path="/all-brands" element={<AllBrand />} />
       <Route path="/seller" element={<Seller />} />
       <Route path="coupons" element={<Coupons />} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/return-policy" element={<ReturnPolicy />} />
       <Route path="/support-policy" element={<SupportPolicy />} />
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/sellers-policy" element={<SellersPolicy />} />
+      <Route path="/purchase-history" element={<PurchaseHistoryMain />} />
+      <Route path="/download" element={<Download />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/auth" element={<Registration />} />
       <Route path="/auth/login" element={<Login />} />
