@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+
 import styled from 'styled-components';
 import { AdminRoutes } from '../../pages/admin/AdminRoutes';
 
@@ -21,18 +21,34 @@ const Container = styled.div`
     }
   }
 `;
+// SALES PAGE
+export const AllOrders = () => {
+  return <div>AllOrders</div>;
+};
 
+export const InHouseOrders = () => {
+  return <div>InHouseOrders</div>;
+};
+
+export const PickUpPoint = () => {
+  return <div>PickUpPoint</div>;
+};
+
+export const SellerOrders = () => {
+  return <div>SellerOrders</div>;
+};
+
+// END OF SALES PAGE
 export const Body = () => {
   return (
-    <Container>
-      <div className="nav">
-        <div className="nav__wrapper">
-          {' '}
-          <h1 style={{ background: 'white', height: '50px' }}>Top Nav</h1>
-          <AdminRoutes />
-          <Outlet />
+
         </div>
-      </div>
-    </Container>
+      </Container>
+
+      <AllOrders />
+      <InHouseOrders />
+      <PickUpPoint />
+      <SellerOrders />
+    </>
   );
 };
