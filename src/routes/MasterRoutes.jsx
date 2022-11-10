@@ -1,4 +1,3 @@
-// import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import { Login } from '../components/auth/Login';
@@ -35,7 +34,6 @@ import  PurchaseHistoryMain  from "../pages/PurchaseHistoryMain";
 import Download from '../pages/Download';
 
 export const MasterRoutes = () => {
-  //const [isLogged, setIsLogged] = useState(false);
   return (
     <Routes>
       <Route path="/" element={<Home />} />
