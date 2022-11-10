@@ -1,1 +1,1 @@
-Implemented loading states for profile updates
+Added toast notifications for update status
