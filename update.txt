@@ -1,1 +1,1 @@
-Added toast notifications for update status
+Fixed form re-render issues after update
