@@ -1,7 +1,7 @@
 // All components for this page are to be created in components/user folder
-import React from 'react'
-import DashboardSidebar from "../DashboardSidebar";
-import {NavLink} from "react-router-dom";
+import React from 'react';
+import DashboardSidebar from './DashboardSidebar';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -15,13 +15,12 @@ const Container = styled.div`
   background: rgb(242, 243, 248);
 `;
 
-
 function Dashboard() {
   return (
     <div>
-       <DashboardSidebar />
+      <DashboardSidebar />
     </div>
-  )
+  );
 }
 
 export default Dashboard;

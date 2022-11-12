@@ -6,7 +6,7 @@ import Registration from '../components/auth/Registration';
 import { AboutUs } from '../pages/AboutUs';
 import { AdminDashboard } from '../pages/admin/AdminDashboard';
 import { AuthSeller } from '../pages/seller/AuthSeller';
-import { AffliatePartner } from '../pages/AffliatePartner';
+import { AffliatePartner } from '../pages/user/AffliatePartner';
 import { AllBrand } from '../pages/AllBrand';
 import { AllCategories } from '../pages/AllCategories';
 import { AllSellers } from '../pages/AllSellers';
@@ -23,15 +23,23 @@ import { SellersPolicy } from '../pages/SellersPolicy';
 import { SupportPolicy } from '../pages/SupportPolicy';
 import { Terms } from '../pages/Terms';
 import { TrackOrder } from '../pages/TrackOrder';
-import { WishList } from '../pages/WishList';
+import { WishList } from '../pages/user/WishList';
 import { SellerOrders } from '../pages/seller/SellerOrders';
 import { SellerProducts } from '../pages/seller/SellerProducts';
 import { SellerPos } from '../pages/seller/SellerPos';
 import { SellerUploads } from '../pages/seller/SellerUploads';
 import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
 import Dashboard from '../pages/user/userDashboard';
-import  PurchaseHistoryMain  from "../pages/PurchaseHistoryMain";
-import Download from '../pages/Download';
+import Compare from '../pages/user/Compare';
+import ClassifiedProduct from '../pages/user/ClassifiedProduct';
+import PurchaseHistoryMain from '../pages/user/PurchaseHistoryMain';
+import Auction from '../pages/user/Auction';
+import Conversation from '../pages/user/Conversation';
+import Download from '../pages/user/Download';
+import Wallet from '../pages/user/Wallet';
+import EarningPoint from "../pages/user/EarningPoint";
+import ManageProfile from '../pages/user/ManageProfile';
+import SupportTicket from '../pages/user/SupportTicket';
 
 export const MasterRoutes = () => {
   return (
@@ -60,16 +68,29 @@ export const MasterRoutes = () => {
       <Route path="/about-us" element={<AboutUs />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/sellers-policy" element={<SellersPolicy />} />
-      <Route path="/purchase-history" element={<PurchaseHistoryMain />} />
-      <Route path="/download" element={<Download />} />
       <Route path="/terms" element={<Terms />} />
       <Route path="/auth" element={<Registration />} />
       <Route path="/auth/login" element={<Login />} />
       <Route path="/partner" element={<AffliatePartner />} />
-      <Route path="/wishlist" element={<WishList />} />
       <Route path="/track-order" element={<TrackOrder />} />
       <Route path="/order-history" element={<OrderHistory />} />
       <Route path="/allbrand" element={<AllBrand />} />
+      <Route path="/user" element={<Dashboard />}>
+        {' '}
+      </Route>
+      <Route path="/user/purchase-history" element={<PurchaseHistoryMain />} />
+      <Route path="/user/download" element={<Download />} />
+      <Route path="/user/sent-refund" element={<sentRefundRequest />} />
+      <Route path="/user/wishlist" element={<WishList />} />
+      <Route path="/user/compare" element={<Compare />} />
+      <Route path="/user/classified-products" element={<ClassifiedProduct />} />
+      <Route path="/user/auction" element={<Auction />} />
+      <Route path="/user/conversation" element={<Conversation />} />
+      <Route path="/user/wallet" element={<Wallet />} />
+      <Route path="/user/earning-point" element={<EarningPoint />} />
+      <Route path="/user/affliate" element={<AffliatePartner />} />
+      <Route path="/user/support" element={<SupportTicket />} />
+      <Route path="/user/manageprofile" element={<ManageProfile />} />
       <Route path="*" element={<p>Page not found</p>} />
     </Routes>
   );
