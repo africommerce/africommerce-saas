@@ -1,1 +1,1 @@
-Optimized API request with debounce
+Improved accessibility for form inputs
