@@ -28,7 +28,7 @@ export const Layout = (props) => {
   const location = useLocation();
   return (
     <Container>
-      {location.pathname === '/admin' ||
+      {location.pathname.includes('/admin') ||
       location.pathname.includes("/auth-seller") ? (
         <Children2>{props.children}</Children2>
       ) : (
