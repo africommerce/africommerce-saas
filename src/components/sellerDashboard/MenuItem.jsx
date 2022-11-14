@@ -129,27 +129,30 @@ export const SellerMenu = () => {
 
   return (
     <>
-      <span
-        id="seller-btn"
-        aria-controls={open ? 'seller-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        style={{ marginLeft: '30px', cursor: 'pointer', fontSize: '14px' }}
-      >
-        <img
-          alt="sellerimage"
-          style={{
-            objectFit: 'cover',
-            width: '100%',
-            height: '100%',
-            maxWidth: '40px',
-            borderRadius: '50%',
-            marginRight: '10px',
-          }}
-          src={sellerImg}
-        ></img>
-        Filon Asset Store
+      <span>
+        <span
+          id="seller-btn"
+          aria-controls={open ? 'seller-menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+          style={{ marginLeft: '30px', cursor: 'pointer', fontSize: '14px' }}
+        >
+          <img
+            alt="sellerimage"
+            style={{
+              width: '100%',
+              maxWidth: '40px',
+              borderRadius: '50%',
+              marginRight: '10px',
+            }}
+            src={sellerImg}
+          ></img>
+        <span style={{ fontSize: '13px', marginTop:"-100px" }}>
+          Filon Asset Store
+          <small style={{ fontSize: '10px', marginLeft: '5px' }}>seller</small>
+        </span>
+        </span>
       </span>
       <Menu
         id="seller-menu"
