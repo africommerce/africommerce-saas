@@ -1,4 +1,3 @@
-
 import styled from 'styled-components';
 import { AdminRoutes } from '../../pages/admin/AdminRoutes';
 
@@ -41,9 +40,8 @@ export const SellerOrders = () => {
 // END OF SALES PAGE
 export const Body = () => {
   return (
-
-        </div>
-      </Container>
+    <>
+      <Container />
 
       <AllOrders />
       <InHouseOrders />
