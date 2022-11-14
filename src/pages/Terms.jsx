@@ -39,18 +39,7 @@ margin-bottom: 2%;
 const P3 = styled.h3`
 margin-bottom: 2%;
 `
-const P4 = styled.p`
-margin-bottom: 2%;
-font-family: Rubik, Arial, sans-serif;
-font-size: 14px;
-font-weight: bold;
-font-size: 15px;
-line-height: 21px;
-color: rgb(44, 62, 80);
-`
-const P5 = styled.ul`
-margin-bottom: 2%;
-`
+
 const P6 = styled.span`
 margin-left: 1%;
 `
