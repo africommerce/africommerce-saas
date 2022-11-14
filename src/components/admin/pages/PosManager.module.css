@@ -1,0 +1,81 @@
+.container {
+    display: flex;
+    position: sticky;
+    left: 0;
+    margin: 0 auto;
+    max-width: 100%;
+    gap: 1rem;
+    height: auto;
+    padding: 1rem;
+    max-height: 100vh;
+}
+
+#container {
+    position: sticky;
+    top: 80px;
+    left: 10px;
+
+}
+
+.left {
+    flex: 1.5;
+    position: relative;
+
+}
+
+.left .search_container {
+    /* background: red; */
+    position: fixed;
+    display: flex;
+
+}
+
+.search_container {
+    display: flex;
+    gap: 1rem;
+}
+
+.search_input {
+    flex: 2;
+}
+
+.search_select {
+    flex: 1;
+}
+
+.search_brand {
+    flex: 1;
+}
+
+.product_container {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    position: sticky;
+    margin-top: 4rem;
+    overflow: hidden;
+    /* background: green; */
+
+}
+
+.product_contents {
+    display: flex;
+    background: red;
+    width: 100%;
+    height: auto;
+}
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+
+    width: inherit;
+    overflow-y: scroll;
+}
+
+
+.right {
+    flex: 1;
+    background: hotpink;
+}

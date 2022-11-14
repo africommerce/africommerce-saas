@@ -37,23 +37,7 @@ export const MasterRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       {/* <Route path="admin/" element={<AdminDashboard />} /> */}
-      <Route path="/admin/*" element={<AdminDashboard />}>
-        {/* <Route path="product/*" element={<h1>create</h1>}>
-          <Route path="inhouse" element={<h1>in house</h1>} />
-          <Route path="product/seller" element={<h1>Seller Products</h1>} />
-          <Route
-            path="product/digital-products"
-            element={<h1>Digital Product</h1>}
-          />
-          <Route path="product/bulk-upload" element={<h1>bulk-upload</h1>} />
-          <Route path="product/bulk-export" element={<h1>bulk-upload</h1>} />
-          <Route path="product/category" element={<h1>Category</h1>} />
-          <Route path="product/brands" element={<h1>Brands</h1>} />
-          <Route path="product/attributes" element={<h1>atrribute</h1>} />
-          <Route path="product/colors" element={<h1>Color</h1>} />
-          <Route path="product/reviews" element={<h1>Reviews</h1>} />
-        </Route> */}
-      </Route>
+      <Route path="/admin/*" element={<AdminDashboard />}></Route>
       <Route path="/admin/auction-product/*" element={<AdminDashboard />}>
         <Route path="create" element={<h1>Create Auction</h1>} />
         <Route path="all-product" element={<h1>all-product</h1>} />
