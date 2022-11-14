@@ -1,5 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { AdminHome } from '../../components/admin/pages/AdminHome';
+import { PosManager } from '../../components/admin/pages/PosManager';
 import { CreateProduct } from '../../components/products/CreateProduct';
 
 export const AdminRoutes = () => {
@@ -7,7 +9,11 @@ export const AdminRoutes = () => {
   return (
     <div>
       <Routes>
-        {/* <Route path="product/*" element={<h1>Hello</h1>}></Route> */}
+        <Route path="pos/*">
+          <Route path="manager" element={<PosManager />} />
+          <Route path="configuration" element={<h1>configuration</h1>} />
+        </Route>
+
         <Route path="product/*">
           <Route path="create" element={<CreateProduct />} />
           <Route path="add" element={<h1>add-product</h1>} />
@@ -131,7 +137,7 @@ export const AdminRoutes = () => {
           <Route path="create" element={<h1>create-Addon</h1>} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
-        <Route path="*" element={<h1>Page not found</h1>} />
+        <Route path="*" element={<AdminHome />} />
       </Routes>
     </div>
   );
