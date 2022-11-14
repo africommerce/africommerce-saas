@@ -1,16 +1,20 @@
 import { HomeOutlined } from '@mui/icons-material';
+import { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { AdminNavs } from './Navs';
 
 const Container = styled.div`
-  display: flex;
+  display: ${(props) => (props.collapse ? 'none' : 'flex')};
   flex-direction: column;
-  flex: 1.3;
+  width: 15%;
+  transition: all 300ms ease;
 
   .wrapper {
     display: flex;
+    transition: all 300ms ease;
     position: fixed;
     flex-direction: column;
     scroll-snap-type: mandatory;
@@ -21,7 +25,7 @@ const Container = styled.div`
     scrollbar-color: red;
     background: rgb(20, 20, 35);
     position: relative;
-    max-height: 100vh;
+    max-height: 100%;
     overflow-y: scroll;
     gap: 1rem;
     &::-webkit-scrollbar-corner {
@@ -86,8 +90,11 @@ const Container = styled.div`
   }
 `;
 export const SideNav = () => {
+  const menu = useSelector((state) => state.ui);
+
+  const [collapse, setCollapese] = useState(false);
   return (
-    <Container>
+    <Container collapse={menu.adminCollapse}>
       <div className="wrapper">
         <div className="logo">
           <img src="../../assets/logo.png" alt="" />
