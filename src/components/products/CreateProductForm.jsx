@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import AutocompleteSelect from '../admin/ui/AutoCompleteSelect';
+import SelectUI from '../admin/ui/SelectUI';
 const Container = styled.div`
   display: flex;
   gap: 1rem;
@@ -107,16 +109,18 @@ export default function CreateProductForm() {
               position: 'relative',
             }}
           >
-            <select
-              type="text"
-              className="formInput"
-              id="productName"
-              placeholder="Product Name"
-              required
-              style={{ width: '100%', display: 'flex', gap: '1rem' }}
-              defaultValue="Women Clothing & Fashion"
-            ></select>
-            {/* <div style={{}}>Hello</div> */}
+            <AutocompleteSelect
+              options={[
+                { title: 'The Shawshank Redemption' },
+                { title: 'The Godfather' },
+                { title: 'The Godfather: Part II' },
+                { title: 'The Dark Knight' },
+                { title: '12 Angry Men' },
+                { title: "Schindler's List" },
+                { title: 'Pulp Fiction' },
+              ]}
+              label=""
+            />
           </div>
         </div>
       </form>
