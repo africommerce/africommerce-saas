@@ -1,1 +1,1 @@
-Tested user profile update functionality
+Enhanced error messages for failed updates
