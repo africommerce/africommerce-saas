@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { GiUsaFlag } from 'react-icons/gi'
 import styleded from 'styled-components';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -9,6 +10,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import PublicIcon from '@mui/icons-material/Public';
+import PrintOutlinedIcon from '@mui/icons-material/PrintOutlined';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 
@@ -112,8 +115,9 @@ const Container = styleded.div`
     );
   
     return (
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+      <Box sx={{ flexGrow: 1, }}>
+        <AppBar sx=
+        {{bgcolor: '#fff', color: '#000'}} position="static">
           <Toolbar>
             <IconButton
               size="large"
@@ -124,6 +128,24 @@ const Container = styleded.div`
             >
               <MenuIcon />
             </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <PublicIcon />
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="start"
+              color="inherit"
+              aria-label="open drawer"
+              sx={{ mr: 2 }}
+            >
+              <PrintOutlinedIcon />
+            </IconButton>
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <IconButton
@@ -131,10 +153,19 @@ const Container = styleded.div`
                 aria-label="show 17 new notifications"
                 color="inherit"
               >
-                <Badge badgeContent={17} color="error">
+                <Badge badgeContent={0} color="error">
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
+
+              <IconButton
+                size="small"
+                color="inherit"
+              >
+                <GiUsaFlag/>
+              </IconButton>
+              
+
               <IconButton
                 size="large"
                 edge="end"
