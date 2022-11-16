@@ -19,6 +19,7 @@ const Container = styleded.div`
 `;
 // SALES PAGE
 
+// header bar
   function PrimarySearchAppBar() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -165,6 +166,8 @@ const Container = styleded.div`
       </Box>
     );
   }
+
+  // end of header bar
 export const AllOrders = () => {
   return (
     <>
