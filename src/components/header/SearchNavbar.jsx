@@ -4,20 +4,16 @@ import SearchIcon from '@mui/icons-material/Search';
 import FlipCameraAndroidIcon from '@mui/icons-material/FlipCameraAndroid';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-// import { useDispatch, useSelector } from 'react-redux';
-// import { cartAction } from '../../store/cart-slice';
 import { Badge } from '@mui/material';
 
 const SearchNavbars = styled.div`
-  width: 100%;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 2em;
   justify-content: space-between;
   max-width: 90%;
   margin: 0 auto;
-  padding: 1em 0;
-  max-width: 100%;
+  padding: 1em;
 
   border-color: var(--soft-secondary) !important;
   border-bottom: 1px solid #dee2e6 !important;
@@ -34,16 +30,17 @@ const SearchContainer = styled.div`
   display: flex;
   flex: 3;
   align-items: center;
+  margin: 0 !important;
+  
 
   .form-group-container {
     display: flex;
     align-items: center;
 
     .form-search input {
-      height: 20px;
       padding: 0.73em;
       border: 1px solid #eee;
-      width: 50em;
+      width: 30em;
       font-size: 15px;
       color: gray;
       border-radius: 4px 0 0 4px;
@@ -69,18 +66,24 @@ const SearchContainer = styled.div`
 const Options = styled.div`
   width: 100%;
   display: flex;
+  flex-direction: row;
   flex: 1;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
 
   .options-list {
     display: flex;
     align-items: center;
-    gap: 0.4em;
+    gap: 0.2em;
   }
 `;
 const Logo = styled.img`
-  max-width: 200px;
+  max-width: 150px;
+`;
+
+const Iname = styled.p`
+  font-family: 'Open Sans', sans-serif !important;
+  font-weight: 400;
 `;
 export const SearchNavbar = () => {
   // CART FROM STORE CART SLICE
@@ -109,9 +112,7 @@ export const SearchNavbar = () => {
             <FlipCameraAndroidIcon />
           </div>
           <div>
-            <div>
-              <p>Compare</p>
-            </div>
+            <Iname>Compare</Iname>
           </div>
         </div>
         <div className="options-list">
@@ -119,9 +120,7 @@ export const SearchNavbar = () => {
             <FavoriteBorderIcon />
           </div>
           <div>
-            <div>
-              <p>Wishlist</p>
-            </div>
+            <Iname>Wishlist</Iname>
           </div>
         </div>
         <div className="options-list" style={{ cursor: 'pointer' }}>
@@ -131,9 +130,7 @@ export const SearchNavbar = () => {
             </Badge>
           </div>
           <div>
-            <div>
-              <p>Cart</p>
-            </div>
+            <Iname>Cart</Iname>
           </div>
         </div>
       </Options>
