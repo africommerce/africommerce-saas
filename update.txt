@@ -1,1 +1,1 @@
-Enhanced error messages for failed updates
+Fixed UI inconsistencies in profile section
