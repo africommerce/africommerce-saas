@@ -29,17 +29,18 @@ import { SellerProducts } from '../pages/seller/SellerProducts';
 import { SellerPos } from '../pages/seller/SellerPos';
 import { SellerUploads } from '../pages/seller/SellerUploads';
 import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
-import Dashboard from '../pages/user/userDashboard';
+import  Dashboard from '../pages/user/userDashboard';
 import Compare from '../pages/user/Compare';
 import ClassifiedProduct from '../pages/user/ClassifiedProduct';
 import PurchaseHistoryMain from '../pages/user/PurchaseHistoryMain';
-import Auction from '../pages/user/Auction';
+import AuctionBidded from '../pages/user/Auction.bidded';
 import Conversation from '../pages/user/Conversation';
 import Download from '../pages/user/Download';
 import Wallet from '../pages/user/Wallet';
 import EarningPoint from "../pages/user/EarningPoint";
 import ManageProfile from '../pages/user/ManageProfile';
 import SupportTicket from '../pages/user/SupportTicket';
+import SentRefundRequest from '../pages/user/sentRefundRequest';
 
 export const MasterRoutes = () => {
   return (
@@ -62,7 +63,6 @@ export const MasterRoutes = () => {
       <Route path="/all-brands" element={<AllBrand />} />
       <Route path="/seller" element={<Seller />} />
       <Route path="coupons" element={<Coupons />} />
-      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/return-policy" element={<ReturnPolicy />} />
       <Route path="/support-policy" element={<SupportPolicy />} />
       <Route path="/about-us" element={<AboutUs />} />
@@ -75,16 +75,17 @@ export const MasterRoutes = () => {
       <Route path="/track-order" element={<TrackOrder />} />
       <Route path="/order-history" element={<OrderHistory />} />
       <Route path="/allbrand" element={<AllBrand />} />
-      <Route path="/user" element={<Dashboard />}>
-        {' '}
-      </Route>
       <Route path="/user/purchase-history" element={<PurchaseHistoryMain />} />
       <Route path="/user/download" element={<Download />} />
-      <Route path="/user/sent-refund" element={<sentRefundRequest />} />
+      <Route path="/user/sent-refund" element={<SentRefundRequest />} />
       <Route path="/user/wishlist" element={<WishList />} />
       <Route path="/user/compare" element={<Compare />} />
       <Route path="/user/classified-products" element={<ClassifiedProduct />} />
-      <Route path="/user/auction" element={<Auction />} />
+      <Route path="/user/dashboard" element={<Dashboard />} />
+      <Route path="/user/auction" element={<AuctionBidded />}>
+        <Route path="/user/auction/auction-bidded" element={<AuctionBidded/>} />
+        <Route path="/user/auction/purchase-history" element={<PurchaseHistoryMain/>} />
+      </Route>
       <Route path="/user/conversation" element={<Conversation />} />
       <Route path="/user/wallet" element={<Wallet />} />
       <Route path="/user/earning-point" element={<EarningPoint />} />

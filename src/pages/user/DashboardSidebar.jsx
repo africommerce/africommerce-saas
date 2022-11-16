@@ -17,6 +17,7 @@ import styled from 'styled-components';
 const Wraps = styled.div`
   margin: 1rem auto;
   padding: 1rem;
+  font-family: 'Open Sans', sans-serif !important;
 `;
 
 const Nav = styled(NavLink)`
@@ -34,10 +35,10 @@ const Container = styled.div`
   box-sizing: border-box;
   position: relative;
   top: 0;
-  padding: 2rem;
+  padding: 1rem;
   align-items:center;
   justify-content: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif !important;
   font-size: 13px;
   line-height: 19.5px;
   color: rgb(99, 102, 107);
@@ -50,7 +51,7 @@ const Content = styled.div`
   margin-bottom: 3%;
   /* margin: 0 auto; */
   &:hover {
-    border: 1pc solid #fbe0da;
+    /* border: 1pc solid #fbe0da; */
     background-color: #fbe0da;
   }
 `;
@@ -72,55 +73,58 @@ function DashboardSidebar() {
         <Content>
           {' '}
           <RequestPageIcon />
-          <Nav to="/purchase-history">Purchase History</Nav>
+          <Nav to="/user/purchase-history">Purchase History</Nav>
         </Content>
         <Content>
           <DownloadIcon />
-          <Nav to="downloads">Download</Nav>
+          <Nav to="/user/download">Download</Nav>
         </Content>
         <Content>
           <FastRewindIcon />
-          <Nav>Sent Refund Request</Nav>
+          <Nav to="/user/sent-refund">Sent Refund Request</Nav>
         </Content>
         <Content>
           <FavoriteBorderIcon />
-          <Nav to="/wishlist">Wishlist</Nav>
+          <Nav to="/user/wishlist">Wishlist</Nav>
         </Content>
         <Content>
           <AutorenewIcon />
-          <Nav>Compare</Nav>
+          <Nav to="/user/compare">Compare</Nav>
         </Content>
         <Content>
           <DiamondIcon />
-          <Nav>Classified Products</Nav>
+          <Nav to="/user/classified-products">Classified Products</Nav>
         </Content>
         <Content>
           <GavelIcon />
-          <Nav>Auction</Nav>
+          <Nav display="flex">
+            <Nav to="/user/auction-bidded">Bidded Products</Nav>
+            <Nav to="/user/purchase-history">Purchase History</Nav>
+          </Nav>
         </Content>
         <Content>
           <ChatIcon />
-          <Nav>Conversations</Nav>
+          <Nav to="/user/conversation">Conversations</Nav>
         </Content>
         <Content>
           <AttachMoneyIcon />
-          <Nav>My Wallet</Nav>
+          <Nav to="/user/wallet">My Wallet</Nav>
         </Content>
         <Content>
           <AttachMoneyIcon />
-          <Nav>Earning Points</Nav>
+          <Nav to="/user/earning-point">Earning Points</Nav>
         </Content>
         <Content>
           <AttachMoneyIcon />
-          <Nav>Affliate</Nav>
+          <Nav to="/user/affliate">Affliate</Nav>
         </Content>
         <Content>
           <SupportIcon />
-          <Nav>Support Ticket</Nav>
+          <Nav to="/user/support">Support Ticket</Nav>
         </Content>
         <Content>
           <PersonIcon />
-          <Nav>Manage Profile</Nav>
+          <Nav to="/user/manageprofile">Manage Profile</Nav>
         </Content>
       </Container>
     </Wraps>
