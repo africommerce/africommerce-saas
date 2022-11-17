@@ -1,7 +1,3 @@
-import { Divider } from '@mui/material';
-import { Pie } from 'react-chartjs-2';
-import AdminProducts from '../../AdminProduct';
-import Products from '../../products/Products';
 import { BarChart } from '../ui/BarChart';
 import { PieChart } from '../ui/PieChart';
 import classes from './AdminHome.module.css';
