@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import classes from '../../styles/purchase.module.css';
-import Paginate from '../../components/user/paginate';
+import Paginate from './paginate';
 const PurchaseHistory = () => {
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState([]);
@@ -213,11 +213,10 @@ const PurchaseHistory = () => {
   useEffect(() => {
     setState(data);
     setLoading(false);
-  }, []);
+  });
 
   const lastIndex = currentPage * perPage;
   const firstIndex = lastIndex - perPage;
-  // console.log(lastIndex, firstIndex);
   const current = state.slice(firstIndex, lastIndex);
   const paginate = (pageNumber) => {
     setCurrentPage(pageNumber);

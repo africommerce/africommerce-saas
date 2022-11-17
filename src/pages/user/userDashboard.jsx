@@ -17,7 +17,6 @@ const Container = styled.div`
   position: relative;
   top: 0;
   margin: 0 auto;
-  /* margin-top: -170px; */
   background: rgb(242, 243, 248);
 `;
 
@@ -35,7 +34,6 @@ const Card2 = styled.div`
   margin-left: 1rem;
 `;
 const Case = styled.div`
-  /* background-color: #fff; */
   display: flex;
   flex-direction: row;
 `;

@@ -15,7 +15,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import styled from 'styled-components';
 
 const Wraps = styled.div`
-  margin: 1rem auto;
+  margin: 0 auto;
   padding: 1rem;
   font-family: 'Open Sans', sans-serif !important;
 `;
@@ -23,6 +23,7 @@ const Wraps = styled.div`
 const Nav = styled(NavLink)`
   margin-left: 20px;
   text-decoration: none;
+  box-sizing: border-box;
 `;
 
 const PersonDetails = styled.div`
@@ -32,6 +33,7 @@ const PersonDetails = styled.div`
 `;
 
 const Container = styled.div`
+margin: 0 auto;
   box-sizing: border-box;
   position: relative;
   top: 0;
@@ -42,16 +44,13 @@ const Container = styled.div`
   font-size: 13px;
   line-height: 19.5px;
   color: rgb(99, 102, 107);
-  /* margin: 0 auto; */
   background: #fff;
 `;
 
 const Content = styled.div`
   text-decoration: none;
   margin-bottom: 3%;
-  /* margin: 0 auto; */
   &:hover {
-    /* border: 1pc solid #fbe0da; */
     background-color: #fbe0da;
   }
 `;
@@ -61,7 +60,7 @@ function DashboardSidebar() {
   return (
     <Wraps>
       <PersonDetails>
-        <img src="" />
+        <img src="" alt="person's page"/>
         <h3>Paul K. Jensen</h3>
         <p>208-295-8053</p>
       </PersonDetails>
@@ -97,9 +96,7 @@ function DashboardSidebar() {
         </Content>
         <Content>
           <GavelIcon />
-          <Nav display="flex">
-            <Nav to="/user/auction-bidded">Bidded Products</Nav>
-            <Nav to="/user/purchase-history">Purchase History</Nav>
+          <Nav to="/user/auction-bidded" >Auction
           </Nav>
         </Content>
         <Content>

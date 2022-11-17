@@ -92,10 +92,7 @@ export const MasterRoutes = () => {
       <Route path="/user/compare" element={<Compare />} />
       <Route path="/user/classified-products" element={<ClassifiedProduct />} />
       <Route path="/user/dashboard" element={<Dashboard />} />
-      <Route path="/user/auction" element={<AuctionBidded />}>
-        <Route path="/user/auction/auction-bidded" element={<AuctionBidded/>} />
-        <Route path="/user/auction/purchase-history" element={<PurchaseHistoryMain/>} />
-      </Route>
+      <Route path="/user/auction" element={<AuctionBidded />}></Route>
       <Route path="/user/conversation" element={<Conversation />} />
       <Route path="/user/wallet" element={<Wallet />} />
       <Route path="/user/earning-point" element={<EarningPoint />} />
