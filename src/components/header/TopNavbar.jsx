@@ -44,7 +44,6 @@ const List2 = styled.div`
 
   p {
     font-size: 13px;
-    font-size: 13px;
   }
 `;
 
