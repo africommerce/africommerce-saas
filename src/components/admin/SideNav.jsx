@@ -1,5 +1,4 @@
 import { HomeOutlined } from '@mui/icons-material';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
@@ -92,7 +91,6 @@ const Container = styled.div`
 export const SideNav = () => {
   const menu = useSelector((state) => state.ui);
 
-  const [collapse, setCollapese] = useState(false);
   return (
     <Container collapse={menu.adminCollapse}>
       <div className="wrapper">
