@@ -18,11 +18,6 @@ const Body1 = styled.div`
   gap: 200px;
 `;
 
-const Body2 = styled.div`
-  display: flex;
-  gap: 200px;
-`;
-
 const BodyContent = styled.ul`
   margin-left: 20px;
   margin-top: 30px;
@@ -44,7 +39,6 @@ function CarCategory() {
   return (
     <Container>
       <HeadingOne>Automobiles & Motorcycles</HeadingOne>
-
       <Body1>
         <BodyContent>
           <BodyHeading>Four Seaters</BodyHeading>
@@ -52,7 +46,6 @@ function CarCategory() {
           <BodyList>Honda</BodyList>
           <BodyList>Audi</BodyList>
         </BodyContent>
-
         <BodyContent>
           <BodyHeading>SUV</BodyHeading>
           <BodyList>Luxury SUV</BodyList>
@@ -66,7 +59,6 @@ function CarCategory() {
           <BodyList>Choppers</BodyList>
         </BodyContent>
       </Body1>
-
     </Container>
   );
 }
