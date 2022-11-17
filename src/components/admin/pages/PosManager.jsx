@@ -1,9 +1,4 @@
-import {
-  ArrowDropDown,
-  ArrowDropUp,
-  ArrowUpward,
-  FireTruck,
-} from '@mui/icons-material';
+import { ArrowDropDown, ArrowDropUp, FireTruck } from '@mui/icons-material';
 import { Button, Divider } from '@mui/material';
 import React from 'react';
 import { useState } from 'react';

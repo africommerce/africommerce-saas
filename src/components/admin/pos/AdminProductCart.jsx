@@ -1,11 +1,8 @@
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Add } from '@mui/icons-material';
-import product from '../../../assests/admin/earphones_a_1.webp';
 import classes from './AdminProductCart.module.css';
 import { useState } from 'react';
 import styled from 'styled-components';
@@ -38,7 +35,7 @@ const Container = styled(Card)`
   }
 `;
 export const AdminProductCart = ({ title, inStock, price, image }) => {
-  const [showHover, setShowHover] = useState(false);
+  const [showHover] = useState(false);
   return (
     <>
       <Container className={classes.container}>
