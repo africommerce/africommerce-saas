@@ -1,1 +1,1 @@
-Added placeholder images for profile avatars
+Implemented caching for faster profile loading
