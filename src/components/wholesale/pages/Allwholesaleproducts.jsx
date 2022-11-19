@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import AllWholeSaleProductsTable from '../AllWholeSaleProductsTable';
 
 import classes from './Allwholesaleproducts.module.css';
