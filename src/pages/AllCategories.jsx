@@ -14,8 +14,8 @@ const Categories = styled.section`
 
 export const AllCategories = () => {
   return (
-    <Categories>
-      <CategoryHeader />
+    <Categories >
+      <CategoryHeader/>
       <WomenCategory />
       <MenCategory />
       <TechCategory />

@@ -2,14 +2,29 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto',
-    sans-serif !important;
+    sans-serif;
 
+
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 
 
 body {
   font-family: 'Roboto',
-    sans-serif !;
+    sans-serif ;
   background-color: #f2f3f8 !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;

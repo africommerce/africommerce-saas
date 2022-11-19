@@ -52,17 +52,8 @@ export const AdminNavs = () => {
         icon={<PlaylistAddCheck />}
         title="POS System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'POS Manager', link: 'pos/manager' },
+          { name: 'POS Configuration', link: 'pos/configuration' },
         ]}
       />
       <ProductMenu
@@ -70,16 +61,17 @@ export const AdminNavs = () => {
         title="Products"
         items={[
           { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
+          { name: 'All Product', link: 'product/all-product' },
           { name: 'In House Products', link: 'product/inhouse' },
           { name: 'Sellers Product', link: 'product/seller-products' },
           { name: 'Digital Products', link: 'product/digital-products' },
           { name: 'Bulk Import', link: 'product/bulk-import' },
           { name: 'Bulk Export', link: 'product/bulk-export' },
+          { name: 'Categories', link: 'product/categories' },
           { name: 'Brands', link: 'product/brand' },
           { name: 'Attributes', link: 'product/attributes' },
           { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Reviews', link: 'product/reviews' },
         ]}
       />
       <AuctionMenu
