@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
-import { Outlet } from 'react-router-dom';
-import { Grid } from '@mui/material';
+import { Outlet, useLocation } from 'react-router-dom';
+import { Grid, Box } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 import { Footer } from '../../components/sellerDashboard/Footer';
 import { Header } from '../../components/sellerDashboard/Header';
 import SideDrawer from '../../components/sellerDashboard/Drawer';
+import { SellerDashboard } from './SellerDashboard';
 
 export const AuthSeller = (props) => {
+  const location = useLocation()
   const theme = useTheme();
   const [open, setOpen] = useState(true);
   const handleDrawerOpen = () => {
@@ -15,32 +17,35 @@ export const AuthSeller = (props) => {
   const drawerwidth = 240;
   useEffect(() => {
     if (window.screen.width <= 768) {
-      setOpen((state) => false);
+      setOpen(false);
     }
   }, []);
 
   const handleDrawerClose = () => {
-    setOpen(false);
+    setOpen((state) => false);
   };
   return (
-    <Grid container>
-      <Grid item md={2} xs={12}>
-        <SideDrawer
-          open={open}
-          drawerwidth={drawerwidth}
-          handleDrawerClose={handleDrawerClose}
-        />
+    <Box style={{backgroundColor:"#f2f3f8"}}>
+      <Grid spacing={1} container>
+        <Grid item md={2} xs={12}>
+          <SideDrawer
+            theme={theme}
+            open={open}
+            drawerwidth={drawerwidth}
+            handleDrawerClose={handleDrawerClose}
+          />
+        </Grid>
+        <Grid item md={10} xs={12}>
+          <Header
+            theme={theme}
+            open={open}
+            drawerwidth={drawerwidth}
+            handleDrawerOpen={handleDrawerOpen}
+          />
+         {location.pathname === "/auth-seller" ?  <SellerDashboard/> : <Outlet />}
+          <Footer />
+        </Grid>
       </Grid>
-      <Grid item md={10} xs={12}>
-        <Header
-          theme={theme}
-          open={open}
-          drawerwidth={drawerwidth}
-          handleDrawerOpen={handleDrawerOpen}
-        />
-        <Outlet />
-        <Footer />
-      </Grid>
-    </Grid>
+    </Box>
   );
 };
