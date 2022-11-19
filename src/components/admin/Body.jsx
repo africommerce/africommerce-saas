@@ -38,30 +38,38 @@ const Container = styled.div`
 
 // AllOders
 
-  function createData(name, calories, fat, carbs, protein) {
+  function createData(name, Num, Customer, Seller, Amount, Delivery, method, status, Refund, Option) {
     return {
       name,
-      calories,
-      fat,
-      carbs,
-      protein,
+      Num,
+      Customer,
+      Seller,
+      Amount,
+      Delivery,
+      method,
+      status,
+      Refund,
+      Option,
     };
   }
 
   const rows = [
-    createData('Cupcake', 305, 3.7, 67, 4.3),
-    createData('Donut', 452, 25.0, 51, 4.9),
-    createData('Eclair', 262, 16.0, 24, 6.0),
-    createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-    createData('Gingerbread', 356, 16.0, 49, 3.9),
-    createData('Honeycomb', 408, 3.2, 87, 6.5),
-    createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-    createData('Jelly Bean', 375, 0.0, 94, 0.0),
-    createData('KitKat', 518, 26.0, 65, 7.0),
-    createData('Lollipop', 392, 0.2, 98, 0.0),
-    createData('Marshmallow', 318, 0, 81, 2.0),
-    createData('Nougat', 360, 19.0, 9, 37.0),
-    createData('Oreo', 437, 18.0, 63, 4.0),
+    createData('20220912-10085522	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$999.000', 'Delivered', 'Cash On Delivery', 'Paid', 'No Refund'),
+    createData('20220906-10185640 new	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$48.450	', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220906-10155759 new	', 1, 'Paul K. Jensen	', 'Adidas', '$76.000', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220829-07250551 new	', 1, 'Paul K. Jensen	', 'LOUIS VUITTON	', '$120.000', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220828-13023343 new	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$514.000', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220828-12334652	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$190.000', 'Delivered', 'Wallet', 'Paid', 'No Refund'),
+    createData('20220828-12322996 new	', 1, 'Paul K. Jensen	', 'Adidas', '$64.000', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220726-08275357 new	', 1, 'Paul K. Jensen	', 'Filon Asset Store	', '$113.300', 'Delivered', 'Cash On Delivery', 'Paid', 'No Refund'),
+    createData('20220726-08040637	', 1, 'Paul K. Jensen	', 'Filon Asset Store	', '$23.800', 'Delivered', 'Cash On Delivery', 'Paid', 'No Refund'),
+    createData('20220612-09093535 new	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$72.000', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220605-10102737 new	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$450.000', 'Delivered', 'Cash On Delivery', 'Paid', 'No Refund'),
+    createData('20220602-13204496	', 1, 'Paul K. Jensen	', 'Adidas', '$64.000', 'Delivered', 'Cash On Delivery', 'Paid', 'No Refund'),
+    createData('20220602-13132071 new	', 1, 'Paul K. Jensen	', 'LOUIS VUITTON	', '$80.000	', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220602-13120531 new	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$120.000	', 'Pending', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+    createData('20220428-06353357 new	', 1, 'Paul K. Jensen	', 'Inhouse Order	', '$36.720	', 'Picked Up', 'Cash On Delivery', 'Unpaid', 'No Refund'),
+  
   ];
 
   function descendingComparator(a, b, orderBy) {
@@ -96,34 +104,64 @@ const Container = styled.div`
 
   const headCells = [
     {
-      id: 'name',
+      id: 'Order Code:',
       numeric: false,
       disablePadding: true,
-      label: 'Dessert (100g serving)',
+      label: 'Order Code:',
     },
     {
-      id: 'calories',
+      id: 'Num. of Products',
       numeric: true,
       disablePadding: false,
-      label: 'Calories',
+      label: 'Num. of Products',
     },
     {
-      id: 'fat',
+      id: 'Customer',
       numeric: true,
       disablePadding: false,
-      label: 'Fat (g)',
+      label: 'Customer',
     },
     {
-      id: 'carbs',
+      id: 'Seller',
       numeric: true,
       disablePadding: false,
-      label: 'Carbs (g)',
+      label: 'Seller',
     },
     {
-      id: 'protein',
+      id: 'Amount',
       numeric: true,
       disablePadding: false,
-      label: 'Protein (g)',
+      label: 'Amount',
+    },
+    {
+      id: 'Delivery Status',
+      numeric: true,
+      disablePadding: false,
+      label: 'Delivery Status',
+    },
+    {
+      id: 'Payment method	',
+      numeric: true,
+      disablePadding: false,
+      label: 'Payment method	',
+    },
+    {
+      id: 'Payment Status	',
+      numeric: true,
+      disablePadding: false,
+      label: 'Payment Status	',
+    },
+    {
+      id: 'Refund',
+      numeric: true,
+      disablePadding: false,
+      label: 'Refund',
+    },
+    {
+      id: 'Options',
+      numeric: true,
+      disablePadding: false,
+      label: 'Options',
     },
   ];
 
@@ -365,10 +403,15 @@ const Container = styled.div`
                         >
                           {row.name}
                         </TableCell>
-                        <TableCell align="right">{row.calories}</TableCell>
-                        <TableCell align="right">{row.fat}</TableCell>
-                        <TableCell align="right">{row.carbs}</TableCell>
-                        <TableCell align="right">{row.protein}</TableCell>
+                        <TableCell align="right">{row.Num}</TableCell>
+                        <TableCell align="right">{row.Customer}</TableCell>
+                        <TableCell align="right">{row.Seller}</TableCell>
+                        <TableCell align="right">{row.Amount}</TableCell>
+                        <TableCell align="right">{row.Delivery}</TableCell>
+                        <TableCell align="right">{row.method}</TableCell>
+                        <TableCell align="right">{row.status}</TableCell>
+                        <TableCell align="right">{row.Refund}</TableCell>
+                        <TableCell align="right">{row.Option}</TableCell>
                       </TableRow>
                     );
                   })}
@@ -385,7 +428,7 @@ const Container = styled.div`
             </Table>
           </TableContainer>
           <TablePagination
-            rowsPerPageOptions={[5, 10, 25]}
+            rowsPerPageOptions={[5, 10, 15]}
             component="div"
             count={rows.length}
             rowsPerPage={rowsPerPage}
