@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ProductTable from '../ProductTable';
-import classes from './InHouseProduct.module.css';
-export const InHouseProduct = () => {
+import WholeSaleProductTable from '../WholeSaleProductTable';
+
+import classes from './AllWholeSale.module.css';
+
+export const AllWholeSale = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
     fetch('https://fakestoreapi.com/products?limit=5')
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         return setProduct(data);
       });
   }, [setProduct]);
   return (
     <div className={classes.container}>
       <div className={classes.product_header}>
-        <span className={classes.title}>All InHouse Product</span>
+        <span className={classes.title}>Whole Sale All Product</span>
         <span>
           {' '}
           <Link to="">
@@ -24,7 +25,7 @@ export const InHouseProduct = () => {
         </span>
       </div>
       <div>
-        <ProductTable data={product} />
+        <WholeSaleProductTable data={product} />
       </div>
     </div>
   );

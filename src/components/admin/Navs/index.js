@@ -91,37 +91,15 @@ export const AdminNavs = () => {
           { name: 'Product', link: 'product/products' },
         ]}
       />
-      <AuctionMenu
-        title="Auction Products"
-        items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
-        ]}
-      />
+
       <WholeSaleMenu
         icon={<AddShoppingCartOutlined />}
         title="Whole Sale Product"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Add New Wholesale Product', link: 'wholesale/create' },
+          { name: 'All wholesale product', link: 'wholesale/all' },
+          { name: 'In wouse wholesale products', link: 'wholesale/inhouse' },
+          { name: 'Sellers wholesale product', link: 'wholesale/seller' },
         ]}
       />
       <SalesMenu
