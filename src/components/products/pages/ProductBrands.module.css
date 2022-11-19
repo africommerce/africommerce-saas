@@ -151,7 +151,7 @@ td {
 
 }
 
-td span {
+/* td span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,13 +162,13 @@ td span {
     color: rgb(250, 169, 97);
     background: rgb(254, 235, 218);
     transition: all 300ms ease;
-}
+} */
 
-td span:hover {
+/* td span:hover {
     transform: scale(0.8);
     background: rgb(247, 123, 11);
     color: white;
-}
+} */
 
 .delete {
     color: red;
@@ -176,7 +176,7 @@ td span:hover {
 
 .delete:hover {
     transform: scale(0.8);
-    background: rgb(247, 123, 11);
+    background: rgb(f247, 123, 11);
     color: white;
 }
 

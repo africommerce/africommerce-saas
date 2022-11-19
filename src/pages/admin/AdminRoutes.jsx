@@ -15,6 +15,7 @@ import { ProductBrands } from '../../components/products/pages/ProductBrands';
 import { Reviews } from '../../components/products/pages/Reviews';
 import { SellersProduct } from '../../components/products/pages/SellersProduct';
 import { UploadExport } from '../../components/products/pages/UploadExport';
+import WholeSaleCreate from '../../components/wholesale/pages/Whole-saleCreate';
 
 export const AdminRoutes = () => {
   return (
@@ -45,8 +46,11 @@ export const AdminRoutes = () => {
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
-        <Route path="whole-sale/*">
-          <Route path="create" element={<h1>create-whole-sale</h1>} />
+        <Route path="wholesale/*">
+          <Route path="create" element={<WholeSaleCreate />} />
+          <Route path="all" element={<h1>All</h1>} />
+          <Route path="inhouse" element={<h1>Inhouse</h1>} />
+          <Route path="seller" element={<h1>Seller</h1>} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
