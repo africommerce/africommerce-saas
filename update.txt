@@ -1,1 +1,1 @@
-Implemented caching for faster profile loading
+Improved responsiveness of profile page
