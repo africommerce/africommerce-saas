@@ -19,14 +19,18 @@ const Children = styled.div`
   margin: 0 auto;
   margin-top: 170px;
 `;
+const Children2 = styled.div`
+  margin: 0 auto;
+  margin-top: 80px;
+  max-width: 100%;
+`;
 export const Layout = (props) => {
   const location = useLocation();
-
   return (
     <Container>
-      {location.pathname === '/admin' ||
+      {location.pathname.includes('/admin') ||
       location.pathname.includes("/auth-seller") ? (
-        <Children>{props.children}</Children>
+        <Children2>{props.children}</Children2>
       ) : (
         <div>
           <NavBar />

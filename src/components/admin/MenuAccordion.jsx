@@ -26,7 +26,7 @@ const MenuList = styled.ul`
     }
   }
 `;
-export default function MenuAccordions({ list, title, icon }) {
+export default function MenuAccordions({ title, icon, items }) {
   const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, isExpanded) => {
@@ -62,28 +62,30 @@ export default function MenuAccordions({ list, title, icon }) {
         <AccordionDetails>
           <Typography>
             <MenuList>
-              {list.map((list) => (
-                <Link
-                  key={list}
-                  style={{
-                    textDecoration: 'none',
-                    color: 'gray',
-                  }}
-                  to="/admin"
-                >
-                  <li
+              {items.map((list) => (
+                <>
+                  <Link
+                    key={list.name}
                     style={{
-                      display: 'flex',
-                      gap: '3px',
-                      padding: '10px',
-                      fontWeight: '600',
+                      textDecoration: 'none',
+                      color: 'gray',
                     }}
+                    to={list.link}
                   >
-                    {' '}
-                    <CircleOutlined fontSize="small" />
-                    {list}
-                  </li>
-                </Link>
+                    <li
+                      style={{
+                        display: 'flex',
+                        gap: '3px',
+                        padding: '10px',
+                        fontWeight: '600',
+                      }}
+                    >
+                      {' '}
+                      <CircleOutlined fontSize="small" />
+                      {list.name}
+                    </li>
+                  </Link>
+                </>
               ))}
             </MenuList>
           </Typography>
