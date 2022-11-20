@@ -1,1 +1,1 @@
-Improved responsiveness of profile page
+Created unit tests for profile update component
