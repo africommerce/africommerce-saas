@@ -197,15 +197,15 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/iamkelv/africommerce.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/iamkelv/africommerce.svg?style=for-the-badge
 [contributors-url]: https://github.com/iamkelv/africommerce/graphs/contributors
-[license-shield]: https://img.shields.io/github/license/iamkelv/africommerce.svg?style=flat-square 
+[license-shield]: https://img.shields.io/github/license/iamkelv/africommerce.svg?style=for-the-badge 
 [license-url]: https://github.com/iamkelv/africommerce/blob/main/LICENSE.txt
-[forks-shield]: https://img.shields.io/github/forks/iamkelv/africommerce.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/iamkelv/africommerce.svg?style=for-the-badge
 [forks-url]: https://github.com/iamkelv/africommerce/network/members
-[stars-shield]: https://img.shields.io/github/stars/iamkelv/africommerce.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/iamkelv/africommerce.svg?style=for-the-badge
 [stars-url]: https://github.com/iamkelv/africommerce/stargazers
-[issues-shield]: https://img.shields.io/github/issues/iamkelv/africommerce.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/iamkelv/africommerce.svg?style=for-the-badge
 [issues-url]: https://github.com/iamkelv/africommerce/issues
-[pulls-shield]: https://img.shields.io/github/pulls/iamkelv/africommerce.svg?style=flat-square
+[pulls-shield]: https://img.shields.io/github/pulls/iamkelv/africommerce.svg?style=for-the-badge
 [pulls-url]: https://github.com/iamkelv/africommerce/pulls
