@@ -52,17 +52,8 @@ export const AdminNavs = () => {
         icon={<PlaylistAddCheck />}
         title="POS System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'POS Manager', link: 'pos/manager' },
+          { name: 'POS Configuration', link: 'pos/configuration' },
         ]}
       />
       <ProductMenu
@@ -70,16 +61,17 @@ export const AdminNavs = () => {
         title="Products"
         items={[
           { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
+          { name: 'All Product', link: 'product/all-product' },
           { name: 'In House Products', link: 'product/inhouse' },
           { name: 'Sellers Product', link: 'product/seller-products' },
           { name: 'Digital Products', link: 'product/digital-products' },
           { name: 'Bulk Import', link: 'product/bulk-import' },
           { name: 'Bulk Export', link: 'product/bulk-export' },
+          { name: 'Categories', link: 'product/categories' },
           { name: 'Brands', link: 'product/brand' },
           { name: 'Attributes', link: 'product/attributes' },
           { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Reviews', link: 'product/reviews' },
         ]}
       />
       <AuctionMenu
@@ -99,37 +91,15 @@ export const AdminNavs = () => {
           { name: 'Product', link: 'product/products' },
         ]}
       />
-      <AuctionMenu
-        title="Auction Products"
-        items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
-        ]}
-      />
+
       <WholeSaleMenu
         icon={<AddShoppingCartOutlined />}
         title="Whole Sale Product"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Add New Wholesale Product', link: 'wholesale/create' },
+          { name: 'All wholesale product', link: 'wholesale/all' },
+          { name: 'In wouse wholesale products', link: 'wholesale/inhouse' },
+          { name: 'Sellers wholesale product', link: 'wholesale/seller' },
         ]}
       />
       <SalesMenu
@@ -153,17 +123,12 @@ export const AdminNavs = () => {
         icon={<LocalShippingOutlined />}
         title="Delivery Boy"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'All Delivery Boy', link: 'delivery/all' },
+          { name: 'Add Delivery Boy', link: 'delivery/create' },
+          { name: 'Payment History', link: 'delivery/payments' },
+          { name: 'Collected History', link: 'delivery/collected' },
+          { name: 'Cancel Request', link: 'delivery/cancel' },
+          { name: 'Configuration', link: 'delivery/configuration' },
         ]}
       />
       <RefundMenu
