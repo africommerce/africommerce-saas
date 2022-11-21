@@ -1,6 +1,6 @@
 <h1 align="center">Africommerce</h4>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/github/contributors/iamkelv/africommerce.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/contributors.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
