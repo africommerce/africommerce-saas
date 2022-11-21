@@ -1,16 +1,26 @@
 <h1 align="center">Africommerce</h4>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors][contributors-shield]][contributors-url]
+[![All Contributors](https://img.shields.io/badge/all_contributors-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
 <!-- PROJECT-BADGES -->
 <p align="center">
-  [![MIT license][license-shield]][license-url]
-  [![forks][forks-shield]][forks-url]
-  [![stargazers][stars-shield]][stars-url]
-  [![issues][issues-shield]][issues-url]
-  [![pull requests][pulls-shield]][pulls-url]
+  <a href="https://github.com/iamkelv/africommerce/blob/main/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/iamkelv/africommerce?style=flat-square" alt="react-play licence" />
+</a>
+<a href="https://github.com/iamkelv/africommerce/fork" target="blank">
+<img src="https://img.shields.io/github/forks/iamkelv/africommerce?style=flat-square" alt="react-play forks"/>
+</a>
+<a href="https://github.com/iamkelv/africommerce/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/iamkelv/africommerce?style=flat-square" alt="react-play stars"/>
+</a>
+<a href="https://github.com/iamkelv/africommerce/issues" target="blank">
+<img src="https://img.shields.io/github/issues/iamkelv/africommerce?style=flat-square" alt="react-play issues"/>
+</a>
+<a href="https://github.com/iamkelv/africommerce/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/iamkelv/africommerce?style=flat-square" alt="react-play pull-requests"/>
+</a>
 </p>
 
 <p align="center">
@@ -171,7 +181,7 @@ Contributed to Africommerce? Here is a big **Thank you** from our community to y
 Claim your badge and showcase them with pride on any of your social media profile.
 Let us inspire more folks!
 
-![africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
+[Africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
 
 ### **[Claim Now!](https://aviyel.com/projects/43/africoommerce/rewards)**
 
@@ -192,20 +202,3 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/iamkelv/africommerce.svg?style=for-the-badge
-[contributors-url]: https://github.com/iamkelv/africommerce/graphs/contributors
-[license-shield]: https://img.shields.io/github/license/iamkelv/africommerce.svg?style=for-the-badge 
-[license-url]: https://github.com/iamkelv/africommerce/blob/main/LICENSE.txt
-[forks-shield]: https://img.shields.io/github/forks/iamkelv/africommerce.svg?style=for-the-badge
-[forks-url]: https://github.com/iamkelv/africommerce/network/members
-[stars-shield]: https://img.shields.io/github/stars/iamkelv/africommerce.svg?style=for-the-badge
-[stars-url]: https://github.com/iamkelv/africommerce/stargazers
-[issues-shield]: https://img.shields.io/github/issues/iamkelv/africommerce.svg?style=for-the-badge
-[issues-url]: https://github.com/iamkelv/africommerce/issues
-[pulls-shield]: https://img.shields.io/github/pulls/iamkelv/africommerce.svg?style=for-the-badge
-[pulls-url]: https://github.com/iamkelv/africommerce/pulls
