@@ -1,7 +1,11 @@
-<h1 align="center">Africommerce</h4>
+# Africommerce (Repo: `Africommerce`)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-) -->
+
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
 
 
 <!-- PROJECT-BADGES -->
@@ -34,6 +38,9 @@
 
 <p> AfriCommerce is a Software As Service E-commerce platform that allows all signed up users in Africa to own their own <mark style="background-color:green">customized store </mark>  and connects buyers to prospective sellers for free. </p>
 
+<p align="center">
+  <a href="https://github.com/iamkelv/africommerce" target="blank">
+</a>
 
 ## 🧰 Technologies Used
 
