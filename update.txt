@@ -1,1 +1,1 @@
-Created unit tests for profile update component
+Set up integration tests for API interactions
