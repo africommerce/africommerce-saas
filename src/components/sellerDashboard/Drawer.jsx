@@ -1,9 +1,11 @@
 import React from 'react';
 import { MenuAccordion } from './Accordion';
-import { TextField, Drawer, Box} from '@mui/material';
+import { TextField, Drawer, Box, IconButton } from '@mui/material';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import StoreImg from '../../assests/authseller.png';
 
-function SideDrawer({ open, drawerwidth }) {
+function SideDrawer({ open, drawerwidth, handleDrawerClose, theme }) {
   return (
     <Box>
       <Drawer
@@ -15,14 +17,22 @@ function SideDrawer({ open, drawerwidth }) {
             alignItems: 'center',
             boxSizing: 'border-box',
             backgroundColor: '#E9E9F0',
-            paddingTop: '20px',
-            fontSize: '15px',
+            paddingTop: '10px',
+            fontSize: '13px',
           },
         }}
         variant="persistent"
         anchor="left"
         open={open}
       >
+        <IconButton onClick={handleDrawerClose}>
+          {theme.direction === 'ltr' ? (
+            <ChevronLeftIcon />
+          ) : (
+            <ChevronRightIcon />
+          )}
+        </IconButton>
+
         <img
           src={StoreImg}
           sx={{ textAlign: 'center' }}
@@ -48,7 +58,7 @@ function SideDrawer({ open, drawerwidth }) {
             variant="outlined"
             style={{ marginBottom: '20px', border: 0 }}
           />
-          <MenuAccordion style={{color:"inherit"}} />
+          <MenuAccordion style={{ color: 'inherit' }} />
         </Box>
       </Drawer>
     </Box>

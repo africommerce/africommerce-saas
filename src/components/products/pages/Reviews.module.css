@@ -1,0 +1,115 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.header_wrapper {
+    display: flex;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.body_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.body_top {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+
+.body_table_Wrapper {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.body_table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.table_head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+    gap: 5px;
+}
+
+
+.table_head th {
+    display: flex;
+}
+
+
+.head_id {
+    flex: 0.5;
+}
+
+
+.head_rating,
+.head_published {
+    flex: 1.5;
+}
+
+.head_product_owner {
+    flex: 1.5;
+}
+
+.head_comment,
+.head_product {
+    flex: 5 !important;
+}
+
+.head_customer {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    background: inherit !important;
+}
+
+.name,
+.email,
+.switch {
+    text-decoration: none !important;
+    color: inherit;
+    background: inherit;
+}
+
+.table_row {
+    display: flex;
+    align-items: center;
+}
+
+.pagination {
+    display: flex;
+    margin: 0 auto;
+
+}
+
+.table_row {
+    display: flex;
+    align-items: center;
+}
+
+.table_row td {
+    display: flex;
+
+
+
+}

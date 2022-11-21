@@ -1,25 +1,46 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { CreateProduct } from '../../components/products/CreateProduct';
-
+import { AdminHome } from '../../components/admin/pages/AdminHome';
+import { PosConfiguration } from '../../components/admin/pages/PosConfiguration';
+import { PosManager } from '../../components/admin/pages/PosManager';
+import { AllProduct } from '../../components/products/pages/AllProduct';
+import { Attributes } from '../../components/products/pages/Attributes';
+import { BulkProductImport } from '../../components/products/pages/BulkProductImport';
+import { Categories } from '../../components/products/pages/Categories';
+import { Colors } from '../../components/products/pages/Colors';
+import { DigitalProduct } from '../../components/products/pages/DigitalProduct';
+import { InHouseProduct } from '../../components/products/pages/InHouseProduct';
+import { ProductBrands } from '../../components/products/pages/ProductBrands';
+import { Reviews } from '../../components/products/pages/Reviews';
+import { SellersProduct } from '../../components/products/pages/SellersProduct';
+import { UploadExport } from '../../components/products/pages/UploadExport';
+import WholeSaleCreate from '../../components/wholesale/pages/Whole-saleCreate';
+import CreateProduct from '../../components/products/pages/CreateProduct';
+import { AllWholeSale } from '../../components/wholesale/pages/AllWholeSale';
+import { WholeSaleInHouse } from '../../components/wholesale/pages/WholeSaleInhouse';
+import { AllWholeSaleProducts } from '../../components/wholesale/pages/Allwholesaleproducts';
 export const AdminRoutes = () => {
-  console.log('from admin route');
   return (
     <div>
       <Routes>
-        {/* <Route path="product/*" element={<h1>Hello</h1>}></Route> */}
+        <Route path="pos/*">
+          <Route path="manager" element={<PosManager />} />
+          <Route path="configuration" element={<PosConfiguration />} />
+        </Route>
+
         <Route path="product/*">
           <Route path="create" element={<CreateProduct />} />
-          <Route path="add" element={<h1>add-product</h1>} />
-          <Route path="inhouse" element={<h1>inhouse-product</h1>} />
-          <Route path="seller-products" element={<h1>Seller-product</h1>} />
-          <Route path="digital-products" element={<h1>Digital-product</h1>} />
-          <Route path="bulk-import" element={<h1>bulk-Import</h1>} />
-          <Route path="bulk-export" element={<h1>bulk-export</h1>} />
-          <Route path="brands" element={<h1>Brans</h1>} />
-          <Route path="attributes" element={<h1>attributes</h1>} />
-          <Route path="colors" element={<h1>Colors</h1>} />
-          <Route path="products" element={<h1>Products</h1>} />
+          <Route path="all-product" element={<AllProduct />} />
+          <Route path="inhouse" element={<InHouseProduct />} />
+          <Route path="seller-products" element={<SellersProduct />} />
+          <Route path="digital-products" element={<DigitalProduct />} />
+          <Route path="bulk-import" element={<BulkProductImport />} />
+          <Route path="bulk-export" element={<UploadExport />} />
+          <Route path="categories" element={<Categories />} />
+          <Route path="brand" element={<ProductBrands />} />
+          <Route path="attributes" element={<Attributes />} />
+          <Route path="colors" element={<Colors />} />
+          <Route path="reviews" element={<Reviews />} />
         </Route>
 
         <Route path="auction/*">
@@ -27,8 +48,11 @@ export const AdminRoutes = () => {
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
-        <Route path="whole-sale/*">
-          <Route path="create" element={<h1>create-whole-sale</h1>} />
+        <Route path="wholesale/*">
+          <Route path="create" element={<WholeSaleCreate />} />
+          <Route path="all" element={<AllWholeSale />} />
+          <Route path="inhouse" element={<WholeSaleInHouse />} />
+          <Route path="seller" element={<AllWholeSaleProducts />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
@@ -131,7 +155,7 @@ export const AdminRoutes = () => {
           <Route path="create" element={<h1>create-Addon</h1>} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
-        <Route path="*" element={<h1>Page not found</h1>} />
+        <Route path="*" element={<AdminHome />} />
       </Routes>
     </div>
   );
