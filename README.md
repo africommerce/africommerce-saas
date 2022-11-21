@@ -1,25 +1,16 @@
 <h1 align="center">Africommerce</h4>
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-) -->
+[![All Contributors][contributors-shield]][contributors-url]
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 
+<!-- PROJECT-BADGES -->
 <p align="center">
-  <a href="https://github.com/iamkelv/africommerce/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/iamkelv/africommerce?style=flat-square" alt="africommerce licence" />
-</a>
-<a href="https://github.com/iamkelv/africommerce/fork" target="blank">
-<img src="https://img.shields.io/github/forks/iamkelv/africommerce?style=flat-square" alt="africommerce forks"/>
-</a>
-<a href="https://github.com/iamkelv/africommerce/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/iamkelv/africommerce?style=flat-square" alt="africommerce stars"/>
-</a>
-<a href="https://github.com/iamkelv/africommerce/issues" target="blank">
-<img src="https://img.shields.io/github/issues/iamkelv/africommerce?style=flat-square" alt="africommerce issues"/>
-</a>
-<a href="https://github.com/iamkelv/africommerce/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/iamkelv/africommerce?style=flat-square" alt="africommerce pull-requests"/>
-</a>
+  [![MIT license][license-shield]][license-url]
+  [![forks][forks-shield]][forks-url]
+  [![stargazers][stars-shield]][stars-url]
+  [![issues][issues-shield]][issues-url]
+  [![pull requests][pulls-shield]][pulls-url]
 </p>
 
 <p align="center">
@@ -33,9 +24,7 @@
 
 <p> AfriCommerce is a Software As Service E-commerce platform that allows all signed up users in Africa to own their own <mark style="background-color:green">customized store </mark>  and connects buyers to prospective sellers for free. </p>
 
-<!-- <p align="center">
-  <a href="https://github.com/iamkelv/africommerce" target="blank">
-</a> -->
+
 ## 🧰 Technologies Used
 
 - Backend Development
@@ -187,6 +176,7 @@ Let us inspire more folks!
 ### **[Claim Now!](https://aviyel.com/projects/43/africoommerce/rewards)**
 
 
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -202,3 +192,20 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/iamkelv/africommerce.svg?style=flat-square
+[contributors-url]: https://github.com/iamkelv/africommerce/graphs/contributors
+[license-shield]: https://img.shields.io/github/license/iamkelv/africommerce.svg?style=flat-square 
+[license-url]: https://github.com/iamkelv/africommerce/blob/main/LICENSE.txt
+[forks-shield]: https://img.shields.io/github/forks/iamkelv/africommerce.svg?style=flat-square
+[forks-url]: https://github.com/iamkelv/africommerce/network/members
+[stars-shield]: https://img.shields.io/github/stars/iamkelv/africommerce.svg?style=flat-square
+[stars-url]: https://github.com/iamkelv/africommerce/stargazers
+[issues-shield]: https://img.shields.io/github/issues/iamkelv/africommerce.svg?style=flat-square
+[issues-url]: https://github.com/iamkelv/africommerce/issues
+[pulls-shield]: https://img.shields.io/github/pulls/iamkelv/africommerce.svg?style=flat-square
+[pulls-url]: https://github.com/iamkelv/africommerce/pulls
