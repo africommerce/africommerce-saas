@@ -19,6 +19,12 @@ import CreateProduct from '../../components/products/pages/CreateProduct';
 import { AllWholeSale } from '../../components/wholesale/pages/AllWholeSale';
 import { WholeSaleInHouse } from '../../components/wholesale/pages/WholeSaleInhouse';
 import { AllWholeSaleProducts } from '../../components/wholesale/pages/Allwholesaleproducts';
+import { AllDeliveryBoy } from '../../components/delivery/pages/AllDeliveryBoy';
+import { AddDeliveryBoy } from '../../components/delivery/pages/AddDeliveryBoy';
+import { DeliveryPayHistory } from '../../components/delivery/pages/DeliveryPayHistory';
+import { DeliveryCollection } from '../../components/delivery/pages/DeliveryCollection';
+import { CancelRequest } from '../../components/delivery/pages/CancelRequest';
+import { ConfigureDelivery } from '../../components/delivery/pages/ConfigureDelivery';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -62,7 +68,12 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="delivery/*">
-          <Route path="create" element={<h1>create-delivery</h1>} />
+          <Route path="all" element={<AllDeliveryBoy />} />
+          <Route path="create" element={<AddDeliveryBoy />} />
+          <Route path="payments" element={<DeliveryPayHistory />} />
+          <Route path="collected" element={<DeliveryCollection />} />
+          <Route path="cancel" element={<CancelRequest />} />
+          <Route path="configuration" element={<ConfigureDelivery />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
