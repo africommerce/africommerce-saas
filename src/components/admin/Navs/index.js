@@ -123,17 +123,12 @@ export const AdminNavs = () => {
         icon={<LocalShippingOutlined />}
         title="Delivery Boy"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'All Delivery Boy', link: 'delivery/all' },
+          { name: 'Add Delivery Boy', link: 'delivery/create' },
+          { name: 'Payment History', link: 'delivery/payments' },
+          { name: 'Collected History', link: 'delivery/collected' },
+          { name: 'Cancel Request', link: 'delivery/cancel' },
+          { name: 'Configuration', link: 'delivery/configuration' },
         ]}
       />
       <RefundMenu
