@@ -11,19 +11,19 @@
 <!-- PROJECT-BADGES -->
 <p align="center">
   <a href="https://github.com/iamkelv/africommerce/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/iamkelv/africommerce?style=flat-square" alt="react-play licence" />
+<img src="https://img.shields.io/github/license/iamkelv/africommerce?style=flat-square" alt="africommerce licence" />
 </a>
 <a href="https://github.com/iamkelv/africommerce/fork" target="blank">
-<img src="https://img.shields.io/github/forks/iamkelv/africommerce?style=flat-square" alt="react-play forks"/>
+<img src="https://img.shields.io/github/forks/iamkelv/africommerce?style=flat-square" alt="africommerce forks"/>
 </a>
 <a href="https://github.com/iamkelv/africommerce/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/iamkelv/africommerce?style=flat-square" alt="react-play stars"/>
+<img src="https://img.shields.io/github/stars/iamkelv/africommerce?style=flat-square" alt="africommerce stars"/>
 </a>
 <a href="https://github.com/iamkelv/africommerce/issues" target="blank">
-<img src="https://img.shields.io/github/issues/iamkelv/africommerce?style=flat-square" alt="react-play issues"/>
+<img src="https://img.shields.io/github/issues/iamkelv/africommerce?style=flat-square" alt="africommerce issues"/>
 </a>
 <a href="https://github.com/iamkelv/africommerce/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/iamkelv/africommerce?style=flat-square" alt="react-play pull-requests"/>
+<img src="https://img.shields.io/github/issues-pr/iamkelv/africommerce?style=flat-square" alt="africommerce pull-requests"/>
 </a>
 </p>
 
