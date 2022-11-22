@@ -1,8 +1,9 @@
 import React from 'react'
+import { SellersDigitalProducts } from '../../components/sellerDashboard/SellersDigitalProducts'
 
 function SellerDigitalProducts() {
   return (
-    <div>SellerDigitalProducts</div>
+    <div><SellersDigitalProducts/></div>
   )
 }
 
