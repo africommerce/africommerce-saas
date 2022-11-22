@@ -44,6 +44,7 @@ import SentRefundRequest from '../pages/user/sentRefundRequest';
 import SellerProductsBulkUpload from '../pages/seller/SellerProductsBulkUpload';
 import SellerDigitalProducts from '../pages/seller/SellerDigitalProducts';
 import SellerProductReview from '../pages/seller/SellerProductReview';
+import { SellerShop } from '../pages/seller/SellerShop';
 
 export const MasterRoutes = () => {
   return (
@@ -63,6 +64,7 @@ export const MasterRoutes = () => {
         <Route path="pos" element={<SellerPos />}></Route>
         <Route path="uploads" element={<SellerUploads />}></Route>
         <Route path="auction" element={<SellerAuction />}></Route>
+        <Route path="shop" element={<SellerShop/>} ></Route>
         <Route path="products-bulk-upload" element={<SellerProductsBulkUpload/>} ></Route>
         <Route path="digital-products" element={<SellerDigitalProducts/>} ></Route>
         <Route path="products-reviews" element={<SellerProductReview/>} ></Route>
