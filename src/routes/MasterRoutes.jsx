@@ -41,6 +41,9 @@ import EarningPoint from "../pages/user/EarningPoint";
 import ManageProfile from '../pages/user/ManageProfile';
 import SupportTicket from '../pages/user/SupportTicket';
 import SentRefundRequest from '../pages/user/sentRefundRequest';
+import SellerProductsBulkUpload from '../pages/seller/SellerProductsBulkUpload';
+import SellerDigitalProducts from '../pages/seller/SellerDigitalProducts';
+import SellerProductReview from '../pages/seller/SellerProductReview';
 
 export const MasterRoutes = () => {
   return (
@@ -60,6 +63,9 @@ export const MasterRoutes = () => {
         <Route path="pos" element={<SellerPos />}></Route>
         <Route path="uploads" element={<SellerUploads />}></Route>
         <Route path="auction" element={<SellerAuction />}></Route>
+        <Route path="products-bulk-upload" element={<SellerProductsBulkUpload/>} ></Route>
+        <Route path="digital-products" element={<SellerDigitalProducts/>} ></Route>
+        <Route path="products-reviews" element={<SellerProductReview/>} ></Route>
       </Route>
       <Route path="/product/:id" element={<ProductDetail />} />
       <Route path="/flash-sale" element={<FlashSale />} />
