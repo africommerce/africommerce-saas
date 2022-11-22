@@ -1,8 +1,9 @@
 import React from 'react'
+import { SellersProductBulk } from '../../components/sellerDashboard/SellersProductBulk'
 
 function SellerProductsBulkUpload() {
   return (
-    <div>SellerProductsBulkUpload</div>
+    <div><SellersProductBulk /></div>
   )
 }
 
