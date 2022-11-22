@@ -1,16 +1,47 @@
-<h1 align="center">Africommerce</h4>
+# Africommerce (Repo: `Africommerce`)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-) -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+
+
+
+<!-- PROJECT-BADGES -->
+<p align="center">
+  <a href="https://github.com/iamkelv/africommerce/blob/main/LICENSE" target="blank">
+<img src="https://img.shields.io/github/license/iamkelv/africommerce?style=flat-square" alt="africommerce licence" />
+</a>
+<a href="https://github.com/iamkelv/africommerce/fork" target="blank">
+<img src="https://img.shields.io/github/forks/iamkelv/africommerce?style=flat-square" alt="africommerce forks"/>
+</a>
+<a href="https://github.com/iamkelv/africommerce/stargazers" target="blank">
+<img src="https://img.shields.io/github/stars/iamkelv/africommerce?style=flat-square" alt="africommerce stars"/>
+</a>
+<a href="https://github.com/iamkelv/africommerce/issues" target="blank">
+<img src="https://img.shields.io/github/issues/iamkelv/africommerce?style=flat-square" alt="africommerce issues"/>
+</a>
+<a href="https://github.com/iamkelv/africommerce/pulls" target="blank">
+<img src="https://img.shields.io/github/issues-pr/iamkelv/africommerce?style=flat-square" alt="africommerce pull-requests"/>
+</a>
+</p>
+
+<p align="center">
+    <a href="https://github.com/iamkelv/africommerce/issues/new/choose">Report Bug</a>
+    ·
+    <a href="https://github.com/iamkelv/africommerce/issues/new/choose">Request Feature</a>
+</p>
+
+
 ## Introduction
 
 <p> AfriCommerce is a Software As Service E-commerce platform that allows all signed up users in Africa to own their own <mark style="background-color:green">customized store </mark>  and connects buyers to prospective sellers for free. </p>
 
-<!-- <p align="center">
+<p align="center">
   <a href="https://github.com/iamkelv/africommerce" target="blank">
-</a> -->
+</a>
+
 ## 🧰 Technologies Used
 
 - Backend Development
@@ -69,11 +100,6 @@ Here is a quick overview on how to setup the `Africommerce` repository as a cont
    npm install --legacy-peer-deps
    ```
 
-  - ### ⛓️ Create a `.env` file at the root of your project folder with the following content </h3>
-
-    ```bash
-
-    ```
 
 - ### 🦄 Start the Development Mode
 
@@ -162,9 +188,10 @@ Contributed to Africommerce? Here is a big **Thank you** from our community to y
 Claim your badge and showcase them with pride on any of your social media profile.
 Let us inspire more folks!
 
-![africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
+[Africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
 
 ### **[Claim Now!](https://aviyel.com/projects/43/africoommerce/rewards)**
+
 
 
 ## Contributors ✨
