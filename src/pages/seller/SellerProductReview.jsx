@@ -1,8 +1,9 @@
 import React from 'react'
+import SellersProductReviews from '../../components/sellerDashboard/SellersProductReviews'
 
 function SellerProductReview() {
   return (
-    <div>SellerProductReview</div>
+    <div><SellersProductReviews/></div>
   )
 }
 
