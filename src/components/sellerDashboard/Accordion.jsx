@@ -423,7 +423,7 @@ export const MenuAccordion = () => {
             </p>
             <Typography component="p" variant="div">
               <Link
-                to="/auth-seller/settings"
+                to="/auth-seller/shop"
                 style={{
                   textDecoration: 'none',
                   color: 'inherit',
