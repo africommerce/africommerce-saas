@@ -1,4 +1,4 @@
-import {CardContent ,Switch, Container, Typography ,TextField} from '@mui/material'
+import {CardContent ,Switch, Container, Typography} from '@mui/material'
 import React from 'react';
 import styled from 'styled-components'
 
@@ -63,15 +63,15 @@ border-radius:5px;
 
 `
 
-const columns =[
-  { id: 'no', label: '#', minWidth: 40 },
-  { id: 'name', label: 'Name', minWidth: 170 },
-  { id: 'category', label: 'Category', minWidth: 40 },
-  { id: 'price', label: 'Base Price', minWidth: 170 },
-  { id: 'published', label: 'Published', minWidth: 170 },
-  { id: 'featured', label: 'Featured', minWidth: 170 },
-  { id: 'options', label: 'Options', minWidth: 170 }
-]
+// const columns =[
+//   { id: 'no', label: '#', minWidth: 40 },
+//   { id: 'name', label: 'Name', minWidth: 170 },
+//   { id: 'category', label: 'Category', minWidth: 40 },
+//   { id: 'price', label: 'Base Price', minWidth: 170 },
+//   { id: 'published', label: 'Published', minWidth: 170 },
+//   { id: 'featured', label: 'Featured', minWidth: 170 },
+//   { id: 'options', label: 'Options', minWidth: 170 }
+// ]
 
 function createData(no, name, category, price ) {
   return { no, name, category, price};
