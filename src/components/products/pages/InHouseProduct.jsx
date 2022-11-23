@@ -15,7 +15,7 @@ export const InHouseProduct = () => {
   return (
     <div className={classes.container}>
       <div className={classes.product_header}>
-        <span className={classes.title}>All Product</span>
+        <span className={classes.title}>All InHouse Product</span>
         <span>
           {' '}
           <Link to="">
