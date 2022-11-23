@@ -15,30 +15,51 @@ import PersonIcon from '@mui/icons-material/Person';
 import styled from 'styled-components';
 
 const Wraps = styled.div`
+  width: 220px;
   margin: 0 auto;
   padding: 1rem;
   font-family: 'Open Sans', sans-serif !important;
 `;
 
+const Profilepic = styled.img`
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;
+
 const Nav = styled(NavLink)`
   margin-left: 20px;
+  margin-bottom:8px;
   text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 19.5px;
+  color: rgb(99, 102, 107);
   box-sizing: border-box;
 `;
 
 const PersonDetails = styled.div`
- box-sizing: border-box;
+  box-sizing: border-box;
   background-color: #e62e04;
-  padding: 2rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 19.2px;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgb(255, 255, 255);
 `;
 
 const Container = styled.div`
-margin: 0 auto;
+  margin: 0 auto;
   box-sizing: border-box;
   position: relative;
   top: 0;
   padding: 1rem;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   font-family: 'Open Sans', sans-serif !important;
   font-size: 13px;
@@ -48,26 +69,34 @@ margin: 0 auto;
 `;
 
 const Content = styled.div`
+  display: flex;
+  flex-direction: row;
   text-decoration: none;
-  margin-bottom: 3%;
+  margin: 0 auto;
   &:hover {
     background-color: #fbe0da;
   }
 `;
 
-
 function DashboardSidebar() {
   return (
     <Wraps>
       <PersonDetails>
-        <img src="" alt="person's page"/>
+        <Profilepic
+          src="https://tulikettu.me/wp-content/uploads/2022/03/TK-temp20-1080x1080-1.jpg"
+          alt="person's page"
+        />
         <h3>Paul K. Jensen</h3>
         <p>208-295-8053</p>
       </PersonDetails>
       <Container>
         <Content>
-          <HomeIcon />
-          <Nav to ="/dashboard">Dashboard</Nav>
+          <div>
+            <HomeIcon />
+          </div>
+          <div style={{marginBottom:"3%"}}>
+            <Nav to="/user/dashboard">Dashboard</Nav>
+          </div>
         </Content>
         <Content>
           {' '}
@@ -96,8 +125,7 @@ function DashboardSidebar() {
         </Content>
         <Content>
           <GavelIcon />
-          <Nav to="/user/auction-bidded" >Auction
-          </Nav>
+          <Nav to="/user/auction-bidded">Auction</Nav>
         </Content>
         <Content>
           <ChatIcon />

@@ -87,7 +87,7 @@ const Iname = styled.p`
 `;
 export const SearchNavbar = () => {
   // CART FROM STORE CART SLICE
-  const cart = useSelector((state) => state.cart.items.length);
+  // const cart = useSelector((state) => state.cart.items.length);
 
   return (
     <SearchNavbars>
