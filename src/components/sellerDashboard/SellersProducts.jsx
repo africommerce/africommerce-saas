@@ -63,17 +63,17 @@ border-radius:5px;
 
 `
 
-const columns =[
-  { id: 'no', label: '#'},
-  { id: 'name', label: 'Name' },
-  { id: 'category', label: 'Category'},
-  { id: 'qty', label: 'Current Qty' },
-  { id: 'price', label: 'Base Price' },
-  { id: 'approval', label: 'Approval' },
-  { id: 'published', label: 'Published' },
-  { id: 'featured', label: 'Featured' },
-  { id: 'options', label: 'Options' }
-]
+// const columns =[
+//   { id: 'no', label: '#'},
+//   { id: 'name', label: 'Name' },
+//   { id: 'category', label: 'Category'},
+//   { id: 'qty', label: 'Current Qty' },
+//   { id: 'price', label: 'Base Price' },
+//   { id: 'approval', label: 'Approval' },
+//   { id: 'published', label: 'Published' },
+//   { id: 'featured', label: 'Featured' },
+//   { id: 'options', label: 'Options' }
+// ]
 
 function createData(no, name, category, qty, price, approval) {
   return { no, name, category, qty, price, approval};
