@@ -7,7 +7,7 @@ const Containers = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 7rem;
 `;
 
 const Button = styled.button`

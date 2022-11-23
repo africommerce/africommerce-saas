@@ -7,7 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  padding: 4rem;
+  padding: 7rem;
 `;
 
 function Download() {
