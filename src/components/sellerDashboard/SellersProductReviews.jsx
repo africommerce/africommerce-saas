@@ -9,7 +9,6 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
@@ -38,7 +37,7 @@ function createData(id, product, rating) {
 function Row(props) {
   const { row } = props;
   const [open, setOpen] = React.useState(false);
-  const [value, setValue] = React.useState(4);//for rating value
+  const [value] = React.useState(4);//for rating value
   return (
     <React.Fragment>
       
