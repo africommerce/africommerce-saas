@@ -3,7 +3,6 @@ import { Route, Routes } from 'react-router-dom';
 import { AdminHome } from '../../components/admin/pages/AdminHome';
 import { PosConfiguration } from '../../components/admin/pages/PosConfiguration';
 import { PosManager } from '../../components/admin/pages/PosManager';
-import { CreateProduct } from '../../components/products/CreateProduct';
 import { AllProduct } from '../../components/products/pages/AllProduct';
 import { Attributes } from '../../components/products/pages/Attributes';
 import { BulkProductImport } from '../../components/products/pages/BulkProductImport';
@@ -15,7 +14,17 @@ import { ProductBrands } from '../../components/products/pages/ProductBrands';
 import { Reviews } from '../../components/products/pages/Reviews';
 import { SellersProduct } from '../../components/products/pages/SellersProduct';
 import { UploadExport } from '../../components/products/pages/UploadExport';
-
+import WholeSaleCreate from '../../components/wholesale/pages/Whole-saleCreate';
+import CreateProduct from '../../components/products/pages/CreateProduct';
+import { AllWholeSale } from '../../components/wholesale/pages/AllWholeSale';
+import { WholeSaleInHouse } from '../../components/wholesale/pages/WholeSaleInhouse';
+import { AllWholeSaleProducts } from '../../components/wholesale/pages/Allwholesaleproducts';
+import { AllDeliveryBoy } from '../../components/delivery/pages/AllDeliveryBoy';
+import { AddDeliveryBoy } from '../../components/delivery/pages/AddDeliveryBoy';
+import { DeliveryPayHistory } from '../../components/delivery/pages/DeliveryPayHistory';
+import { DeliveryCollection } from '../../components/delivery/pages/DeliveryCollection';
+import { CancelRequest } from '../../components/delivery/pages/CancelRequest';
+import { ConfigureDelivery } from '../../components/delivery/pages/ConfigureDelivery';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -45,8 +54,11 @@ export const AdminRoutes = () => {
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
-        <Route path="whole-sale/*">
-          <Route path="create" element={<h1>create-whole-sale</h1>} />
+        <Route path="wholesale/*">
+          <Route path="create" element={<WholeSaleCreate />} />
+          <Route path="all" element={<AllWholeSale />} />
+          <Route path="inhouse" element={<WholeSaleInHouse />} />
+          <Route path="seller" element={<AllWholeSaleProducts />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
@@ -56,7 +68,12 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="delivery/*">
-          <Route path="create" element={<h1>create-delivery</h1>} />
+          <Route path="all" element={<AllDeliveryBoy />} />
+          <Route path="create" element={<AddDeliveryBoy />} />
+          <Route path="payments" element={<DeliveryPayHistory />} />
+          <Route path="collected" element={<DeliveryCollection />} />
+          <Route path="cancel" element={<CancelRequest />} />
+          <Route path="configuration" element={<ConfigureDelivery />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
