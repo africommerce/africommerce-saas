@@ -1,5 +1,28 @@
 import React, { useEffect, useState } from 'react';
-import classes from '../../styles/purchase.module.css';
+import classes from '../../styles/users.module.css';
+import styled from 'styled-components';
+import DashboardSidebar from './DashboardSidebar';
+
+const Containers = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 4rem;
+`;
+
+const Button = styled.button`
+  font-family: 'Open Sans', sans-serif;
+  font-size: 10.4px;
+  font-weight: 500;
+  line-height: 15.6px;
+  color: rgb(255, 255, 255);
+  background: green;
+  color: white;
+  border: none;
+  padding: 2px;
+  border-radius: 2px;
+  align-items: center;
+`;
 
 const AuctionBidded = () => {
   const [loading, setLoading] = useState(true);
@@ -12,7 +35,7 @@ const AuctionBidded = () => {
       HighestBiddedAmount: '$550.000',
       AuctionEndDate: '2025-03-01 00:00:00',
 
-      Action: ['N/A', 'Purchased'],
+      Action: ['N/A'],
     },
     {
       id: 2,
@@ -21,7 +44,7 @@ const AuctionBidded = () => {
       HighestBiddedAmount: '$3,000.000',
       AuctionEndDate: '2025-03-01 00:00:00',
 
-      Action: ['N/A', 'Purchased'],
+      Action: ['Purchased'],
     },
     {
       id: 3,
@@ -30,7 +53,7 @@ const AuctionBidded = () => {
       HighestBiddedAmount: '$4,050.000',
       AuctionEndDate: '2025-03-01 00:00:00',
 
-      Action: ['N/A', 'Purchased'],
+      Action: ['N/A'],
     },
     {
       id: 4,
@@ -39,7 +62,7 @@ const AuctionBidded = () => {
       HighestBiddedAmount: '$2,050.000',
       AuctionEndDate: '2025-03-01 00:00:00',
 
-      Action: ['N/A', 'Purchased'],
+      Action: ['N/A'],
     },
     {
       id: 5,
@@ -48,7 +71,7 @@ const AuctionBidded = () => {
       HighestBiddedAmount: '$5,020.000',
       AuctionEndDate: '2025-03-01 00:00:00',
 
-      Action: ['N/A', 'Purchased'],
+      Action: ['Purchased'],
     },
     {
       id: 6,
@@ -57,7 +80,7 @@ const AuctionBidded = () => {
       HighestBiddedAmount: '$850.000',
       AuctionEndDate: '2025-03-01 00:00:00',
 
-      Action: ['N/A', 'Purchased'],
+      Action: ['Purchased'],
     },
     {
       id: 7,
@@ -66,7 +89,7 @@ const AuctionBidded = () => {
       HighestBiddedAmount: '$13,000.000',
       AuctionEndDate: '2025-03-01 00:00:00',
 
-      Action: ['N/A', 'Purchased'],
+      Action: ['N/A'],
     },
   ];
 
@@ -79,43 +102,51 @@ const AuctionBidded = () => {
   if (loading) content = <div>Loading...</div>;
   if (!loading) {
     content = (
-      <div className={classes.Purchase}>
-        <h2>Purchase History</h2>
-        <div className={classes.Headers}>
-          <div>Code</div>
-          <div>Date</div>
-
-          <div>Amount</div>
-          <div id="display">Payment Status</div>
-          <div>Options</div>
+      <Containers>
+        <div>
+          <DashboardSidebar />
         </div>
-        {data.map((data) => {
-          return (
-            <div key={data.id} className={classes.PurchaseBox}>
-              <div className={classes.Code}>{data.code}</div>
-              <div className={classes.Date}>{data.date}</div>
+        <div className={classes.Purchase}>
+          <h2>Bidded Products</h2>
+          <div className={classes.Headers}>
+            <div>#</div>
+            <div>Product Name</div>
 
-              <div className={classes.Amount}>${data.amount}</div>
+            <div>My Bidded Amount</div>
+            <div id="display">Highest Bid Amount</div>
+            <div>Auction End Date</div>
+            <div>Action</div>
+          </div>
+          {state.map((data) => {
+            return (
+              <div key={data.id} className={classes.PurchaseBox}>
+                <div className={classes.AuctionId}>{data.id}</div>
+                <div className={classes.Code}>{data.Product}</div>
 
-              <div className={classes.Tired}>
-                {data.status === 'Delivered' ? (
-                  <div className={classes[data.status]}>Paid</div>
-                ) : (
-                  <div className={classes[data.status]}>Unpaid</div>
-                )}
+                <div className={classes.BiddedAmount}>${data.BiddedAmount}</div>
+
+                <div className={classes.Btn}>
+                  {data.HighestBiddedAmount === '2' || '4' || '7' ? (
+                    <Button>{data.HighestBiddedAmount}</Button>
+                  ) : (
+                    <button style={{ background: 'red', color: 'white' }}>
+                      {data.HighestBiddedAmount}
+                    </button>
+                  )}
+                </div>
+                <div className={classes.Date}>{data.AuctionEndDate}</div>
+                <div className={classes.Btn}>
+                  {data.Action !== 'Purchased' ? (
+                    <div>{data.Action}</div>
+                  ) : (
+                    <div>{data.Action}</div>
+                  )}
+                </div>
               </div>
-              <div className={classes.Options}>
-                {data.options.map((option, i) => (
-                  <span key={i} className={classes[option]}>
-                    {' '}
-                    <ion-icon name={option}></ion-icon>
-                  </span>
-                ))}
-              </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </Containers>
     );
   }
   return content;
