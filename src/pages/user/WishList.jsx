@@ -7,6 +7,15 @@ import Box from '@mui/material/Box';
 import { Delete, ShoppingCart } from '@mui/icons-material';
 import { Button, IconButton } from '@mui/material';
 import Rating from '@mui/material/Rating';
+import styled from 'styled-components';
+import DashboardSidebar from './DashboardSidebar';
+
+const Containers = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 7rem;
+`;
 
 const imgStyle = {
   width: '100%',
@@ -62,6 +71,8 @@ function Card(props) {
 
 export const WishList = () => {
   return (
+    <Containers>
+    <div><DashboardSidebar/></div>
     <div>
       <Container maxWidth="md">
         <Typography>Wishlist</Typography>
@@ -109,6 +120,7 @@ export const WishList = () => {
         </Grid>
       </Container>
     </div>
+    </Containers>
   );
 };
 
