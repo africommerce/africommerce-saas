@@ -1,1 +1,1 @@
-Improved state management in user context
+Refactored API calls to use React Query
