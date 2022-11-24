@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import classes from '../../styles/purchase.module.css';
+import classes from '../../styles/users.module.css';
 import Paginate from './paginate';
 const PurchaseHistory = () => {
   const [loading, setLoading] = useState(true);

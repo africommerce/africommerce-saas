@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from '../../styles/purchase.module.css';
+import classes from '../../styles/users.module.css';
 const Paginate = ({
   perPage,
   totalPage,
