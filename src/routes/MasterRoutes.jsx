@@ -45,6 +45,13 @@ import SellerProductsBulkUpload from '../pages/seller/SellerProductsBulkUpload';
 import SellerDigitalProducts from '../pages/seller/SellerDigitalProducts';
 import SellerProductReview from '../pages/seller/SellerProductReview';
 import { SellerShop } from '../pages/seller/SellerShop';
+import SellerPackages from '../pages/seller/SellerPackages';
+import SellerPurchasePackages from '../pages/seller/SellerPurchasePackages';
+import SellerCoupon from '../pages/seller/SellerCoupon';
+import SellerWholesaleProducts from '../pages/seller/SellerWholesaleProducts';
+import SellerAuctionOrders from '../pages/seller/SellerAuctionOrders';
+import SellerReceivedRefundRequest from '../pages/seller/SellerReceivedRefundRequest';
+import SellerPaymentHistory from '../pages/seller/SellerPaymentHistory';
 
 export const MasterRoutes = () => {
   return (
@@ -63,11 +70,18 @@ export const MasterRoutes = () => {
         <Route path="products" element={<SellerProducts />}></Route>
         <Route path="pos" element={<SellerPos />}></Route>
         <Route path="uploads" element={<SellerUploads />}></Route>
-        <Route path="auction" element={<SellerAuction />}></Route>
+        <Route path="all-auction-products" element={<SellerAuction />}></Route>
         <Route path="shop" element={<SellerShop/>} ></Route>
         <Route path="products-bulk-upload" element={<SellerProductsBulkUpload/>} ></Route>
         <Route path="digital-products" element={<SellerDigitalProducts/>} ></Route>
         <Route path="products-reviews" element={<SellerProductReview/>} ></Route>
+        <Route path="packages" element={<SellerPackages/>} ></Route>
+        <Route path="packages-purchase" element={<SellerPurchasePackages/>} ></Route>
+        <Route path="coupon" element={<SellerCoupon/>}  ></Route>
+        <Route path="wholesale" element={<SellerWholesaleProducts/>} ></Route>
+        <Route path="auction-product-orders" element={<SellerAuctionOrders/>} ></Route>
+        <Route path="refund" element={<SellerReceivedRefundRequest/>} ></Route>
+        <Route path="payment-history" element={<SellerPaymentHistory/>} ></Route>
       </Route>
       <Route path="/product/:id" element={<ProductDetail />} />
       <Route path="/flash-sale" element={<FlashSale />} />
