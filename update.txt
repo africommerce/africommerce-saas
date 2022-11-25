@@ -1,1 +1,1 @@
-Refactored API calls to use React Query
+Fixed minor UI bugs in profile settings
