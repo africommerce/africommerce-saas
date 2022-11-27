@@ -18,11 +18,6 @@ const Body1 = styled.div`
   gap: 200px;
 `;
 
-const Body2 = styled.div`
-  display: flex;
-  gap: 200px;
-`;
-
 const BodyContent = styled.ul`
   margin-left: 20px;
   margin-top: 30px;
@@ -58,10 +53,7 @@ function MenCategory() {
           <BodyList>Suits & Blazers</BodyList>
           <BodyList>Wool & Blends</BodyList>
         </BodyContent>
-
       </Body1>
-
-      
     </Container>
   );
 }
