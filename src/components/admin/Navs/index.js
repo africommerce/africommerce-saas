@@ -135,17 +135,10 @@ export const AdminNavs = () => {
         icon={<KeyboardReturnOutlined />}
         title="Refund"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Refund Requests', link: 'refund/request' },
+          { name: 'Approved Refund ', link: 'refund/approved' },
+          { name: 'Rejected Refund ', link: 'refund/rejected' },
+          { name: 'Refund Configuration ', link: 'refund/configuration' },
         ]}
       />
 
