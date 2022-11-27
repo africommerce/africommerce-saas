@@ -1,8 +1,7 @@
 .Purchase {
   margin-top: 50px;
   background-color: white;
-  width: 80vw;
-  margin: 200px auto;
+  flex-basis: 70%;
   box-sizing: border-box;
   padding: 20px;
   border-radius: 10px;
