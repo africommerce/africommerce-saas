@@ -23,6 +23,7 @@ import { SellersPolicy } from '../pages/SellersPolicy';
 import { SupportPolicy } from '../pages/SupportPolicy';
 import { Terms } from '../pages/Terms';
 import { TrackOrder } from '../pages/TrackOrder';
+import User from '../pages/user/userDashboard';
 import { WishList } from '../pages/WishList';
 
 export const MasterRoutes = () => {
