@@ -1,1 +1,1 @@
-Updated documentation for profile updates
+Optimized profile update flow for performance
