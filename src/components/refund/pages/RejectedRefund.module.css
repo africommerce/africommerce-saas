@@ -75,16 +75,20 @@
 }
 
 .table_body_row .head_refund span {
-    background: orange;
-    color: black;
+    background: rgb(10, 187, 117);
+    color: white;
+    font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
     padding: 0.5rem 1rem;
 }
 
+
+.table_body_row .head_refund span {}
+
 .table_body_row .head_options {
     display: flex;
-    gap: 5px;
+    gap: 3px;
 }
 
 .table_body_row .head_options span {
