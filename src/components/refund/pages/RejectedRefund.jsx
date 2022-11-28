@@ -1,14 +1,13 @@
 import {
   DeleteOutline,
   KeyboardDoubleArrowLeft,
-  VisibilityOff,
   VisibilityOutlined,
 } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import classes from './RefundRequest.module.css';
-export const RefundRequest = () => {
+import classes from './RejectedRefund.module.css';
+export const RejectedRefund = () => {
   return (
     <div className={classes.container}>
       <div className={classes.table_wrapper}>
@@ -23,8 +22,8 @@ export const RefundRequest = () => {
               <th className={classes.head_product}>Product</th>
               <th className={classes.head_price}>Price</th>
               <th className={classes.head_approval}>Seller Approval</th>
-              <th className={classes.head_refund}>Refund Status</th>
-              <th className={classes.head_options}>Options</th>
+              <th className={classes.head_refund}>Admin Status</th>
+              <th className={classes.head_refund}>Reject Reason</th>
             </tr>
             <tr key="">
               <Divider />
@@ -50,14 +49,8 @@ export const RefundRequest = () => {
               <td className={classes.head_refund}>
                 <span>Non-Paid</span>
               </td>
-              <td className={classes.head_options}>
-                <span className={classes.arrow}>
-                  <KeyboardDoubleArrowLeft />
-                </span>
-                <span className={classes.delete}>
-                  <DeleteOutline />
-                </span>
-                <span className={classes.visible}>
+              <td className={classes.head_refund}>
+                <span>
                   <VisibilityOutlined />
                 </span>
               </td>
