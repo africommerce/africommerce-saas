@@ -1,8 +1,4 @@
-import {
-  DeleteOutline,
-  KeyboardDoubleArrowLeft,
-  VisibilityOutlined,
-} from '@mui/icons-material';
+import { VisibilityOutlined } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
