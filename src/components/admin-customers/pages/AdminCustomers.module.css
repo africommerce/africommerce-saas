@@ -1,0 +1,228 @@
+.container {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 1rem;
+}
+
+.container_head {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.container_body {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    padding: 0.3rem;
+}
+
+.top_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 1rem; */
+}
+
+.top_wrapper span {
+    font-weight: bold;
+}
+
+.top_input {
+    display: flex;
+    align-items: center !important;
+    gap: 1rem;
+
+}
+
+.top_input span input {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    align-items: center;
+    display: flex;
+
+    padding: 1rem;
+    min-width: 200px;
+}
+
+.bulk {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.bulk .bulk_wrapper {
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 150px;
+    background: white;
+}
+
+.bulk_delete {
+    display: flex;
+    position: absolute;
+    margin-top: 33%;
+    color: black;
+    padding: 1rem 0.6rem;
+    left: -33%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+
+    transition: all 300ms ease;
+
+}
+
+.bulk_delete:hover {
+    background: orange;
+    color: white;
+}
+
+.bulk_delete_hide {
+    display: none;
+}
+
+.table_container {
+
+    display: flex;
+    flex-direction: column;
+}
+
+.table_container table {
+    display: flex;
+    width: 96%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.table_head_row {
+    display: flex;
+    width: 100%;
+
+}
+
+.table_head_row .table_head_input,
+.table_body_row .table_body_input {
+    flex: 1;
+
+}
+
+.table_head_row .table_head_input input,
+.table_body_row .table_body_input input {
+    cursor: pointer;
+}
+
+.table_head_row .table_head_name,
+.table_body_row .table_body_name {
+    flex: 3;
+}
+
+.table_head_row .table_head_email,
+.table_body_row .table_body_email {
+    flex: 5;
+}
+
+.table_head_row .table_head_phone,
+.table_body_row .table_body_phone {
+    flex: 3;
+}
+
+.table_head_row .table_head_packages,
+.table_body_row .table_body_packages {
+    flex: 3;
+}
+
+.table_head_row .table_head_ballance,
+.table_body_row .table_body_ballance {
+    flex: 3;
+}
+
+.table_head_row .table_head_options,
+.table_body_row .table_body_options {
+    flex: 4;
+}
+
+.table_body_row {
+    display: flex;
+    width: 100%;
+}
+
+
+.table_body_row .table_body_options .edit_icon {
+    display: flex;
+    gap: 5px;
+}
+
+.table_body_row .table_body_options .edit_icon {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    background: rgb(254, 235, 218);
+    color: rgb(248, 123, 43);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+
+.table_body_row .table_body_options .delete_icon {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    background: rgb(254, 235, 218);
+    color: rgb(248, 123, 43);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.table_body_row .table_body_options .ban_icon {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    justify-content: center;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+    background: rgb(253, 227, 233);
+    color: rgb(248, 123, 43);
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.table_body_row .table_body_options .ban_icon:hover {
+    color: rgb(253, 227, 233);
+    background: rgb(248, 123, 43);
+}
+
+.table_body_row .table_body_options .edit_icon:hover {
+    color: rgb(253, 227, 233);
+    background: rgb(248, 123, 43);
+}
+
+input {
+    border: none;
+}
+
+.table_body_row .table_body_options .delete_icon:hover {
+    color: rgb(253, 227, 233);
+    background: rgb(248, 123, 43);
+}

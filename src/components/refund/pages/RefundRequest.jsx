@@ -1,7 +1,6 @@
 import {
   DeleteOutline,
   KeyboardDoubleArrowLeft,
-  VisibilityOff,
   VisibilityOutlined,
 } from '@mui/icons-material';
 import { Divider } from '@mui/material';

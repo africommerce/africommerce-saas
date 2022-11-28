@@ -29,6 +29,9 @@ import { RefundRequest } from '../../components/refund/pages/RefundRequest';
 import { ApproveFunds } from '../../components/refund/pages/ApproveFunds';
 import { RejectedRefund } from '../../components/refund/pages/RejectedRefund';
 import { Configuration } from '../../components/refund/pages/Configuration';
+import { AdminCustomers } from '../../components/admin-customers/pages/AdminCustomers';
+import { ClassifiedProduct } from '../../components/admin-customers/pages/ClassifiedProduct';
+import { ClassifiedPackages } from '../../components/admin-customers/pages/ClassifiedPackages';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -89,8 +92,10 @@ export const AdminRoutes = () => {
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
-        <Route path="customer/*">
-          <Route path="create" element={<h1>customer-sellers</h1>} />
+        <Route path="customers/*">
+          <Route path="list" element={<AdminCustomers />} />
+          <Route path="products" element={<ClassifiedProduct />} />
+          <Route path="packages" element={<ClassifiedPackages />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
