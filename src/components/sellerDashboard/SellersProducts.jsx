@@ -32,7 +32,7 @@ const ItemBgCard =styled.div`
 
 `
 const ItemNoneBgCard= styled.div`
-background-color: none;
+background-color: #fff;
 padding:20px;
 text-align:center;
 border:1px solid #fafafa;
@@ -149,11 +149,11 @@ export const SellersProducts = ()=>{
 
     {/* TABLE COLUMN SECTION */}
 
-<TableContainer component={Paper} sx={{marginTop:"20px", marginBottom:"20px"}}>
+<TableContainer component={Paper} sx={{marginTop:"20px", marginBottom:"20px", padding: 2, width:"max-content"}}>
   <Table aria-label="simple table">
     <TableHead>
       <TableRow>
-        <TableCell sx={{fontWeight:"bold"}} colSpan={2}>All Products</TableCell>
+        <TableCell sx={{fontWeight:"bold"}} colSpan={6}>All Products</TableCell>
         <TableCell colSpan={3}>
           <TextField 
            placeholder="Search Product"
@@ -163,40 +163,40 @@ export const SellersProducts = ()=>{
       </TableRow>
 
       <TableRow >
-            <TableCell sx={{fontWeight:"bold"}} align="left">#</TableCell>
-            <TableCell sx={{fontWeight:"bold"}} align="left">Name</TableCell>
-            <TableCell sx={{fontWeight:"bold"}} align="left">Category</TableCell>
-            <TableCell sx={{fontWeight:"bold"}} align="left">Current Qty</TableCell>
-            <TableCell sx={{fontWeight:"bold"}} align="left">Base Price</TableCell>
-            <TableCell sx={{fontWeight:"bold"}} align="left">Approval</TableCell>
-            <TableCell sx={{fontWeight:"bold"}} align="left">Published</TableCell>
+            <TableCell sx={{fontWeight:"bold", width:5}} align="left">#</TableCell>
+            <TableCell sx={{fontWeight:"bold",width:230 }} align="left">Name</TableCell>
+            <TableCell sx={{fontWeight:"bold",width:100 }} align="left">Category</TableCell>
+            <TableCell sx={{fontWeight:"bold", width:40 }} align="left">Current Qty</TableCell>
+            <TableCell sx={{fontWeight:"bold", width:40 } } align="left">Base Price</TableCell>
+            <TableCell sx={{fontWeight:"bold",width:40 }} align="left">Approval</TableCell>
+            <TableCell sx={{fontWeight:"bold",width:40 }} align="left">Published</TableCell>
 
-            <TableCell sx={{fontWeight:"bold"}} align="left">Featured</TableCell>
-            <TableCell sx={{fontWeight:"bold"}} align="left" bold>options</TableCell>
+            <TableCell sx={{fontWeight:"bold", width:40}} align="left">Featured</TableCell>
+            <TableCell sx={{fontWeight:"bold", width:150}} align="left" bold>options</TableCell>
           </TableRow>
     </TableHead>
     <TableBody>
       {rows.map((row)=>(
         <TableRow  key={row.no} >
-        <TableCell align="left"> {row.no}</TableCell>
-        <TableCell align="left">{row.name}</TableCell>
-        <TableCell align="left">{row.category}</TableCell>
-        <TableCell align="left">{row.qty}</TableCell>
-        <TableCell align="left">{row.price}</TableCell>
+        <TableCell align="left" component="th" scope="row" sx={{width:5}}> {row.no}</TableCell>
+        <TableCell align="left" sx={{width:230}}>{row.name}</TableCell>
+        <TableCell align="left" sx={{width:100}}>{row.category}</TableCell>
+        <TableCell align="left" sx={{width:40}}>{row.qty}</TableCell>
+        <TableCell align="left" sx={{width:40}}>{row.price}</TableCell>
         
-        <TableCell align="left" ><Typography variant="Span" sx={{backgroundColor:"#28a745", padding:"5px", fontSize:".8rem",  borderRadius:"5px" , color:"#fFf"}}>{row.approval}</Typography> </TableCell>
-        <TableCell align="left"><Switch {...label} defaultChecked /></TableCell>
-        <TableCell align="left"><Switch {...label} defaultChecked /></TableCell>
+        <TableCell align="left" sx={{width:40}}><Typography variant="Span" sx={{backgroundColor:"#28a745", padding:"5px", fontSize:".8rem",  borderRadius:"5px" , color:"#fFf"}}>{row.approval}</Typography> </TableCell>
+        <TableCell align="left" sx={{width:40}}><Switch {...label} defaultChecked /></TableCell>
+        <TableCell align="left" sx={{width:40}}><Switch {...label} defaultChecked /></TableCell>
      
-        <TableCell align="left">
+        <TableCell align="left" sx={{width:150}}>
         <EditOutlinedIcon  sx={{cursor:"pointer", color:'#0abb75', backgroundColor:"rgba(37, 188, 241, 0.15)", fontSize:"small",padding:"10px", borderRadius:"50%", '&:hover': {
-              backgroundColor: '#0abb75',
+              backgroundColor: '#25bcf1', color:'#fff'
             }}}/>
            <ContentCopyOutlinedIcon sx={{cursor:"pointer", color:'#28a745', backgroundColor:"rgba(10, 187, 117, 0.15)", fontSize:"small",padding:"10px", borderRadius:"50%", '&:hover': {
-              backgroundColor: '#28a745',
+              backgroundColor: '#28a745', color:'#fff'
             }}}/>
            <DeleteOutlinedIcon sx={{cursor:"pointer", color:'#ef486a', backgroundColor:"rgba(239, 72, 106, 0.15)", fontSize:"small",padding:"10px", borderRadius:"50%", '&:hover': {
-              backgroundColor: '#ef486a',
+              backgroundColor: '#ef486a', color:'#fff'
             }}}/>
 
         </TableCell>

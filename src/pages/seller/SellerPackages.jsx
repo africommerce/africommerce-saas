@@ -1,8 +1,9 @@
 import React from 'react'
+import { SellersPackages } from '../../components/sellerDashboard/SellersPackages'
 
 function SellerPackages() {
   return (
-    <div>SellerPackages</div>
+    <div><SellersPackages/></div>
   )
 }
 

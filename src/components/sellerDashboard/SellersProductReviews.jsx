@@ -42,7 +42,7 @@ function Row(props) {
     <React.Fragment>
       
       <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
-        <TableCell>
+        <TableCell sx={{width:50}}>
           <IconButton
             aria-label="expand row"
             size="small"
@@ -53,10 +53,10 @@ function Row(props) {
           </IconButton>
           {row.id}
         </TableCell>
-        <TableCell component="th" scope="row">
+        <TableCell component="th" scope="row" sx={{width:700}}>
           {row.product}
         </TableCell>
-        <TableCell align="left"><Rating size="small" name="read-only" value={value} readOnly /></TableCell>
+        <TableCell align="left" sx={{width:150}}><Rating size="small" name="read-only" value={value} readOnly /></TableCell>
         {/* <TableCell align="right">{row.carbs}</TableCell>
         <TableCell align="right">{row.protein}</TableCell> */}
       </TableRow>
@@ -71,7 +71,7 @@ function Row(props) {
                 <TableHead>
                   <TableRow>
                     {/* <TableCell>Date</TableCell> */}
-                    <TableCell>Customer</TableCell></TableRow>
+                    <TableCell >Customer</TableCell></TableRow>
                   <TableRow> <TableCell>Comment</TableCell></TableRow>
                   <TableRow> <TableCell>Published</TableCell></TableRow>
                 </TableHead>
@@ -126,16 +126,16 @@ const rows = [
 export default function sellerProductReviews() {
   return (
     
-    <TableContainer  component={Paper}>
+    <TableContainer  component={Paper} sx={{width:"max-content"}}>
       <Table sx={{width:"100%"}}  aria-label="collapsible table">
         <TableHead>
           <TableRow> 
             <TableCell  sx={{fontWeight:"bold"}} colSpan={3}>Product Reviews</TableCell>
              </TableRow>
           <TableRow>
-            <TableCell  sx={{fontWeight:"bold"}} align="left">#</TableCell>
-            <TableCell  sx={{fontWeight:"bold"}}  align="left">Product</TableCell>
-            <TableCell  sx={{fontWeight:"bold"}}  align="left">Rating</TableCell>
+            <TableCell  sx={{fontWeight:"bold", width:50}} align="left">#</TableCell>
+            <TableCell  sx={{fontWeight:"bold", width:700}}  align="left">Product</TableCell>
+            <TableCell  sx={{fontWeight:"bold", width:150}}  align="left">Rating</TableCell>
             
           </TableRow>
         </TableHead>
