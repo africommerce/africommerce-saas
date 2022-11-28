@@ -25,6 +25,10 @@ import { DeliveryPayHistory } from '../../components/delivery/pages/DeliveryPayH
 import { DeliveryCollection } from '../../components/delivery/pages/DeliveryCollection';
 import { CancelRequest } from '../../components/delivery/pages/CancelRequest';
 import { ConfigureDelivery } from '../../components/delivery/pages/ConfigureDelivery';
+import { RefundRequest } from '../../components/refund/pages/RefundRequest';
+import { ApproveFunds } from '../../components/refund/pages/ApproveFunds';
+import { RejectedRefund } from '../../components/refund/pages/RejectedRefund';
+import { Configuration } from '../../components/refund/pages/Configuration';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -78,7 +82,10 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="refund/*">
-          <Route path="create" element={<h1>create-refund</h1>} />
+          <Route path="request" element={<RefundRequest />} />
+          <Route path="approved" element={<ApproveFunds />} />
+          <Route path="rejected" element={<RejectedRefund />} />
+          <Route path="configuration" element={<Configuration />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 

@@ -29,7 +29,7 @@ import { SellerProducts } from '../pages/seller/SellerProducts';
 import { SellerPos } from '../pages/seller/SellerPos';
 import { SellerUploads } from '../pages/seller/SellerUploads';
 import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
-import  Dashboard from '../pages/user/userDashboard';
+import Dashboard from '../pages/user/userDashboard';
 import Compare from '../pages/user/Compare';
 import ClassifiedProduct from '../pages/user/ClassifiedProduct';
 import PurchaseHistoryMain from '../pages/user/PurchaseHistoryMain';
@@ -37,7 +37,7 @@ import AuctionBidded from '../pages/user/Auction.bidded';
 import Conversation from '../pages/user/Conversation';
 import Download from '../pages/user/Download';
 import Wallet from '../pages/user/Wallet';
-import EarningPoint from "../pages/user/EarningPoint";
+import EarningPoint from '../pages/user/EarningPoint';
 import ManageProfile from '../pages/user/ManageProfile';
 import SupportTicket from '../pages/user/SupportTicket';
 import SentRefundRequest from '../pages/user/sentRefundRequest';
@@ -57,13 +57,14 @@ export const MasterRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/admin/*" element={<AdminDashboard />}></Route>
-      <Route path="/admin/auction-product/*" element={<AdminDashboard />}>
-        <Route path="create" element={<h1>Create Auction</h1>} />
-        <Route path="all-product" element={<h1>all-product</h1>} />
-        <Route path="inhouse" element={<h1>inhouse-products</h1>} />
-        <Route path="seller-products" element={<h1>seller-products</h1>} />
-        <Route path="orders" element={<h1>orders</h1>} />
+      <Route path="/admin/*" element={<AdminDashboard />}>
+        <Route path="auction-product/*" element={<AdminDashboard />}>
+          <Route path="create" element={<h1>Create Auction</h1>} />
+          <Route path="all-product" element={<h1>all-product</h1>} />
+          <Route path="inhouse" element={<h1>inhouse-products</h1>} />
+          <Route path="seller-products" element={<h1>seller-products</h1>} />
+          <Route path="orders" element={<h1>orders</h1>} />
+        </Route>
       </Route>
       <Route path="/auth-seller" element={<AuthSeller />}>
         <Route path="orders" element={<SellerOrders />}></Route>
@@ -125,10 +126,3 @@ export const MasterRoutes = () => {
     </Routes>
   );
 };
-
-
-
-
-
-
-    
