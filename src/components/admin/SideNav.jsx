@@ -78,7 +78,7 @@ const Container = styled.div`
     }
     .dashboard {
       text-transform: capitalize;
-      background: rgb(26, 26, 39);
+      background: rgb(20, 20, 35);
       padding: 1rem;
       color: white;
       font-weight: bold;

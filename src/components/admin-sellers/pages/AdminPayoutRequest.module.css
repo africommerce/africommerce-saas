@@ -1,0 +1,215 @@
+.container {
+    display: flex;
+    padding: 1rem;
+    width: 96%;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.top_wrapper {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.top_title {
+    display: flex;
+    padding: 1rem 0.5rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    gap: 1rem;
+    flex-direction: column;
+
+}
+
+.body_wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body_title {
+    display: flex;
+    font-weight: bold;
+}
+
+.body_search {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: space-between;
+}
+
+.bulk_action {
+    display: flex;
+    align-items: center;
+    border: 1px gainsboro solid;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.body_select {
+    display: flex;
+    border: 1px gainsboro solid;
+    align-items: center;
+    padding: 0.3rem;
+    cursor: pointer;
+
+}
+
+.body_select select {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+}
+
+.search_input input {
+    border: 1px solid gainsboro;
+    padding: 0.8rem;
+    border-radius: 5px;
+    outline: none;
+    min-width: 200px;
+}
+
+.table_container {
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+}
+
+.table_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.head_row {
+    display: flex;
+    font-weight: bolder;
+}
+
+.body_row {
+    display: flex;
+    align-items: flex-start !important;
+
+}
+
+.head_row .head_id,
+.body_row .body_id {
+    display: flex;
+    flex: 1;
+}
+
+.head_row .head_date,
+.body_row .body_date {
+    display: flex;
+    flex: 1;
+}
+
+.head_row .head_seller,
+.body_row .body_seller {
+    display: flex;
+    flex: 2.5;
+}
+
+
+.head_row .head_amount_topay,
+.body_row .body_amount_topay {
+    display: flex;
+    flex: 2.5;
+}
+
+
+.head_row .head_request_amount,
+.body_row .body_request_amount {
+    display: flex;
+    flex: 2.5;
+}
+
+.head_row .head_message,
+.body_row .body_message {
+    display: flex;
+    flex: 6;
+}
+
+
+.head_row .head_status,
+.body_row .body_status {
+    display: flex;
+    flex: 2;
+}
+
+.body_row .body_status span {
+    background: rgba(7, 129, 252, 0.762);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+
+.head_row .head_option,
+.body_row .body_option {
+    display: flex;
+    flex: 3;
+}
+
+.body_row .body_option {
+    position: relative;
+}
+
+.option_menu {
+    width: 30px;
+    height: 30px;
+    color: rgb(251, 182, 120);
+    display: flex;
+    background: rgb(254, 235, 218);
+    cursor: pointer;
+    align-items: center;
+    border-radius: 50%;
+    justify-content: center;
+    position: relative;
+    transition: all 300ms ease;
+    font-size: 10px !important;
+
+}
+
+.option_menu:hover {
+    color: white;
+    display: flex;
+    background: orange;
+}
+
+.option_menu_drop {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    color: gray;
+
+    margin-top: 200px;
+    left: -80px;
+}
+
+.option_menu_drop span {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    transition: all 300ms ease;
+}
+
+.hide_option {
+    display: none;
+}
+
+.option_menu_drop span:hover {
+    color: white;
+    display: flex;
+    background: orange;
+    cursor: pointer;
+}

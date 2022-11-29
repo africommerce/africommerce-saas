@@ -62,32 +62,33 @@ export default function UploadsMenu({ title, icon, items }) {
         <AccordionDetails>
           <Typography>
             <MenuList>
-              {items.map((list) => (
-                <>
-                  <Link
-                    key={list.name}
-                    style={{
-                      textDecoration: 'none',
-                      color: 'gray',
-                    }}
-                    to={list.link}
-                  >
-                    <li
+              {items &&
+                items.map((list) => (
+                  <>
+                    <Link
+                      key={list.name}
                       style={{
-                        display: 'flex',
-                        gap: '3px',
-                        padding: '10px',
-                        fontWeight: '600',
+                        textDecoration: 'none',
+                        color: 'gray',
                       }}
+                      to={list.link}
                     >
-                      {' '}
-                      <CircleOutlined fontSize="small" />
-                      {list.name}
-                    </li>
-                  </Link>
-                  {/* <Outlet /> */}
-                </>
-              ))}
+                      <li
+                        style={{
+                          display: 'flex',
+                          gap: '3px',
+                          padding: '10px',
+                          fontWeight: '600',
+                        }}
+                      >
+                        {' '}
+                        <CircleOutlined fontSize="small" />
+                        {list.name}
+                      </li>
+                    </Link>
+                    {/* <Outlet /> */}
+                  </>
+                ))}
             </MenuList>
           </Typography>
         </AccordionDetails>
