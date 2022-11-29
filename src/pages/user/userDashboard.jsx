@@ -67,9 +67,6 @@ function Dashboard() {
   return (
     <Wrap>
       <div>
-        <DashboardSidebar />
-      </div>
-      <div>
         <div>
           <div style={{ padding: '3rem' }}>Dashboard</div>
           <Wraps>

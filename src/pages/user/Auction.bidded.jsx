@@ -7,7 +7,7 @@ const Containers = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  padding: 7rem;
+  flex: 1;
 `;
 
 const Button = styled.button`
@@ -103,9 +103,6 @@ const AuctionBidded = () => {
   if (!loading) {
     content = (
       <Containers>
-        <div>
-          <DashboardSidebar />
-        </div>
         <div className={classes.Purchase}>
           <h2>Bidded Products</h2>
           <div className={classes.Headers}>

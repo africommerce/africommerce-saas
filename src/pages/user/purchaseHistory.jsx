@@ -213,7 +213,7 @@ const PurchaseHistory = () => {
   useEffect(() => {
     setState(data);
     setLoading(false);
-  });
+  }, []);
 
   const lastIndex = currentPage * perPage;
   const firstIndex = lastIndex - perPage;

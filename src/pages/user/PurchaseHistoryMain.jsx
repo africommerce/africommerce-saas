@@ -7,7 +7,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-  padding: 7rem;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  justify-content: space-between;
 `;
 
 function PurchaseHistoryMain() {
