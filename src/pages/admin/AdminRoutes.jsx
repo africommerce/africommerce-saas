@@ -38,6 +38,7 @@ import { AdminPayoutRequest } from '../../components/admin-sellers/pages/AdminPa
 import { AdminCommision } from '../../components/admin-sellers/pages/AdminCommision';
 import { AdminPackages } from '../../components/admin-sellers/pages/AdminPackage';
 import { AdminSellerForm } from '../../components/admin-sellers/pages/AdminSellerForm';
+import { AdminAllUpload } from '../../components/admin-upload/pages/AdminAllUpload';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -116,7 +117,7 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="upload/*">
-          <Route path="create" element={<h1>create-upload</h1>} />
+          <Route path="all-upload" element={<AdminAllUpload />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
