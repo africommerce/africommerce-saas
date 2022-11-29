@@ -23,20 +23,16 @@ function ManageProfile() {
   return (
     <Card>
       <div>
-        <DashboardSidebar />
-      </div>
-      <div>
-          <div>Manage Profile</div>
+        <div>Manage Profile</div>
+        <div>
+          <div>Basic Info</div>
           <div>
-            <div>Basic Info</div>
-            <div>
-              <form>
-              </form>
-            </div>
+            <form></form>
           </div>
+        </div>
       </div>
     </Card>
   );
-};
+}
 
 export default ManageProfile;

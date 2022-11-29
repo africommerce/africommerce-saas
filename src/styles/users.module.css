@@ -1,8 +1,9 @@
 .Purchase {
   margin-top: 50px;
   background-color: white;
-  width: 80vw;
-  margin: 1rem auto;
+  /* width: 80vw; */
+  flex: 1;
+  margin: 0 auto;
   box-sizing: border-box;
   padding: 1rem;
   border-radius: 10px;
@@ -14,11 +15,8 @@
 }
 
 .ProductPage {
-  margin-top: 50px;
   background-color: white;
-  width: 80vw;
-  height: 40vh;
-  margin: 1rem auto;
+  width: 100%;
   box-sizing: border-box;
   padding: 1rem;
   border-radius: 10px;
