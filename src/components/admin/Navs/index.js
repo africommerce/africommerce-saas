@@ -146,52 +146,30 @@ export const AdminNavs = () => {
         icon={<PeopleAltOutlined />}
         title="Customers"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Customers list', link: 'customers/list' },
+          { name: 'Classified Products', link: 'customers/products' },
+          { name: 'Classified Packages', link: 'customers/packages' },
         ]}
       />
       <SalesMenu
         icon={<PersonOutlineOutlined />}
         title="Sellers"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'All Seller', link: 'sellers/all' },
+          { name: 'Payouts', link: 'sellers/payouts' },
+          { name: 'Payout Request', link: 'sellers/payout-request' },
+          { name: 'Sellers Commission', link: 'sellers/commission' },
+          { name: 'Sellers Packages', link: 'sellers/package' },
+          {
+            name: 'Sellers Verification Form',
+            link: 'sellers/verification-form',
+          },
         ]}
       />
       <UploadsMenu
         icon={<DriveFolderUploadOutlined />}
         title="Upload Files"
-        items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
-        ]}
+        items={[{ name: 'All Upload', link: 'upload/all-upload' }]}
       />
 
       <ReportMenu

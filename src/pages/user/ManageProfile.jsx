@@ -7,17 +7,6 @@ const Card = styled.div`
   flex-direction: row;
   margin: 0 auto;
 `;
-const Page = styled.div`
-  margin: 0 auto;
-  background: red;
-`;
-
-const Container = styled.div`
-  /* height: 50vh; */
-  top: 0;
-  margin: 0 auto;
-  background: rgb(242, 243, 248);
-`;
 
 function ManageProfile() {
   return (
@@ -26,17 +15,16 @@ function ManageProfile() {
         <DashboardSidebar />
       </div>
       <div>
-          <div>Manage Profile</div>
+        <div>Manage Profile</div>
+        <div>
+          <div>Basic Info</div>
           <div>
-            <div>Basic Info</div>
-            <div>
-              <form>
-              </form>
-            </div>
+            <form></form>
           </div>
+        </div>
       </div>
     </Card>
   );
-};
+}
 
 export default ManageProfile;

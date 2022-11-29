@@ -4,7 +4,7 @@ import classes from '../../styles/users.module.css';
 const DownloadSection = () => {
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState([]);
-  
+
   const data = [
     {
       id: 1,
@@ -17,8 +17,8 @@ const DownloadSection = () => {
   useEffect(() => {
     setState(data);
     setLoading(false);
-  });
-  
+  }, []);
+
   let content = null;
   if (loading) content = <div>Loading...</div>;
   if (!loading) {
@@ -50,5 +50,3 @@ const DownloadSection = () => {
   return content;
 };
 export default DownloadSection;
-
-
