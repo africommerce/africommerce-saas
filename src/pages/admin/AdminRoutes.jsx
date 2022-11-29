@@ -32,6 +32,12 @@ import { Configuration } from '../../components/refund/pages/Configuration';
 import { AdminCustomers } from '../../components/admin-customers/pages/AdminCustomers';
 import { ClassifiedProduct } from '../../components/admin-customers/pages/ClassifiedProduct';
 import { ClassifiedPackages } from '../../components/admin-customers/pages/ClassifiedPackages';
+import { AdminAllSellers } from '../../components/admin-sellers/pages/AdminAllSellers';
+import { AdminPayout } from '../../components/admin-sellers/pages/AdminPayout';
+import { AdminPayoutRequest } from '../../components/admin-sellers/pages/AdminPayoutRequest';
+import { AdminCommision } from '../../components/admin-sellers/pages/AdminCommision';
+import { AdminPackages } from '../../components/admin-sellers/pages/AdminPackage';
+import { AdminSellerForm } from '../../components/admin-sellers/pages/AdminSellerForm';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -99,8 +105,13 @@ export const AdminRoutes = () => {
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
-        <Route path="sales/*">
-          <Route path="create" element={<h1>create-sales</h1>} />
+        <Route path="sellers/*">
+          <Route path="all" element={<AdminAllSellers />} />
+          <Route path="payouts" element={<AdminPayout />} />
+          <Route path="payout-request" element={<AdminPayoutRequest />} />
+          <Route path="commission" element={<AdminCommision />} />
+          <Route path="package" element={<AdminPackages />} />
+          <Route path="verification-form" element={<AdminSellerForm />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
