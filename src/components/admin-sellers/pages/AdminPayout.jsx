@@ -1,10 +1,9 @@
-import { KeyboardArrowDown, MoreVertOutlined } from '@mui/icons-material';
-import { Divider, Switch } from '@mui/material';
-import React, { useState } from 'react';
+import { Divider } from '@mui/material';
+import React from 'react';
 import classes from './AdminPayout.module.css';
 
 export const AdminPayout = () => {
-  const [menuDrop, setMenuDrop] = useState(false);
+  // const [menuDrop, setMenuDrop] = useState(false);
   return (
     <div className={classes.container}>
       <div className={classes.top_wrapper}>All Sellers</div>
