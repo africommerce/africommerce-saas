@@ -39,6 +39,13 @@ import { AdminCommision } from '../../components/admin-sellers/pages/AdminCommis
 import { AdminPackages } from '../../components/admin-sellers/pages/AdminPackage';
 import { AdminSellerForm } from '../../components/admin-sellers/pages/AdminSellerForm';
 import { AdminAllUpload } from '../../components/admin-upload/pages/AdminAllUpload';
+import { InHouseReport } from '../../components/admin-report/pages/InHouseReport';
+import { SellerProductSale } from '../../components/admin-report/pages/SellerProductSale';
+import { AdminProductStock } from '../../components/admin-report/pages/AdminProductStock';
+import { AdminProductWishlist } from '../../components/admin-report/pages/AdminProductWishlist';
+import { AdminUserSearches } from '../../components/admin-report/pages/AdminUserSearches';
+import { AdminCommissionHistory } from '../../components/admin-report/pages/AdminCommissionHistory';
+import { AdminWalletRechargeHistory } from '../../components/admin-report/pages/AdminWalletRechargeHistory';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -122,7 +129,16 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="report/*">
-          <Route path="create" element={<h1>create-report</h1>} />
+          <Route path="inhouse" element={<InHouseReport />} />
+          <Route path="sales" element={<SellerProductSale />} />
+          <Route path="stock" element={<AdminProductStock />} />
+          <Route path="wishlist" element={<AdminProductWishlist />} />
+          <Route path="searches" element={<AdminUserSearches />} />
+          <Route path="history" element={<AdminCommissionHistory />} />
+          <Route
+            path="wallet-history"
+            element={<AdminWalletRechargeHistory />}
+          />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
