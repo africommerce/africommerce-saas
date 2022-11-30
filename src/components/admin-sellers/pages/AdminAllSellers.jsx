@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import classes from './AdminAllSellers.module.css';
 
 export const AdminAllSellers = () => {
-  const [menuDrop, setMenuDrop] = useState(false);
+  const [setMenuDrop] = useState(false);
   return (
     <div className={classes.container}>
       <div className={classes.top_wrapper}>All Sellers</div>
