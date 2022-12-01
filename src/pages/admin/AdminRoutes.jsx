@@ -46,6 +46,8 @@ import { AdminProductWishlist } from '../../components/admin-report/pages/AdminP
 import { AdminUserSearches } from '../../components/admin-report/pages/AdminUserSearches';
 import { AdminCommissionHistory } from '../../components/admin-report/pages/AdminCommissionHistory';
 import { AdminWalletRechargeHistory } from '../../components/admin-report/pages/AdminWalletRechargeHistory';
+import { AdminAllBlog } from '../../components/admin-blog/pages/AdminAllBlog';
+import { AdminBlogCategories } from '../../components/admin-blog/pages/AdminBlogCategories';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -143,7 +145,8 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="blog/*">
-          <Route path="create" element={<h1>create-blog</h1>} />
+          <Route path="all" element={<AdminAllBlog />} />
+          <Route path="categories" element={<AdminBlogCategories />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
