@@ -53,6 +53,9 @@ import { AdminNewsletter } from '../../components/admin-marketing/pages/AdminNew
 import { AdminSubcribers } from '../../components/admin-marketing/pages/AdminSubcribers';
 import { AdminCoupons } from '../../components/admin-marketing/pages/AdminCoupons';
 import { AdminBulkSms } from '../../components/admin-marketing/pages/AdminBulkSms';
+import { AdminTicket } from '../../components/admin-support/pages/AdminTicket';
+import { AdminConversation } from '../../components/admin-support/pages/AdminConversation';
+import { AdminQueries } from '../../components/admin-support/pages/AdminQueries';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -165,7 +168,9 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="support/*">
-          <Route path="create" element={<h1>create-support</h1>} />
+          <Route path="ticket" element={<AdminTicket />} />
+          <Route path="conversation" element={<AdminConversation />} />
+          <Route path="queries" element={<AdminQueries />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
