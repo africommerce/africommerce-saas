@@ -34,8 +34,8 @@ const AuctionBidded = () => {
       BiddedAmount: '$550.000',
       HighestBiddedAmount: '$550.000',
       AuctionEndDate: '2025-03-01 00:00:00',
-
-      Action: ['N/A'],
+      status: 'green',
+      Action: 'N/A',
     },
     {
       id: 2,
@@ -43,8 +43,8 @@ const AuctionBidded = () => {
       BiddedAmount: '$2,020.000',
       HighestBiddedAmount: '$3,000.000',
       AuctionEndDate: '2025-03-01 00:00:00',
-
-      Action: ['Purchased'],
+      status: 'red',
+      Action: 'Purchased',
     },
     {
       id: 3,
@@ -52,8 +52,8 @@ const AuctionBidded = () => {
       BiddedAmount: '$4,050.000',
       HighestBiddedAmount: '$4,050.000',
       AuctionEndDate: '2025-03-01 00:00:00',
-
-      Action: ['N/A'],
+      status: 'green',
+      Action: 'N/A',
     },
     {
       id: 4,
@@ -61,8 +61,8 @@ const AuctionBidded = () => {
       BiddedAmount: '$2,040.000',
       HighestBiddedAmount: '$2,050.000',
       AuctionEndDate: '2025-03-01 00:00:00',
-
-      Action: ['N/A'],
+      status: 'red',
+      Action: 'N/A',
     },
     {
       id: 5,
@@ -70,8 +70,9 @@ const AuctionBidded = () => {
       BiddedAmount: '$5,020.000',
       HighestBiddedAmount: '$5,020.000',
       AuctionEndDate: '2025-03-01 00:00:00',
+      status: 'green',
 
-      Action: ['Purchased'],
+      Action: 'Purchased',
     },
     {
       id: 6,
@@ -79,8 +80,9 @@ const AuctionBidded = () => {
       BiddedAmount: '$850.000',
       HighestBiddedAmount: '$850.000',
       AuctionEndDate: '2025-03-01 00:00:00',
+      status: 'green',
 
-      Action: ['Purchased'],
+      Action: 'Purchased',
     },
     {
       id: 7,
@@ -88,8 +90,9 @@ const AuctionBidded = () => {
       BiddedAmount: '$1,250.000',
       HighestBiddedAmount: '$13,000.000',
       AuctionEndDate: '2025-03-01 00:00:00',
+      status: 'red',
 
-      Action: ['N/A'],
+      Action: 'N/A',
     },
   ];
 
@@ -123,20 +126,50 @@ const AuctionBidded = () => {
                 <div className={classes.BiddedAmount}>${data.BiddedAmount}</div>
 
                 <div className={classes.Btn}>
-                  {data.HighestBiddedAmount === '2' || '4' || '7' ? (
-                    <Button>{data.HighestBiddedAmount}</Button>
+                  {data.status === 'red' ? (
+                    <button
+                      style={{
+                        backgroundColor: '#0abb75',
+                        color: 'white',
+                        padding: '1px 4px',
+                        borderRadius: '3px',
+                        border: '0',
+                        fontSize: '11px',
+                      }}
+                    >
+                      {data.HighestBiddedAmount}
+                    </button>
                   ) : (
-                    <button style={{ background: 'red', color: 'white' }}>
+                    <button
+                      style={{
+                        backgroundColor: 'red',
+                        color: 'white',
+                        padding: '1px 4px',
+                        borderRadius: '3px',
+                        border: '0',
+                        fontSize: '11px',
+                      }}
+                    >
                       {data.HighestBiddedAmount}
                     </button>
                   )}
                 </div>
                 <div className={classes.Date}>{data.AuctionEndDate}</div>
                 <div className={classes.Btn}>
-                  {data.Action !== 'Purchased' ? (
-                    <div>{data.Action}</div>
+                  {data.Action === 'Purchased' ? (
+                    <button
+                      style={{
+                        backgroundColor: '#0abb75',
+                        color: 'white',
+                        padding: '5px 10px',
+                        borderRadius: '3px',
+                        border: '0',
+                      }}
+                    >
+                      {data.Action}
+                    </button>
                   ) : (
-                    <div>{data.Action}</div>
+                    <div style={{ color: 'black' }}>{data.Action}</div>
                   )}
                 </div>
               </div>

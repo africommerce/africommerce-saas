@@ -144,12 +144,9 @@ export const MasterRoutes = () => {
         <Route path="wallet" element={<Wallet />} />
         <Route path="earning-point" element={<EarningPoint />} />
         <Route path="affiliate" element={<AffliatePartner />}>
-          <Route path="user" element={<AffiliateSystem />} />
-          <Route path="user/payment-history" element={<PaymentHistory />} />
-          <Route
-            path="user/withdrawal-history"
-            element={<WithdrawalHistory />}
-          />
+          <Route path="system" element={<AffiliateSystem />} />
+          <Route path="payment-history" element={<PaymentHistory />} />
+          <Route path="withdrawal-history" element={<WithdrawalHistory />} />
         </Route>
         <Route path="support" element={<SupportTicket />} />
         <Route path="manage-profile" element={<ManageProfile />} />
