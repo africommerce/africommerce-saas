@@ -18,6 +18,8 @@
   box-sizing: border-box;
   width: 345px;
   height: 135px;
+  cursor: pointer;
+
   align-items: center;
   border-radius: 5px;
 }
@@ -141,4 +143,90 @@
 }
 .HistoryContent {
   padding: 20px;
+}
+.PaymentHistory {
+  display: flex;
+  justify-content: space-evenly;
+}
+.PaymentHistoryBox {
+  margin-top: 30px;
+  background-color: white;
+
+  border-radius: 5px;
+  /* padding: 15px; */
+}
+.PaymentHistoryBoxHead {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.PaymentMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 14px;
+  border-bottom: 2px solid #ebedf2;
+}
+.PaymentContent {
+  background-color: white;
+}
+.PaymentSN {
+  flex-basis: 10%;
+}
+.PaymentDate {
+  flex-basis: 25%;
+}
+.PaymentAmount {
+  flex-basis: 25%;
+}
+.PaymentMethod {
+  flex: 1;
+}
+.pending {
+  background-color: #25bcf1;
+  color: white;
+  padding: 2px;
+  font-size: 11px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  /* justify-self: flex-start; */
+  font-weight: bold;
+  max-width: 80px;
+}
+.approved {
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 11px;
+  box-sizing: border-box;
+  background-color: #0abb75;
+  max-width: 80px;
+  color: white;
+  padding: 2px;
+}
+.AffiliateForm {
+  position: relative;
+  margin-top: 20px;
+}
+.AffiliateFormDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.AffiliateFormDiv label {
+  font-size: 14px;
+}
+.AffiliateFormInput {
+  flex-basis: 70%;
+  border: 1px solid #ebedf2;
+  padding: 5px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.AffiliateFormInput:focus {
+  border: 1px solid #ebedf2;
+}
+.AffiliateSubmitButton {
+  position: absolute;
+  right: 50px;
+  margin-top: 10px;
 }

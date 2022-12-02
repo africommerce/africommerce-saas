@@ -1,26 +1,28 @@
 import classes from '../../../styles/affiliate.module.css';
-
+import React, { useState } from 'react';
+import PurpleBox from '../components/purpleBox';
+import WhiteBox from '../components/whiteBox';
+import Backdrop from '../components/backdrop';
 const AffiliateSystem = () => {
+  const [showBackdrop, setShowBackdrop] = useState(false);
+  const setShowBackdropHandler = () => {
+    setShowBackdrop(true);
+  };
+  const setCloseBackdropHandler = () => {
+    setShowBackdrop(false);
+  };
   return (
     <div className={classes.System}>
+      {showBackdrop ? <Backdrop click={setCloseBackdropHandler} /> : null}
       <div className={classes.SystemBoxes}>
-        <div
-          className={[classes.SystemBox, classes.SystemBoxSpecial].join(' ')}
-        >
-          <div>$</div>
-          <div style={{ fontWeight: 'bold', fontSize: '20px' }}>$10, 000</div>
-          <div style={{ fontSize: '13px', fontWeight: '500', opacity: '0.5' }}>
-            Affiliate Balance
-          </div>
-        </div>
-        <div className={[classes.SystemBox, classes.SystemBoxWhite].join(' ')}>
-          <div>Settings Icon</div>
-          <div>Configure payout</div>
-        </div>
-        <div className={[classes.SystemBox, classes.SystemBoxWhite].join(' ')}>
-          <div>Plus icon</div>
-          <div>Affiliate Withdrawal Request</div>
-        </div>
+        <PurpleBox caption="Affiliate Balance" value="$10, 000" symbol="$" />
+
+        <WhiteBox caption="Configure Payout" icon="Settings" />
+        <WhiteBox
+          caption="Withdrawal Request"
+          icon="Plus"
+          click={setShowBackdropHandler}
+        />
       </div>
       <div className={classes.Code}>
         <textarea
@@ -58,7 +60,7 @@ const AffiliateSystem = () => {
               <span>0</span>
             </div>
             <div className={classes.Caption}>No of Delivered</div>
-          </div>{' '}
+          </div>
           <div className={classes.StatsBox} style={{ marginRight: '0px' }}>
             <div className={classes.Number}>
               <span>0</span>

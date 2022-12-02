@@ -231,7 +231,7 @@ function DashboardSidebar() {
               style={show ? { height: 'auto' } : null}
             >
               <li className={classes.ListItem}>
-                <Link to="affiliate/user" className={classes.Link}>
+                <Link to="affiliate/system" className={classes.Link}>
                   <div className={classes.Icon}>
                     <div className={classes.ListStyle}></div>{' '}
                   </div>
@@ -239,10 +239,7 @@ function DashboardSidebar() {
                 </Link>
               </li>
               <li className={classes.ListItem}>
-                <Link
-                  to="affiliate\user\payment-history"
-                  className={classes.Link}
-                >
+                <Link to="affiliate/payment-history" className={classes.Link}>
                   <div className={classes.Icon}>
                     <div className={classes.ListStyle}></div>{' '}
                   </div>
@@ -252,7 +249,7 @@ function DashboardSidebar() {
 
               <li className={classes.ListItem}>
                 <Link
-                  to="affiliate\user\withdrawal-history"
+                  to="affiliate/withdrawal-history"
                   className={classes.Link}
                 >
                   <div className={classes.Icon}>
