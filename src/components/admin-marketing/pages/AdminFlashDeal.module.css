@@ -35,10 +35,10 @@
 .body {
     display: flex;
     gap: 1rem;
-    padding: 1rem;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     border-radius: 10px;
+    padding: 1rem;
     flex-direction: column;
 }
 
@@ -69,44 +69,86 @@
 .body_body_row {
     display: flex;
     border-bottom: 1px solid gainsboro;
-    /* align-items: center; */
+    width: 100%;
+    align-items: center;
 
 }
 
 .body_head_id,
 .body_body_id {
     display: flex;
-    flex: 0.5;
+    flex: 0.2;
+
 }
 
 .body_head_title,
 .body_body_title {
     display: flex;
-    flex: 5;
+    flex: 1;
+
+
 }
 
-.body_head_category,
-.body_body_category {
+.body_head_banner,
+.body_body_banner {
     display: flex;
-    flex: 2;
+    flex: 1;
+
 }
 
-.body_head_desc,
-.body_body_desc {
-    flex: 8;
+.body_head_start,
+.body_body_start {
+    display: flex;
+    flex: 1;
+
+
+}
+
+.body_head_end,
+.body_body_end {
+    display: flex;
+    flex: 1;
+
 }
 
 .body_head_status,
 .body_body_status {
-    flex: 2;
+    display: flex;
+
+    flex: 1;
+}
+
+.body_head_featured,
+.body_body_featured {
+    display: flex;
+    flex: 1;
+
+}
+
+.body_head_link,
+.body_body_link {
+    display: flex;
+    flex: 4;
+    width: 100%;
+    word-wrap: break-word;
+    flex-wrap: wrap;
+    word-break: break-all;
+}
+
+.body_body_link span {
+    display: flex;
+    width: 100%;
+    word-wrap: break-word;
+    flex-wrap: wrap;
 }
 
 .body_head_options,
 .body_body_options {
     display: flex;
-    flex-direction: column;
     flex: 2;
+
 }
+
 
 .options_edit {
     display: flex;
@@ -140,4 +182,13 @@
 .options_delete:hover {
     background: rgb(234, 186, 143);
     color: red;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    width: auto;
+    max-width: 50px;
+    justify-content: center;
+    margin: 0 auto;
 }
