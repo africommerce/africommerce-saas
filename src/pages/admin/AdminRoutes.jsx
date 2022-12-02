@@ -48,6 +48,11 @@ import { AdminCommissionHistory } from '../../components/admin-report/pages/Admi
 import { AdminWalletRechargeHistory } from '../../components/admin-report/pages/AdminWalletRechargeHistory';
 import { AdminAllBlog } from '../../components/admin-blog/pages/AdminAllBlog';
 import { AdminBlogCategories } from '../../components/admin-blog/pages/AdminBlogCategories';
+import { AdminFlashDeal } from '../../components/admin-marketing/pages/AdminFlashDeal';
+import { AdminNewsletter } from '../../components/admin-marketing/pages/AdminNewsletter';
+import { AdminSubcribers } from '../../components/admin-marketing/pages/AdminSubcribers';
+import { AdminCoupons } from '../../components/admin-marketing/pages/AdminCoupons';
+import { AdminBulkSms } from '../../components/admin-marketing/pages/AdminBulkSms';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -151,7 +156,11 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="marketing/*">
-          <Route path="marketing" element={<h1>create-marketing</h1>} />
+          <Route path="flash" element={<AdminFlashDeal />} />
+          <Route path="newsletter" element={<AdminNewsletter />} />
+          <Route path="subscribers" element={<AdminSubcribers />} />
+          <Route path="bulk-sms" element={<AdminBulkSms />} />
+          <Route path="coupon" element={<AdminCoupons />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
