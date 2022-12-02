@@ -199,17 +199,11 @@ export const AdminNavs = () => {
         icon={<CampaignOutlined />}
         title="Marketing"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Flash deals', link: 'marketing/flash' },
+          { name: 'Newsletter', link: 'marketing/newsletter' },
+          { name: 'Bulk SMS', link: 'marketing/bulk-sms' },
+          { name: 'Subscribers', link: 'marketing/subscribers' },
+          { name: 'Coupon', link: 'marketing/coupon' },
         ]}
       />
 
