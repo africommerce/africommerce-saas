@@ -33,7 +33,6 @@ const AffiliateSystem = () => {
         <div
           style={{ width: '100%', display: 'flex', justifyContent: 'flex-end' }}
         >
-          {' '}
           <button className={classes.ButtonCopy}>Copy URL</button>
         </div>
       </div>
