@@ -1,8 +1,11 @@
 import React from 'react'
+import { SellersPurchasePackages } from '../../components/sellerDashboard/SellersPurchasePackages'
 
 function SellerPurchasePackages() {
   return (
-    <div>SellerPurchasePackages</div>
+    <div>
+      <SellersPurchasePackages />
+    </div>
   )
 }
 

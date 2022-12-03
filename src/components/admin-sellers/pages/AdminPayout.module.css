@@ -1,0 +1,127 @@
+.container {
+    display: flex;
+    padding: 1rem;
+    width: 96%;
+    gap: 1.5rem;
+    flex-direction: column;
+}
+
+.top_wrapper {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.top_title {
+    display: flex;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    gap: 1rem;
+    flex-direction: column;
+
+}
+
+.body_wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body_title {
+    display: flex;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.body_search {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    justify-content: space-between;
+}
+
+.bulk_action {
+    display: flex;
+    align-items: center;
+    border: 1px gainsboro solid;
+    position: relative;
+    padding: 0.5rem;
+}
+
+.body_select {
+    display: flex;
+    border: 1px gainsboro solid;
+    align-items: center;
+    padding: 0.3rem;
+    cursor: pointer;
+
+}
+
+.body_select select {
+    border: none;
+    outline: none;
+    font-weight: bold;
+    padding: 0.4rem 1rem;
+}
+
+.search_input input {
+    border: 1px solid gainsboro;
+    padding: 0.8rem;
+    border-radius: 5px;
+    outline: none;
+    min-width: 200px;
+}
+
+.table_container {
+    display: flex;
+    font-size: 12px;
+    flex-direction: column;
+}
+
+.table_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.head_row {
+    display: flex;
+    font-weight: bolder;
+}
+
+.body_row {
+    display: flex;
+}
+
+.head_row .head_id,
+.body_row .body_id {
+    display: flex;
+    flex: 1;
+}
+
+.head_row .head_date,
+.body_row .body_date {
+    display: flex;
+    flex: 4;
+}
+
+
+.head_row .head_seller,
+.body_row .body_seller {
+    display: flex;
+    flex: 5;
+}
+
+
+.head_row .head_amount,
+.body_row .body_amount {
+    display: flex;
+    flex: 2;
+}
+
+.head_row .head_detail,
+.body_row .body_detail {
+    display: flex;
+    flex: 2;
+}

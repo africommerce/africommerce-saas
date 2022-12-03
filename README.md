@@ -8,24 +8,15 @@
 
 
 
-<!-- PROJECT-BADGES -->
-<p align="center">
-  <a href="https://github.com/iamkelv/africommerce/blob/main/LICENSE" target="blank">
-<img src="https://img.shields.io/github/license/iamkelv/africommerce?style=flat-square" alt="africommerce licence" />
-</a>
-<a href="https://github.com/iamkelv/africommerce/fork" target="blank">
-<img src="https://img.shields.io/github/forks/iamkelv/africommerce?style=flat-square" alt="africommerce forks"/>
-</a>
-<a href="https://github.com/iamkelv/africommerce/stargazers" target="blank">
-<img src="https://img.shields.io/github/stars/iamkelv/africommerce?style=flat-square" alt="africommerce stars"/>
-</a>
-<a href="https://github.com/iamkelv/africommerce/issues" target="blank">
-<img src="https://img.shields.io/github/issues/iamkelv/africommerce?style=flat-square" alt="africommerce issues"/>
-</a>
-<a href="https://github.com/iamkelv/africommerce/pulls" target="blank">
-<img src="https://img.shields.io/github/issues-pr/iamkelv/africommerce?style=flat-square" alt="africommerce pull-requests"/>
-</a>
-</p>
+<!-- Project Shields -->
+<div>
+  
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Forks][forks-shield]][forks-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Issues][issues-shield]][issues-url]
+  [![MIT License][license-shield]][license-url]
+</div>
 
 <p align="center">
     <a href="https://github.com/iamkelv/africommerce/issues/new/choose">Report Bug</a>
@@ -209,3 +200,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+
+<!-- Markdown Links & Images -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/africommerce/africommerce-saas.svg?style=for-the-badge
+[contributors-url]: https://github.com/africommerce/africommerce-saas/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/africommerce/africommerce-saas.svg?style=for-the-badge
+[forks-url]: https://github.com/africommerce/africommerce-saas/network/members
+[stars-shield]: https://img.shields.io/github/stars/africommerce/africommerce-saas.svg?style=for-the-badge
+[stars-url]: https://github.com/africommerce/africommerce-saas/stargazers
+[issues-shield]: https://img.shields.io/github/issues/africommerce/africommerce-saas.svg?style=for-the-badge
+[issues-url]: https://github.com/africommerce/africommerce-saas/issues
+[license-shield]: https://img.shields.io/github/license/africommerce/africommerce-saas.svg?style=for-the-badge
+[license-url]: https://github.com/africommerce/africommerce-saas/blob/main/LICENSE

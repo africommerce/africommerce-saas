@@ -135,17 +135,10 @@ export const AdminNavs = () => {
         icon={<KeyboardReturnOutlined />}
         title="Refund"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Refund Requests', link: 'refund/request' },
+          { name: 'Approved Refund ', link: 'refund/approved' },
+          { name: 'Rejected Refund ', link: 'refund/rejected' },
+          { name: 'Refund Configuration ', link: 'refund/configuration' },
         ]}
       />
 
@@ -153,69 +146,43 @@ export const AdminNavs = () => {
         icon={<PeopleAltOutlined />}
         title="Customers"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Customers list', link: 'customers/list' },
+          { name: 'Classified Products', link: 'customers/products' },
+          { name: 'Classified Packages', link: 'customers/packages' },
         ]}
       />
       <SalesMenu
         icon={<PersonOutlineOutlined />}
         title="Sellers"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'All Seller', link: 'sellers/all' },
+          { name: 'Payouts', link: 'sellers/payouts' },
+          { name: 'Payout Request', link: 'sellers/payout-request' },
+          { name: 'Sellers Commission', link: 'sellers/commission' },
+          { name: 'Sellers Packages', link: 'sellers/package' },
+          {
+            name: 'Sellers Verification Form',
+            link: 'sellers/verification-form',
+          },
         ]}
       />
       <UploadsMenu
         icon={<DriveFolderUploadOutlined />}
         title="Upload Files"
-        items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
-        ]}
+        items={[{ name: 'All Upload', link: 'upload/all-upload' }]}
       />
 
       <ReportMenu
         icon={<ArticleOutlined />}
         title="Reports"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'In House Product Sale', link: 'report/inhouse' },
+          { name: 'Seller Product Sale', link: 'report/sales' },
+          { name: 'Product Stock', link: 'report/stock' },
+          { name: 'Product Wishlist', link: 'report/wishlist' },
+          { name: 'User Searches', link: 'report/searches' },
+          { name: 'Commission History', link: 'report/history' },
+          { name: 'Wallet Histrory', link: 'report/wallet-history' },
         ]}
       />
 
@@ -223,17 +190,8 @@ export const AdminNavs = () => {
         icon={<CampaignOutlined />}
         title="Blog System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'All Post', link: 'blog/all' },
+          { name: 'Categories', link: 'blog/categories' },
         ]}
       />
 
@@ -241,17 +199,11 @@ export const AdminNavs = () => {
         icon={<CampaignOutlined />}
         title="Marketing"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Flash deals', link: 'marketing/flash' },
+          { name: 'Newsletter', link: 'marketing/newsletter' },
+          { name: 'Bulk SMS', link: 'marketing/bulk-sms' },
+          { name: 'Subscribers', link: 'marketing/subscribers' },
+          { name: 'Coupon', link: 'marketing/coupon' },
         ]}
       />
 
@@ -259,17 +211,9 @@ export const AdminNavs = () => {
         icon={<SupportAgentOutlined />}
         title="Support"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Ticket', link: 'support/ticket' },
+          { name: 'Product Conversations', link: 'support/conversation' },
+          { name: 'Product Queries', link: 'support/queries' },
         ]}
       />
 
@@ -277,34 +221,15 @@ export const AdminNavs = () => {
         icon={<InsertLinkOutlined />}
         title="Affliate System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
-        ]}
-      />
-      <AffliateMenu
-        icon={<InsertLinkOutlined />}
-        title="Affliate System"
-        items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Affliate Registration Form', link: 'affliate/registration' },
+          { name: 'Affliate Configuration', link: 'affliate/configuration' },
+          { name: 'Affliate Users', link: 'affliate/affliate-users' },
+          { name: 'Referrals Users', link: 'affliate/referral-users' },
+          {
+            name: 'Affliate Withdraw Request',
+            link: 'affliate/withdraw-request',
+          },
+          { name: 'Affliate Logs', link: 'affliate/logs' },
         ]}
       />
       <OfflineMenu
@@ -363,17 +288,9 @@ export const AdminNavs = () => {
         icon={<LocalPhoneOutlined />}
         title="OTP System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'OTP Configuration', link: 'otp/configuration' },
+          { name: 'SMS Templates', link: 'otp/sms-templates' },
+          { name: 'Set OTP Credential', link: 'otp/credentials' },
         ]}
       />
       <PaymentGateWayMenu

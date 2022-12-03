@@ -1,0 +1,152 @@
+.container {
+    display: flex;
+    padding: 2rem;
+    gap: 3rem;
+    margin: 0 auto;
+}
+
+.left {
+    display: flex;
+    flex: 1;
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.activation,
+.commision,
+.withdraw,
+.note {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+
+}
+
+
+
+.activation_title,
+.commission_title,
+.withdraw_title,
+.note_head {
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.switch {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.commision_body,
+.withdraw_body,
+.note_body {
+    /* position: relative; */
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    font-size: 15px;
+    align-items: center;
+
+}
+
+.note_body {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.commision_detail,
+.withdraw_detail {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    flex-wrap: wrap;
+
+
+}
+
+.commission_input,
+.withdraw_input {
+    width: 60%;
+
+}
+
+.note_item {
+    width: 100%;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap !important;
+
+
+}
+
+.commission_input input,
+.withdraw_input input {
+    border: 1px solid gainsboro;
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    transition: all 300ms ease;
+}
+
+.commission_input span,
+.withdraw_input span {
+    border: 1px solid gainsboro;
+    padding: 0.5rem;
+    border-radius: 5px;
+    outline: none;
+    transition: all 300ms ease;
+}
+
+.commission_input input:focus,
+.withdraw_input input:focus {
+    border: 1px solid orange;
+
+}
+
+.commision_btn,
+.withdraw_btn {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    justify-content: flex-end;
+}
+
+.commision_btn button,
+.withdraw_btn button {
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    padding: 1rem;
+    color: white;
+    background: rgb(247, 123, 11);
+    transition: all 300ms ease;
+    border-radius: 5px;
+}
+
+.commision_btn button:hover {
+    background: rgb(229, 111, 14);
+}
+
+.right {
+    display: flex;
+    flex: 1;
+    position: relative;
+    flex-direction: column;
+    gap: 2rem;
+}

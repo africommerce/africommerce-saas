@@ -7,22 +7,12 @@ const Card = styled.div`
   flex-direction: row;
   margin: 0 auto;
 `;
-const Page = styled.div`
-  margin: 0 auto;
-  background: red;
-`;
-
-const Container = styled.div`
-  /* height: 50vh; */
-  top: 0;
-  margin: 0 auto;
-  background: rgb(242, 243, 248);
-`;
 
 function ManageProfile() {
   return (
     <Card>
       <div>
+
         <div>Manage Profile</div>
         <div>
           <div>Basic Info</div>

@@ -4,7 +4,7 @@ import Paginate from './paginate';
 const PurchaseHistory = () => {
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState([]);
-  const [perPage, setPerpage] = useState(10);
+  const [perPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
   const data = [
     {
@@ -222,18 +222,15 @@ const PurchaseHistory = () => {
     setCurrentPage(pageNumber);
   };
   const nextPage = (pageNumber) => {
-    console.log(currentPage, [pageNumber]);
     if (currentPage === pageNumber) {
       setCurrentPage(1);
     } else setCurrentPage((prev) => prev + 1);
     console.log(currentPage);
   };
   const prevPage = () => {
-    console.log(currentPage);
     if (currentPage === 1) {
       setCurrentPage(1);
     } else setCurrentPage((prev) => prev - 1);
-    console.log(currentPage);
   };
 
   let content = null;
