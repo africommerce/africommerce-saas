@@ -62,6 +62,9 @@ import { AdminAffliateUsers } from '../../components/admin-affliate/pages/AdminA
 import { AdminReferralsUser } from '../../components/admin-affliate/pages/AdminReferralsUser';
 import { AdminAffliateWithdrawRequest } from '../../components/admin-affliate/pages/AdminAffliateWithdrawRequest';
 import { AdminAffliateLogs } from '../../components/admin-affliate/pages/AdminAffliateLogs';
+import { AdminOptConfiguration } from '../../components/admin-otp/pages/AdminOptConfiguration';
+import { AdminSmsTemplate } from '../../components/admin-otp/pages/AdminSmsTemplate';
+import { AdminOtpCredentials } from '../../components/admin-otp/pages/AdminOtpCredentials';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -212,7 +215,9 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="otp/*">
-          <Route path="create" element={<h1>create-otp</h1>} />
+          <Route path="configuration" element={<AdminOptConfiguration />} />
+          <Route path="sms-templates" element={<AdminSmsTemplate />} />
+          <Route path="credentials" element={<AdminOtpCredentials />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
