@@ -86,50 +86,56 @@
 .body_head_id,
 .body_body_id {
     display: flex;
-    flex: 0.4;
+    flex: 1;
 
 }
 
-.body_head_username,
-.body_body_username {
+
+.body_head_reffered,
+.body_body_reffered {
+    display: flex;
+    flex: 1;
+}
+
+.body_head_refferal,
+.body_body_refferal {
+    display: flex;
+    flex: 1;
+}
+
+.body_head_amount,
+.body_body_amount {
     display: flex;
     flex: 1;
 
+}
+
+
+.body_head_order,
+.body_body_order {
+    display: flex;
+    flex: 1;
+
+
+}
+
+.body_head_type,
+.body_body_type {
+    display: flex;
+    flex: 1;
 
 }
 
 .body_head_product,
 .body_body_product {
     display: flex;
-    flex: 3;
-
-}
-
-
-.body_head_question,
-.body_body_question {
-    display: flex;
-    flex: 3;
-
-
-}
-
-.body_head_reply,
-.body_body_reply {
-    display: flex;
-    flex: 3;
-
-}
-
-
-.body_head_status,
-.body_body_status {
-    display: flex;
     flex: 1;
 }
 
-.body_head_options,
-.body_body_options {
+
+
+.body_head_date,
+.body_body_date {
     display: flex;
     flex: 1;
 
@@ -167,13 +173,5 @@
     color: white;
     background: gray;
     padding: 5px;
-    border-radius: 5px;
-}
-
-.reply {
-    display: flex;
-    padding: 3px 5px;
-    color: white;
-    background: green;
     border-radius: 5px;
 }

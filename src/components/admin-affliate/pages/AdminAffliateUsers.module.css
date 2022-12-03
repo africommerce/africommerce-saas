@@ -86,44 +86,57 @@
 .body_head_id,
 .body_body_id {
     display: flex;
-    flex: 0.4;
+    flex: 1;
 
 }
 
-.body_head_username,
-.body_body_username {
+.body_head_name,
+.body_body_name {
     display: flex;
     flex: 1;
 
 
 }
 
-.body_head_product,
-.body_body_product {
+.body_head_phone,
+.body_body_phone {
     display: flex;
-    flex: 3;
+    flex: 1;
 
 }
 
 
-.body_head_question,
-.body_body_question {
+.body_head_email,
+.body_body_email {
     display: flex;
-    flex: 3;
+    flex: 1;
 
 
 }
 
-.body_head_reply,
-.body_body_reply {
+.body_head_verification,
+.body_body_verification {
     display: flex;
-    flex: 3;
+    flex: 1;
 
 }
 
+.body_head_approval,
+.body_body_approval {
+    display: flex;
+    flex: 1;
+}
 
-.body_head_status,
-.body_body_status {
+.body_body_verification span {
+    background: green;
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+}
+
+
+.body_head_due,
+.body_body_due {
     display: flex;
     flex: 1;
 }
@@ -137,7 +150,7 @@
 
 
 .options_view,
-.options_delete {
+.options_history {
     display: flex;
     align-items: center;
     background: rgb(254, 235, 218);
@@ -150,7 +163,7 @@
 }
 
 .options_view:hover,
-.options_delete:hover {
+.options_history:hover {
     background: rgb(144, 85, 34);
     color: rgb(231, 126, 74);
 }
@@ -167,13 +180,5 @@
     color: white;
     background: gray;
     padding: 5px;
-    border-radius: 5px;
-}
-
-.reply {
-    display: flex;
-    padding: 3px 5px;
-    color: white;
-    background: green;
     border-radius: 5px;
 }
