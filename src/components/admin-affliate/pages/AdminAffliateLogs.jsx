@@ -1,8 +1,4 @@
-import {
-  DeleteOutline,
-  SentimentVeryDissatisfied,
-  VisibilityOutlined,
-} from '@mui/icons-material';
+import { SentimentVeryDissatisfied } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import classes from './AdminAffliateLogs.module.css';
 
