@@ -32,7 +32,8 @@ import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
 import Dashboard from '../pages/user/userDashboard';
 import Compare from '../pages/user/Compare';
 import ClassifiedProduct from '../pages/user/ClassifiedProduct';
-import PurchaseHistoryMain from '../pages/user/PurchaseHistoryMain';
+import User from '../pages/user/user';
+import PurchaseHistory from '../pages/user/purchaseHistory';
 import AuctionBidded from '../pages/user/Auction.bidded';
 import Conversation from '../pages/user/Conversation';
 import Download from '../pages/user/Download';
@@ -52,6 +53,9 @@ import SellerWholesaleProducts from '../pages/seller/SellerWholesaleProducts';
 import SellerAuctionOrders from '../pages/seller/SellerAuctionOrders';
 import SellerReceivedRefundRequest from '../pages/seller/SellerReceivedRefundRequest';
 import SellerPaymentHistory from '../pages/seller/SellerPaymentHistory';
+import AffiliateSystem from '../pages/user/affiliate/AffiliateSystem';
+import WithdrawalHistory from '../pages/user/affiliate/WithdrawalHistory';
+import PaymentHistory from '../pages/user/affiliate/PaymentHistory';
 
 export const MasterRoutes = () => {
   return (
@@ -72,17 +76,35 @@ export const MasterRoutes = () => {
         <Route path="pos" element={<SellerPos />}></Route>
         <Route path="uploads" element={<SellerUploads />}></Route>
         <Route path="all-auction-products" element={<SellerAuction />}></Route>
-        <Route path="shop" element={<SellerShop/>} ></Route>
-        <Route path="products-bulk-upload" element={<SellerProductsBulkUpload/>} ></Route>
-        <Route path="digital-products" element={<SellerDigitalProducts/>} ></Route>
-        <Route path="products-reviews" element={<SellerProductReview/>} ></Route>
-        <Route path="packages" element={<SellerPackages/>} ></Route>
-        <Route path="packages-purchase" element={<SellerPurchasePackages/>} ></Route>
-        <Route path="coupon" element={<SellerCoupon/>}  ></Route>
-        <Route path="wholesale" element={<SellerWholesaleProducts/>} ></Route>
-        <Route path="auction-product-orders" element={<SellerAuctionOrders/>} ></Route>
-        <Route path="refund" element={<SellerReceivedRefundRequest/>} ></Route>
-        <Route path="payment-history" element={<SellerPaymentHistory/>} ></Route>
+        <Route path="shop" element={<SellerShop />}></Route>
+        <Route
+          path="products-bulk-upload"
+          element={<SellerProductsBulkUpload />}
+        ></Route>
+        <Route
+          path="digital-products"
+          element={<SellerDigitalProducts />}
+        ></Route>
+        <Route
+          path="products-reviews"
+          element={<SellerProductReview />}
+        ></Route>
+        <Route path="packages" element={<SellerPackages />}></Route>
+        <Route
+          path="packages-purchase"
+          element={<SellerPurchasePackages />}
+        ></Route>
+        <Route path="coupon" element={<SellerCoupon />}></Route>
+        <Route path="wholesale" element={<SellerWholesaleProducts />}></Route>
+        <Route
+          path="auction-product-orders"
+          element={<SellerAuctionOrders />}
+        ></Route>
+        <Route path="refund" element={<SellerReceivedRefundRequest />}></Route>
+        <Route
+          path="payment-history"
+          element={<SellerPaymentHistory />}
+        ></Route>
       </Route>
       <Route path="/product/:id" element={<ProductDetail />} />
       <Route path="/flash-sale" element={<FlashSale />} />
@@ -104,24 +126,33 @@ export const MasterRoutes = () => {
       <Route path="/terms" element={<Terms />} />
       <Route path="/auth" element={<Registration />} />
       <Route path="/auth/login" element={<Login />} />
-      <Route path="/partner" element={<AffliatePartner />} />
+      <Route path="/affiliate" element={<AffliatePartner />}>
+        <Route path="user" element={<AffiliateSystem />} />
+      </Route>
       <Route path="/track-order" element={<TrackOrder />} />
       <Route path="/order-history" element={<OrderHistory />} />
       <Route path="/allbrand" element={<AllBrand />} />
-      <Route path="/user/purchase-history" element={<PurchaseHistoryMain />} />
-      <Route path="/user/download" element={<Download />} />
-      <Route path="/user/sent-refund" element={<SentRefundRequest />} />
-      <Route path="/user/wishlist" element={<WishList />} />
-      <Route path="/user/compare" element={<Compare />} />
-      <Route path="/user/classified-products" element={<ClassifiedProduct />} />
-      <Route path="/user/dashboard" element={<Dashboard />} />
-      <Route path="/user/auction-bidded" element={<AuctionBidded />}></Route>
-      <Route path="/user/conversation" element={<Conversation />} />
-      <Route path="/user/wallet" element={<Wallet />} />
-      <Route path="/user/earning-point" element={<EarningPoint />} />
-      <Route path="/user/affliate" element={<AffliatePartner />} />
-      <Route path="/user/support" element={<SupportTicket />} />
-      <Route path="/user/manageprofile" element={<ManageProfile />} />
+      <Route path="user" element={<User />}>
+        <Route path="purchase-history" element={<PurchaseHistory />} />
+        <Route path="download" element={<Download />} />
+        <Route path="sent-refund" element={<SentRefundRequest />} />
+        <Route path="wishlist" element={<WishList />} />
+        <Route path="compare" element={<Compare />} />
+        <Route path="classified-products" element={<ClassifiedProduct />} />
+        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="auction-bidded" element={<AuctionBidded />}></Route>
+        <Route path="conversation" element={<Conversation />} />
+        <Route path="wallet" element={<Wallet />} />
+        <Route path="earning-point" element={<EarningPoint />} />
+        <Route path="affiliate" element={<AffliatePartner />}>
+          <Route path="system" element={<AffiliateSystem />} />
+          <Route path="payment-history" element={<PaymentHistory />} />
+          <Route path="withdrawal-history" element={<WithdrawalHistory />} />
+        </Route>
+        <Route path="support" element={<SupportTicket />} />
+        <Route path="manage-profile" element={<ManageProfile />} />
+      </Route>
+
       <Route path="*" element={<p>Page not found</p>} />
     </Routes>
   );

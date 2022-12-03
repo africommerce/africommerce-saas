@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function Wallet() {
-  return (
-    <div>Wallet</div>
-  )
+  return <div style={{ flex: '1' }}>Wallet</div>;
 }
 
-export default Wallet
+export default Wallet;
