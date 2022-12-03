@@ -86,47 +86,59 @@
 .body_head_id,
 .body_body_id {
     display: flex;
-    flex: 0.4;
+    flex: 1;
 
 }
 
-.body_head_username,
-.body_body_username {
+
+.body_head_date,
+.body_body_date {
+    display: flex;
+    flex: 1;
+}
+
+.body_head_name,
+.body_body_name {
+    display: flex;
+    flex: 1;
+}
+
+.body_head_phone,
+.body_body_phone {
+    display: flex;
+    flex: 1;
+
+}
+
+
+.body_head_email,
+.body_body_email {
     display: flex;
     flex: 1;
 
 
 }
 
-.body_head_product,
-.body_body_product {
+.body_head_amount,
+.body_body_amount {
     display: flex;
-    flex: 3;
+    flex: 1;
 
 }
-
-
-.body_head_question,
-.body_body_question {
-    display: flex;
-    flex: 3;
-
-
-}
-
-.body_head_reply,
-.body_body_reply {
-    display: flex;
-    flex: 3;
-
-}
-
 
 .body_head_status,
 .body_body_status {
     display: flex;
     flex: 1;
 }
+
+.body_body_status span {
+    background: green;
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+}
+
 
 .body_head_options,
 .body_body_options {
@@ -167,13 +179,5 @@
     color: white;
     background: gray;
     padding: 5px;
-    border-radius: 5px;
-}
-
-.reply {
-    display: flex;
-    padding: 3px 5px;
-    color: white;
-    background: green;
     border-radius: 5px;
 }
