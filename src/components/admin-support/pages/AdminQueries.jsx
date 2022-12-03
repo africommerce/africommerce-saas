@@ -45,7 +45,7 @@ export const AdminQueries = () => {
 
                 <td className={classes.body_body_options}>
                   <span className={classes.options_view}>
-                    <VisibilityOutlined />
+                    <VisibilityOutlined fontSize="12px" />
                   </span>
                 </td>
               </tr>
