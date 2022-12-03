@@ -169,3 +169,11 @@
     padding: 5px;
     border-radius: 5px;
 }
+
+.reply {
+    display: flex;
+    padding: 3px 5px;
+    color: white;
+    background: green;
+    border-radius: 5px;
+}

@@ -56,6 +56,12 @@ import { AdminBulkSms } from '../../components/admin-marketing/pages/AdminBulkSm
 import { AdminTicket } from '../../components/admin-support/pages/AdminTicket';
 import { AdminConversation } from '../../components/admin-support/pages/AdminConversation';
 import { AdminQueries } from '../../components/admin-support/pages/AdminQueries';
+import { AdminAffliateForm } from '../../components/admin-affliate/pages/AdminAffliateForm';
+import { AdminAffliateConfiguration } from '../../components/admin-affliate/pages/AdminAffliateConfiguration';
+import { AdminAffliateUsers } from '../../components/admin-affliate/pages/AdminAffliateUsers';
+import { AdminReferralsUser } from '../../components/admin-affliate/pages/AdminReferralsUser';
+import { AdminAffliateWithdrawRequest } from '../../components/admin-affliate/pages/AdminAffliateWithdrawRequest';
+import { AdminAffliateLogs } from '../../components/admin-affliate/pages/AdminAffliateLogs';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -175,7 +181,18 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="affliate/*">
-          <Route path="create" element={<h1>create-affliate</h1>} />
+          <Route path="registration" element={<AdminAffliateForm />} />
+          <Route
+            path="configuration"
+            element={<AdminAffliateConfiguration />}
+          />
+          <Route path="affliate-users" element={<AdminAffliateUsers />} />
+          <Route path="referral-users" element={<AdminReferralsUser />} />
+          <Route
+            path="withdraw-request"
+            element={<AdminAffliateWithdrawRequest />}
+          />
+          <Route path="logs" element={<AdminAffliateLogs />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 

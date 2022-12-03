@@ -1,15 +1,15 @@
 import { CloseOutlined } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import { useSelector } from 'react-redux';
-import classes from './AdminSellerForm.module.css';
+import classes from './AdminAffliateForm.module.css';
 
-export const AdminSellerForm = (props) => {
+export const AdminAffliateForm = () => {
   const formCtx = useSelector((state) => state.form);
 
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <div className={classes.left_title}>Seller Verification Form</div>
+        <div className={classes.left_title}>Affiliate Registration Form</div>
         <Divider />
         <div className={classes.form_wrapper}>
           <form>
