@@ -288,17 +288,9 @@ export const AdminNavs = () => {
         icon={<LocalPhoneOutlined />}
         title="OTP System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'OTP Configuration', link: 'otp/configuration' },
+          { name: 'SMS Templates', link: 'otp/sms-templates' },
+          { name: 'Set OTP Credential', link: 'otp/credentials' },
         ]}
       />
       <PaymentGateWayMenu
