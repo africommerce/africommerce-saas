@@ -25,6 +25,46 @@ import { DeliveryPayHistory } from '../../components/delivery/pages/DeliveryPayH
 import { DeliveryCollection } from '../../components/delivery/pages/DeliveryCollection';
 import { CancelRequest } from '../../components/delivery/pages/CancelRequest';
 import { ConfigureDelivery } from '../../components/delivery/pages/ConfigureDelivery';
+import { RefundRequest } from '../../components/refund/pages/RefundRequest';
+import { ApproveFunds } from '../../components/refund/pages/ApproveFunds';
+import { RejectedRefund } from '../../components/refund/pages/RejectedRefund';
+import { Configuration } from '../../components/refund/pages/Configuration';
+import { AdminCustomers } from '../../components/admin-customers/pages/AdminCustomers';
+import { ClassifiedProduct } from '../../components/admin-customers/pages/ClassifiedProduct';
+import { ClassifiedPackages } from '../../components/admin-customers/pages/ClassifiedPackages';
+import { AdminAllSellers } from '../../components/admin-sellers/pages/AdminAllSellers';
+import { AdminPayout } from '../../components/admin-sellers/pages/AdminPayout';
+import { AdminPayoutRequest } from '../../components/admin-sellers/pages/AdminPayoutRequest';
+import { AdminCommision } from '../../components/admin-sellers/pages/AdminCommision';
+import { AdminPackages } from '../../components/admin-sellers/pages/AdminPackage';
+import { AdminSellerForm } from '../../components/admin-sellers/pages/AdminSellerForm';
+import { AdminAllUpload } from '../../components/admin-upload/pages/AdminAllUpload';
+import { InHouseReport } from '../../components/admin-report/pages/InHouseReport';
+import { SellerProductSale } from '../../components/admin-report/pages/SellerProductSale';
+import { AdminProductStock } from '../../components/admin-report/pages/AdminProductStock';
+import { AdminProductWishlist } from '../../components/admin-report/pages/AdminProductWishlist';
+import { AdminUserSearches } from '../../components/admin-report/pages/AdminUserSearches';
+import { AdminCommissionHistory } from '../../components/admin-report/pages/AdminCommissionHistory';
+import { AdminWalletRechargeHistory } from '../../components/admin-report/pages/AdminWalletRechargeHistory';
+import { AdminAllBlog } from '../../components/admin-blog/pages/AdminAllBlog';
+import { AdminBlogCategories } from '../../components/admin-blog/pages/AdminBlogCategories';
+import { AdminFlashDeal } from '../../components/admin-marketing/pages/AdminFlashDeal';
+import { AdminNewsletter } from '../../components/admin-marketing/pages/AdminNewsletter';
+import { AdminSubcribers } from '../../components/admin-marketing/pages/AdminSubcribers';
+import { AdminCoupons } from '../../components/admin-marketing/pages/AdminCoupons';
+import { AdminBulkSms } from '../../components/admin-marketing/pages/AdminBulkSms';
+import { AdminTicket } from '../../components/admin-support/pages/AdminTicket';
+import { AdminConversation } from '../../components/admin-support/pages/AdminConversation';
+import { AdminQueries } from '../../components/admin-support/pages/AdminQueries';
+import { AdminAffliateForm } from '../../components/admin-affliate/pages/AdminAffliateForm';
+import { AdminAffliateConfiguration } from '../../components/admin-affliate/pages/AdminAffliateConfiguration';
+import { AdminAffliateUsers } from '../../components/admin-affliate/pages/AdminAffliateUsers';
+import { AdminReferralsUser } from '../../components/admin-affliate/pages/AdminReferralsUser';
+import { AdminAffliateWithdrawRequest } from '../../components/admin-affliate/pages/AdminAffliateWithdrawRequest';
+import { AdminAffliateLogs } from '../../components/admin-affliate/pages/AdminAffliateLogs';
+import { AdminOptConfiguration } from '../../components/admin-otp/pages/AdminOptConfiguration';
+import { AdminSmsTemplate } from '../../components/admin-otp/pages/AdminSmsTemplate';
+import { AdminOtpCredentials } from '../../components/admin-otp/pages/AdminOtpCredentials';
 export const AdminRoutes = () => {
   return (
     <div>
@@ -78,47 +118,84 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="refund/*">
-          <Route path="create" element={<h1>create-refund</h1>} />
+          <Route path="request" element={<RefundRequest />} />
+          <Route path="approved" element={<ApproveFunds />} />
+          <Route path="rejected" element={<RejectedRefund />} />
+          <Route path="configuration" element={<Configuration />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
-        <Route path="customer/*">
-          <Route path="create" element={<h1>customer-sellers</h1>} />
+        <Route path="customers/*">
+          <Route path="list" element={<AdminCustomers />} />
+          <Route path="products" element={<ClassifiedProduct />} />
+          <Route path="packages" element={<ClassifiedPackages />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
-        <Route path="sales/*">
-          <Route path="create" element={<h1>create-sales</h1>} />
+        <Route path="sellers/*">
+          <Route path="all" element={<AdminAllSellers />} />
+          <Route path="payouts" element={<AdminPayout />} />
+          <Route path="payout-request" element={<AdminPayoutRequest />} />
+          <Route path="commission" element={<AdminCommision />} />
+          <Route path="package" element={<AdminPackages />} />
+          <Route path="verification-form" element={<AdminSellerForm />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
         <Route path="upload/*">
-          <Route path="create" element={<h1>create-upload</h1>} />
+          <Route path="all-upload" element={<AdminAllUpload />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
         <Route path="report/*">
-          <Route path="create" element={<h1>create-report</h1>} />
+          <Route path="inhouse" element={<InHouseReport />} />
+          <Route path="sales" element={<SellerProductSale />} />
+          <Route path="stock" element={<AdminProductStock />} />
+          <Route path="wishlist" element={<AdminProductWishlist />} />
+          <Route path="searches" element={<AdminUserSearches />} />
+          <Route path="history" element={<AdminCommissionHistory />} />
+          <Route
+            path="wallet-history"
+            element={<AdminWalletRechargeHistory />}
+          />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
         <Route path="blog/*">
-          <Route path="create" element={<h1>create-blog</h1>} />
+          <Route path="all" element={<AdminAllBlog />} />
+          <Route path="categories" element={<AdminBlogCategories />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
         <Route path="marketing/*">
-          <Route path="marketing" element={<h1>create-marketing</h1>} />
+          <Route path="flash" element={<AdminFlashDeal />} />
+          <Route path="newsletter" element={<AdminNewsletter />} />
+          <Route path="subscribers" element={<AdminSubcribers />} />
+          <Route path="bulk-sms" element={<AdminBulkSms />} />
+          <Route path="coupon" element={<AdminCoupons />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
         <Route path="support/*">
-          <Route path="create" element={<h1>create-support</h1>} />
+          <Route path="ticket" element={<AdminTicket />} />
+          <Route path="conversation" element={<AdminConversation />} />
+          <Route path="queries" element={<AdminQueries />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
         <Route path="affliate/*">
-          <Route path="create" element={<h1>create-affliate</h1>} />
+          <Route path="registration" element={<AdminAffliateForm />} />
+          <Route
+            path="configuration"
+            element={<AdminAffliateConfiguration />}
+          />
+          <Route path="affliate-users" element={<AdminAffliateUsers />} />
+          <Route path="referral-users" element={<AdminReferralsUser />} />
+          <Route
+            path="withdraw-request"
+            element={<AdminAffliateWithdrawRequest />}
+          />
+          <Route path="logs" element={<AdminAffliateLogs />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
@@ -138,7 +215,9 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="otp/*">
-          <Route path="create" element={<h1>create-otp</h1>} />
+          <Route path="configuration" element={<AdminOptConfiguration />} />
+          <Route path="sms-templates" element={<AdminSmsTemplate />} />
+          <Route path="credentials" element={<AdminOtpCredentials />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 

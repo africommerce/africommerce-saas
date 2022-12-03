@@ -99,7 +99,7 @@ const AuctionBidded = () => {
   useEffect(() => {
     setState(data);
     setLoading(false);
-  }, []);
+  }, [setState, setLoading]);
 
   let content = null;
   if (loading) content = <div>Loading...</div>;
