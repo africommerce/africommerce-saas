@@ -70,6 +70,7 @@ import { AdminWalletRecharge } from '../../components/admin-offline-pay/pages/Ad
 
 import { AdminSellerPackage } from '../../components/admin-offline-pay/pages/AdminSellerPackage';
 import { AdminCustomersPackage } from '../../components/admin-offline-pay/pages/AdminCustomersPackage';
+import { AdminAsianCredentials } from '../../components/admin-asian-payment/pages/AdminAsianCredentials';
 
 export const AdminRoutes = () => {
   return (
@@ -211,6 +212,10 @@ export const AdminRoutes = () => {
           <Route path="customer-package" element={<AdminCustomersPackage />} />
           <Route path="seller-package" element={<AdminSellerPackage />} />
           <Route path="*" element={<h1>Page not found</h1>} />
+        </Route>
+
+        <Route path="asian-payment/*">
+          <Route path="set-credentials" element={<AdminAsianCredentials />} />
         </Route>
 
         <Route path="payment-gateway/*">
