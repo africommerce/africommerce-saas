@@ -65,6 +65,12 @@ import { AdminAffliateLogs } from '../../components/admin-affliate/pages/AdminAf
 import { AdminOptConfiguration } from '../../components/admin-otp/pages/AdminOptConfiguration';
 import { AdminSmsTemplate } from '../../components/admin-otp/pages/AdminSmsTemplate';
 import { AdminOtpCredentials } from '../../components/admin-otp/pages/AdminOtpCredentials';
+import { AdminPaymentMethod } from '../../components/admin-offline-pay/pages/AdminPaymentMethod';
+import { AdminWalletRecharge } from '../../components/admin-offline-pay/pages/AdminWalletRecharge';
+
+import { AdminSellerPackage } from '../../components/admin-offline-pay/pages/AdminSellerPackage';
+import { AdminCustomersPackage } from '../../components/admin-offline-pay/pages/AdminCustomersPackage';
+
 export const AdminRoutes = () => {
   return (
     <div>
@@ -200,7 +206,10 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="offline-payment/*">
-          <Route path="create" element={<h1>create-offline-payment</h1>} />
+          <Route path="method" element={<AdminPaymentMethod />} />
+          <Route path="wallet-recharge" element={<AdminWalletRecharge />} />
+          <Route path="customer-package" element={<AdminCustomersPackage />} />
+          <Route path="seller-package" element={<AdminSellerPackage />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
