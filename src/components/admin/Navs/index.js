@@ -24,6 +24,7 @@ import {
 import React from 'react';
 import AddonMenu from './AddonManager';
 import AffliateMenu from './Affliate';
+import AsianPay from './AsianPay';
 import AuctionMenu from './AuctionMenu';
 import BlogMenu from './Blog';
 import ClubMenu from './ClubPoint';
@@ -248,6 +249,16 @@ export const AdminNavs = () => {
           {
             name: 'Offline Seller Package Gateway',
             link: 'offline-payment/seller-package',
+          },
+        ]}
+      />
+      <AsianPay
+        icon={<PaymentsOutlined />}
+        title="Asian System Payment"
+        items={[
+          {
+            name: 'Set Asian PG Credentials',
+            link: 'asian-payment/set-credentials',
           },
         ]}
       />
