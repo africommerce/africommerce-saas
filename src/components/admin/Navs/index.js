@@ -236,17 +236,19 @@ export const AdminNavs = () => {
         icon={<PaymentsOutlined />}
         title="Offline System Payment"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Manual Payment Method', link: 'offline-payment/method' },
+          {
+            name: 'Offline Wallet Recharge',
+            link: 'offline-payment/wallet-recharge',
+          },
+          {
+            name: 'Offline Customer Package Payment',
+            link: 'offline-payment/customer-package',
+          },
+          {
+            name: 'Offline Seller Package Gateway',
+            link: 'offline-payment/seller-package',
+          },
         ]}
       />
       <PaymentGateWayMenu
