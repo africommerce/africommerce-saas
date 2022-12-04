@@ -119,7 +119,7 @@ export const AdminAsianCredentials = () => {
           <Divider />
           <span className={classes.paytm_body}>
             <span className={classes.paytm_label}>
-              <img src={paytm} alt="" className={classes.paytm_img} />
+              <img src={totyibpay} alt="" className={classes.paytm_img} />
             </span>
             <span className={classes.paytm_detail}>
               <Switch defaultChecked={true} />
