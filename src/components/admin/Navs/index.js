@@ -24,6 +24,7 @@ import {
 import React from 'react';
 import AddonMenu from './AddonManager';
 import AffliateMenu from './Affliate';
+import AfricanPay from './AfricanPay';
 import AsianPay from './AsianPay';
 import AuctionMenu from './AuctionMenu';
 import BlogMenu from './Blog';
@@ -259,6 +260,21 @@ export const AdminNavs = () => {
           {
             name: 'Set Asian PG Credentials',
             link: 'asian-payment/set-credentials',
+          },
+        ]}
+      />
+
+      <AfricanPay
+        icon={<PaymentsOutlined />}
+        title="African Payment Gateway Addon"
+        items={[
+          {
+            name: 'African PG Configurations',
+            link: 'african-payment/african-configuration',
+          },
+          {
+            name: 'Set African PG Credentials',
+            link: 'african-payment/african-credential',
           },
         ]}
       />
