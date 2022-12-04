@@ -1,5 +1,4 @@
 import { VisibilityOutlined } from '@mui/icons-material';
-
 import { Divider } from '@mui/material';
 import classes from './AdminTicket.module.css';
 export const AdminTicket = () => {

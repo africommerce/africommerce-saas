@@ -1,0 +1,175 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.top {
+    padding: 1rem;
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_btn {
+    display: flex;
+    align-items: center;
+}
+
+.top_btn button {
+    padding: 1rem;
+    border-radius: 5px;
+    color: white;
+    background: rgb(37, 188, 241);
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.top_btn button:hover {
+    background: rgb(8, 93, 124);
+}
+
+.body {
+    display: flex;
+    gap: 1rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    padding: 1rem;
+    flex-direction: column;
+}
+
+.body_head {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-between
+}
+
+.body_head_input {
+    display: flex;
+    align-items: center;
+}
+
+.body_head_input input {
+    padding: 1rem;
+    border: 1px solid gainsboro;
+    outline: none;
+    border-radius: 5px;
+}
+
+.body_tabel_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.body_table {
+    display: flex;
+    flex-direction: column;
+}
+
+.body_head_row,
+.body_body_row {
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    width: 100%;
+    font-size: 12px;
+    align-items: center;
+
+}
+
+.body_body_row {
+    font-size: 12px;
+}
+
+.body_head_id,
+.body_body_id {
+    display: flex;
+    flex: 1;
+
+}
+
+.body_head_send_date,
+.body_body_send_date {
+    display: flex;
+    flex: 1;
+
+
+}
+
+.body_head_subject,
+.body_body_subject {
+    display: flex;
+    flex: 1;
+
+}
+
+
+.body_head_user,
+.body_body_user {
+    display: flex;
+    flex: 1;
+
+
+}
+
+.body_head_status,
+.body_body_status {
+    display: flex;
+    flex: 1;
+
+}
+
+.body_head_last_reply,
+.body_body_last_reply {
+    display: flex;
+
+    flex: 1;
+}
+
+.body_head_options,
+.body_body_options {
+    display: flex;
+    flex: 1;
+
+}
+
+
+.options_view {
+    display: flex;
+    align-items: center;
+    background: rgb(254, 235, 218);
+    color: rgb(247, 123, 62);
+    padding: 0.4rem;
+    border-radius: 50%;
+    font-size: 15px !important;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.options_view:hover {
+    background: rgb(144, 85, 34);
+    color: rgb(231, 126, 74);
+}
+
+
+.options_delete:hover {
+    background: rgb(234, 186, 143);
+    color: red;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    color: white;
+    background: gray;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.open_receipt {
+    color: orange;
+    cursor: pointer;
+}
