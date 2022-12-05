@@ -73,6 +73,9 @@ import { AdminCustomersPackage } from '../../components/admin-offline-pay/pages/
 import { AdminAsianCredentials } from '../../components/admin-asian-payment/pages/AdminAsianCredentials';
 import { AdminAfricanCrendential } from '../../components/admin-african/pages/AdminAfricanCrendential';
 import { AdminAfricanConfiguration } from '../../components/admin-african/pages/AdminAfricanConfiguration';
+import { AdminAllStaffs } from '../../components/admin-staffs/pages/AdminAllStaffs';
+import { AdminPermissionRole } from '../../components/admin-staffs/pages/AdminPermissionRole';
+import { AdminAddonManager } from '../../components/admin-addon/pages/AdminAddonManager';
 
 export const AdminRoutes = () => {
   return (
@@ -219,7 +222,6 @@ export const AdminRoutes = () => {
         <Route path="asian-payment/*">
           <Route path="set-credentials" element={<AdminAsianCredentials />} />
         </Route>
-
         <Route path="african-payment/*">
           <Route
             path="african-configuration"
@@ -229,7 +231,6 @@ export const AdminRoutes = () => {
             path="african-credential"
             element={<AdminAfricanCrendential />}
           />
-
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
@@ -261,7 +262,8 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="staffs/*">
-          <Route path="create" element={<h1>create-staffs</h1>} />
+          <Route path="all" element={<AdminAllStaffs />} />
+          <Route path="permission" element={<AdminPermissionRole />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
@@ -271,7 +273,7 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="addon/*">
-          <Route path="create" element={<h1>create-Addon</h1>} />
+          <Route path="manager" element={<AdminAddonManager />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
         <Route path="*" element={<AdminHome />} />
