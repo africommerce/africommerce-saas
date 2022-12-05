@@ -75,6 +75,7 @@ import { AdminAfricanCrendential } from '../../components/admin-african/pages/Ad
 import { AdminAfricanConfiguration } from '../../components/admin-african/pages/AdminAfricanConfiguration';
 import { AdminAllStaffs } from '../../components/admin-staffs/pages/AdminAllStaffs';
 import { AdminPermissionRole } from '../../components/admin-staffs/pages/AdminPermissionRole';
+import { AdminAddonManager } from '../../components/admin-addon/pages/AdminAddonManager';
 
 export const AdminRoutes = () => {
   return (
@@ -272,7 +273,7 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="addon/*">
-          <Route path="create" element={<h1>create-Addon</h1>} />
+          <Route path="manager" element={<AdminAddonManager />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
         <Route path="*" element={<AdminHome />} />
