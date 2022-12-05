@@ -1,0 +1,71 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+}
+
+.button button {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background: orange;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.addon_container {
+    display: flex;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.button button:hover {
+    background: rgba(255, 166, 0, 0.708);
+}
+
+.addon_wrapper {
+    display: flex;
+    border: 1px gainsboro solid;
+    padding: 1rem;
+    justify-content: space-between;
+}
+
+.addon_left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.addon_img {
+    display: flex;
+    align-items: center;
+}
+
+.addon_img img {
+    width: auto;
+    max-width: 80px;
+}
+
+.addon_name {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.addon_version {
+    font-size: 12px;
+}
