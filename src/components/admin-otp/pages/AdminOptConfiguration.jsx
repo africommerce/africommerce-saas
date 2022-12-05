@@ -5,6 +5,7 @@ import classes from './AdminOptConfiguration.module.css';
 const label = { inputProps: { 'aria-label': 'Switch demo' } };
 
 export const AdminOptConfiguration = () => {
+
   return (
     <>
       <div className={classes.activeOTP}>Activate OTP</div>{' '}
@@ -61,4 +62,5 @@ export const AdminOptConfiguration = () => {
       </div>
     </>
   );
+
 };
