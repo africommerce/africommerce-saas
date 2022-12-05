@@ -76,6 +76,9 @@ import { AdminAfricanConfiguration } from '../../components/admin-african/pages/
 import { AdminAllStaffs } from '../../components/admin-staffs/pages/AdminAllStaffs';
 import { AdminPermissionRole } from '../../components/admin-staffs/pages/AdminPermissionRole';
 import { AdminAddonManager } from '../../components/admin-addon/pages/AdminAddonManager';
+import { AdminPointConfiguration } from '../../components/admin-club-point/pages/AdminPointConfiguration';
+import { AdminSetProductPoints } from '../../components/admin-club-point/pages/AdminSetProductPoints';
+import { AdminUserPoints } from '../../components/admin-club-point/pages/AdminUserPoints';
 
 export const AdminRoutes = () => {
   return (
@@ -240,7 +243,12 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="club/*">
-          <Route path="create" element={<h1>create-club</h1>} />
+          <Route path="configuration" element={<AdminPointConfiguration />} />
+          <Route
+            path="set-product-points"
+            element={<AdminSetProductPoints />}
+          />
+          <Route path="user-points" element={<AdminUserPoints />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
