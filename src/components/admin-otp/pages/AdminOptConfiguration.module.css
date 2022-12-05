@@ -1,0 +1,33 @@
+.activeOTP {
+  font-weight: 600;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.containerOTP {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 25px;
+  height: 100px;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;
+}
+p {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+hr {
+  margin-top: 10px;
+}
+
+.switch {
+  margin-top: 10px;
+  text-align: center;
+}
