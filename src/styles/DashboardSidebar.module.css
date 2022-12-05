@@ -1,0 +1,47 @@
+a {
+  text-decoration: none;
+}
+.LinkList {
+  padding: 13px;
+  list-style-type: none;
+}
+
+.ListItem {
+  font-size: 12px;
+  font-weight: 500;
+}
+.Link {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+.Link:hover {
+  background-color: rgba(230, 46, 4, 0.15);
+}
+.LinkName {
+  color: #9191a0;
+  font-weight: 550;
+}
+.Icon ion-icon {
+  margin-right: 20px;
+  font-weight: 550;
+  color: #9191a0;
+}
+.Subs {
+  list-style-type: none;
+  margin-left: 30px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.ListStyle {
+  width: 4px;
+  margin-right: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 1px solid black;
+}

@@ -1,0 +1,178 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+}
+
+.top_wrapper {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+
+
+.payment_item input {
+    width: 100%;
+    border: 1px solid gray;
+    padding: 0.7rem;
+    outline: none;
+    border-radius: 5px;
+}
+
+.payment_item input:hover {
+    display: flex;
+    border: 1px solid orange;
+}
+
+.payement_btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.payement_btn button {
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+
+
+}
+
+.payment {
+    width: 50%;
+}
+
+.payment_content {
+    width: 95%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.payment_title {
+    display: flex;
+    font-weight: bold;
+}
+
+.payment_wrapper {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.payment_text {
+    display: flex;
+    width: 40%;
+}
+
+.payment_item {
+    display: flex;
+    width: 60%;
+}
+
+.payment_info {
+    display: flex;
+    width: 100%;
+
+}
+
+.notification {
+    width: 47%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+
+.content {
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content_title {
+    font-weight: bold;
+}
+
+.content_items {
+    display: flex;
+    flex-direction: column;
+}
+
+.content_items span {
+    display: flex;
+
+}
+
+/*  */
+.pickup_content {
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.pickup_title {
+    font-weight: bold;
+}
+
+.bottom_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+    flex-direction: column;
+}
+
+.botton_btn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.botton_btn button {
+    padding: 0.7rem;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-weight: bold;
+}
+
+.bottom_input {
+    width: 100% !important;
+    border: 1px solid gray !important;
+    padding: 0.7rem !important;
+    outline: none !important;
+    border-radius: 5px !important;
+}
+
+.bottom_input:focus {
+
+    border: 1px solid orange;
+
+}
