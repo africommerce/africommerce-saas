@@ -1,1 +1,1 @@
-refactor: improve controlled form handling for profile updates
+feat: add input validation for profile fields
