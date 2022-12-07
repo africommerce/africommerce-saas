@@ -1,1 +1,1 @@
-feat: add input validation for profile fields
+fix: resolve API error handling and improve success responses
