@@ -1,3 +1,4 @@
+
 import { Add } from '@mui/icons-material';
 import { Box, Button, Divider, Stack } from '@mui/material';
 import { style } from '@mui/system';
@@ -399,6 +400,6 @@ function Wallet() {
       </Stack>
     </Stack>
   );
-}
+
 
 export default Wallet;

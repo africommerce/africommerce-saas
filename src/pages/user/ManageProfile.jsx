@@ -12,9 +12,7 @@ function ManageProfile() {
   return (
     <Card>
       <div>
-        <DashboardSidebar />
-      </div>
-      <div>
+
         <div>Manage Profile</div>
         <div>
           <div>Basic Info</div>
