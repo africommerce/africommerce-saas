@@ -277,15 +277,6 @@ function ManageProfile() {
 
   return (
     <Card>
-      <div>
-        <div>Manage Profile</div>
-        <div>
-          <div>Basic Info</div>
-          <div>
-            <form></form>
-          </div>
-        </div>
-      </div>
       <Container style={{ width: 1000, padding: '10px' }}>
         <ModalWindow open={modal} handleClose={handleClose} />
         <Typography
