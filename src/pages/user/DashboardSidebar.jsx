@@ -167,7 +167,7 @@ function DashboardSidebar() {
             <div className={classes.Icon}>
               <ion-icon name="home-outline"></ion-icon>
             </div>
-            <div className={classes.LinkName}>Whislist</div>
+            <div className={classes.LinkName}>Wishlist</div>
           </Link>
         </li>
         <li className={classes.ListItem}>
