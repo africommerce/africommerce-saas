@@ -8,7 +8,6 @@ import { Delete, ShoppingCart } from '@mui/icons-material';
 import { Button, IconButton } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import styled from 'styled-components';
-import DashboardSidebar from './DashboardSidebar';
 
 const Containers = styled.div`
   display: flex;

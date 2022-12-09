@@ -1,5 +1,4 @@
 import React from 'react';
-import DashboardSidebar from './DashboardSidebar';
 import styled from 'styled-components';
 
 const Card = styled.div`
@@ -12,7 +11,6 @@ function ManageProfile() {
   return (
     <Card>
       <div>
-
         <div>Manage Profile</div>
         <div>
           <div>Basic Info</div>
