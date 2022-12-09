@@ -1,12 +1,10 @@
-
 import { Add } from '@mui/icons-material';
 import { Box, Button, Divider, Stack } from '@mui/material';
-import { style } from '@mui/system';
 import React from 'react';
 import styled from 'styled-components';
 import ModalUi from '../../components/ui components/Modal';
 import MultipleSelectUi from '../../components/ui components/MultipleSelectUi';
-import DashboardSidebar from './DashboardSidebar';
+
 const TableBody = styled.table`
   padding: 1rem;
   display: flex;
@@ -99,12 +97,9 @@ function Wallet() {
       display={'flex'}
       padding={'1rem'}
       margin={'0 auto'}
-      sx={{ maxWidth: '80%' }}
+      sx={{ width: '90%' }}
     >
-      <Stack flex={'1'} margin={'0'} position={'relative'} top={'-1rem'}>
-        <DashboardSidebar />
-      </Stack>
-      <Stack flex={'5'} spacing={2}>
+      <Stack width={'100%'} spacing={2}>
         <Box fontWeight={'bold'}>My Wallet</Box>
         <Stack
           display={'flex'}
@@ -400,6 +395,5 @@ function Wallet() {
       </Stack>
     </Stack>
   );
-
-
+}
 export default Wallet;
