@@ -11,6 +11,95 @@ const Containers = styled.div`
   flex: 1;
 `;
 
+const Box1 = styled.div`
+  background-image: linear-gradient(315deg, #eb4786 0%, #b854a6 74%);
+  background-color: #eb4786;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%) !important;
+  width: 15vw;
+  flex: 30%;
+  height: 20vh;
+  margin-right: 20px;
+  overflow: hidden;
+  color: white;
+  border-radius: '0.3rem!important';
+`;
+
+const First = styled.div`
+  padding: 30px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: 'center';
+`;
+
+const Box2 = styled.div`
+  background-color: white;
+  width: 15vw;
+  flex: 30%;
+  height: 20vh;
+  margin-right: 20px;
+  overflow: hidden;
+  border-radius: 0.3rem!important;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%) !important;
+`
+
+const Box3 = styled.div`
+  width: 15vw;
+  flex: 30%;
+  height: 20vh;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 0.3rem !important;
+`;
+
+const Uploads = styled.div`
+  font-weight: bold;
+  font-size: 24px;
+  font-family: 'Open Sans';
+  font-weight: 700;
+  line-height: 28.8px;
+  color: rgb(255, 255, 255);
+`;
+const Second = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-Content: center;
+`;
+const Card = styled.div`
+  height: 5vh;
+   padding: 40px; 
+`;
+const Third = styled.div`
+ align-items: center;
+ padding: 50px;
+  display: flex;
+ flex-direction: column;
+  justify-content: center;
+`;
+
+const Upload = styled.div`
+  margin-top: 20px;
+   color: red;
+`;
+
+const Image = styled.img`
+ width: 70px;
+  height: 60px;
+`;
+
+const Detail = styled.div`
+ color: red;
+  margin-bottom: 6px;
+`;
+
+const Button = styled.button`
+ color: red;
+ border: 0.1pc solid red;
+ padding: 5px;
+ background-color: white;
+`;
+
 const ClassifiedProduct = () => {
   const [loading, setLoading] = useState(true);
   const [status, setStatus] = useState(true);
@@ -97,72 +186,34 @@ const ClassifiedProduct = () => {
             marginTop: '20px',
           }}
         >
-          <div
-            style={{
-              backgroundImage:
-                 'linear-gradient(315deg, #eb4786 0%, #b854a6 74%)',
-              backgroundColor: '#eb4786',
-              boxShadow: '0 1px 2px 0 rgb(0 0 0 / 5%) !important',
-              width: '15vw',
-              flex: '30%',
-              height: '20vh',
-              marginRight: '20px',
-              overflow: 'hidden',
-              color: 'white',
-              borderRadius: '0.3rem!important',
-            }}
-          >
-            <div style={{padding: "30px", marginRight: '30%'}}>
-              <IoArrowUp size={36} color="white"/>
-              <div>594</div>
+          <Box1>
+            <First>
+              <IoArrowUp size={36} color="white" />
+              <Uploads>594</Uploads>
               <div>Remaining uploads</div>
-            </div>
-          </div>
-          <div
-            style={{
-              backgroundColor: 'white',
-              width: '15vw',
-              flex: '30%',
-              height: '20vh',
-              marginRight: '20px',
-              overflow: 'hidden',
-              borderRadius: '0.3rem!important',
-              boxShadow: '0 1px 2px 0 rgb(0 0 0 / 5%) !important'
-            }}
-          >
-            <div style={{ height: '5vh',  padding: '40px', marginRight: '30px'}}>
-              <NavLink to="customers_products">
-                <IoAddCircle
-                  size={70}
-                  vertical-align="center"
-                  color="#8f97ab"
-                  marginRight="60%"
-                />
-              </NavLink>
-            </div>
-            <div  style={{padding: '30px'}}>Add New product</div>
-          </div>
-          <div
-            style={{
-              width: '15vw',
-              flex: '30%',
-              height: '20vh',
-              backgroundColor: 'white',
-              overflow: 'hidden',
-              borderRadius: '0.3rem!important',
-            }}
-          >
-            <div style={{ alignItems: 'center', padding: '50px' }}>
-              <img
-                style={{ width:"70px", height: "60px",  marginLeft: '30%'}}
-                src="https://demo.activeitzone.com/ecommerce/public/uploads/all/zu3eVLzwf8iAs4AG7K5h4902UhaXVR0MbWVevxjJ.png"
-              />
-              <div style={{ marginRight: '10%', color: 'red'}}>CurrentPackage: Premium</div>
-              <div style={{marginRight: '10%', marginBottom: '40px', }}>
-                <button style={{color: 'red', border: '0.1pc solid red', padding: '5px', backgroundColor: 'white'}}>Upgrade Package</button>
+            </First>
+          </Box1>
+
+          <Box2>
+            <Second>
+              <Card>
+                <NavLink to="customers_products">
+                  <IoAddCircle size={100} color="#8f97ab" marginBotton="0" />
+                </NavLink>
+              </Card>
+              <Upload>Add New product</Upload>
+            </Second>
+          </Box2>
+
+          <Box3>
+            <Third>
+              <Image src="https://demo.activeitzone.com/ecommerce/public/uploads/all/zu3eVLzwf8iAs4AG7K5h4902UhaXVR0MbWVevxjJ.png"/>
+              <Detail>CurrentPackage: Premiu</Detail>
+              <div>
+                <Button>Upgrade Package</Button>
               </div>
-            </div>
-          </div>
+            </Third>
+          </Box3>
         </div>
         <Containers>
           <div className={classes.Purchase}>
@@ -185,8 +236,30 @@ const ClassifiedProduct = () => {
                   <div className={classes.Codes}>{info.Name}</div>
 
                   <div className={classes.Bid}>${info.Price}</div>
+
                   <div>
                     <div className={classes.Toggle}>
+                      <div
+                        style={
+                          status
+                            ? {
+                                backgroundColor: 'black',
+                                width: '10px',
+                                height: '10px',
+                                borderRadius: '50%',
+                                transition: 'all 3s',
+                                transform: 'translateX (3rem)',
+                              }
+                            : {
+                                backgroundColor: 'black',
+                                width: '10px',
+                                height: '10px',
+                                borderRadius: '50%',
+                                transition: 'all .3s',
+                                transform: 'translateX(0)',
+                              }
+                        }
+                      ></div>
                     </div>
                   </div>
 
