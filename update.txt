@@ -1,1 +1,1 @@
-refactor: optimize profile update logic for reusability
+feat: implement loading states and UI feedback for profile updates
