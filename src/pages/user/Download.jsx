@@ -4,16 +4,12 @@ import styled from 'styled-components';
 import DownloadSection from './DownloadSection';
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  padding: 7rem;
+  flex: 1;
 `;
 
 function Download() {
   return (
     <Container>
-      <DashboardSidebar />
       <DownloadSection />
     </Container>
   );

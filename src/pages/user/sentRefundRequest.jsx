@@ -2,11 +2,7 @@ import React from 'react';
 import DashboardSidebar from './DashboardSidebar';
 
 function SentRefundRequest() {
-  return (
-    <>
-    <DashboardSidebar />
-    </>
-  )
+  return <></>;
 }
 
-export default SentRefundRequest
+export default SentRefundRequest;
