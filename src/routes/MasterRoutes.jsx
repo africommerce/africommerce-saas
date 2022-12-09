@@ -29,7 +29,7 @@ import { SellerProducts } from '../pages/seller/SellerProducts';
 import { SellerPos } from '../pages/seller/SellerPos';
 import { SellerUploads } from '../pages/seller/SellerUploads';
 import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
-import Dashboard from '../pages/user/UsersDashboard';
+
 import Compare from '../pages/user/Compare';
 import ClassifiedProduct from '../pages/user/ClassifiedProduct';
 import User from '../pages/user/user';
@@ -57,6 +57,8 @@ import AffiliateSystem from '../pages/user/affiliate/AffiliateSystem';
 import WithdrawalHistory from '../pages/user/affiliate/WithdrawalHistory';
 import PaymentHistory from '../pages/user/affiliate/PaymentHistory';
 import BiddedProduct from '../pages/user/AuctionSystem/BiddedProduct';
+import CustomerProduct from '../pages/user/CustomerProduct';
+import UsersDashboard from '../pages/user/UsersDashboard';
 
 export const MasterRoutes = () => {
   return (
@@ -134,13 +136,15 @@ export const MasterRoutes = () => {
       <Route path="/order-history" element={<OrderHistory />} />
       <Route path="/allbrand" element={<AllBrand />} />
       <Route path="user" element={<User />}>
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={<UsersDashboard />} />
         <Route path="purchase-history" element={<PurchaseHistory />} />
         <Route path="download" element={<Download />} />
         <Route path="sent-refund" element={<SentRefundRequest />} />
         <Route path="wishlist" element={<WishList />} />
         <Route path="compare" element={<Compare />} />
-        <Route path="classified-products" element={<ClassifiedProduct />} />
+        <Route path="classified-products" element={<ClassifiedProduct />}>
+        <Route path="customers_products" element={<CustomerProduct />} />
+          </Route>
         <Route path="auction-bidded" element={<AuctionBidded />}>
           <Route path="bidded-product" element={<BiddedProduct />} />
           <Route path="purchase-history" element={<PurchaseHistory />} />

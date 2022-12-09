@@ -25,7 +25,7 @@ const Wraps = styled.div`
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
-  max-height: 800px;
+  max-height: 900px;
 
   background-color: white;
   font-family: 'Open Sans', sans-serif !important;
