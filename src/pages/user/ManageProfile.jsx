@@ -198,6 +198,15 @@ function ManageProfile() {
 
   return (
     <Card>
+
+      <div>
+        <div>Manage Profile</div>
+        <div>
+          <div>Basic Info</div>
+          <div>
+            <form></form>
+          </div>
+
       <Container style={{ width: 1000, padding: '10px' }}>
       <ModalWindow open={modal} handleClose={handleClose} />
         <Typography
@@ -374,6 +383,7 @@ function ManageProfile() {
           }}
         >
           <Button sx={buttonStyle}>Update Profile</Button>
+
         </div>
 
         <Paper elevation={6} style={{ marginBottom: '15px', padding: '20px' }}>
