@@ -1,7 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import Typography from '@mui/material/Typography';
-import { Button, FormLabel, IconButton, Paper, Select, TextField } from '@mui/material';
+import {
+  Button,
+  FormLabel,
+  IconButton,
+  Paper,
+  Select,
+  TextField,
+} from '@mui/material';
 import { Box } from '@mui/system';
 import { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
@@ -35,7 +42,7 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
-  borderRadius:"7px"
+  borderRadius: '7px',
 };
 
 const buttonModalStyle = {
@@ -44,13 +51,13 @@ const buttonModalStyle = {
   border: 'none',
   width: '90px',
   borderRadius: '10px',
-  marginTop: "20px",
-  backgroundColor: "#E62E04",
-  color: "white",
+  marginTop: '20px',
+  backgroundColor: '#E62E04',
+  color: 'white',
   '&:hover': {
     backgroundColor: 'darkred',
   },
-}
+};
 
 const buttonStyle = {
   padding: '15px',
@@ -108,10 +115,8 @@ function AddressCard(props) {
   );
 }
 
-
-
 function ModalWindow(props) {
-  function handleSubmit(e){
+  function handleSubmit(e) {
     e.preventDefault();
   }
 
@@ -124,62 +129,136 @@ function ModalWindow(props) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Box style={{display: "flex", justifyContent:"space-between", marginBottom:"20px"}}>
+          <Box
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              marginBottom: '20px',
+            }}
+          >
             <Typography id="modal-modal-title" variant="h6" component="h2">
               New Address
             </Typography>
             <IconButton onClick={props.handleClose}>
               <Close />
             </IconButton>
-          </Box><hr></hr>
+          </Box>
+          <hr></hr>
 
           <form>
-            <Box style={{display: 'flex',justifyContent: 'space-between',padding: '5px'}}>
-              <FormLabel htmlFor="address" style={{ color: 'black', fontSize:"15px" }}>
+            <Box
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                padding: '5px',
+              }}
+            >
+              <FormLabel
+                htmlFor="address"
+                style={{ color: 'black', fontSize: '15px' }}
+              >
                 Address
               </FormLabel>
-              <TextField id="address" style={{ width: '80%'}} type="text" placeholder="Your Address" required/>
+              <TextField
+                id="address"
+                style={{ width: '80%' }}
+                type="text"
+                placeholder="Your Address"
+                required
+              />
             </Box>
-            <Box style={{display: 'flex',justifyContent: 'space-between',padding: '5px',}}>
-              <FormLabel htmlFor="country" style={{ color: 'black', fontSize:"15px" }}>
+            <Box
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                padding: '5px',
+              }}
+            >
+              <FormLabel
+                htmlFor="country"
+                style={{ color: 'black', fontSize: '15px' }}
+              >
                 Country
               </FormLabel>
-              <Select id="country" style={{ width: '80%'}} required>
-              </Select>
+              <Select id="country" style={{ width: '80%' }} required></Select>
             </Box>
-            <Box style={{display: 'flex',justifyContent: 'space-between',padding: '5px',}}>
-              <FormLabel htmlFor="state" style={{ color: 'black', fontSize:"15px" }}>
+            <Box
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                padding: '5px',
+              }}
+            >
+              <FormLabel
+                htmlFor="state"
+                style={{ color: 'black', fontSize: '15px' }}
+              >
                 State
               </FormLabel>
-              <Select id="state" style={{ width: '80%'}} required>
-              </Select>
+              <Select id="state" style={{ width: '80%' }} required></Select>
             </Box>
-            <Box style={{display: 'flex',justifyContent: 'space-between',padding: '5px',}}>
-              <FormLabel htmlFor="city" style={{ color: 'black', fontSize:"15px" }}>
+            <Box
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                padding: '5px',
+              }}
+            >
+              <FormLabel
+                htmlFor="city"
+                style={{ color: 'black', fontSize: '15px' }}
+              >
                 City
               </FormLabel>
-              <Select id="city" style={{ width: '80%'}} required>
-              </Select>
+              <Select id="city" style={{ width: '80%' }} required></Select>
             </Box>
-            <Box style={{display: 'flex',justifyContent: 'space-between',padding: '5px',}}>
-              <FormLabel htmlFor="postal code" style={{ color: 'black', fontSize:"15px" }}>
+            <Box
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                padding: '5px',
+              }}
+            >
+              <FormLabel
+                htmlFor="postal code"
+                style={{ color: 'black', fontSize: '15px' }}
+              >
                 Postal Code
               </FormLabel>
-              <TextField id="postal code"  style={{ width: '80%'}} type="number" placeholder="Your Postal Code" required/>
+              <TextField
+                id="postal code"
+                style={{ width: '80%' }}
+                type="number"
+                placeholder="Your Postal Code"
+                required
+              />
             </Box>
-            <Box style={{display: 'flex',justifyContent: 'space-between',padding: '5px',}}>
-              <FormLabel htmlFor="phone" style={{ color: 'black', fontSize:"15px" }}>
+            <Box
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                padding: '5px',
+              }}
+            >
+              <FormLabel
+                htmlFor="phone"
+                style={{ color: 'black', fontSize: '15px' }}
+              >
                 Phone
               </FormLabel>
-              <TextField id="phone" style={{ width: '80%'}} type="tel" placeholder="+234" required/>
+              <TextField
+                id="phone"
+                style={{ width: '80%' }}
+                type="tel"
+                placeholder="+234"
+                required
+              />
             </Box>
 
-            <Button type="submit" sx={buttonModalStyle} onClick={handleSubmit} >
-               Save
+            <Button type="submit" sx={buttonModalStyle} onClick={handleSubmit}>
+              Save
             </Button>
           </form>
-           
-          
         </Box>
       </Modal>
     </>
@@ -198,17 +277,8 @@ function ManageProfile() {
 
   return (
     <Card>
-
-      <div>
-        <div>Manage Profile</div>
-        <div>
-          <div>Basic Info</div>
-          <div>
-            <form></form>
-          </div>
-
       <Container style={{ width: 1000, padding: '10px' }}>
-      <ModalWindow open={modal} handleClose={handleClose} />
+        <ModalWindow open={modal} handleClose={handleClose} />
         <Typography
           component="h2"
           style={{
@@ -275,11 +345,11 @@ function ManageProfile() {
               <FormLabel style={{ color: 'black' }}>Photo</FormLabel>
               <Box
                 style={{
-                  display: "flex",
+                  display: 'flex',
                   border: '1px solid lightgrey',
                   width: '87%',
                   borderRadius: '5px',
-                  gap: "15px"
+                  gap: '15px',
                 }}
               >
                 <TextField
@@ -308,7 +378,9 @@ function ManageProfile() {
                 >
                   Browse
                 </Button>
-                <Typography style={{marginTop: "15px", fontSize: "15px"}}>{selectText}</Typography>
+                <Typography style={{ marginTop: '15px', fontSize: '15px' }}>
+                  {selectText}
+                </Typography>
               </Box>
             </Box>
             <Box
@@ -318,19 +390,22 @@ function ManageProfile() {
               }}
             >
               {photos && (
-                <div style={{display: "flex"}}>
+                <div style={{ display: 'flex' }}>
                   <img
                     src={URL.createObjectURL(imageObject)}
                     alt="Display"
-                    style={{ width: '150px', height: '150px', borderRadius:"5px" }}
+                    style={{
+                      width: '150px',
+                      height: '150px',
+                      borderRadius: '5px',
+                    }}
                   />
                   <IconButton
                     style={{
                       backgroundColor: 'white',
-                      position: "absolute",
-                     marginLeft: "115px",
-                     color: "red",
-                     
+                      position: 'absolute',
+                      marginLeft: '115px',
+                      color: 'red',
                     }}
                     onClick={() => {
                       setPhotos('');
@@ -338,7 +413,7 @@ function ManageProfile() {
                       setImageObject(undefined);
                     }}
                   >
-                    <Close fontSize= "small" />
+                    <Close fontSize="small" />
                   </IconButton>
                 </div>
               )}
@@ -374,7 +449,6 @@ function ManageProfile() {
             </Box>
           </form>
         </Paper>
-
         <div
           style={{
             display: 'flex',
@@ -383,7 +457,6 @@ function ManageProfile() {
           }}
         >
           <Button sx={buttonStyle}>Update Profile</Button>
-
         </div>
 
         <Paper elevation={6} style={{ marginBottom: '15px', padding: '20px' }}>
@@ -433,7 +506,11 @@ function ManageProfile() {
             }}
           >
             <IconButton>
-              <AddIcon fontSize="large" style={{ alignSelf: 'center' }} onClick={handleOpen} />
+              <AddIcon
+                fontSize="large"
+                style={{ alignSelf: 'center' }}
+                onClick={handleOpen}
+              />
             </IconButton>
 
             <Typography>Add New Address</Typography>
