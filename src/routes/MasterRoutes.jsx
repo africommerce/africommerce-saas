@@ -1,8 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
-
 import { Login } from '../components/auth/Login';
 import Registration from '../components/auth/Registration';
-
 import { AboutUs } from '../pages/AboutUs';
 import { AdminDashboard } from '../pages/admin/AdminDashboard';
 import { AuthSeller } from '../pages/seller/AuthSeller';
