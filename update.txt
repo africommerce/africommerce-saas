@@ -1,1 +1,1 @@
-feat: implement loading states and UI feedback for profile updates
+fix: correct form re-render issues after successful update
