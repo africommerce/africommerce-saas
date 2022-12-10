@@ -9,7 +9,6 @@
   border-radius: 10px;
 }
 
-
 .SystemBoxes {
   display: flex;
   justify-content: space-between;
@@ -133,8 +132,6 @@
   font-weight: 400;
   line-height: 19.5px;
 }
-
-
 
 .Codes {
   color: rgb(230, 46, 4);

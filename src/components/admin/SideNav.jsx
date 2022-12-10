@@ -1,12 +1,14 @@
 import { HomeOutlined } from '@mui/icons-material';
+import { Stack } from '@mui/system';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { AdminNavs } from './Navs';
 
-const Container = styled.div`
+const Container = styled(Stack)`
   display: ${(props) => (props.collapse ? 'none' : 'flex')};
+  /* display: none; */
   flex-direction: column;
   width: 15%;
   transition: all 300ms ease;
@@ -92,7 +94,10 @@ export const SideNav = () => {
   const menu = useSelector((state) => state.ui);
 
   return (
-    <Container collapse={menu.adminCollapse}>
+    <Container
+      sx={{ display: () => (menu.adminCollapse ? 'none' : 'flex') }}
+      collapse={menu.adminCollapse}
+    >
       <div className="wrapper">
         <div className="logo">
           <img src="../../assets/logo.png" alt="" />
