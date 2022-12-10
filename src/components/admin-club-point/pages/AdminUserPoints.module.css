@@ -1,0 +1,194 @@
+.container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    font-size: 12px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    flex: 3;
+}
+
+.table {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.table_head_row,
+.table_body_row {
+    display: flex;
+}
+
+.table_head_row_id,
+.table_body_row_id {
+    flex: 0.6;
+}
+
+.table_head_row_customer,
+.table_body_row_customer {
+    flex: 2;
+}
+
+.table_head_row_point,
+.table_body_row_point {
+    flex: 2;
+}
+
+.table_head_row_status,
+.table_body_row_status {
+    flex: 2;
+}
+
+.table_head_row_options,
+.table_body_row_options {
+    flex: 1;
+
+}
+
+.table_head_row {
+    font-weight: bolder;
+}
+
+.table_head_row_customer,
+.table_body_row_customer {
+    flex: 2;
+}
+
+.table_head_row_earn,
+.table_body_row_earn {
+    flex: 2;
+}
+
+
+.table_head_row_code,
+.table_body_row_code {
+    display: flex;
+    flex: 2;
+    gap: 1rem;
+}
+
+
+
+
+.img img {
+    flex: 1;
+    width: auto;
+    max-width: 50px;
+}
+
+.name_title {
+    flex: 10;
+}
+
+.table_body_row_edit {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(247, 133, 62);
+    background: rgb(254, 235, 218);
+    transition: all 300ms ease;
+}
+
+.table_body_row_edit:hover {
+    background: rgb(247, 133, 62);
+    color: rgb(254, 235, 218);
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.set_point {
+    display: flex;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    flex-direction: column;
+
+}
+
+.set_point_head {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    font-weight: bold;
+}
+
+.form {
+    padding: 1rem;
+    align-items: center;
+    gap: 1rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.set_point_info {
+    display: flex;
+    text-align: justify;
+    /* font-weight: bold; */
+}
+
+.set_point_form_group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+.set_point_input {
+    display: flex;
+    align-items: center;
+    cursor: auto;
+    outline: none;
+    gap: 5px;
+}
+
+.set_point_input input {
+    cursor: auto;
+    padding: 0.7rem;
+    outline: none;
+}
+
+.set_point_input input:focus {
+    border: 1px solid orange;
+}
+
+.set_point_label {
+    flex: 1;
+}
+
+.set_point_input {
+    flex: 1;
+}
+
+.set_point_form_group_btn {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.set_point_form_group_btn button {
+    padding: 0.5rem 1rem;
+    background: orange;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+
+}
+
+.pagination {
+    display: flex;
+    padding: 1rem 0;
+}
