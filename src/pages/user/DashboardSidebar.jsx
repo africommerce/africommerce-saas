@@ -94,13 +94,16 @@ const Content = styled.div`
 `;
 
 function DashboardSidebar() {
-  const pathName = window.location.pathname;
 
   const [show, setShow] = useState(false);
 
+ const showAuctionTypesHandler = () => {
+    setShow(!show);
+  };
   const showAffiliateTypesHandler = () => {
     setShow(!show);
   };
+ 
 
   return (
     <Wraps>
@@ -303,6 +306,69 @@ function DashboardSidebar() {
           </Link>
         </li>
       </ul>
+      {/* <Container>
+        <Content>
+          <div>
+            <ion-icon name="home-outline"></ion-icon>
+          </div>
+          <div style={{ marginBottom: '3%' }}>
+            <Nav to="/user/dashboard">Dashboard</Nav>
+          </div>
+        </Content>
+        <Content>
+          {' '}
+          <RequestPageIcon />
+          <Nav to="/user/purchase-history">Purchase History</Nav>
+        </Content>
+        <Content>
+          <DownloadIcon />
+          <Nav to="/user/download">Download</Nav>
+        </Content>
+        <Content>
+          <FastRewindIcon />
+          <Nav to="/user/sent-refund">Sent Refund Request</Nav>
+        </Content>
+        <Content>
+          <FavoriteBorderIcon />
+          <Nav to="/user/wishlist">Wishlist</Nav>
+        </Content>
+        <Content>
+          <AutorenewIcon />
+          <Nav to="/user/compare">Compare</Nav>
+        </Content>
+        <Content>
+          <DiamondIcon />
+          <Nav to="/user/classified-products">Classified Products</Nav>
+        </Content>
+        <Content>
+          <GavelIcon />
+          <Nav to="/user/auction-bidded">Auction</Nav>
+        </Content>
+        <Content>
+          <ChatIcon />
+          <Nav to="/user/conversation">Conversations</Nav>
+        </Content>
+        <Content>
+          <AttachMoneyIcon />
+          <Nav to="/user/wallet">My Wallet</Nav>
+        </Content>
+        <Content>
+          <AttachMoneyIcon />
+          <Nav to="/user/earning-point">Earning Points</Nav>
+        </Content>
+        <Content>
+          <AttachMoneyIcon />
+          <Nav to="/user/affliate">Affliate</Nav>
+        </Content>
+        <Content>
+          <SupportIcon />
+          <Nav to="/user/support">Support Ticket</Nav>
+        </Content>
+        <Content>
+          <PersonIcon />
+          <Nav to="/user/manageprofile">Manage Profile</Nav>
+        </Content>
+      </Container> */}
     </Wraps>
   );
 }
