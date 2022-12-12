@@ -12,17 +12,21 @@
 .body {
   display: flex;
 }
-.smsText {
+.switch {
+  margin-top: 10px;
+  text-align: center;
+}
+nav {
   margin-left: 30px;
   margin-top: 20px;
   font-size: 15px;
   line-height: 2.5;
   cursor: pointer;
-  color: #ff6a3d;
-  width: 40%;
+  color: hsl(14, 100%, 62%);
+  width: 200px;
 }
 
-.smsText ul li {
+nav ul li {
   list-style: none;
 }
 
@@ -34,6 +38,7 @@ section {
 }
 
 label {
+  margin-left: 100px;
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
@@ -48,15 +53,8 @@ h5 {
   color: #ff6a3d;
 }
 
-textarea {
-  padding: 10px;
-  width: 200px;
-  height: 50px;
-}
-
-
- button {
-  margin-left: 300px;
+button {
+  margin-left: 700px;
   font-size: 15px;
   padding: 15px;
   border: none;
