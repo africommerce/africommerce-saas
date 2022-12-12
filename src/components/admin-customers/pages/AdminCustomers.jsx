@@ -37,7 +37,7 @@ export const AdminCustomers = () => {
                 Delete Selections
               </span>
             </span>
-            <span>
+            <span className={classes.email_search}>
               <input type="text" placeholder="Type email or name & Enter" />
             </span>
           </span>

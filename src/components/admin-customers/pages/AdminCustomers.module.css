@@ -218,7 +218,9 @@
     background: rgb(248, 123, 43);
 }
 
-input {
+.table_head_input input,
+.table_body_input input,
+.email_search input {
     border: none;
 }
 

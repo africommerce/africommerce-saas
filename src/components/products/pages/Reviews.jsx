@@ -2,8 +2,9 @@ import { MenuItem, Pagination, Select, Switch } from '@mui/material';
 import { useState } from 'react';
 import classes from './Reviews.module.css';
 import styled from 'styled-components';
+import { SwitchUI } from '../../admin/ui/Switch';
 
-const SwitchBtn = styled(Switch)`
+const SwitchBtn = styled(SwitchUI)`
   /* background: red; */
   border-radius: 0;
   color: gray !important;

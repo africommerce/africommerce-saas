@@ -3,9 +3,10 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Switch } from '@mui/material';
+
 import { DeleteOutline, Download, EditOutlined } from '@mui/icons-material';
 import { useState } from 'react';
+import { SwitchUI } from '../admin/ui/Switch';
 
 export default function DigitalProductAccodoin() {
   const [expanded, setExpanded] = useState(false);
@@ -64,7 +65,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Todays Deal</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -72,7 +73,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Published</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -80,7 +81,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Featured</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -194,7 +195,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Todays Deal</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -202,7 +203,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Published</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -210,7 +211,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Featured</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -324,7 +325,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Todays Deal</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -332,7 +333,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Published</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -340,7 +341,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Featured</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -455,7 +456,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Todays Deal</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -463,7 +464,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Published</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div
@@ -471,7 +472,7 @@ export default function DigitalProductAccodoin() {
             >
               <span style={{ width: '20%' }}>Featured</span>
               <span style={{ width: '80%' }}>
-                <Switch />
+                <SwitchUI />
               </span>
             </div>
             <div

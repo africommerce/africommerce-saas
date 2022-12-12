@@ -27,6 +27,7 @@ import {
   EditOutlined,
   VisibilityOutlined,
 } from '@mui/icons-material';
+import { SwitchUI } from '../admin/ui/Switch';
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -422,17 +423,17 @@ export default function WholeSaleProductTable({ data }) {
                           </span>
                         </span>
                       </TableCell>
-                      <TableCell align="right">
-                        <Switch />
+                      <TableCell align="center">
+                        <SwitchUI />
+                      </TableCell>
+                      <TableCell align="center">
+                        <SwitchUI />
                       </TableCell>
                       <TableCell align="right">
-                        <Switch />
+                        <SwitchUI />
                       </TableCell>
                       <TableCell align="right">
-                        <Switch />
-                      </TableCell>
-                      <TableCell align="right">
-                        <Switch />
+                        <SwitchUI />
                       </TableCell>
                       <TableCell
                         align="right"

@@ -41,12 +41,9 @@
 }
 
 .input_wrapper {
-
-
     width: 100%;
     max-width: 80%;
     height: auto !important;
-
     border-radius: 5px;
     align-items: center;
 }
@@ -110,7 +107,6 @@
     border: 1px solid gainsboro;
     border-radius: 5px;
     padding: 1rem 0.5rem;
-
     align-items: center;
     cursor: pointer;
 

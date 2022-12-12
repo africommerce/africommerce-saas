@@ -1,4 +1,5 @@
 import BasicCard from '../ui/Card';
+
 import classes from './PosConfiguration.module.css';
 export const PosConfiguration = () => {
   return (

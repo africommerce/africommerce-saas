@@ -144,7 +144,7 @@
     /* justify-content: flex-start; */
 }
 
-td {
+.tr td {
     display: flex;
     align-items: center;
     gap: 5px;

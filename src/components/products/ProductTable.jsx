@@ -17,7 +17,7 @@ import Checkbox from '@mui/material/Checkbox';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import Switch from '@mui/material/Switch';
+
 import DeleteIcon from '@mui/icons-material/Delete';
 import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
@@ -27,6 +27,7 @@ import {
   EditOutlined,
   VisibilityOutlined,
 } from '@mui/icons-material';
+import { SwitchUI } from '../admin/ui/Switch';
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -409,13 +410,13 @@ export default function ProductTable({ data }) {
                       </TableCell>
                       <TableCell align="right">{row.fat}</TableCell>
                       <TableCell align="right">
-                        <Switch />
+                        <SwitchUI />
                       </TableCell>
                       <TableCell align="right">
-                        <Switch />
+                        <SwitchUI />
                       </TableCell>
                       <TableCell align="right">
-                        <Switch />
+                        <SwitchUI />
                       </TableCell>
                       <TableCell
                         align="right"
@@ -528,7 +529,7 @@ export default function ProductTable({ data }) {
         />
       </Paper>
       <FormControlLabel
-        control={<Switch checked={dense} onChange={handleChangeDense} />}
+        control={<SwitchUI checked={dense} onChange={handleChangeDense} />}
         label="Dense padding"
       />
     </Box>

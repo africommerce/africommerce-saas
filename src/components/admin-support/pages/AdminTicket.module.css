@@ -105,7 +105,6 @@
 
 }
 
-
 .body_head_user,
 .body_body_user {
     display: flex;
@@ -124,7 +123,6 @@
 .body_head_last_reply,
 .body_body_last_reply {
     display: flex;
-
     flex: 1;
 }
 
@@ -134,7 +132,6 @@
     flex: 1;
 
 }
-
 
 .options_view {
     display: flex;

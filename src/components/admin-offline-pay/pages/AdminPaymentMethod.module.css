@@ -53,7 +53,6 @@
 }
 
 .body_table {
-
     display: flex;
     justify-content: space-between;
 }
@@ -94,8 +93,8 @@
     justify-content: space-between;
 }
 
-th,
-td {
+.table_head th,
+.body_data td {
     display: flex;
     width: 100%;
     padding: 1rem;

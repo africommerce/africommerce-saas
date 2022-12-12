@@ -27,6 +27,7 @@ import {
   EditOutlined,
   VisibilityOutlined,
 } from '@mui/icons-material';
+import { SwitchUI } from '../admin/ui/Switch';
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -427,7 +428,7 @@ export default function AllCategoriesTable({ data }) {
                       <TableCell align="right">-</TableCell>
                       <TableCell align="right">-</TableCell>
                       <TableCell align="right">
-                        <Switch />
+                        <SwitchUI />
                       </TableCell>
                       <TableCell align="right">{'%'}</TableCell>
                       <TableCell

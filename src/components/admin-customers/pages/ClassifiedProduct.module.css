@@ -44,7 +44,6 @@
     border-radius: 5px;
     align-items: center;
     display: flex;
-
     padding: 1rem;
     min-width: 200px;
 }
@@ -80,7 +79,6 @@
     border-radius: 10px;
     width: 100%;
     cursor: pointer;
-
     transition: all 300ms ease;
 
 }
@@ -217,7 +215,6 @@
     cursor: pointer;
 }
 
-
 .table_body_row .table_body_options .delete_icon {
     display: flex;
     align-items: center;
@@ -256,7 +253,8 @@
     background: rgb(248, 123, 43);
 }
 
-input {
+.table_head_input input,
+.table_body_input input {
     border: none;
 }
 

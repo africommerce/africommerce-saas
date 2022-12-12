@@ -1,8 +1,6 @@
-import { MoreVert, SentimentVeryDissatisfied } from '@mui/icons-material';
+import { SentimentVeryDissatisfied } from '@mui/icons-material';
 import React, { useState } from 'react';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Fade from '@mui/material/Fade';
+
 import classes from './AdminPaymentMethod.module.css';
 import { Divider } from '@mui/material';
 export const AdminPaymentMethod = () => {

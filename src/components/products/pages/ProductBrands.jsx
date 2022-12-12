@@ -35,7 +35,7 @@ export const ProductBrands = () => {
               <Divider />
               {data.map((brand) => (
                 <>
-                  <tr key={brand.id}>
+                  <tr key={brand.id} className={classes.tr}>
                     <td>{brand.id}</td>
                     <td>{brand.title.split(' ').slice(0, 1)}</td>
                     <td className={classes.brand_image}>

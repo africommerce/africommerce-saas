@@ -85,10 +85,8 @@
     align-items: center;
     width: 100%;
     padding: 0;
-    /* max-width: 200px; */
     margin: auto 0;
     padding: 1rem;
-
     outline: none;
     cursor: auto;
     border: 1px solid gainsboro;
