@@ -8,6 +8,7 @@ import { Delete, ShoppingCart } from '@mui/icons-material';
 import { Button, IconButton } from '@mui/material';
 import Rating from '@mui/material/Rating';
 import styled from 'styled-components';
+import DashboardSidebar from './DashboardSidebar';
 
 const Containers = styled.div`
   display: flex;
@@ -27,16 +28,7 @@ function Card(props) {
       <Paper elevation={6} sx={{ maxHeight: 380, marginBottom: 0 }}>
         <img src={props.img} alt="" style={imgStyle} />
         <Box paddingX={2}>
-          <Typography
-            variant="body2"
-            component="h3"
-            noWrap="true"
-            style={{
-              fontSize: '15px',
-              fontWeight: 'bolder',
-              letterSpacing: '1px',
-            }}
-          >
+          <Typography variant="body2" component="h3" noWrap="true">
             {props.title}
           </Typography>
           <Box>
@@ -46,19 +38,10 @@ function Card(props) {
             <Typography
               variant="caption"
               sx={{ textDecoration: 'line-through' }}
-              style={{ fontSize: '15px', fontWeight: 'bolder' }}
             >
               {props.oldprice}
             </Typography>
-            <Typography
-              variant="caption"
-              marginLeft={1}
-              style={{
-                color: '#E62E04',
-                fontSize: '15px',
-                fontWeight: 'bolder',
-              }}
-            >
+            <Typography variant="caption" marginLeft={1} color="error">
               {props.newprice}
             </Typography>
           </Box>
@@ -71,12 +54,12 @@ function Card(props) {
         >
           <Box marginLeft={2}>
             <IconButton aria-label="delete">
-              <Delete style={{ color: '#E62E04' }} />
+              <Delete color="error" />
             </IconButton>
           </Box>
           <Box>
-            <Button variant="contained" style={{ backgroundColor: '#E62E04' }}>
-              <ShoppingCart style={{ color: 'white' }} />
+            <Button variant="contained" color="error">
+              <ShoppingCart />
               <Typography variant="caption">Add to cart</Typography>
             </Button>
           </Box>
@@ -93,12 +76,6 @@ export const WishList = () => {
         <Container maxWidth="md">
           <Typography>Wishlist</Typography>
           <Grid container spacing={5}>
-            <Card
-              img="https://demo.activeitzone.com/ecommerce/public/uploads/all/Cu01ryaF914OhH3CpMdKTkk9glGXpLBb5HqWS4Jv.png"
-              title="Dress the Population Women's Catalina Solid Sleeveless Fit & Flare Midi Dress"
-              newprice="$140.000"
-            />
-
             <Card
               img="https://demo.activeitzone.com/ecommerce/public/uploads/all/HQboSmyuvf2TShvV4NfJAgeCwm6Qnx1y6xQ2B8gI.png"
               title="Women's Embellished Tiered Sequin Jacket Dress"
