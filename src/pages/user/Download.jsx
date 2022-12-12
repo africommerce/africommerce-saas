@@ -1,4 +1,5 @@
 import React from 'react';
+import DashboardSidebar from './DashboardSidebar';
 import styled from 'styled-components';
 import DownloadSection from './DownloadSection';
 

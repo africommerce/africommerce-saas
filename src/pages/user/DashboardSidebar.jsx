@@ -12,7 +12,7 @@ const Wraps = styled.div`
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 
-  max-height: 800px;
+  max-height: 900px;
 
   background-color: white;
   font-family: 'Open Sans', sans-serif !important;
@@ -41,13 +41,19 @@ const PersonDetails = styled.div`
 `;
 
 function DashboardSidebar() {
+
   // const pathName = window.location.pathname;
+
 
   const [show, setShow] = useState(false);
 
+ const showAuctionTypesHandler = () => {
+    setShow(!show);
+  };
   const showAffiliateTypesHandler = () => {
     setShow(!show);
   };
+ 
 
   return (
     <Wraps>
@@ -134,12 +140,35 @@ function DashboardSidebar() {
           </Link>
         </li>
         <li className={classes.ListItem}>
-          <Link to="auction-bidded" className={classes.Link}>
-            <div className={classes.Icon}>
-              <ion-icon name="home-outline"></ion-icon>
+          <div onClick={showAuctionTypesHandler}>
+            <div to="auction-bidded" className={classes.Link}>
+              <div className={classes.Icon}>
+                <ion-icon name="home-outline"></ion-icon>
+              </div>
+              <div className={classes.LinkName}>Auction</div>
             </div>
-            <div className={classes.LinkName}>Auction</div>
-          </Link>
+            <ul
+              className={classes.Subs}
+              style={show ? { height: 'auto' } : null}
+            >
+              <li className={classes.ListItem}>
+                <Link to="auction-bidded/bidded-product" className={classes.Link}>
+                  <div className={classes.Icon}>
+                    <div className={classes.ListStyle}></div>{' '}
+                  </div>
+                  <div className={classes.LinkName}>Bidded Products</div>
+                </Link>
+              </li>
+              <li className={classes.ListItem}>
+                <Link to="auction-bidded/purchase-history" className={classes.Link}>
+                  <div className={classes.Icon}>
+                    <div className={classes.ListStyle}></div>{' '}
+                  </div>
+                  <div className={classes.LinkName}>Purchase History</div>
+                </Link>
+              </li>
+              </ul>
+          </div>
         </li>
         <li className={classes.ListItem}>
           <Link to="conversation" className={classes.Link}>
