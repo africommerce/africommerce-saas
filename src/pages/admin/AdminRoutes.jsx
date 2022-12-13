@@ -67,7 +67,6 @@ import { AdminSmsTemplate } from '../../components/admin-otp/pages/AdminSmsTempl
 import { AdminOtpCredentials } from '../../components/admin-otp/pages/AdminOtpCredentials';
 import { AdminPaymentMethod } from '../../components/admin-offline-pay/pages/AdminPaymentMethod';
 import { AdminWalletRecharge } from '../../components/admin-offline-pay/pages/AdminWalletRecharge';
-
 import { AdminSellerPackage } from '../../components/admin-offline-pay/pages/AdminSellerPackage';
 import { AdminCustomersPackage } from '../../components/admin-offline-pay/pages/AdminCustomersPackage';
 import { AdminAsianCredentials } from '../../components/admin-asian-payment/pages/AdminAsianCredentials';
@@ -76,6 +75,13 @@ import { AdminAfricanConfiguration } from '../../components/admin-african/pages/
 import { AdminAllStaffs } from '../../components/admin-staffs/pages/AdminAllStaffs';
 import { AdminPermissionRole } from '../../components/admin-staffs/pages/AdminPermissionRole';
 import { AdminAddonManager } from '../../components/admin-addon/pages/AdminAddonManager';
+import { AdminPointConfiguration } from '../../components/admin-club-point/pages/AdminPointConfiguration';
+import { AdminSetProductPoints } from '../../components/admin-club-point/pages/AdminSetProductPoints';
+import { AdminUserPoints } from '../../components/admin-club-point/pages/AdminUserPoints';
+import { AdminHeader } from '../../components/admin-web-setup/pages/AdminHeader';
+import { AdminFooter } from '../../components/admin-web-setup/pages/AdminFooter';
+import { AdminPages } from '../../components/admin-web-setup/pages/AdminPages';
+import { AdminAppearance } from '../../components/admin-web-setup/pages/AdminAppearance';
 
 export const AdminRoutes = () => {
   return (
@@ -240,7 +246,12 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="club/*">
-          <Route path="create" element={<h1>create-club</h1>} />
+          <Route path="configuration" element={<AdminPointConfiguration />} />
+          <Route
+            path="set-product-points"
+            element={<AdminSetProductPoints />}
+          />
+          <Route path="user-points" element={<AdminUserPoints />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 
@@ -252,7 +263,10 @@ export const AdminRoutes = () => {
         </Route>
 
         <Route path="websetup/*">
-          <Route path="create" element={<h1>create-webSetup</h1>} />
+          <Route path="header" element={<AdminHeader />} />
+          <Route path="footer" element={<AdminFooter />} />
+          <Route path="pages" element={<AdminPages />} />
+          <Route path="appearance" element={<AdminAppearance />} />
           <Route path="*" element={<h1>Page not found</h1>} />
         </Route>
 

@@ -300,17 +300,9 @@ export const AdminNavs = () => {
         icon={<ScoreboardOutlined />}
         title="Club Point System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Club Point To Wallet', link: 'club/configuration' },
+          { name: 'Set Product Point', link: 'club/set-product-points' },
+          { name: 'user Points', link: 'club/user-points' },
         ]}
       />
       <OtpMenu
@@ -343,17 +335,10 @@ export const AdminNavs = () => {
         icon={<DesktopWindowsOutlined />}
         title="Website Setup"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Header', link: 'websetup/header' },
+          { name: 'Footer', link: 'websetup/footer' },
+          { name: 'Pages', link: 'websetup/pages' },
+          { name: 'Appearance', link: 'websetup/appearance' },
         ]}
       />
       <ConfigurationMenu
