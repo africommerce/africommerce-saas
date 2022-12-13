@@ -1,14 +1,7 @@
 # Africommerce (Repo: `Africommerce`)
 
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+<!-- ALL PROJECT BADGES:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
-
-
-
-<!-- Project Shields -->
 <div>
   
   [![Contributors][contributors-shield]][contributors-url]
@@ -17,6 +10,9 @@
   [![Issues][issues-shield]][issues-url]
   [![MIT License][license-shield]][license-url]
 </div>
+
+<!-- ALL PROJECT BADGES:END -->
+
 
 <p align="center">
     <a href="https://github.com/iamkelv/africommerce/issues/new/choose">Report Bug</a>
@@ -124,7 +120,7 @@ Here is a quick overview on how to setup the `Africommerce` repository as a cont
   yarn build
   ```
 
-  THis command builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+  This command builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
 
 - ### 🚀 Deploy
 
@@ -181,7 +177,7 @@ Let us inspire more folks!
 
 [Africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
 
-### **[Claim Now!](https://aviyel.com/projects/43/africoommerce/rewards)**
+### **[Claim Now!](https://aviyel.com/projects/43/africommerce/rewards)**
 
 
 
