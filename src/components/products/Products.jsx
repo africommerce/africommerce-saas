@@ -186,6 +186,7 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   padding: 20px;
+  box-sizing: border-box;
   width: 100%;
 `;
 const Products = () => {

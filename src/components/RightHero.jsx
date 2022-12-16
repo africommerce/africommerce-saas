@@ -1,18 +1,17 @@
 import styled from 'styled-components';
-
+import classes from '../styles/Home.module.css';
 const Right = styled.div`
   display: flex;
   width: auto;
   flex-direction: column;
-  flex: 0.7;
+  flex: 1;
   background: rgb(230, 46, 4);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 5px;
   /* ----------- iPad 1, 2, Mini and Air ----------- */
 
   /* Portrait and Landscape */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    display: none;
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
   }
 `;
 const HeaderContainer = styled.div`
@@ -65,16 +64,42 @@ const images = [
     price: '500',
     discount: '470',
   },
+  {
+    title: 'Tools',
+    src: '../../assets/speaker1.webp',
+    price: '500',
+    discount: '470',
+  },
+  {
+    title: 'Tools',
+    src: '../../assets/speaker1.webp',
+    price: '500',
+    discount: '470',
+  },
+  {
+    title: 'Tools',
+    src: '../../assets/speaker1.webp',
+    price: '500',
+    discount: '470',
+  },
+  {
+    title: 'Tools',
+    src: '../../assets/speaker1.webp',
+    price: '500',
+    discount: '470',
+  },
 ];
-const CardContainer = styled.div`
-  display: flex;
-  margin: 0 auto;
-  gap: 5px;
-  width: 90%;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 10px;
-`;
+// const CardContainer = styled.div`
+//   display: flex;
+//   margin: 0 auto;
+//   gap: 5px;
+//   margin-bottom: 10px;
+//   overflow-y: scroll;
+//   width: 90%;
+//   justify-content: center;
+//   flex-direction: column;
+//   margin-top: 10px;
+// `;
 const Card = styled.div`
   display: flex;
   background: white;
@@ -117,7 +142,7 @@ export const RightHero = () => {
       <HeaderContainer>
         <Header>Todays Deal</Header>
       </HeaderContainer>
-      <CardContainer>
+      <div className={classes.RightHero}>
         {images.map((card, i) => (
           <Card key={i}>
             <CardLeft>
@@ -129,7 +154,7 @@ export const RightHero = () => {
             </CardRight>
           </Card>
         ))}
-      </CardContainer>
+      </div>
     </Right>
   );
 };
