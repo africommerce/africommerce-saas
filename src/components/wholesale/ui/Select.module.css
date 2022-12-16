@@ -1,94 +1,92 @@
 .select_container {
-    display: flex;
-    width: 97%;
-    position: relative;
-    flex-direction: column;
+  display: flex;
+  width: 97%;
+  position: relative;
+  flex-direction: column;
 }
 
 .select_wrapper:hover {
-    cursor: pointer;
-    border: 1px solid orange !important;
+  cursor: pointer;
+  border: 1px solid orange !important;
 }
 
 .select_wrapper {
-    display: flex;
-    width: 100%;
-    cursor: pointer;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.7rem;
-    position: relative;
-    border: 1px solid gainsboro;
-    border-radius: 5px;
-    color: gray;
-    transition: all 300ms ease;
-    outline: none;
-    margin: 0 auto;
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem;
+  position: relative;
+  border: 1px solid gainsboro;
+  border-radius: 5px;
+  color: gray;
+  transition: all 300ms ease;
+  outline: none;
+  margin: 0 auto;
 }
 
 .options {
-    display: flex;
-    margin-top: 1rem;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem;
-    z-index: 10;
-    cursor: pointer;
+  display: flex;
+  margin-top: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+  z-index: 10;
+  cursor: pointer;
 }
 
 .options:hover {
-    color: white;
-    background: orange;
+  color: white;
+  background: orange;
 }
 
 .dropdown {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    width: 100%;
-    gap: 1rem;
-    background: white;
-    padding: 1rem 0;
-    margin: 0 auto;
-    margin-top: 3rem;
-    overflow-x: hidden;
-    scrollbar-width: thin;
-    max-height: 100px;
-    overflow-y: scroll;
-    background: white;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    border-radius: 10px;
-    scroll-margin: thin;
-    scroll-behavior: smooth;
-
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  gap: 1rem;
+  background: white;
+  padding: 1rem 0;
+  margin: 0 auto;
+  margin-top: 3rem;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  max-height: 100px;
+  overflow-y: scroll;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  border-radius: 10px;
+  scroll-margin: thin;
+  scroll-behavior: smooth;
 }
 
 .dropdown {
-    scrollbar-width: thin;
-    scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-bar-color) var(--scroll-bar-bg-color);
 }
-
 
 .dropdown::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+  width: 12px;
+  height: 12px;
 }
 
 .dropdown::-webkit-scrollbar-track {
-    background: var(--scroll-bar-bg-color);
+  background: var(--scroll-bar-bg-color);
 }
 
 .dropdown::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-bar-color);
-    border-radius: 20px;
-    border: 3px solid var(--scroll-bar-bg-color);
+  background-color: var(--scroll-bar-color);
+  border-radius: 20px;
+  border: 3px solid var(--scroll-bar-bg-color);
 }
 
 .hideOption {
-    display: none;
+  display: none;
 }
 
 input {
-    max-width: 95%;
-    margin: 0 auto;
+  max-width: 95%;
+  margin: 0 auto;
 }
