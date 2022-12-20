@@ -1,0 +1,95 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.head {
+    display: flex;
+    font-weight: bold;
+    color: black;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer_widget {
+    display: flex;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.about_form {
+    display: flex;
+    /* gap: 1rem; */
+    padding: 1rem;
+    flex-direction: column;
+
+}
+
+.form_group {
+    display: flex;
+    margin-top: 2rem;
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.form_input {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form_input .btn_wrapper {
+
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    cursor: pointer;
+
+}
+
+.footer_img {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.footer_img img {
+    max-width: 50px;
+}
+
+.footer_img span {
+    font-size: 12px;
+}
+
+.logo_input {
+    display: flex;
+    align-items: center;
+    color: gray;
+    padding-left: 1rem;
+}
+
+.textArea_input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    /* max-width: 200px; */
+    margin: auto 0;
+    padding: 1rem;
+
+    outline: none;
+    cursor: auto;
+    border: 1px solid gainsboro;
+}

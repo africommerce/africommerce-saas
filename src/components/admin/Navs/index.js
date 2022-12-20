@@ -24,6 +24,8 @@ import {
 import React from 'react';
 import AddonMenu from './AddonManager';
 import AffliateMenu from './Affliate';
+import AfricanPay from './AfricanPay';
+import AsianPay from './AsianPay';
 import AuctionMenu from './AuctionMenu';
 import BlogMenu from './Blog';
 import ClubMenu from './ClubPoint';
@@ -236,17 +238,44 @@ export const AdminNavs = () => {
         icon={<PaymentsOutlined />}
         title="Offline System Payment"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Manual Payment Method', link: 'offline-payment/method' },
+          {
+            name: 'Offline Wallet Recharge',
+            link: 'offline-payment/wallet-recharge',
+          },
+          {
+            name: 'Offline Customer Package Payment',
+            link: 'offline-payment/customer-package',
+          },
+          {
+            name: 'Offline Seller Package Gateway',
+            link: 'offline-payment/seller-package',
+          },
+        ]}
+      />
+      <AsianPay
+        icon={<PaymentsOutlined />}
+        title="Asian System Payment"
+        items={[
+          {
+            name: 'Set Asian PG Credentials',
+            link: 'asian-payment/set-credentials',
+          },
+        ]}
+      />
+
+      <AfricanPay
+        icon={<PaymentsOutlined />}
+        title="African Payment Gateway Addon"
+        items={[
+          {
+            name: 'African PG Configurations',
+            link: 'african-payment/african-configuration',
+          },
+          {
+            name: 'Set African PG Credentials',
+            link: 'african-payment/african-credential',
+          },
         ]}
       />
       <PaymentGateWayMenu
@@ -271,17 +300,9 @@ export const AdminNavs = () => {
         icon={<ScoreboardOutlined />}
         title="Club Point System"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Club Point To Wallet', link: 'club/configuration' },
+          { name: 'Set Product Point', link: 'club/set-product-points' },
+          { name: 'user Points', link: 'club/user-points' },
         ]}
       />
       <OtpMenu
@@ -314,17 +335,10 @@ export const AdminNavs = () => {
         icon={<DesktopWindowsOutlined />}
         title="Website Setup"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'Header', link: 'websetup/header' },
+          { name: 'Footer', link: 'websetup/footer' },
+          { name: 'Pages', link: 'websetup/pages' },
+          { name: 'Appearance', link: 'websetup/appearance' },
         ]}
       />
       <ConfigurationMenu
@@ -348,17 +362,8 @@ export const AdminNavs = () => {
         icon={<GroupOutlined />}
         title="Staffs"
         items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
+          { name: 'All Staffs', link: 'staffs/all' },
+          { name: 'Staff Permission', link: 'staffs/permission' },
         ]}
       />
       <SystemMenu
@@ -381,23 +386,8 @@ export const AdminNavs = () => {
       <AddonMenu
         icon={<SettingsSuggestOutlined />}
         title="Addon Manager"
-        items={[
-          { name: 'Add New Product', link: 'product/create' },
-          { name: 'Add Product', link: 'product/add' },
-          { name: 'In House Products', link: 'product/inhouse' },
-          { name: 'Sellers Product', link: 'product/seller-products' },
-          { name: 'Digital Products', link: 'product/digital-products' },
-          { name: 'Bulk Import', link: 'product/bulk-import' },
-          { name: 'Bulk Export', link: 'product/bulk-export' },
-          { name: 'Brands', link: 'product/brand' },
-          { name: 'Attributes', link: 'product/attributes' },
-          { name: 'Colors', link: 'product/colors' },
-          { name: 'Product', link: 'product/products' },
-        ]}
+        items={[{ name: 'Manager', link: 'addon/manager' }]}
       />
-      {/* 
-          
-*/}
     </div>
   );
 };

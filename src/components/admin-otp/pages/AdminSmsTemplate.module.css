@@ -1,0 +1,76 @@
+.smsCard {
+  width: 1100px;
+  height: 400px;
+  background: #fff;
+  border-radius: 5px;
+  margin: 20px 20px 20px 20px;
+}
+.smsTemplates {
+  padding: 20px 0 0 20px;
+}
+
+.body {
+  display: flex;
+}
+.switch {
+  margin-top: 10px;
+  text-align: center;
+}
+nav {
+  margin-left: 30px;
+  margin-top: 20px;
+  font-size: 15px;
+  line-height: 2.5;
+  cursor: pointer;
+  color: hsl(14, 100%, 62%);
+  width: 200px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+label {
+  margin-left: 100px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+h4 {
+  font-weight: 500;
+}
+
+h5 {
+  margin: 5px 0;
+  font-weight: 400;
+  color: #ff6a3d;
+}
+
+button {
+  margin-left: 700px;
+  font-size: 15px;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background: #ff921c;
+  color: #fff;
+}
+
+.footer {
+  width: 100%;
+  height: 50px;
+  margin-top: 80px;
+  background: #fff;
+}
+
+.footer p {
+  text-align: center;
+  padding-top: 14.5px;
+}
