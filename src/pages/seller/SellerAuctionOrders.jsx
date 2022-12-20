@@ -1,8 +1,11 @@
 import React from 'react'
+import SellersAuctionOrders from '../../components/sellerDashboard/SellersAuctionOrder'
 
 function SellerAuctionOrders() {
   return (
-    <div>SellerAuctionOrders</div>
+    <div>
+<SellersAuctionOrders/>
+    </div>
   )
 }
 

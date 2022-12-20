@@ -7,6 +7,7 @@
   box-sizing: border-box;
   left: 0;
   display: none;
+  margin-left: 0px !important;
   right: 0;
   border-top: #e2e5ec !important;
   z-index: 20;
@@ -44,6 +45,7 @@
   font-size: 12px;
   color: black;
 }
+
 .Cart {
   width: 100%;
   color: #1b1b28;

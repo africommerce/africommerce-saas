@@ -23,7 +23,7 @@ export const NavBar = () => {
         <div style={{ borderBottom: '0.1px solid rgb(204 204 204 / 52)' }}>
           <TopNavbar />
         </div>
-        <hr />
+
         <div style={{ borderBottom: '0.1px solid rgb(204 204 204 / 52)' }}>
           <SearchNavbar />
         </div>
