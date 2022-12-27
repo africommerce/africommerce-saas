@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
+import bottomImage from '../assests/placeholder.jpg';
+
 const Center = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,7 +11,7 @@ const Center = styled.div`
   gap: 10px;
   justify-content: space-between;
   border-radius: 10px;
-  flex: 4;
+  flex-basis: 58%;
 `;
 
 const CenterTop = styled.div`
@@ -21,26 +23,24 @@ const CenterTop = styled.div`
 const CenterButtom = styled.div`
   display: flex;
   width: 100%;
-  flex: 1;
-  gap: 10px;
-  align-items: flex-end;
 
-  @media screen and (max-device-width: 480px) and (orientation: portrait) {
-    display: flex;
-    width: 100%;
-    max-width: 480px;
-    flex-direction: row;
-    background: red;
-    flex-wrap: wrap;
+  @media only screen and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 1) {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  @media only screen and (max-device-width: 300px) and (-webkit-min-device-pixel-ratio: 1) {
+    grid-template-columns: 1fr;
   }
 `;
 const CartegoryImage = [
-  { title: 'Women', src: '../../assets/earphones_b_4.webp' },
-  { title: 'Mobile', src: '../../assets/watch_1.webp' },
-  { title: 'Baby Dress', src: '../../assets/watch_2.webp' },
-  { title: 'Men Cloth', src: '../../assets/earphones_c_3.webp' },
-  { title: 'Kids and Toys', src: '../../assets/earphones_b_3.webp' },
-  { title: 'Tools', src: '../../assets/speaker1.webp' },
+  { title: 'Women', src: bottomImage },
+  { title: 'Mobile', src: bottomImage },
+  { title: 'Baby Dress', src: bottomImage },
+  { title: 'Men Cloth', src: bottomImage },
+  { title: 'Kids and Toys', src: bottomImage },
+  { title: 'Tools', src: bottomImage },
 ];
 const images = [
   { id: 1, src: '../../assets/banner1.png' },
@@ -53,10 +53,11 @@ const SlideImage = styled.img`
   height: 100%;
 `;
 const Card = styled.div`
-  background: rgb(255, 255, 255, 0.3);
+  background-color: rgb(255, 255, 255);
   text-align: center;
   border-radius: 5px;
-  padding: 2px;
+  padding: 5px;
+  width: 100%;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   &:hover {
     cursor: pointer;
@@ -64,13 +65,26 @@ const Card = styled.div`
   }
 `;
 const CardImage = styled.img`
-  max-width: 100px;
+  width: 100%;
+  max-height: 78px;
+  max-width: 107px;
 `;
-const CartTitle = styled.div``;
+const CartTitle = styled.div`
+  font-size: 14px;
+`;
 const CardContainer = styled.div`
   display: flex;
+  background-color: #fff;
   justify-content: center;
-  width: 100%;
+  box-sizing: border-box;
+  flex-basis: 16.5%;
+
+  margin-right: 20px;
+  @media only screen and (max-device-width: 700px) and (-webkit-min-device-pixel-ratio: 1) {
+    width: 90%;
+    margin-inline: 20px;
+    margin-right: 0px;
+  }
 `;
 export const CenterHero = () => {
   return (

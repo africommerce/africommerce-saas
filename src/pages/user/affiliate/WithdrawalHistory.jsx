@@ -3,6 +3,7 @@ import PurpleBox from '../components/purpleBox';
 import WhiteBox from '../components/whiteBox';
 import React from 'react';
 import Box from '../components/Box';
+import DataBox from '../components/dataBox';
 const WithdrawalHistory = () => {
   const state = [
     {
@@ -34,20 +35,7 @@ const WithdrawalHistory = () => {
 
         <WhiteBox caption="Affiliate Withdrawal Request" icon="Settings" />
       </div>
-      <div className={classes.PaymentContent} style={{ borderRadius: '10px' }}>
-        <div className={classes.PaymentHistoryBox}>
-          <div
-            className={[classes.PaymentHistoryBoxHead, classes.StatsHead].join(
-              ' '
-            )}
-          >
-            Affiliate Withdrawal History
-          </div>
-        </div>
-        <div style={{ padding: '0px 20px' }}>
-          <Box state={state} headers={headers} />
-        </div>
-      </div>
+      <DataBox state={state} headers={headers} />
     </div>
   );
 };

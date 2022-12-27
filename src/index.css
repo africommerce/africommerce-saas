@@ -1,10 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto',
-    sans-serif;
-
-
+  font-family: 'Roboto', sans-serif;
 }
 
 article,
@@ -21,10 +18,8 @@ section {
   display: block;
 }
 
-
 body {
-  font-family: 'Roboto',
-    sans-serif ;
+  font-family: 'Roboto', sans-serif;
   background-color: #f2f3f8 !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -97,7 +92,6 @@ code {
   }
 }
 
-
 /*mobile toggler*/
 .hamburger-sign {
   position: relative;
@@ -137,7 +131,7 @@ code {
   width: 100%;
   height: 2px;
   min-height: 2px;
-  content: "";
+  content: '';
   border-radius: 2px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
@@ -168,12 +162,11 @@ code {
   bottom: -9px;
 }
 
-
 .flexcontainer {
   display: flex;
   justify-content: space-between;
 }
 
 .flexitem {
-  width: 28%
+  width: 28%;
 }
