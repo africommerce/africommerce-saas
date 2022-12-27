@@ -39,9 +39,9 @@ const Box2 = styled.div`
   height: 20vh;
   margin-right: 20px;
   overflow: hidden;
-  border-radius: 0.3rem!important;
+  border-radius: 0.3rem !important;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 5%) !important;
-`
+`;
 
 const Box3 = styled.div`
   width: 15vw;
@@ -64,40 +64,40 @@ const Second = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-Content: center;
+  justify-content: center;
 `;
 const Card = styled.div`
   height: 5vh;
-   padding: 40px; 
+  padding: 40px;
 `;
 const Third = styled.div`
- align-items: center;
- padding: 50px;
+  align-items: center;
+  padding: 50px;
   display: flex;
- flex-direction: column;
+  flex-direction: column;
   justify-content: center;
 `;
 
 const Upload = styled.div`
   margin-top: 20px;
-   color: red;
+  color: red;
 `;
 
 const Image = styled.img`
- width: 70px;
+  width: 70px;
   height: 60px;
 `;
 
 const Detail = styled.div`
- color: red;
+  color: red;
   margin-bottom: 6px;
 `;
 
 const Button = styled.button`
- color: red;
- border: 0.1pc solid red;
- padding: 5px;
- background-color: white;
+  color: red;
+  border: 0.1pc solid red;
+  padding: 5px;
+  background-color: white;
 `;
 
 const ClassifiedProduct = () => {
@@ -207,7 +207,7 @@ const ClassifiedProduct = () => {
 
           <Box3>
             <Third>
-              <Image src="https://demo.activeitzone.com/ecommerce/public/uploads/all/zu3eVLzwf8iAs4AG7K5h4902UhaXVR0MbWVevxjJ.png"/>
+              <Image src="https://demo.activeitzone.com/ecommerce/public/uploads/all/zu3eVLzwf8iAs4AG7K5h4902UhaXVR0MbWVevxjJ.png" />
               <Detail>CurrentPackage: Premiu</Detail>
               <div>
                 <Button>Upgrade Package</Button>

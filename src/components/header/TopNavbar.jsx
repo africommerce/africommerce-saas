@@ -20,6 +20,10 @@ const Container1 = styled.div`
   text-align: center;
   list-style: none;
   flex: 1;
+  @media only screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+    justify-content: space-between;
+    padding: 10px;
+  }
 `;
 
 const List1 = styled.div`
@@ -51,6 +55,9 @@ const Container2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media only screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+    display: none;
+  }
 `;
 
 const Phone = styled.div`

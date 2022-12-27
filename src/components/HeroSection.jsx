@@ -8,8 +8,13 @@ const Container = styled.div`
   justify-content: space-between;
   height: auto;
   position: relative;
-  margin: 0 100px;
+  height: 462.5px;
   gap: 10px;
+  /* Portrait and Landscape */
+  @media only screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
+    flex-direction: column;
+    height: auto;
+  }
 
   .menu {
     background: white;

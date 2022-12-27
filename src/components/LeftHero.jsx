@@ -5,15 +5,15 @@ const Left = styled.div`
   display: flex;
   width: 100%;
   border-radius: 5px;
-  padding: 5px;
-  flex: 1;
+
+  flex-basis: 25%;
   background: rgb(255, 255, 255);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   border-radius: 5px;
   /* ----------- iPad 1, 2, Mini and Air ----------- */
 
   /* Portrait and Landscape */
-  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  @media only screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
     display: none;
   }
 `;
@@ -39,10 +39,11 @@ const CategoriesUl = styled.ul`
 const CategoriesLi = styled.li`
   background: white;
   padding: 10px;
-  border-radius: 10px;
+  font-size: 14px;
+
   &:hover {
     cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    background-color: rgb(252, 224, 217);
   }
 `;
 const CategoriesTitle = styled.div`
@@ -64,13 +65,19 @@ export const LeftHero = () => {
         <CategoriesTitle>Categories</CategoriesTitle>
         <CategoriesList>
           <CategoriesUl>
-            {['Men', 'Women', 'Electronics', 'kids', 'Car', 'Machines'].map(
-              (li) => (
-                <CategoriesLi props={menu} key={li}>
-                  {li}
-                </CategoriesLi>
-              )
-            )}
+            {[
+              'Men clothes',
+              'Women',
+              'Electronics',
+              'kids',
+              'Car',
+              'Machines',
+              'Home appliances',
+            ].map((li) => (
+              <CategoriesLi props={menu} key={li}>
+                {li}
+              </CategoriesLi>
+            ))}
           </CategoriesUl>
         </CategoriesList>
       </CategoriesWrapper>

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { AdsSection } from '../components/ads/AdsSection';
 import { HeroSection } from '../components/HeroSection';
 import Products from '../components/products/Products';
-
+import classes from '../styles/Home.module.css';
 const Containter = styled.div``;
 const ProductsContainer = styled.div`
   display: flex;
@@ -11,19 +11,19 @@ const ProductsContainer = styled.div`
   background-color: inherit;
   position: relative;
   background: inherit;
-  padding: 20px;
-  width: 90%;
+  padding: 20px 0px;
+  width: 100%;
   margin: 0 auto;
 `;
 
 export const Home = () => {
   return (
-    <Containter>
+    <div className={classes.HomeContainer}>
       <HeroSection />
       <AdsSection />
       <ProductsContainer>
         <Products />
       </ProductsContainer>
-    </Containter>
+    </div>
   );
 };
