@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import { device } from '../styles/BreackPoints';
 
 const Container = styled.div`
   padding: 1% 5% 5%;
@@ -12,6 +12,10 @@ const Privacy1 = styled.h1`
   font-weight: 600;
   color: rgb(27, 27, 40);
   line-height: 28.8px;
+  /* Device = Laptops, Desktops  */
+  @media ${device.mobileS} {
+    font-size: 15px;
+  }
 `;
 
 const Section1 = styled.div`
@@ -31,22 +35,28 @@ const Section2 = styled.div`
 `;
 const P1 = styled.h2`
   margin-bottom: 2%;
+  @media ${device.mobileS} {
+    font-size: 15px;
+  }
 `;
 const P2 = styled.p`
   margin-bottom: 2%;
+  @media ${device.mobileS} {
+    font-size: 15px;
+  }
 `;
 const P3 = styled.h3`
   margin-bottom: 2%;
 `;
 
-
 export const PrivacyPolicy = () => {
   return (
     <Container>
       <Section1>
-          <div>
-            <Privacy1>Privacy Policy Page</Privacy1></div>
-          <div>Home / "Privacy Policy Page</div>
+        <div>
+          <Privacy1>Privacy Policy Page</Privacy1>
+        </div>
+        <div>Home / "Privacy Policy Page</div>
       </Section1>
       <Section2>
         <P1>Privacy Policy</P1>
@@ -73,36 +83,46 @@ export const PrivacyPolicy = () => {
         </P2>
         <P2>Definitions</P2>
         <P2>For the purposes of this Privacy Policy:</P2>
-        <P2>"Account" means a unique account created for You to access our Service
+        <P2>
+          "Account" means a unique account created for You to access our Service
           or parts of our Service.
         </P2>
-        <P2>"Company" (referred to as either "the Company", "We", "Us" or "Our" in
-          this Agreement) refers to [COMPANY INFORMATION]</P2>
+        <P2>
+          "Company" (referred to as either "the Company", "We", "Us" or "Our" in
+          this Agreement) refers to [COMPANY INFORMATION]
+        </P2>
         <P2>"Country" refers to [COMPANY_COUNTRY].</P2>
-        <P2>"Cookies" are small files that are placed on Your computer, mobile
+        <P2>
+          "Cookies" are small files that are placed on Your computer, mobile
           device or any other device by a website, containing the details of
           Your browsing history on that website among its many uses.
         </P2>
-        <P2>"Device" means any device that can access the Service such as a
+        <P2>
+          "Device" means any device that can access the Service such as a
           computer, a cell phone or a digital tablet.
         </P2>
-        <P2> "Personal Data" is any information that relates to an identified or
+        <P2>
+          {' '}
+          "Personal Data" is any information that relates to an identified or
           identifiable individual.
         </P2>
         <P2>"Service" refers to the Website.</P2>
-        <P2>"Service Provider" means any natural or legal person who processes the
+        <P2>
+          "Service Provider" means any natural or legal person who processes the
           data on behalf of the Company. It refers to third-party companies or
           individuals employed by the Company to facilitate the Service, to
           provide the Service on behalf of the Company, to perform services
           related to the Service or to assist the Company in analyzing how the
-          Service is used.</P2>
+          Service is used.
+        </P2>
         <P2>
           "Usage Data" refers to data collected automatically, either generated
           by the use of the Service or from the Service infrastructure itself
           (for example, the duration of a page visit).
         </P2>
         <P2>"Website" refers to [WEBSITE NAME], accessible from [WEBSITE]</P2>
-         <P2>"You" means the individual accessing or using the Service, or the
+        <P2>
+          "You" means the individual accessing or using the Service, or the
           company, or other legal entity on behalf of which such individual is
           accessing or using the Service, as applicable.
         </P2>
@@ -410,7 +430,9 @@ export const PrivacyPolicy = () => {
           Prevent or investigate possible wrongdoing in connection with the
           Service
         </P2>
-        <P2>Protect the personal safety of Users of the Service or the public</P2>
+        <P2>
+          Protect the personal safety of Users of the Service or the public
+        </P2>
         <P2>Protect against legal liability</P2>
         <P1>Security of Your Personal Data</P1>
         <P2>
@@ -480,7 +502,9 @@ export const PrivacyPolicy = () => {
           If you have any questions about this Privacy Policy, You can contact
           us:
         </P2>
-        <P2>By visiting this page on our website: [WEBSITE_CONTACT_PAGE_URL]</P2>
+        <P2>
+          By visiting this page on our website: [WEBSITE_CONTACT_PAGE_URL]
+        </P2>
         <P2>By sending us an email: [WEBSITE_CONTACT_EMAIL]</P2>
       </Section2>
     </Container>
