@@ -80,12 +80,12 @@ const Options = styled.div`
   flex-direction: row;
   flex: 1;
   align-items: center;
-  gap: 1em;
+  gap: 1.4em;
 
   .options-list {
     display: flex;
     align-items: center;
-    gap: 0.2em;
+    /* gap: 0.2em; */
   }
   /* Portrait and Landscape */
   @media only screen and (max-device-width: 1000px) and (-webkit-min-device-pixel-ratio: 1) {
