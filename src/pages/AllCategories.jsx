@@ -8,14 +8,16 @@ import CarCategory from '../components/categories/CarCategory';
 import KidsCategory from '../components/categories/KidsCategory';
 
 const Categories = styled.section`
-  margin-top: 60px;
-  width: 100%;
+  margin: 0 auto;
+  padding-top: 20px;
+  width: 80%;
+  display: flex;
 `;
 
 export const AllCategories = () => {
   return (
-    <Categories >
-      <CategoryHeader/>
+    <Categories>
+      <CategoryHeader />
       <WomenCategory />
       <MenCategory />
       <TechCategory />
