@@ -1,25 +1,32 @@
 .Sellers {
-  width: 100vw;
+  width: 80%;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
+  padding-top: 30px;
 }
+
 .Sellers__Content {
   width: 100%;
   max-width: 1400px;
 }
+
 .Header {
   display: flex;
 
   align-items: center;
   justify-content: space-between;
 }
+
 .Header__Caption,
 .Header__Caption_special {
   font-size: 14px;
 }
+
 .Header__Caption_special {
   font-weight: 500;
 }
+
 .SellersContainer {
   margin-top: 50px;
   display: grid;
@@ -35,27 +42,33 @@
   box-sizing: border-box;
   border: 1px solid #dee2e6;
 }
+
 .SellerImage {
   width: 115px;
   height: 115px;
 }
+
 .SellerBox__Right {
   margin-left: 10px;
   padding-left: 20px;
   border-left: 1px solid rgba(119, 119, 119, 0.2);
 }
+
 .SellerBox__Head {
   margin-block-start: 0px;
   margin-block-end: 0px;
   text-transform: capitalize;
 }
+
 .SellerBox__Rating {
   margin-bottom: 20px;
   margin-top: 15px;
 }
+
 .SellerBox__Rating ion-icon {
   color: #ffbd7f;
 }
+
 .SellerLink {
   text-decoration: none;
   background-color: #fbe0da;
@@ -64,37 +77,45 @@
   padding: 8px 15px;
   transition: all 0.2s;
 }
+
 .SellerLink:hover {
   background-color: #e62e04;
   color: white;
 }
+
 @media only screen and (max-width: 1000px) {
   .SellersContainer {
     grid-template-columns: 1fr 1fr;
     padding: 0 20px;
   }
 }
+
 @media only screen and (max-width: 675px) {
   .SellersContainer {
     display: flex;
     flex-direction: column;
   }
+
   .BigBox {
     display: flex;
     justify-content: center;
   }
+
   .SellerBox {
     width: 450px;
   }
+
   .Header {
     flex-direction: column;
     justify-content: center;
   }
+
   .Header__Caption,
   .Header__Caption_special {
     margin-top: 10px;
   }
 }
+
 @media only screen and (max-width: 500px) {
   .SellerBox {
     width: 95vw;
