@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from '../../styles/BreackPoints';
 
 const Container = styled.section`
   background-color: #fff;
@@ -14,8 +15,13 @@ const HeadingOne = styled.div`
 `;
 
 const Body1 = styled.div`
-  display: flex;
-  gap: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  width: 100%;
+  @media ${device.mobileM} {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 const BodyContent = styled.ul`
