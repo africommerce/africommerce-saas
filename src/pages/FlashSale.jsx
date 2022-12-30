@@ -3,17 +3,23 @@ import { Link } from 'react-router-dom';
 import { flashImgs } from '../assests/img_links';
 import { Grid, Card, CardMedia, Container } from '@mui/material';
 import styled from 'styled-components';
-
+import { device } from '../styles/BreackPoints';
 
 export const Flashdiv = styled.div`
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
 
-  @media screen and  (max-width: 700px) {
+  @media screen and (max-width: 700px) {
     display: block;
     text-align: center;
     margin-bottom: 30px;
+  }
+`;
+const Cardmedia = styled(CardMedia)`
+  @media ${device.mobileS} {
+    margin: 0 auto;
+    height: 280px;
   }
 `;
 export const Loading = () => {
@@ -57,7 +63,7 @@ export const FlashSale = () => {
               <Grid key={img.alt} item md={6} xs={12}>
                 <Link to={img.link}>
                   <Card>
-                    <CardMedia
+                    <Cardmedia
                       component="img"
                       height="294"
                       alt={img.alt}

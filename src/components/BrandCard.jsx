@@ -1,9 +1,27 @@
-import { Card, Box, ImageListItem, ImageList } from '@mui/material';
+import { Card, Box, ImageListItem } from '@mui/material';
+import styled from 'styled-components';
+import { device } from '../styles/BreackPoints';
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  @media ${device.tablet} {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media ${device.mobileL} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media ${device.mobileM} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media ${device.mobileS} {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
 
 export default function BrandCard() {
   return (
     <div>
-      <ImageList cols={5}>
+      <Container>
         {itemData.map((item) => (
           <Box
             sx={{
@@ -26,7 +44,7 @@ export default function BrandCard() {
             </Card>
           </Box>
         ))}
-      </ImageList>
+      </Container>
     </div>
   );
 }
