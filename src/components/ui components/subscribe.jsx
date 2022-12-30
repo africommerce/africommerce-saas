@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import { Stack } from '@mui/material';
 import { Link } from 'react-router-dom';
@@ -29,11 +29,14 @@ const InputField = styled.input`
   border-radius: 0.4rem;
 `;
 
-export const ButtonSub = styled.button`
+export const ButtonSub = styled.span`
   width: 100px;
   color: #fff;
   cursor: pointer;
   background-color: #e62e04;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   height: 43px;
   max-height: 50px;
   border-radius: 0.3rem;
@@ -41,11 +44,11 @@ export const ButtonSub = styled.button`
 `;
 
 export const Subscribe = () => {
-    const [subEmail, setSubEmail] = useState("")
-    
-    const handleSubcription = (e) => {
-        e.preventDefault();
-    }
+  const [subEmail, setSubEmail] = useState('');
+
+  const handleSubcription = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <Stack style={{ margin: '10px' }}>
@@ -54,12 +57,10 @@ export const Subscribe = () => {
           <LogoImg alt="active_estore_logo" src={storeImage}></LogoImg>
         </Link>
       </p>
-      <p style={{margin:"20px"}}>
-        <small>
-          Complete system for your eCommerce business
-        </small>
+      <p style={{ margin: '20px' }}>
+        <small>Complete system for your eCommerce business</small>
       </p>
-      <p>
+      <p style={{ display: 'flex', alignItems: 'center', gap: '0' }}>
         <InputField
           type="email"
           name="email"
@@ -68,11 +69,9 @@ export const Subscribe = () => {
           onChange={(e) => setSubEmail((preveState) => e.target.value)}
           placeholder="Your Email Address"
         ></InputField>
-        <ButtonSub type="submit" onClick={handleSubcription}>
-          Subscribe
-        </ButtonSub>
+        <ButtonSub onClick={handleSubcription}>Subscribe</ButtonSub>
       </p>
-      <p style={{margin:"20px"}}>
+      <p style={{ margin: '20px' }}>
         <Link to="##">
           <PlayStoreImg
             alt="google_play_store"

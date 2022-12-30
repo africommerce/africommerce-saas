@@ -34,7 +34,7 @@ const List1 = styled.div`
   font-weight: 400;
 
   p {
-    font-size: 13px;
+    padding: 0;
     font-size: 13px;
   }
 `;
@@ -48,6 +48,7 @@ const List2 = styled.div`
 
   p {
     font-size: 13px;
+    padding: 0;
   }
 `;
 
@@ -102,12 +103,14 @@ export const TopNavbar = () => {
       <TopNavbars>
         <Container1>
           <List1>
-            <img src="" alt="" />
+            {/* <img src="" alt="" /> */}
             <p>English</p>
-            <ArrowDropDownIcon />
+            <span>
+              <ArrowDropDownIcon />
+            </span>
           </List1>
           <List2>
-            <img src="" alt="" />
+            {/* <img src="" alt="" /> */}
             <p> U.SDollar</p>
             <ArrowDropDownIcon />
           </List2>
