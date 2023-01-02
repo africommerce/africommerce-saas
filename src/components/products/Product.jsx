@@ -5,7 +5,7 @@ import React from 'react';
 
 const Product = ({ product }) => {
   return (
-    <Link className={classes.Product} to="/">
+    <Link className={classes.Product} to={'/product/' + product.id}>
       <div className={classes.ProductImage}>
         <img src={product.image} alt="product img" />
       </div>
