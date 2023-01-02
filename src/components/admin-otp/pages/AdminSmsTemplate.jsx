@@ -10,8 +10,8 @@ function PhoneNumber() {
   const [text, setText] = useState('');
   const [name, setName] = useState('');
   return (
-    <section>
-      <label>
+    <section className={classes.section}>
+      <label className={classes.label}>
         <h4>SMS Body</h4>
         <div className={classes.textarea}>
           <textarea
@@ -25,7 +25,7 @@ function PhoneNumber() {
           <h5>**N.B : Do Not Change The Variables Like [[ ____ ]].**</h5>
         </div>
       </label>
-      <label>
+      <label className={classes.label}>
         <h4>Template ID</h4>
         <div className={classes.textarea}>
           <input
@@ -40,7 +40,7 @@ function PhoneNumber() {
           </h5>
         </div>
       </label>
-      <button>Update Settings</button>
+      <button className={classes.button}>Update Settings</button>
     </section>
   );
 }
@@ -49,7 +49,7 @@ function PasswordReset() {
   const [name, setName] = useState('');
   return (
     <section>
-      <label>
+      <label className={classes.label}>
         <h4>SMS Body</h4>
         <div className={classes.textarea}>
           <textarea
@@ -62,7 +62,7 @@ function PasswordReset() {
           <h5>**N.B : Do Not Change The Variables Like [[ ____ ]].**</h5>
         </div>
       </label>
-      <label>
+      <label className={classes.label}>
         <h4>Template ID</h4>
         <div className={classes.textarea}>
           <input
@@ -77,7 +77,7 @@ function PasswordReset() {
           </h5>
         </div>
       </label>
-      <button>Update Settings</button>
+      <button className={classes.button}>Update Settings</button>
     </section>
   );
 }
@@ -86,7 +86,7 @@ function OrderPlacement() {
   const [name, setName] = useState('');
   return (
     <section>
-      <label>
+      <label className={classes.label}>
         <h4>Activation</h4>
         <h4>SMS Body</h4>
         <div className={classes.textarea}>
@@ -103,7 +103,7 @@ function OrderPlacement() {
           <h5>**N.B : Do Not Change The Variables Like [[ ____ ]].**</h5>
         </div>
       </label>
-      <label>
+      <label className={classes.label}>
         <h4>Template ID</h4>
         <div className={classes.textarea}>
           <input
@@ -118,7 +118,7 @@ function OrderPlacement() {
           </h5>
         </div>
       </label>
-      <button>Update Settings</button>
+      <button className={classes.button}>Update Settings</button>
     </section>
   );
 }
@@ -127,7 +127,7 @@ function DeliveryStatus() {
   const [name, setName] = useState('');
   return (
     <section>
-      <label>
+      <label className={classes.label}>
         <h4>SMS Body</h4>
         <div className={classes.textarea}>
           <div className={classes.switch}>
@@ -143,7 +143,7 @@ function DeliveryStatus() {
           <h5>**N.B : Do Not Change The Variables Like [[ ____ ]].**</h5>
         </div>
       </label>
-      <label>
+      <label className={classes.label}>
         <h4>Template ID</h4>
         <div className={classes.textarea}>
           <input
@@ -158,7 +158,7 @@ function DeliveryStatus() {
           </h5>
         </div>
       </label>
-      <button>Update Settings</button>
+      <button className={classes.button}>Update Settings</button>
     </section>
   );
 }
@@ -167,7 +167,7 @@ function PaymentStatus() {
   const [name, setName] = useState('');
   return (
     <section>
-      <label>
+      <label className={classes.label}>
         <h4>SMS Body</h4>
         <div className={classes.textarea}>
           <div className={classes.switch}>
@@ -183,7 +183,7 @@ function PaymentStatus() {
           <h5>**N.B : Do Not Change The Variables Like [[ ____ ]].**</h5>
         </div>
       </label>
-      <label>
+      <label className={classes.label}>
         <h4>Template ID</h4>
         <div className={classes.textarea}>
           <input
@@ -198,7 +198,7 @@ function PaymentStatus() {
           </h5>
         </div>
       </label>
-      <button>Update Settings</button>
+      <button className={classes.button}>Update Settings</button>
     </section>
   );
 }
@@ -207,7 +207,7 @@ function AssignDelivery() {
   const [name, setName] = useState('');
   return (
     <section>
-      <label>
+      <label className={classes.label}>
         <h4>SMS Body</h4>
         <div className={classes.textarea}>
           <div className={classes.switch}>
@@ -224,7 +224,7 @@ function AssignDelivery() {
           <h5>**N.B : Do Not Change The Variables Like [[ ____ ]].**</h5>
         </div>
       </label>
-      <label>
+      <label className={classes.label}>
         <h4>Template ID</h4>
         <div className={classes.textarea}>
           <input
@@ -239,7 +239,7 @@ function AssignDelivery() {
           </h5>
         </div>
       </label>
-      <button>Update Settings</button>
+      <button className={classes.button}>Update Settings</button>
     </section>
   );
 }
@@ -247,7 +247,7 @@ function AssignDelivery() {
 function Layout() {
   return (
     <>
-      <nav>
+      <nav className={classes.nav}>
         <ul>
           <li>
             <NavLink
