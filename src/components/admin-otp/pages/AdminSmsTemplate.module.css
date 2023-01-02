@@ -16,7 +16,7 @@
   margin-top: 10px;
   text-align: center;
 }
-nav {
+.nav {
   margin-left: 30px;
   margin-top: 20px;
   font-size: 15px;
@@ -26,34 +26,34 @@ nav {
   width: 200px;
 }
 
-nav ul li {
+.nav ul li {
   list-style: none;
 }
 
-section {
+.section {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
   width: 100%;
 }
 
-label {
+.label {
   margin-left: 100px;
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
 
-h4 {
+.section h4 {
   font-weight: 500;
 }
 
-h5 {
+.section h5 {
   margin: 5px 0;
   font-weight: 400;
   color: #ff6a3d;
 }
 
-button {
+.button {
   margin-left: 700px;
   font-size: 15px;
   padding: 15px;
