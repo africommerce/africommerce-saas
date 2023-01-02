@@ -1,0 +1,398 @@
+.Container {
+  margin-top: 200px !important;
+  margin: 0 auto;
+  max-width: 1400px;
+}
+
+.ProductDetails {
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.ProductBox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ProductImages {
+  display: flex;
+  flex-basis: 42%;
+}
+
+.ImagesTab {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.Image {
+  padding-left: 20px;
+}
+
+.Right {
+  transform: translateY(20px);
+  z-index: 1;
+}
+.Left {
+  z-index: 1;
+  transform: translateY(-20px);
+}
+.SliderButton {
+  font-weight: bold;
+  font-size: 14px;
+}
+.SliderBtn {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  transition: 0.2s;
+  box-shadow: 0 0 1px 1px rgb(20 23 28 / 10%), 0 3px 1px 0 rgb(20 23 28 / 10%);
+}
+.SliderBtn:hover {
+  box-shadow: 0 2px 8px 2px rgb(20 23 28 / 15%);
+}
+.SmallImage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 5px;
+  margin-bottom: 4.5px;
+  border: 1px solid #e2e5ec;
+}
+.SmallImg {
+  width: 100%;
+  height: 50px;
+}
+.SmallImage:hover {
+  border: 1px solid #e62e04;
+}
+.img {
+  max-width: 460px;
+}
+.Img {
+  width: 100%;
+}
+.ProductDescription {
+  flex: 1;
+  /* background-color: blue; */
+}
+.NameBox {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e5ec;
+}
+.ProductName {
+  font-size: 20px;
+  color: black;
+  font-weight: bold;
+}
+.Rating {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+.Star {
+  color: #c3c3c5;
+  font-size: 16px;
+}
+
+.Revnumber {
+  margin-left: 10px;
+  color: #c3c3c5;
+  font-size: 16px;
+}
+.Seller {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e5ec;
+}
+.By {
+  font-size: 12px;
+  color: #c3c3c5;
+}
+.SellerName {
+  font-size: 14px;
+  color: #000;
+  margin-top: 5px;
+}
+.SellerLogo {
+  height: 30px;
+}
+.Logo {
+  height: 100%;
+}
+.SellerBtn {
+  background-color: rgba(230, 46, 4, 0.15);
+  color: #e62e04;
+  display: grid;
+
+  place-items: center;
+  transition: 0.2s;
+  padding-inline: 15px;
+  padding-block: 10px;
+  border: 0;
+  cursor: pointer;
+  margin-inline: 25px;
+  font-size: 13px;
+  border-radius: 2px;
+}
+.SellerBtn:hover {
+  background-color: #e62e04;
+  color: #fff;
+}
+
+.Price {
+  padding-block: 16px;
+  border-bottom: 1px solid #e2e5ec;
+}
+
+.PriceLine {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.Cap {
+  font-size: 14px;
+  color: #c3c3c5;
+
+  flex-basis: 16%;
+}
+.FakePrice {
+  font-size: 20px;
+  text-decoration: line-through;
+  color: #c3c3c5;
+}
+.RealPrice {
+  color: #e62e04;
+  font-weight: bold;
+  font-size: 32px;
+}
+.Point {
+  font-size: 12px;
+  border-radius: 2px;
+  box-sizing: border-box;
+  border: 1px solid rgba(230, 46, 4, 0.15);
+  padding-inline: 5px;
+  padding-block: 2.5px;
+  background-color: rgba(230, 46, 4, 0.15);
+}
+.Colors {
+  display: flex;
+  margin-block: 16px;
+  align-items: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #e2e5ec;
+}
+.ColorBox {
+  width: 30px;
+  height: 30px;
+  border-radius: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ColorContainer {
+  border: 1px solid #e2e5ec;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  position: relative;
+  border-radius: 3px;
+}
+.Color {
+  display: flex;
+
+  align-items: center;
+}
+.Signs {
+  display: flex;
+  align-items: center;
+}
+.Sign {
+  display: flex;
+  align-items: center;
+  background-color: #e2e6ea;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 16px;
+  cursor: pointer;
+  justify-content: center;
+}
+.Input {
+  border: 0;
+  outline: none;
+  min-width: 50px;
+  font-size: 16px;
+}
+.Input:focus {
+  border: 0;
+  outline: none;
+}
+.Quantity {
+  display: flex;
+  align-items: center;
+  padding-block: 16px;
+  border-bottom: 1px solid #e2e5ec;
+}
+.TotalPrice {
+  padding-block: 16px;
+}
+.CartButtons {
+  display: flex;
+  margin-block: 16px;
+}
+.Buy,
+.Add {
+  padding: 9.5px 19.2px;
+  border-radius: 4px;
+  font-size: 14.5px;
+  display: flex;
+  font-weight: bold;
+  align-items: center;
+  border: 0;
+  min-width: 133px;
+  min-height: 43px;
+  box-sizing: border-box;
+  cursor: pointer;
+  justify-content: center;
+}
+.Buy {
+  background-color: #e62e04;
+  color: #fff;
+}
+.Add {
+  background-color: rgba(230, 46, 4, 0.15);
+  color: #e62e04;
+  margin-right: 15px;
+}
+.Add:hover {
+  background-color: #e62e04;
+  color: #fff;
+}
+.BuyBox {
+  color: #fff;
+}
+.BuyBox,
+.AddBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.Icon {
+  color: inherit;
+}
+.Icons {
+  color: #fff;
+}
+.AltCart {
+  display: flex;
+  align-items: center;
+  margin-block: 34px;
+}
+.Alt {
+  color: #e62e04;
+  margin-right: 10px;
+  transition: 0.1s;
+  border: 0;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 3px;
+}
+.Alt:hover {
+  text-decoration: underline;
+}
+.Refund {
+  margin-block: 16px;
+}
+.RefImg {
+  width: 200px;
+}
+.PolicyLink {
+  color: #e62e04;
+  font-size: 14px;
+  margin-left: 5px;
+}
+@media only screen and (max-width: 1500px) {
+  .Container {
+    max-width: 1140px;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .Container {
+    max-width: 960px;
+  }
+  .Cap {
+    flex-basis: 25%;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .Container {
+    max-width: 720px;
+  }
+  .ProductBox {
+    flex-direction: column;
+  }
+  .ProductImages {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .Container {
+    max-width: 520px;
+  }
+  .ProductImages {
+    flex-direction: column;
+  }
+  .ImagesTab {
+    order: 1;
+    margin-top: 10px;
+    flex-direction: row;
+  }
+  .SliderBtn {
+    display: none;
+  }
+  .SmallImage {
+    margin-right: 10px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .Container {
+    max-width: 450px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .Container {
+    max-width: 400px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .Container {
+    max-width: 350px;
+  }
+}
+@media only screen and (max-width: 370px) {
+  .Container {
+    max-width: 350px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .Container {
+    max-width: 100vw;
+  }
+}
