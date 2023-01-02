@@ -30,13 +30,13 @@ export const AdminNewsletter = () => {
           <span className={classes.form_group}>
             <span className={classes.form_label}>Newsletter subject</span>
             <span className={classes.form_field}>
-              <input type="text" />
+              <input type="text" className={classes.input} />
             </span>
           </span>
           <span className={classes.form_group}>
             <span className={classes.form_label}>Newsletter content</span>
             <span className={classes.form_field}>
-              <textarea cols="30" rows="10" />
+              <textarea cols="30" rows="10" className={classes.textarea} />
             </span>
           </span>
           <span className={classes.form_group_btn}>

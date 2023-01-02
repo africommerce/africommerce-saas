@@ -22,13 +22,17 @@ export const AdminBulkSms = () => {
           <span className={classes.form_group_textarea}>
             <span className={classes.form_label}>SMS content</span>
             <span className={classes.form_field}>
-              <textarea />
+              <textarea className={classes.textarea} />
             </span>
           </span>
           <span className={classes.form_group}>
             <span className={classes.form_label}>Template ID</span>
             <span className={classes.form_field}>
-              <input type="text" placeholder="Template ID" />
+              <input
+                type="text"
+                placeholder="Template ID"
+                className={classes.input}
+              />
             </span>
           </span>
 

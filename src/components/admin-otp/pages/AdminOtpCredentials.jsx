@@ -14,7 +14,7 @@ export const AdminOtpCredentials = () => {
     authKey:
       'HtSZYmXdjVgqpWL7Pl6Rw3DKizrk0uvs2MB8yJoGaC1Oe495cUNelVfWwrpQ4b02JcCUnhZDOmxaB6u1',
     entityId: '123',
-    
+
     sendId: 'FSTSMS',
     mimoUsername: 'MIMO_USERNAME',
     mimoPassword: 'MIMO_PASSWORD',
@@ -35,7 +35,7 @@ export const AdminOtpCredentials = () => {
 
   return (
     <>
-      <section>
+      <section className={classes.section}>
         {/* article */}
         <div className={classes.card__container}>
           <div className={classes.text}>Twilio Credential</div>
@@ -43,6 +43,7 @@ export const AdminOtpCredentials = () => {
           <label>
             TWILIO SID
             <input
+              className={classes.input}
               value={form.twilioSid}
               onChange={(e) => {
                 setForm({
@@ -76,7 +77,7 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <button>Save</button>
+          <button className={classes.Btn}>Save</button>
         </div>
         {/* article */}
         <div className={classes.card__container_nexmo}>
@@ -106,7 +107,9 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <button className={classes.nexmo}>Save</button>
+          <button className={[classes.Btn, classes.nexmo].join(' ')}>
+            Save
+          </button>
         </div>
         {/* article */}
         <div className={classes.card__container}>
@@ -148,13 +151,13 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <button>Save</button>
+          <button className={classes.Btn}>Save</button>
         </div>
         {/* article */}
         <div className={classes.card__container_auth}>
           <div className={classes.text}>Fast2SMS Credential</div>
           <hr></hr>
-          <label>
+          <label className={classes.label}>
             AUTH KEY
             <input
               value={form.authKey}
@@ -166,7 +169,7 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <label>
+          <label className={classes.label}>
             ENTITY ID
             <input
               value={form.entityId}
@@ -178,7 +181,7 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <label>
+          <label className={classes.label}>
             ROUTE
             <select value={manul} onChange={handleChange}>
               <option value="DLT Manual">DLT Manual</option>
@@ -186,14 +189,14 @@ export const AdminOtpCredentials = () => {
               <option value="Transactional Use">Transactional Use</option>
             </select>
           </label>
-          <label>
+          <label className={classes.label}>
             Language
             <select value={manul} onChange={handleChange}>
               <option value="English">English</option>
               <option value="Unicode">Unicode</option>
             </select>
           </label>
-          <label>
+          <label className={classes.label}>
             SENDER ID
             <input
               value={form.sendId}
@@ -205,13 +208,15 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <button className={classes.auth}>Save</button>
+          <button className={[classes.Btn, classes.auth].join(' ')}>
+            Save
+          </button>
         </div>
         {/* article */}
         <div className={classes.card__container}>
           <div className={classes.text}>MIMO Credential</div>
           <hr></hr>
-          <label>
+          <label className={classes.label}>
             MIMO_USERNAME
             <input
               value={form.mimoUsername}
@@ -223,9 +228,10 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <label>
+          <label className={classes.label}>
             MIMO_PASSWORD
             <input
+              className={classes.input}
               value={form.mimoPassword}
               onChange={(e) => {
                 setForm({
@@ -235,9 +241,10 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <label>
+          <label className={classes.label}>
             MIMO_SENDER_ID
             <input
+              className={classes.input}
               value={form.mimoSenderId}
               onChange={(e) => {
                 setForm({
@@ -247,15 +254,16 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <button>Save</button>
+          <button className={classes.Btn}>Save</button>
         </div>
         {/* article */}
         <div className={classes.card__container}>
           <div className={classes.text}>MIMSMS Credential</div>
           <hr></hr>
-          <label>
+          <label className={classes.label}>
             MIM_API_KEY
             <input
+              className={classes.input}
               value={form.mimApiKey}
               onChange={(e) => {
                 setForm({
@@ -268,6 +276,7 @@ export const AdminOtpCredentials = () => {
           <label>
             MIM_SENDER_ID
             <input
+              className={classes.input}
               value={form.mimSenderId}
               onChange={(e) => {
                 setForm({
@@ -280,6 +289,7 @@ export const AdminOtpCredentials = () => {
           <label>
             MIM_BASE_URL
             <input
+              className={classes.input}
               value={form.mimBaseUrl}
               onChange={(e) => {
                 setForm({
@@ -289,7 +299,7 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <button>Save</button>
+          <button className={classes.Btn}>Save</button>
         </div>
         {/* article */}
         <div className={classes.card__container}>
@@ -298,6 +308,7 @@ export const AdminOtpCredentials = () => {
           <label>
             MSEGAT_API_KEY
             <input
+              className={classes.input}
               value={form.msegatApiKey}
               onChange={(e) => {
                 setForm({
@@ -310,6 +321,7 @@ export const AdminOtpCredentials = () => {
           <label>
             MSEGAT_USERNAME
             <input
+              className={classes.input}
               value={form.msegatUsername}
               onChange={(e) => {
                 setForm({
@@ -322,6 +334,7 @@ export const AdminOtpCredentials = () => {
           <label>
             MSEGAT_USER_SENDER
             <input
+              className={classes.input}
               value={form.msegatUserSender}
               onChange={(e) => {
                 setForm({
@@ -331,7 +344,7 @@ export const AdminOtpCredentials = () => {
               }}
             />
           </label>
-          <button>Save</button>
+          <button className={classes.Btn}>Save</button>
         </div>
       </section>
       <div className={classes.footer}>
