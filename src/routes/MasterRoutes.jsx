@@ -16,7 +16,7 @@ import { FlashSale } from '../pages/FlashSale';
 import { Home } from '../pages/Home';
 import { OrderHistory } from '../pages/OrderHistory';
 import { PrivacyPolicy } from '../pages/PrivacyPolicy';
-import { ProductDetail } from '../pages/ProductDetail';
+import ProductDetail from '../pages/ProductPage';
 import { ReturnPolicy } from '../pages/ReturnPolicy';
 import { Seller } from '../pages/Seller';
 import { SellersPolicy } from '../pages/SellersPolicy';
@@ -143,8 +143,8 @@ export const MasterRoutes = () => {
         <Route path="wishlist" element={<WishList />} />
         <Route path="compare" element={<Compare />} />
         <Route path="classified-products" element={<ClassifiedProduct />}>
-        <Route path="customers_products" element={<CustomerProduct />} />
-          </Route>
+          <Route path="customers_products" element={<CustomerProduct />} />
+        </Route>
         <Route path="auction-bidded" element={<AuctionBidded />}>
           <Route path="bidded-product" element={<BiddedProduct />} />
           <Route path="purchase-history" element={<PurchaseHistory />} />
