@@ -226,7 +226,9 @@ const Products = () => {
       <Head>
         <span>
           <h3>Flash Sale</h3>
-          <p>811</p> : <p>11</p> : <p>11</p> : <p>11</p>
+          <span className="Home__flash--buttons">
+            <p>811</p> : <p>11</p> : <p>11</p> : <p>11</p>
+          </span>
         </span>
         <button>View More</button>
       </Head>
