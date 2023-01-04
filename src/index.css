@@ -88,7 +88,7 @@ code {
 
 @media screen and (max-width: 550px) {
   #slider {
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 }
 
@@ -169,4 +169,18 @@ code {
 
 .flexitem {
   width: 28%;
+}
+@media only screen and (max-width: 1200px) {
+  .Hide {
+    visibility: hidden;
+    width: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.1s;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .Home__flash--buttons {
+    display: none !important;
+  }
 }

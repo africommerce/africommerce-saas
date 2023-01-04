@@ -8,7 +8,7 @@ const Registration = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#e6e6e6',
+        backgroundColor: '#f2f3f8',
         display: 'flex',
         justifyContent: 'center',
       }}
@@ -87,7 +87,10 @@ const Registration = () => {
             Already have an account?
           </Typography>
           <Box sx={{ typography: 'body1' }}>
-            <Link to="/auth" sx={{ color: '#E62E04', textDecoration: 'none' }}>
+            <Link
+              to="/auth/login"
+              sx={{ color: '#E62E04', textDecoration: 'none' }}
+            >
               Login
             </Link>
           </Box>
