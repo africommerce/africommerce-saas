@@ -9,6 +9,9 @@ import { BiShoppingBag } from 'react-icons/bi';
 import classes from '../../styles/PhoneNavbar.module.css';
 
 const PhoneNavbar = () => {
+  const showDashboardHandler = () => {
+    document.getElementById('sidebar-test').classList.remove('Hide');
+  };
   return (
     <nav className={classes.Nav}>
       <ul className={classes.NavList}>
@@ -21,7 +24,7 @@ const PhoneNavbar = () => {
           </NavLink>
         </li>
         <li className={classes.NavItem}>
-          <NavLink to="" className={classes.Link}>
+          <NavLink to="/all-categories" className={classes.Link}>
             <span className={classes.NavIcon}>
               <BiCategory className={classes.Icon} />
             </span>
@@ -45,7 +48,11 @@ const PhoneNavbar = () => {
           </NavLink>
         </li>
         <li className={classes.NavItem}>
-          <NavLink to="" className={classes.Link}>
+          <NavLink
+            to="/user/purchase-history"
+            onClick={showDashboardHandler}
+            className={classes.Link}
+          >
             <span className={classes.NavIcon}>
               <VscAccount className={classes.Icon} />
             </span>

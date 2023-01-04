@@ -7,8 +7,8 @@ import Spinner from '../spinner/spinner';
 
 const MainDescription = () => {
   const [description, setDescription] = useState({
-    des: false,
-    video: true,
+    des: true,
+    video: false,
     review: false,
   });
   const [data, setData] = useState(null);
@@ -143,11 +143,17 @@ const MainDescription = () => {
                 review: false,
               });
             }}
+            style={
+              description.des ? { borderBottom: '2px solid #e62e04' } : null
+            }
           >
             Description
           </span>
           <span
             className={classes.DescriptionTab}
+            style={
+              description.video ? { borderBottom: '2px solid #e62e04' } : null
+            }
             onClick={() => {
               setDescription({
                 des: false,
@@ -159,6 +165,9 @@ const MainDescription = () => {
             Video
           </span>
           <span
+            style={
+              description.review ? { borderBottom: '2px solid #e62e04' } : null
+            }
             className={classes.DescriptionTab}
             onClick={() => {
               setDescription({

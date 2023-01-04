@@ -12,6 +12,7 @@ const Categories = styled.section`
   padding-top: 20px;
   width: 80%;
   display: flex;
+  flex-direction: column;
 `;
 
 export const AllCategories = () => {

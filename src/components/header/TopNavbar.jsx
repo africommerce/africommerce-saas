@@ -121,7 +121,7 @@ export const TopNavbar = () => {
             <Span>Helps Line +903 343333</Span>
           </Phone>
           <Line />
-          <Link to="/auth" style={{ textDecoration: 'none' }}>
+          <Link to="/auth/login" style={{ textDecoration: 'none' }}>
             <Log>Login</Log>
           </Link>
           <Line />

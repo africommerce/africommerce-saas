@@ -17,7 +17,7 @@ const Container = styled.div`
 const Children = styled.div`
   max-width: 100%;
   margin: 0 auto;
-  margin-top: 170px;
+  margin-top: 195px;
 `;
 const Children2 = styled.div`
   margin: 0 auto;
@@ -29,7 +29,7 @@ export const Layout = (props) => {
   return (
     <Container>
       {location.pathname.includes('/admin') ||
-      location.pathname.includes("/auth-seller") ? (
+      location.pathname.includes('/auth-seller') ? (
         <Children2>{props.children}</Children2>
       ) : (
         <div>
