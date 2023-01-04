@@ -18,7 +18,7 @@ const Body1 = styled.div`
   grid-template-columns: repeat(3, 1fr);
   justify-content: space-between;
   width: 100%;
-  @media ${device.mobileM} {
+  @media ${device.mobileMM} {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
