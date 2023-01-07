@@ -23,7 +23,7 @@
 
 ## Introduction
 
-<p> AfriCommerce is a Software As Service E-commerce platform that allows all signed up users in Africa to own their own <mark style="background-color:green">customized store </mark>  and connects buyers to prospective sellers for free. </p>
+<p> AfriCommerce is a Software As Service E-commerce platform that allows all signed up users in Africa to own their own <mark style="background-color:green">customized store </mark>  and connects buyers to prospective sellers for free.. </p>
 
 <p align="center">
   <a href="https://github.com/iamkelv/africommerce" target="blank">
