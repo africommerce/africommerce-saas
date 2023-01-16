@@ -191,7 +191,7 @@ const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
 `;
-const Products = () => {
+const Products = ({ title }) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
   // const [visible, setVisible] = useState(5);
@@ -225,7 +225,7 @@ const Products = () => {
     <Container>
       <Head>
         <span>
-          <h3>Flash Sale</h3>
+          <h3>{title}</h3>
           <span className="Home__flash--buttons">
             <p>811</p> : <p>11</p> : <p>11</p> : <p>11</p>
           </span>
