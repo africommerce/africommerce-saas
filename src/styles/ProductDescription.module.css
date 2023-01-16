@@ -92,14 +92,18 @@
   height: 210px;
   display: flex;
   width: 100%;
+  background:'red';
   justify-content: center;
   box-sizing: border-box;
 }
 .ProductContent {
   padding: 1rem;
+  
 }
+
 .ProductImage img {
-  width: 96%;
+  width: 70%;
+  height:80%;
 }
 .RelatedContainer {
   display: flex;

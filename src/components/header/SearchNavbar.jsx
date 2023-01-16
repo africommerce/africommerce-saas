@@ -8,6 +8,7 @@ import { Badge } from '@mui/material';
 import classes from '../../styles/PhoneNavbar.module.css';
 import { BiArrowBack } from 'react-icons/bi';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const SearchNavbars = styled.div`
   display: grid;
@@ -112,7 +113,9 @@ export const SearchNavbar = () => {
   return (
     <SearchNavbars>
       <LogoContainer className="logo">
-        <Logo src="../../assets/logo.png" />
+        <Link to={'/'}>
+          <Logo src="../../assets/logo.png" />
+        </Link>
       </LogoContainer>
       <SearchContainer>
         <form className={classes.Form}>
