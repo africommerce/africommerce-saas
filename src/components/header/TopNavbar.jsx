@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from 'react-router-dom';
+import AuthContext from '../../store/authContext';
+import { NotificationAdd, NotificationsOutlined } from '@mui/icons-material';
+import { Badge } from '@mui/material';
 
 const TopNavbars = styled.div`
   display: flex;
@@ -97,6 +100,15 @@ const Span = styled.div`
 `;
 
 export const TopNavbar = () => {
+  const authCtx = useContext(AuthContext);
+
+  const isLoggedIn = authCtx.isLoggedIn;
+
+  const logoutHandler = () => {
+    authCtx.logout();
+    // optional: redirect the user
+  };
+
   return (
     <>
       {' '}
@@ -120,14 +132,44 @@ export const TopNavbar = () => {
             <PhoneIcon style={{ fontSize: '13px' }} />
             <Span>Helps Line +903 343333</Span>
           </Phone>
+
+          {authCtx.isLoggedIn && <Line />}
+          {authCtx.isLoggedIn && (
+            <Link to="/auth" style={{ textDecoration: 'none' }}>
+              <Reg>
+                <Badge badgeContent={4} color="primary">
+                  <NotificationsOutlined />
+                </Badge>
+              </Reg>
+            </Link>
+          )}
           <Line />
-          <Link to="/auth/login" style={{ textDecoration: 'none' }}>
-            <Log>Login</Log>
-          </Link>
+          {!authCtx.isLoggedIn && (
+            <Link to="/auth" style={{ textDecoration: 'none' }}>
+              <Reg>Registration</Reg>
+            </Link>
+          )}
+
+          {authCtx.isLoggedIn && (
+            <Link to="/user" style={{ textDecoration: 'none' }}>
+              <Reg>My Panel</Reg>
+            </Link>
+          )}
           <Line />
-          <Link to="/auth" style={{ textDecoration: 'none' }}>
-            <Reg>Registration</Reg>
-          </Link>
+          {!authCtx.isLoggedIn && (
+            <Link to="/auth/login" style={{ textDecoration: 'none' }}>
+              <Log>Login</Log>
+            </Link>
+          )}
+          {authCtx.isLoggedIn && (
+            <Link
+              to="/"
+              onClick={logoutHandler}
+              style={{ textDecoration: 'none' }}
+            >
+              <Log>Logout</Log>
+            </Link>
+          )}
         </Container2>
       </TopNavbars>
     </>
