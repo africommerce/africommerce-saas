@@ -6,6 +6,8 @@ import Products from '../components/products/Products';
 import classes from '../styles/Home.module.css';
 import { Close } from '@mui/icons-material';
 import SubscribeModal from '../components/ui components/SubscribeUi';
+import { subscribeAction } from '../store/subscribeModal';
+import { useSelector } from 'react-redux';
 const Containter = styled.div``;
 const ProductsContainer = styled.div`
   display: flex;
@@ -19,52 +21,50 @@ const ProductsContainer = styled.div`
 `;
 
 export const Home = () => {
-  const [openModal, setOpenModal] = useState(false);
-  useEffect(() => {
-    setOpenModal(true);
-  }, [setOpenModal]);
+  const { openModal } = useSelector((state) => state.subscribe);
+
   return (
     <div className={classes.HomeContainer}>
       {/* {openModal && <SubscribeModal />} */}
       <HeroSection />
       <AdsSection />
       <ProductsContainer>
-        <Products title={'Flash Sale'} />
+        <Products title={'Flash Sale'} endPoint={'products'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'New Products'} />
+        <Products title={'New Products'} endPoint={'products'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Features Products'} />
+        <Products title={'Features Products'} endPoint={'products'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Best Selling'} />
+        <Products title={'Best Selling'} endPoint={'products'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Auction Products'} />
-      </ProductsContainer>
-      <AdsSection />
-      <ProductsContainer>
-        <Products title={'Women Clothing & Fashion'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Men Clothing & Fashion'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Computer & Accessories'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Kids & toy'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Cellphones & Tabs'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Classified Ads'} />
+        <Products title={'Auction Products'} endPoint={'products'} />
       </ProductsContainer>
       <AdsSection />
       <ProductsContainer>
-        <Products title={'Best Sellers'} />
+        <Products title={'Women Clothing & Fashion'} endPoint={'products'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Men Clothing & Fashion'} endPoint={'products'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Computer & Accessories'} endPoint={'products'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Kids & toy'} endPoint={'products'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Cellphones & Tabs'} endPoint={'products'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Classified Ads'} endPoint={'products'} />
+      </ProductsContainer>
+      <AdsSection />
+      <ProductsContainer>
+        <Products title={'Best Sellers'} endPoint={'products'} />
       </ProductsContainer>
       <div>
         <div>Top 10 Categories</div>
