@@ -1,10 +1,7 @@
-import { Rating } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 import Product from './Product';
 import Spinner from '../spinner/spinner';
 
@@ -191,7 +188,7 @@ const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
 `;
-const Products = ({ title }) => {
+const Products = ({ title, endPoint }) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
   // const [visible, setVisible] = useState(5);

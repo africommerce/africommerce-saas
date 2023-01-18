@@ -1,11 +1,10 @@
 .Description {
   margin-top: 20px;
-  display: flex;
+  display: flex;  
   justify-content: space-between;
 }
 .Aside {
   flex-basis: 25%;
-
   padding-right: 10px;
   box-sizing: border-box;
 }
@@ -84,6 +83,8 @@
   margin-right: 10px;
   border: 1px solid #f2f3f8;
   transition: 0.2s;
+  
+
 }
 .Product:hover {
   box-shadow: 1px 2px 0 rgb(0 0 0 / 5%);
@@ -91,19 +92,18 @@
 .ProductImage {
   height: 210px;
   display: flex;
-  width: 100%;
-  background:'red';
+  width: 100%;  
   justify-content: center;
   box-sizing: border-box;
+  align-items: center;
 }
 .ProductContent {
-  padding: 1rem;
-  
+  padding: 1rem;      
 }
 
 .ProductImage img {
-  width: 70%;
-  height:80%;
+  width: 50%;
+  height:60%;    
 }
 .RelatedContainer {
   display: flex;
@@ -137,6 +137,7 @@
 }
 .ProductContent {
   padding-inline: 1rem;
+    
 }
 .Ratings {
   display: flex;
