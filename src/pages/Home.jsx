@@ -29,42 +29,42 @@ export const Home = () => {
       <HeroSection />
       <AdsSection />
       <ProductsContainer>
-        <Products title={'Flash Sale'} />
+        <Products title={'Flash Sale'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'New Products'} />
+        <Products title={'New Products'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Features Products'} />
+        <Products title={'Features Products'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Best Selling'} />
+        <Products title={'Best Selling'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Auction Products'} />
-      </ProductsContainer>
-      <AdsSection />
-      <ProductsContainer>
-        <Products title={'Women Clothing & Fashion'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Men Clothing & Fashion'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Computer & Accessories'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Kids & toy'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Cellphones & Tabs'} />
-      </ProductsContainer>
-      <ProductsContainer>
-        <Products title={'Classified Ads'} />
+        <Products title={'Auction Products'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <AdsSection />
       <ProductsContainer>
-        <Products title={'Best Sellers'} />
+        <Products title={'Women Clothing & Fashion'} endPoint={'products/best-selling'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Men Clothing & Fashion'} endPoint={'products/best-selling'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Computer & Accessories'} endPoint={'products/best-selling'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Kids & toy'} endPoint={'products/best-selling'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Cellphones & Tabs'} endPoint={'products/best-selling'} />
+      </ProductsContainer>
+      <ProductsContainer>
+        <Products title={'Classified Ads'} endPoint={'products/best-selling'} />
+      </ProductsContainer>
+      <AdsSection />
+      <ProductsContainer>
+        <Products title={'Best Sellers'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <div>
         <div>Top 10 Categories</div>

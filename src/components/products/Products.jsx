@@ -191,7 +191,7 @@ const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
 `;
-const Products = ({ title }) => {
+const Products = ({ title, endPoint, onData }) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
   // const [visible, setVisible] = useState(5);
@@ -208,18 +208,17 @@ const Products = ({ title }) => {
     setLoading(true);
     axios({
       method: 'GET',
-      url: 'https://fakestoreapi.com/products?limit=10',
+      url: `https://africommerce.cyclic.app/${endPoint}`,
     })
       .then((res) => {
-        setData(res.data);
+        setData(`${res.data.data.onData}`);
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
         setLoading(false);
       });
     return () => {};
-  }, [setData]);
+  }, [setData, endPoint]);
 
   return (
     <Container>
