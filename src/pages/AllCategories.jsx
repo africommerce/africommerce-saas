@@ -13,6 +13,7 @@ const Categories = styled.section`
 `;
 
 export const AllCategories = () => {
+  const [categories, setCategories] = useState([]);
 
   const getCategories = async () => { 
     const response = await axios.get('https://africommerce.cyclic.app/categories');
@@ -25,7 +26,6 @@ export const AllCategories = () => {
     getCategories();
   }, []);
 
-const [categories, setCategories] = useState([]);
 
 
 
