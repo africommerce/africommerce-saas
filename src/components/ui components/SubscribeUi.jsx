@@ -7,6 +7,8 @@ import { Close } from '@mui/icons-material';
 import subscribe from '../../assests/subscribe.png';
 import styled from 'styled-components';
 import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
+import { subscribeAction } from '../../store/subscribeModal';
 const style = {
   position: 'absolute',
   top: '50%',
@@ -44,14 +46,16 @@ const SubscribeButton = styled.button`
 `;
 export default function SubscribeModal() {
   const [open, setOpen] = React.useState(false);
-  const handleClose = () => setOpen(false);
-  useEffect(() => {
-    setOpen(true);
-  }, []);
+  const { openModal } = useSelector((state) => state.subscribe);
+
+  const handleClose = () => {
+    subscribeAction.subscribe(false);
+    console.log(openModal);
+  };
   return (
     <div>
       <Modal
-        open={open}
+        open={openModal}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

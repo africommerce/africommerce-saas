@@ -1,10 +1,7 @@
-import { Rating } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 import Product from './Product';
 import Spinner from '../spinner/spinner';
 
@@ -211,7 +208,7 @@ const Products = ({ title, endPoint, onData }) => {
       url: `https://africommerce.cyclic.app/${endPoint}`,
     })
       .then((res) => {
-        setData(`${res.data.data.onData}`);
+        setData('res.data.data.bestSellingProducts');
         setLoading(false);
       })
       .catch((err) => {
