@@ -1,11 +1,8 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
+import axios from 'axios';
 import CategoryHeader from '../components/categories/CategoryHeader';
-import WomenCategory from '../components/categories/WomenCategory';
-import MenCategory from '../components/categories/MenCategory';
-import TechCategory from '../components/categories/TechCategory';
-import CarCategory from '../components/categories/CarCategory';
-import KidsCategory from '../components/categories/KidsCategory';
+import Category from '../components/categories/Category';
 
 const Categories = styled.section`
   margin: 0 auto;
@@ -16,14 +13,28 @@ const Categories = styled.section`
 `;
 
 export const AllCategories = () => {
+
+  const getCategories = async () => { 
+    const response = await axios.get('https://africommerce.cyclic.app/categories');
+    setCategories(response.data.categories);
+    console.log(response.data.categories);
+
+  }
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
+const [categories, setCategories] = useState([]);
+
+
+
   return (
     <Categories>
       <CategoryHeader />
-      <WomenCategory />
-      <MenCategory />
-      <TechCategory />
-      <CarCategory />
-      <KidsCategory />
+      {categories.length > 0 && categories.map((category) => (
+        <Category header={category.category_name} key={category._id} />
+      ))}
     </Categories>
   );
 };
