@@ -18,8 +18,6 @@ export const AllCategories = () => {
   const getCategories = async () => { 
     const response = await axios.get('https://africommerce.cyclic.app/categories');
     setCategories(response.data.categories);
-    console.log(response.data.categories);
-
   }
 
   useEffect(() => {
@@ -32,9 +30,11 @@ export const AllCategories = () => {
   return (
     <Categories>
       <CategoryHeader />
-      {categories.length > 0 && categories.map((category) => (
+      {categories.length > 0 ? categories.map((category) => (
         <Category header={category.category_name} key={category._id} />
-      ))}
+      )) : 
+      <h1 style={{textAlign: 'center'}}>No category Found</h1>
+    }
     </Categories>
   );
 };
