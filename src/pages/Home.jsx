@@ -29,6 +29,7 @@ export const Home = () => {
       <HeroSection />
       <AdsSection />
       <ProductsContainer>
+
         <Products title={'Flash Sale'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <ProductsContainer>
