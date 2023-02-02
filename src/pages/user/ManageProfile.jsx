@@ -8,12 +8,16 @@ import {
   Paper,
   Select,
   TextField,
+  Snackbar,
+  Alert,
 } from '@mui/material';
 import { Box } from '@mui/system';
 import { useState } from 'react';
 import AddIcon from '@mui/icons-material/Add';
 import { Close } from '@mui/icons-material';
 import Modal from '@mui/material/Modal';
+import axios from 'axios';
+import { baseUrl } from '../../adapter/api';
 
 const Card = styled.div`
   display: flex;
@@ -272,8 +276,92 @@ function ManageProfile() {
   const [photos, setPhotos] = useState('');
   const [imageObject, setImageObject] = useState(undefined);
   const [modal, setModal] = useState(false);
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [snackbar, setSnackbar] = useState({
+    open: false,
+    message: '',
+    severity: 'success'
+  });
+
   const handleOpen = () => setModal(true);
   const handleClose = () => setModal(false);
+
+  const handleSnackbarClose = () => {
+    setSnackbar({ ...snackbar, open: false });
+  };
+
+  const validateForm = () => {
+    if (!name.trim()) {
+      setSnackbar({
+        open: true,
+        message: 'Name is required',
+        severity: 'error'
+      });
+      return false;
+    }
+    if (!phone.trim()) {
+      setSnackbar({
+        open: true,
+        message: 'Phone number is required',
+        severity: 'error'
+      });
+      return false;
+    }
+    if (password && password !== confirmPassword) {
+      setSnackbar({
+        open: true,
+        message: 'Passwords do not match',
+        severity: 'error'
+      });
+      return false;
+    }
+    return true;
+  };
+
+  const handleUpdateProfile = async () => {
+    if (!validateForm()) return;
+
+    try {
+      setLoading(true);
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('phone', phone);
+      if (password) {
+        formData.append('password', password);
+      }
+      if (photos) {
+        formData.append('avatar', photos);
+      }
+
+      const token = localStorage.getItem('token'); // Assuming token is stored in localStorage
+      const response = await axios.put(`${baseUrl}api/v1/users/me`, formData, {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'multipart/form-data'
+        }
+      });
+
+      setSnackbar({
+        open: true,
+        message: 'Profile updated successfully',
+        severity: 'success'
+      });
+
+      // Reset password fields after successful update
+      setPassword('');
+      setConfirmPassword('');
+    } catch (error) {
+      setSnackbar({
+        open: true,
+        message: error.response?.data?.message || 'Failed to update profile',
+        severity: 'error'
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <Card>
@@ -314,6 +402,7 @@ function ManageProfile() {
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
               />
             </Box>
             <Box
@@ -332,6 +421,7 @@ function ManageProfile() {
                 type="tel"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                required
               />
             </Box>
 
@@ -365,6 +455,7 @@ function ManageProfile() {
                     });
                     setSelectText('1 File selected');
                   }}
+                  accept="image/*"
                 />
                 <Button
                   onClick={() => {
@@ -431,6 +522,8 @@ function ManageProfile() {
                 style={{ width: '87%' }}
                 type="password"
                 placeholder="New Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </Box>
             <Box
@@ -445,6 +538,8 @@ function ManageProfile() {
                 style={{ width: '92%' }}
                 type="password"
                 placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
               />
             </Box>
           </form>
@@ -456,8 +551,29 @@ function ManageProfile() {
             marginBottom: '15px',
           }}
         >
-          <Button sx={buttonStyle}>Update Profile</Button>
+          <Button 
+            sx={buttonStyle} 
+            onClick={handleUpdateProfile}
+            disabled={loading}
+          >
+            {loading ? 'Updating...' : 'Update Profile'}
+          </Button>
         </div>
+
+        <Snackbar
+          open={snackbar.open}
+          autoHideDuration={6000}
+          onClose={handleSnackbarClose}
+          anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+        >
+          <Alert 
+            onClose={handleSnackbarClose} 
+            severity={snackbar.severity}
+            sx={{ width: '100%' }}
+          >
+            {snackbar.message}
+          </Alert>
+        </Snackbar>
 
         <Paper elevation={6} style={{ marginBottom: '15px', padding: '20px' }}>
           <Typography
