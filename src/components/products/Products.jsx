@@ -188,7 +188,7 @@ const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
 `;
-const Products = ({ title, endPoint }) => {
+const Products = ({ title, endPoint, onData }) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState(null);
   // const [visible, setVisible] = useState(5);
@@ -207,17 +207,12 @@ const Products = ({ title, endPoint }) => {
       method: 'GET',
       url: `https://africommerce.cyclic.app/${endPoint}`,
     })
-      .then((res) => res)
-      .then((data) => {
-        const { products } = data.data;
-        setData(products);
         setLoading(false);
         console.log(products);
       })
-      .catch((err) => setLoading(false));
 
     return () => {};
-  }, [setData]);
+  }, [setData, endPoint]);
 
   return (
     <Container>
