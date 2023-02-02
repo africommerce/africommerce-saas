@@ -205,16 +205,17 @@ const Products = ({ title, endPoint }) => {
     setLoading(true);
     axios({
       method: 'GET',
-      url: 'https://fakestoreapi.com/products?limit=10',
+      url: `https://africommerce.cyclic.app/${endPoint}`,
     })
-      .then((res) => {
-        setData(res.data);
+      .then((res) => res)
+      .then((data) => {
+        const { products } = data.data;
+        setData(products);
         setLoading(false);
+        console.log(products);
       })
-      .catch((err) => {
-        console.log(err);
-        setLoading(false);
-      });
+      .catch((err) => setLoading(false));
+
     return () => {};
   }, [setData]);
 
@@ -235,7 +236,7 @@ const Products = ({ title, endPoint }) => {
         </StyledArrowContainerLeft>
         {data ? (
           data.map((values) => {
-            console.log(values);
+            // console.log(values);
             return <Product product={values} key={values.id} />;
           })
         ) : (
