@@ -207,13 +207,10 @@ const Products = ({ title, endPoint, onData }) => {
       method: 'GET',
       url: `https://africommerce.cyclic.app/${endPoint}`,
     })
-      .then((res) => {
-        setData('res.data.data.bestSellingProducts');
         setLoading(false);
+        console.log(products);
       })
-      .catch((err) => {
-        setLoading(false);
-      });
+
     return () => {};
   }, [setData, endPoint]);
 
@@ -234,7 +231,7 @@ const Products = ({ title, endPoint, onData }) => {
         </StyledArrowContainerLeft>
         {data ? (
           data.map((values) => {
-            console.log(values);
+            // console.log(values);
             return <Product product={values} key={values.id} />;
           })
         ) : (
