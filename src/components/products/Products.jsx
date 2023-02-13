@@ -43,26 +43,7 @@ const Head = styled.div`
   }
 `;
 
-const Card = styled.div`
-  width: 183px;
-  position: relative;
-  padding: 10px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-`;
 
-const Image = styled.div`
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-  img {
-    width: 128px;
-    height: 161px;
-  }
-`;
 const Promo = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
@@ -146,7 +127,7 @@ const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
 `;
-const Products = ({ title, endPoint, onData }) => {
+const Products = ({ title, endPoint}) => {
   const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   // const [visible, setVisible] = useState(5);
@@ -166,6 +147,7 @@ const Products = ({ title, endPoint, onData }) => {
       url: `https://africommerce.cyclic.app/${endPoint}`,
     })
       .then((res) => {
+        console.log(res.data.data);
         setData(res.data.data);
         setLoading(false);
       })
@@ -196,7 +178,7 @@ const Products = ({ title, endPoint, onData }) => {
         ) : (
           <Spinner />
         )}
-        { !loading && data.length <1 &&<div>No Product Found</div>}
+        { !loading &&<div>No Product Found</div>}
         <StyledArrowContainerRight onClick={slideRight}>
           <MdKeyboardArrowRight />
         </StyledArrowContainerRight>
