@@ -43,26 +43,7 @@ const Head = styled.div`
   }
 `;
 
-const Card = styled.div`
-  width: 183px;
-  position: relative;
-  padding: 10px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-`;
 
-const Image = styled.div`
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-  img {
-    width: 128px;
-    height: 161px;
-  }
-`;
 const Promo = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
@@ -88,32 +69,6 @@ const Promo = styled.div`
     background: red;
     color: #ffff;
     font-size: 14px;
-  }
-`;
-const Price = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: 10px;
-  p {
-    text-decoration: line-through;
-    color: #99999f;
-    &:nth-child(2) {
-      text-decoration: none;
-      color: red;
-      font-weight: 600;
-    }
-  }
-`;
-
-const Rate = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  gap: 5px;
-  p {
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 `;
 
@@ -162,22 +117,6 @@ const StyledArrowContainerLeft = styled.div`
     display: none;
   }
 `;
-const Point = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  background: #fce0d9;
-  border-radius: 5px;
-  text-align: center;
-
-  p {
-    &:nth-child(2) {
-      font-weight: 600;
-    }
-  }
-`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -188,9 +127,9 @@ const Container = styled.div`
   box-sizing: border-box;
   width: 100%;
 `;
-const Products = ({ title, endPoint, onData }) => {
+const Products = ({ title, endPoint}) => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   // const [visible, setVisible] = useState(5);
 
   const slideLeft = (e) => {
@@ -207,8 +146,10 @@ const Products = ({ title, endPoint, onData }) => {
       method: 'GET',
       url: `https://africommerce.cyclic.app/${endPoint}`,
     })
+      .then((res) => {
+        console.log(res.data.data);
+        setData(res.data.data);
         setLoading(false);
-        console.log(products);
       })
 
     return () => {};
@@ -237,6 +178,7 @@ const Products = ({ title, endPoint, onData }) => {
         ) : (
           <Spinner />
         )}
+        { !loading &&<div>No Product Found</div>}
         <StyledArrowContainerRight onClick={slideRight}>
           <MdKeyboardArrowRight />
         </StyledArrowContainerRight>

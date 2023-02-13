@@ -1,5 +1,7 @@
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { device } from '../../styles/BreackPoints';
+import axios from 'axios';
 
 const Container = styled.section`
   background-color: #fff;
@@ -41,28 +43,34 @@ const BodyList = styled.li`
   margin-bottom: 15px;
 `;
 
-function Category({header}) {
+function Category({ title, endPoint, onData }) {
+  // const [loading, setLoading] = useState(false);
+  // const [data, setData] = useState([]);
+
+  // useEffect(() => {
+  //   setLoading(true);
+  //   axios({
+  //     method: 'GET',
+  //     url: `https://africommerce.cyclic.app/categories`,
+  //   })
+  //     .then((res) => {
+  //       console.log(res.data.data)
+  //       setData(res.data.data);
+  //       setLoading(false);
+  //     })
+
+  //   return () => {};
+  // }, [setData]);
+
   return (
     <Container>
-      <HeadingOne>{header}</HeadingOne>
+      <HeadingOne>hello</HeadingOne>
       <Body1>
         <BodyContent>
           <BodyHeading>Four Seaters</BodyHeading>
           <BodyList>Toyota</BodyList>
           <BodyList>Honda</BodyList>
           <BodyList>Audi</BodyList>
-        </BodyContent>
-        <BodyContent>
-          <BodyHeading>SUV</BodyHeading>
-          <BodyList>Luxury SUV</BodyList>
-          <BodyList>Off-road SUV</BodyList>
-          <BodyList>Mini SUV</BodyList>
-        </BodyContent>
-
-        <BodyContent>
-          <BodyHeading>Motorbike</BodyHeading>
-          <BodyList>Cruisers</BodyList>
-          <BodyList>Choppers</BodyList>
         </BodyContent>
       </Body1>
     </Container>
