@@ -30,13 +30,13 @@ export const Home = () => {
       <AdsSection />
       <ProductsContainer>
 
-        <Products title={'Flash Sale'} endPoint={'products/best-selling'} />
+        <Products title={'Flash Sale'} endPoint={'products/top-rated-product'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'New Products'} endPoint={'products/best-selling'} />
+        <Products title={'New Products'} endPoint={'products/latest-products'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Features Products'} endPoint={'products/best-selling'} />
+        <Products title={'Features Products'} endPoint={'products/five-products'} />
       </ProductsContainer>
       <ProductsContainer>
         <Products title={'Best Selling'} endPoint={'products/best-selling'} />
@@ -46,7 +46,7 @@ export const Home = () => {
       </ProductsContainer>
       <AdsSection />
       <ProductsContainer>
-        <Products title={'Women Clothing & Fashion'} endPoint={'products/best-selling'} />
+        <Products title={'Women Clothing & Fashion'} endPoint={'products/five-products'} />
       </ProductsContainer>
       <ProductsContainer>
         <Products title={'Men Clothing & Fashion'} endPoint={'products/best-selling'} />
@@ -61,7 +61,7 @@ export const Home = () => {
         <Products title={'Cellphones & Tabs'} endPoint={'products/best-selling'} />
       </ProductsContainer>
       <ProductsContainer>
-        <Products title={'Classified Ads'} endPoint={'products/best-selling'} />
+        <Products title={'Classified Ads'} endPoint={'products/five-product-category'} />
       </ProductsContainer>
       <AdsSection />
       <ProductsContainer>
