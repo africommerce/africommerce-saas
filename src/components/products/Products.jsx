@@ -90,32 +90,6 @@ const Promo = styled.div`
     font-size: 14px;
   }
 `;
-const Price = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: 10px;
-  p {
-    text-decoration: line-through;
-    color: #99999f;
-    &:nth-child(2) {
-      text-decoration: none;
-      color: red;
-      font-weight: 600;
-    }
-  }
-`;
-
-const Rate = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  gap: 5px;
-  p {
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-`;
 
 const StyledArrowContainerRight = styled.div`
   font-size: 35px;
@@ -162,22 +136,6 @@ const StyledArrowContainerLeft = styled.div`
     display: none;
   }
 `;
-const Point = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  background: #fce0d9;
-  border-radius: 5px;
-  text-align: center;
-
-  p {
-    &:nth-child(2) {
-      font-weight: 600;
-    }
-  }
-`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -190,7 +148,7 @@ const Container = styled.div`
 `;
 const Products = ({ title, endPoint, onData }) => {
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   // const [visible, setVisible] = useState(5);
 
   const slideLeft = (e) => {
@@ -208,7 +166,7 @@ const Products = ({ title, endPoint, onData }) => {
       url: `https://africommerce.cyclic.app/${endPoint}`,
     })
       .then((res) => {
-        setData('res.data.data.bestSellingProducts');
+        setData(res.data.data);
         setLoading(false);
       })
       .catch((err) => {
@@ -240,6 +198,7 @@ const Products = ({ title, endPoint, onData }) => {
         ) : (
           <Spinner />
         )}
+        { !loading && data.length <1 &&<div>No Product Found</div>}
         <StyledArrowContainerRight onClick={slideRight}>
           <MdKeyboardArrowRight />
         </StyledArrowContainerRight>
