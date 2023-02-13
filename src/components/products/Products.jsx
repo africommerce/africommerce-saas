@@ -169,9 +169,7 @@ const Products = ({ title, endPoint, onData }) => {
         setData(res.data.data);
         setLoading(false);
       })
-      .catch((err) => {
-        setLoading(false);
-      });
+
     return () => {};
   }, [setData, endPoint]);
 
@@ -192,7 +190,7 @@ const Products = ({ title, endPoint, onData }) => {
         </StyledArrowContainerLeft>
         {data ? (
           data.map((values) => {
-            console.log(values);
+            // console.log(values);
             return <Product product={values} key={values.id} />;
           })
         ) : (
