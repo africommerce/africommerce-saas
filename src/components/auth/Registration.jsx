@@ -31,44 +31,7 @@ const Registration = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    // fetch('https://africommerce.cyclic.app/users/signup', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     username: username,
-    //     firstname: firstname,
-    //     lastname: lastName,
-    //     email: email,
-    //     password: password,
-    //     phonenumber: phone,
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json; charset=utf-8',
-    //   },
-    // })
-    //   .then((res) => {
-    //     return res;
-    //   })
-    //   .then((data) => data);
-
-    // if (
-    //   username.trim() === '' ||
-    //   firstname.trim() === '' ||
-    //   lastName.trim() === '' ||
-    //   password.trim() === ''
-    // ) {
-    //   if (email.trim() === '' && phone.trim() === '') {
-    //     setIsInvalid(true);
-    //     return isInvalidHandler();
-    //   }
-    // }
-    // const enteredData = {
-    //   username: username,
-    //   firstname: firstname,
-    //   lastname: lastName,
-    //   email: email,
-    //   password: password,
-    //   phonenumber: phone,
-    // };
+    
 
     fetch(`https://africommerce.cyclic.app/users/signup`, {
       method: 'POST',
