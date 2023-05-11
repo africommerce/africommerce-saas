@@ -49,30 +49,7 @@ const Registration = () => {
         return res;
       }
     });
-    // axios
-    //   .post('https://africommerce.cyclic.app/users/signup', {
-    // username: username,
-    // firstname: firstname,
-    // lastname: lastName,
-    // email: email,
-    // password: password,
-    // phonenumber: phone,
-    //   })
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
-
-    // const response = await axios.post(
-    //   'https://africommerce.cyclic.app/users/signup',
-    //   { enteredData }
-    // );
-    // const data = await response;
-    // console.log(data);
-
-    // setUsername(e.target.value);
+    
   };
 
   return (
