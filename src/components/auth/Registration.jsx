@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-
 import {
   Typography,
   Button,
@@ -13,6 +12,17 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Registration = () => {
+
+  const [formData, setFormData] = useState({
+    username: '',
+    firstname: '',
+    lastname: '',
+    email: '',
+    phone: '',
+    password: '',
+    confirmPassword: '',
+  });
+
   const [mailSwitch, setMailSwitch] = useState(false);
   let [username, setUsername] = useState('');
   const [firstname, setFirstname] = useState('');
