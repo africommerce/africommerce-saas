@@ -23,6 +23,8 @@ const Registration = () => {
     confirmPassword: '',
   });
 
+  const [isInvalid, setIsInvalid] = useState(false);
+
   const [mailSwitch, setMailSwitch] = useState(false);
   let [username, setUsername] = useState('');
   const [firstname, setFirstname] = useState('');
@@ -31,7 +33,6 @@ const Registration = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [isInvalid, setIsInvalid] = useState(false);
 
   const isInvalidHandler = () => {
     setTimeout(() => {
