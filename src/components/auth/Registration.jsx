@@ -34,35 +34,23 @@ const Registration = () => {
   };
 
 
-  const isInvalidHandler = () => {
-    setTimeout(() => {
-      setIsInvalid(false);
-    }, 7000);
-  };
-
-  const submitHandler = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
-
-    fetch(`https://africommerce.cyclic.app/users/signup`, {
-      method: 'POST',
-      body: JSON.stringify({
-        username: username,
-        firstname: firstname,
-        lastname: lastName,
-        email: email,
-        password: password,
-        phonenumber: phone,
-      }),
-    }).then((res) => {
-      if (res.ok) {
-        console.log(res);
-        return res;
-      }
-    });
-    
+    if (formData.password !== formData.confirmPassword) {
+      setIsInvalid(true);
+      return;
+    }
+    axios.post('https://africommerce.cyclic.app/users/signup', formData)
+      .then((res) => {
+        console.log(res.data);
+        // Redirect or perform any other action upon successful registration
+      })
+      .catch((error) => {
+        console.error('Registration error:', error);
+        // Handle registration error
+      });
   };
-
+  
   return (
     <Box
       sx={{
