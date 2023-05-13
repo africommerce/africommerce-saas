@@ -25,14 +25,14 @@ const Registration = () => {
 
   const [isInvalid, setIsInvalid] = useState(false);
 
-  const [mailSwitch, setMailSwitch] = useState(false);
-  let [username, setUsername] = useState('');
-  const [firstname, setFirstname] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
 
   const isInvalidHandler = () => {
     setTimeout(() => {
