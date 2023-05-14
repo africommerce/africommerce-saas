@@ -50,7 +50,7 @@ const Registration = () => {
         // Handle registration error
       });
   };
-  
+
   return (
     <Box
       sx={{
@@ -82,7 +82,7 @@ const Registration = () => {
           Create an Account
         </Typography>
         <form
-          onSubmit={submitHandler}
+          onSubmit={handleSubmit}
           style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
         >
           <TextField
