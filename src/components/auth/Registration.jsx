@@ -96,15 +96,16 @@ const Registration = () => {
             fullWidth
             margin="normal"
           />
-          <TextField
-            id="filled-disabled"
+         <TextField
             label="First Name"
+            name="firstname"
             type="text"
             variant="outlined"
             required
-            value={firstname}
-            onChange={(e) => setFirstname(e.target.value)}
-            size="small"
+            value={formData.firstname}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
           <TextField
             id="filled-disabled"
