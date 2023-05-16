@@ -129,16 +129,16 @@ const Registration = () => {
             fullWidth
             margin="normal"
           />
-
-          <TextField
-            id="filled-disabled"
+<TextField
             label="Phone"
+            name="phone"
             type="tel"
             variant="outlined"
-            size="small"
             required
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            value={formData.phone}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
 
           <Typography
