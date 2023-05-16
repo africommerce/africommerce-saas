@@ -118,15 +118,16 @@ const Registration = () => {
             fullWidth
             margin="normal"
           />
-          <TextField
-            id="filled-disabled"
+        <TextField
             label="Email"
+            name="email"
             type="email"
             variant="outlined"
-            size="small"
-            value={email}
             required
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
 
           <TextField
