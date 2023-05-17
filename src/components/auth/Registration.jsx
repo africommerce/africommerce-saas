@@ -172,14 +172,15 @@ const Registration = () => {
             margin="normal"
           />
           <TextField
-            id="outlined-password-input"
             label="Confirm Password"
+            name="confirmPassword"
             type="password"
+            variant="outlined"
             required
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            autoComplete="current-password"
-            size="small"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
           <span></span>
           <Typography variant="h7" color="#8D8D93">
