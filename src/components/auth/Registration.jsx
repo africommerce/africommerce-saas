@@ -161,14 +161,15 @@ const Registration = () => {
             </span>
           </Typography>
           <TextField
-            id="outlined-password-input"
             label="Password"
+            name="password"
             type="password"
-            value={password}
+            variant="outlined"
             required
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
-            size="small"
+            value={formData.password}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
           <TextField
             id="outlined-password-input"
