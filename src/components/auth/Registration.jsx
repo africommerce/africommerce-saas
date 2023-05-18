@@ -141,7 +141,7 @@ const Registration = () => {
             margin="normal"
           />
 
-          <Typography
+          {/* <Typography
             variant="h7"
             sx={{
               textDecoration: 'underline',
@@ -159,7 +159,7 @@ const Registration = () => {
             >
               Use Email Instead
             </span>
-          </Typography>
+          </Typography> */}
           <TextField
             label="Password"
             name="password"
