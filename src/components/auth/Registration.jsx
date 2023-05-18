@@ -12,13 +12,12 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 const Registration = () => {
-
   const [formData, setFormData] = useState({
     username: '',
     firstname: '',
     lastname: '',
     email: '',
-    phone: '',
+    phonenumber: '',
     password: '',
     confirmPassword: '',
   });
@@ -33,14 +32,14 @@ const Registration = () => {
     }));
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (formData.password !== formData.confirmPassword) {
       setIsInvalid(true);
       return;
     }
-    axios.post('https://africommerce.cyclic.app/users/signup', formData)
+    axios
+      .post('https://africommerce.cyclic.app/users/signup', formData)
       .then((res) => {
         console.log(res.data);
         // Redirect or perform any other action upon successful registration
@@ -85,7 +84,7 @@ const Registration = () => {
           onSubmit={handleSubmit}
           style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
         >
-           <TextField
+          <TextField
             label="Username"
             name="username"
             type="text"
@@ -96,7 +95,7 @@ const Registration = () => {
             fullWidth
             margin="normal"
           />
-         <TextField
+          <TextField
             label="First Name"
             name="firstname"
             type="text"
@@ -118,7 +117,7 @@ const Registration = () => {
             fullWidth
             margin="normal"
           />
-        <TextField
+          <TextField
             label="Email"
             name="email"
             type="email"
@@ -129,9 +128,9 @@ const Registration = () => {
             fullWidth
             margin="normal"
           />
-<TextField
+          <TextField
             label="Phone"
-            name="phone"
+            name="phonenumber"
             type="tel"
             variant="outlined"
             required
