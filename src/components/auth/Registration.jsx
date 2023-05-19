@@ -139,26 +139,6 @@ const Registration = () => {
             fullWidth
             margin="normal"
           />
-
-          {/* <Typography
-            variant="h7"
-            sx={{
-              textDecoration: 'underline',
-              width: 'fitContent',
-              display: 'flex',
-              alignItems: 'flex-end',
-              justifyContent: 'flex-end',
-            }}
-            textAlign="end"
-            color="#8D8D93"
-          >
-            <span
-              style={{ cursor: 'pointer' }}
-              onClick={() => setMailSwitch((prev) => !prev)}
-            >
-              Use Email Instead
-            </span>
-          </Typography> */}
           <TextField
             label="Password"
             name="password"
