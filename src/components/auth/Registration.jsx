@@ -21,7 +21,7 @@ const Registration = () => {
     password: '',
     confirmPassword: '',
   });
-  
+
   const navigate = useNavigate();
   const [isInvalid, setIsInvalid] = useState(false);
 
@@ -43,7 +43,7 @@ const Registration = () => {
       .post('https://africommerce.cyclic.app/users/signup', formData)
       .then((res) => {
         console.log(res.data);
-        // Redirect or perform any other action upon successful registration
+        navigate('/');
       })
       .catch((error) => {
         console.error('Registration error:', error);
