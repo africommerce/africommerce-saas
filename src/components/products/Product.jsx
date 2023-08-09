@@ -31,7 +31,7 @@ const Product = ({ product }) => {
         </div>
         <div className={classes.ProductPoint}>
           <span className={classes.ProductCap}>Club point</span>
-          <span className={classes.Point}>{product.rating.count}</span>
+          <span className={classes.Point}>{5}</span>
         </div>
       </div>
     </Link>
