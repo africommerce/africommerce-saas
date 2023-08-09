@@ -144,11 +144,11 @@ const Products = ({ title, endPoint}) => {
     setLoading(true);
     axios({
       method: 'GET',
-      url: `https://africommerce.cyclic.app/${endPoint}`,
+      url: `https://fakestoreapi.com/products`,
     })
       .then((res) => {
-        console.log(res.data.data);
-        setData(res.data.data);
+        console.log(res);
+        setData(res);
         setLoading(false);
       })
 
