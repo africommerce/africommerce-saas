@@ -4,12 +4,6 @@ import { useEffect } from 'react';
 import classes from './AddDeliveryBoy.module.css';
 export const AddDeliveryBoy = () => {
   const [country, setCountry] = useState([]);
-  const [states, setStates] = useState([]);
-
-  const statesHandler = (event) => {
-    console.log(event.target.value);
-    setStates(event.target.value);
-  };
 
   useEffect(() => {
     fetch(`https://countriesnow.space/api/v0.1/countries/states`)

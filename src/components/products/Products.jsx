@@ -44,33 +44,6 @@ const Head = styled.div`
 `;
 
 
-const Promo = styled.div`
-  background: #ffffff;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 0px 15px 15px 0px;
-  padding: 5px;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 5px;
-  align-items: center;
-  z-index: 1;
-  h3 {
-    color: red;
-    font-size: 14px;
-    font-weight: 600;
-  }
-  p {
-    padding: 5px;
-    border-radius: 50%;
-    background: red;
-    color: #ffff;
-    font-size: 14px;
-  }
-`;
 
 const StyledArrowContainerRight = styled.div`
   font-size: 35px;

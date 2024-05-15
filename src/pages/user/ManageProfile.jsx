@@ -336,7 +336,7 @@ function ManageProfile() {
       }
 
       const token = localStorage.getItem('token'); // Assuming token is stored in localStorage
-      const response = await axios.put(`${baseUrl}api/v1/users/me`, formData, {
+      await axios.put(`${baseUrl}api/v1/users/me`, formData, {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Content-Type': 'multipart/form-data'

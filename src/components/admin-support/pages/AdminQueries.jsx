@@ -1,4 +1,4 @@
-import { DeleteOutline, VisibilityOutlined } from '@mui/icons-material';
+import { VisibilityOutlined } from '@mui/icons-material';
 import { Divider } from '@mui/material';
 import classes from './AdminQueries.module.css';
 export const AdminQueries = () => {

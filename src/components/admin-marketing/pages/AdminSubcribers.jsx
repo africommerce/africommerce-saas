@@ -1,5 +1,4 @@
 import { DeleteOutline } from '@mui/icons-material';
-import banner from '../../../assests/admin/banner.png';
 import { Divider } from '@mui/material';
 import classes from './AdminSubcribers.module.css';
 export const AdminSubcribers = () => {

@@ -105,9 +105,6 @@ const ClassifiedProduct = () => {
   const [status, setStatus] = useState(true);
   const [state, setState] = useState([]);
 
-  const toggleButton = () => {
-    setStatus(!status);
-  };
 
   const info = useMemo(() => {
     return [

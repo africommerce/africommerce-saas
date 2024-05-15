@@ -2,7 +2,6 @@ import classes from '../../../styles/affiliate.module.css';
 import PurpleBox from '../components/purpleBox';
 import WhiteBox from '../components/whiteBox';
 import React from 'react';
-import Box from '../components/Box';
 import DataBox from '../components/dataBox';
 const WithdrawalHistory = () => {
   const state = [
