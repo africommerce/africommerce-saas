@@ -21,7 +21,8 @@ const Registration = () => {
     password: '',
     confirmPassword: '',
   });
-
+  
+  const navigate = useNavigate();
   const [isInvalid, setIsInvalid] = useState(false);
 
   const handleChange = (e) => {
