@@ -247,9 +247,6 @@ function DashboardSidebar() {
               >
                 <li className={classes.ListItem}>
                   <Link
-                    onClick={() => {
-                      setShowSideBar(false);
-                    }}
                     to="affiliate/system"
                     className={classes.Link}
                   >
@@ -261,9 +258,6 @@ function DashboardSidebar() {
                 </li>
                 <li className={classes.ListItem}>
                   <Link
-                    onClick={() => {
-                      setShowSideBar(false);
-                    }}
                     to="affiliate/payment-history"
                     className={classes.Link}
                   >

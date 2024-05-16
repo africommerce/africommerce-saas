@@ -4,7 +4,6 @@ import { AdsSection } from '../components/ads/AdsSection';
 import { HeroSection } from '../components/HeroSection';
 import Products from '../components/products/Products';
 import classes from '../styles/Home.module.css';
-import { useSelector } from 'react-redux';
 const ProductsContainer = styled.div`
   display: flex;
   flex-direction: column;

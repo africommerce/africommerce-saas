@@ -102,7 +102,7 @@ const Button = styled.button`
 
 const ClassifiedProduct = () => {
   const [loading, setLoading] = useState(true);
-  const [status, setStatus] = useState(true);
+  const [status] = useState(true);
   const [state, setState] = useState([]);
 
 
