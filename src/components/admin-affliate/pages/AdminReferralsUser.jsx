@@ -1,6 +1,7 @@
+import React from 'react';
+import { Divider } from '@mui/material';
 import { HistoryOutlined, VisibilityOutlined } from '@mui/icons-material';
 
-import { Divider, Switch } from '@mui/material';
 import classes from './AdminReferralsUser.module.css';
 export const AdminReferralsUser = () => {
   return (

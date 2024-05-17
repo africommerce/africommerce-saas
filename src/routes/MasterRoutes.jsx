@@ -23,7 +23,7 @@ import { SellersPolicy } from '../pages/SellersPolicy';
 import { SupportPolicy } from '../pages/SupportPolicy';
 import { Terms } from '../pages/Terms';
 import { TrackOrder } from '../pages/TrackOrder';
-import { WishList } from '../pages/user/WishList';
+import { WishList } from '../pages/user/Wishlist';
 import { SellerOrders } from '../pages/seller/SellerOrders';
 import { SellerProducts } from '../pages/seller/SellerProducts';
 import { SellerPos } from '../pages/seller/SellerPos';

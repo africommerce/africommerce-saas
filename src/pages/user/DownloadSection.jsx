@@ -1,23 +1,25 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import classes from '../../styles/users.module.css';
 
 const DownloadSection = () => {
   const [loading, setLoading] = useState(true);
   const [state, setState] = useState([]);
 
-  const data = [
-    {
-      id: 1,
-      Product: 'Adobe Photoshop Elements 2021 & Premiere Elements 2021',
+  const data = useMemo(() => {
+    return [
+      {
+        id: 1,
+        Product: 'Adobe Photoshop Elements 2021 & Premiere Elements 2021',
 
-      options: ['download'],
-    },
-  ];
+        options: ['download'],
+      },
+    ];
+  }, []);
 
   useEffect(() => {
     setState(data);
     setLoading(false);
-  }, []);
+  }, [data]);
 
   let content = null;
   if (loading) content = <div>Loading...</div>;

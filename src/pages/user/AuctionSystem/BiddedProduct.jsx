@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import classes from '../../../styles/users.module.css';
 import styled from 'styled-components';
 
@@ -24,81 +24,81 @@ const Button = styled.button`
 `;
 
 const BiddedProduct = () => {
-  const [loading, setLoading] = useState(true);
   const [state, setState] = useState([]);
-  const data = [
-    {
-      id: 1,
-      Product: 'Bridesmaid Jewelry Sets for Women',
-      BiddedAmount: '$550.000',
-      HighestBiddedAmount: '$550.000',
-      AuctionEndDate: '2025-03-01 00:00:00',
-      status: 'green',
-      Action: 'N/A',
-    },
-    {
-      id: 2,
-      Product: 'Dell 8300 Desktop 2020',
-      BiddedAmount: '$2,020.000',
-      HighestBiddedAmount: '$3,000.000',
-      AuctionEndDate: '2025-03-01 00:00:00',
-      status: 'red',
-      Action: 'Purchased',
-    },
-    {
-      id: 3,
-      Product: 'OnePlus 8T 5G KB2000 128GB 8GB RAM',
-      BiddedAmount: '$4,050.000',
-      HighestBiddedAmount: '$4,050.000',
-      AuctionEndDate: '2025-03-01 00:00:00',
-      status: 'green',
-      Action: 'N/A',
-    },
-    {
-      id: 4,
-      Product: '2020Bmw R 1250 RS',
-      BiddedAmount: '$2,040.000',
-      HighestBiddedAmount: '$2,050.000',
-      AuctionEndDate: '2025-03-01 00:00:00',
-      status: 'red',
-      Action: 'N/A',
-    },
-    {
-      id: 5,
-      Product: '2021 BMW i8 Car',
-      BiddedAmount: '$5,020.000',
-      HighestBiddedAmount: '$5,020.000',
-      AuctionEndDate: '2025-03-01 00:00:00',
-      status: 'green',
+  const [loading, setLoading] = useState(true);
 
-      Action: 'Purchased',
-    },
-    {
-      id: 6,
-      Product: 'OnePlus 7 pro (256GB storage)',
-      BiddedAmount: '$850.000',
-      HighestBiddedAmount: '$850.000',
-      AuctionEndDate: '2025-03-01 00:00:00',
-      status: 'green',
-
-      Action: 'Purchased',
-    },
-    {
-      id: 7,
-      Product: 'iPhone 12 Pro Max 5G 256GB',
-      BiddedAmount: '$1,250.000',
-      HighestBiddedAmount: '$13,000.000',
-      AuctionEndDate: '2025-03-01 00:00:00',
-      status: 'red',
-
-      Action: 'N/A',
-    },
-  ];
+  const data = useMemo(() => {
+    return [
+      {
+        id: 1,
+        Product: 'Bridesmaid Jewelry Sets for Women',
+        BiddedAmount: '$550.000',
+        HighestBiddedAmount: '$550.000',
+        AuctionEndDate: '2025-03-01 00:00:00',
+        status: 'green',
+        Action: 'N/A',
+      },
+      {
+        id: 2,
+        Product: 'Dell 8300 Desktop 2020',
+        BiddedAmount: '$2,020.000',
+        HighestBiddedAmount: '$3,000.000',
+        AuctionEndDate: '2025-03-01 00:00:00',
+        status: 'red',
+        Action: 'Purchased',
+      },
+      {
+        id: 3,
+        Product: 'OnePlus 8T 5G KB2000 128GB 8GB RAM',
+        BiddedAmount: '$4,050.000',
+        HighestBiddedAmount: '$4,050.000',
+        AuctionEndDate: '2025-03-01 00:00:00',
+        status: 'green',
+        Action: 'N/A',
+      },
+      {
+        id: 4,
+        Product: '2020Bmw R 1250 RS',
+        BiddedAmount: '$2,040.000',
+        HighestBiddedAmount: '$2,050.000',
+        AuctionEndDate: '2025-03-01 00:00:00',
+        status: 'red',
+        Action: 'N/A',
+      },
+      {
+        id: 5,
+        Product: '2021 BMW i8 Car',
+        BiddedAmount: '$5,020.000',
+        HighestBiddedAmount: '$5,020.000',
+        AuctionEndDate: '2025-03-01 00:00:00',
+        status: 'green',
+        Action: 'Purchased',
+      },
+      {
+        id: 6,
+        Product: 'OnePlus 7 pro (256GB storage)',
+        BiddedAmount: '$850.000',
+        HighestBiddedAmount: '$850.000',
+        AuctionEndDate: '2025-03-01 00:00:00',
+        status: 'green',
+        Action: 'Purchased',
+      },
+      {
+        id: 7,
+        Product: 'iPhone 12 Pro Max 5G 256GB',
+        BiddedAmount: '$1,250.000',
+        HighestBiddedAmount: '$13,000.000',
+        AuctionEndDate: '2025-03-01 00:00:00',
+        status: 'red',
+        Action: 'N/A',
+      },
+    ];
+  }, []);
 
   useEffect(() => {
     setState(data);
     setLoading(false);
-  }, [setState, setLoading]);
+  }, [data]);
 
   let content = null;
   if (loading) content = <div>Loading...</div>;
@@ -110,7 +110,6 @@ const BiddedProduct = () => {
           <div className={classes.Headers}>
             <div>#</div>
             <div>Product Name</div>
-
             <div>My Bidded Amount</div>
             <div id="display">Highest Bid Amount</div>
             <div>Auction End Date</div>
@@ -121,9 +120,7 @@ const BiddedProduct = () => {
               <div key={data.id} className={classes.PurchaseBox}>
                 <div className={classes.AuctionId}>{data.id}</div>
                 <div className={classes.Code}>{data.Product}</div>
-
                 <div className={classes.BiddedAmount}>${data.BiddedAmount}</div>
-
                 <div className={classes.Btn}>
                   {data.status === 'red' ? (
                     <button

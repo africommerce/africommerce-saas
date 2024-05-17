@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { IoArrowUp, IoAddCircle } from 'react-icons/io5';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
@@ -109,67 +109,69 @@ const ClassifiedProduct = () => {
     setStatus(!status);
   };
 
-  const info = [
-    {
-      id: 1,
-      Name: 'Apple Watch Series 6 (GPS, 40mm) - Gold Aluminum Case with Pink Sand Sport Band',
-      Price: '$120.000',
-      AvailableStatus: '$550.000',
-      AdminStatus: 'Published',
-      status: 'green',
-      Opts: ['create-outline', 'trash'],
-    },
-    {
-      id: 2,
-      Name: 'Canon Pixma TS3320 Black, Works with Alexa',
-      Price: '$80.000',
-      AvailableStatus: '$550.000',
-      AdminStatus: 'Published',
-      status: 'green',
-      Opts: ['create-outline', 'trash'],
-    },
-    {
-      id: 3,
-      Name: 'Mi Smart Router 4C, 300 Mbps with 4 high-Performance Antenna & App Control',
-      Price: '$30.000',
-      AvailableStatus: '$550.000',
-      AdminStatus: 'Published',
-      status: 'green',
-      Opts: ['create-outline', 'trash'],
-    },
-    {
-      id: 4,
-      Name: 'Sony HT-S20R 5.1ch Dolby Digital Soundbar',
-      Price: '$90.000',
-      AvailableStatus: '$550.000',
-      AdminStatus: 'Published',
-      status: 'green',
-      Opts: ['create-outline', 'trash'],
-    },
-    {
-      id: 5,
-      Name: 'Sony Bravia 108 cm (43 inches) Full HD Smart LED TV KDL',
-      Price: '$320.000',
-      AvailableStatus: '$550.000',
-      AdminStatus: 'Published',
-      status: 'green',
-      Opts: ['create-outline', 'trash'],
-    },
-    {
-      id: 6,
-      Name: 'Canon EOS 1500D/Rebel T7 DSLR Camera with EF-S 18-55 mm f/3.5-5.6 is II Lens',
-      Price: '$52.000',
-      AvailableStatus: '$550.000',
-      AdminStatus: 'Published',
-      status: 'green',
-      Opts: ['create-outline', 'trash'],
-    },
-  ];
+  const info = useMemo(() => {
+    return [
+      {
+        id: 1,
+        Name: 'Apple Watch Series 6 (GPS, 40mm) - Gold Aluminum Case with Pink Sand Sport Band',
+        Price: '$120.000',
+        AvailableStatus: '$550.000',
+        AdminStatus: 'Published',
+        status: 'green',
+        Opts: ['create-outline', 'trash'],
+      },
+      {
+        id: 2,
+        Name: 'Canon Pixma TS3320 Black, Works with Alexa',
+        Price: '$80.000',
+        AvailableStatus: '$550.000',
+        AdminStatus: 'Published',
+        status: 'green',
+        Opts: ['create-outline', 'trash'],
+      },
+      {
+        id: 3,
+        Name: 'Mi Smart Router 4C, 300 Mbps with 4 high-Performance Antenna & App Control',
+        Price: '$30.000',
+        AvailableStatus: '$550.000',
+        AdminStatus: 'Published',
+        status: 'green',
+        Opts: ['create-outline', 'trash'],
+      },
+      {
+        id: 4,
+        Name: 'Sony HT-S20R 5.1ch Dolby Digital Soundbar',
+        Price: '$90.000',
+        AvailableStatus: '$550.000',
+        AdminStatus: 'Published',
+        status: 'green',
+        Opts: ['create-outline', 'trash'],
+      },
+      {
+        id: 5,
+        Name: 'Sony Bravia 108 cm (43 inches) Full HD Smart LED TV KDL',
+        Price: '$320.000',
+        AvailableStatus: '$550.000',
+        AdminStatus: 'Published',
+        status: 'green',
+        Opts: ['create-outline', 'trash'],
+      },
+      {
+        id: 6,
+        Name: 'Canon EOS 1500D/Rebel T7 DSLR Camera with EF-S 18-55 mm f/3.5-5.6 is II Lens',
+        Price: '$52.000',
+        AvailableStatus: '$550.000',
+        AdminStatus: 'Published',
+        status: 'green',
+        Opts: ['create-outline', 'trash'],
+      },
+    ];
+  }, []);
 
   useEffect(() => {
     setState(info);
     setLoading(false);
-  }, []);
+  }, [info]);
 
   let content = null;
   if (loading) content = <div>Loading...</div>;
