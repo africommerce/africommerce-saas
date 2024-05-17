@@ -10,12 +10,11 @@ import {
 } from '@mui/material';
 import styled from 'styled-components';
 import axios from 'axios';
-import { baseUrl } from '../../adapter/api';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { loginSliceActions } from '../../store/LoginSlice';
-import { useSelector } from 'react-redux';
 import AuthContext from '../../store/authContext';
+
+
 const TableStyle = styled.table`
   border-collapse: collapse;
   width: 100%;
