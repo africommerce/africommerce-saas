@@ -1,6 +1,5 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import TextField from '@mui/material/TextField';
-
 import {
   Typography,
   Button,
@@ -9,107 +8,47 @@ import {
   Alert,
   AlertTitle,
 } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const Registration = () => {
-  const [mailSwitch, setMailSwitch] = useState(false);
-  let [username, setUsername] = useState('');
-  const [firstname, setFirstname] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  const [formData, setFormData] = useState({
+    username: '',
+    firstname: '',
+    lastname: '',
+    email: '',
+    phonenumber: '',
+    password: '',
+    confirmPassword: '',
+  });
+
+  const navigate = useNavigate();
   const [isInvalid, setIsInvalid] = useState(false);
 
-  const isInvalidHandler = () => {
-    setTimeout(() => {
-      setIsInvalid(false);
-    }, 7000);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
   };
 
-  const submitHandler = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // fetch('https://africommerce.cyclic.app/users/signup', {
-    //   method: 'POST',
-    //   body: JSON.stringify({
-    //     username: username,
-    //     firstname: firstname,
-    //     lastname: lastName,
-    //     email: email,
-    //     password: password,
-    //     phonenumber: phone,
-    //   }),
-    //   headers: {
-    //     'Content-Type': 'application/json; charset=utf-8',
-    //   },
-    // })
-    //   .then((res) => {
-    //     return res;
-    //   })
-    //   .then((data) => data);
-
-    // if (
-    //   username.trim() === '' ||
-    //   firstname.trim() === '' ||
-    //   lastName.trim() === '' ||
-    //   password.trim() === ''
-    // ) {
-    //   if (email.trim() === '' && phone.trim() === '') {
-    //     setIsInvalid(true);
-    //     return isInvalidHandler();
-    //   }
-    // }
-    // const enteredData = {
-    //   username: username,
-    //   firstname: firstname,
-    //   lastname: lastName,
-    //   email: email,
-    //   password: password,
-    //   phonenumber: phone,
-    // };
-
-    fetch(`https://africommerce.cyclic.app/users/signup`, {
-      method: 'POST',
-      body: JSON.stringify({
-        username: username,
-        firstname: firstname,
-        lastname: lastName,
-        email: email,
-        password: password,
-        phonenumber: phone,
-      }),
-    }).then((res) => {
-      if (res.ok) {
-        console.log(res);
-        return res;
-      }
-    });
-    // axios
-    //   .post('https://africommerce.cyclic.app/users/signup', {
-    // username: username,
-    // firstname: firstname,
-    // lastname: lastName,
-    // email: email,
-    // password: password,
-    // phonenumber: phone,
-    //   })
-    //   .then(function (response) {
-    //     console.log(response);
-    //   })
-    //   .catch(function (error) {
-    //     console.log(error);
-    //   });
-
-    // const response = await axios.post(
-    //   'https://africommerce.cyclic.app/users/signup',
-    //   { enteredData }
-    // );
-    // const data = await response;
-    // console.log(data);
-
-    // setUsername(e.target.value);
+    if (formData.password !== formData.confirmPassword) {
+      setIsInvalid(true);
+      return;
+    }
+    axios
+      .post('https://africommerce.cyclic.app/users/signup', formData)
+      .then((res) => {
+        console.log(res.data);
+        navigate('/');
+      })
+      .catch((error) => {
+        console.error('Registration error:', error);
+        // Handle registration error
+      });
   };
 
   return (
@@ -143,100 +82,85 @@ const Registration = () => {
           Create an Account
         </Typography>
         <form
-          onSubmit={submitHandler}
+          onSubmit={handleSubmit}
           style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}
         >
           <TextField
-            id="filled-disabled"
             label="Username"
-            required
+            name="username"
             type="text"
-            value={username}
             variant="outlined"
-            onChange={(e) => setUsername(e.target.value)}
-            size="small"
+            required
+            value={formData.username}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
           <TextField
-            id="filled-disabled"
             label="First Name"
+            name="firstname"
             type="text"
             variant="outlined"
             required
-            value={firstname}
-            onChange={(e) => setFirstname(e.target.value)}
-            size="small"
+            value={formData.firstname}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
           <TextField
-            id="filled-disabled"
             label="Last Name"
+            name="lastname"
             type="text"
             variant="outlined"
-            size="small"
             required
-            value={lastName}
-            onChange={(e) => setLastName(e.target.value)}
+            value={formData.lastname}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
-
           <TextField
-            id="filled-disabled"
             label="Email"
+            name="email"
             type="email"
             variant="outlined"
-            size="small"
-            value={email}
             required
-            onChange={(e) => setEmail(e.target.value)}
+            value={formData.email}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
-
           <TextField
-            id="filled-disabled"
             label="Phone"
+            name="phonenumber"
             type="tel"
             variant="outlined"
-            size="small"
             required
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
+            value={formData.phone}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
-
-          <Typography
-            variant="h7"
-            sx={{
-              textDecoration: 'underline',
-              width: 'fitContent',
-              display: 'flex',
-              alignItems: 'flex-end',
-              justifyContent: 'flex-end',
-            }}
-            textAlign="end"
-            color="#8D8D93"
-          >
-            <span
-              style={{ cursor: 'pointer' }}
-              onClick={() => setMailSwitch((prev) => !prev)}
-            >
-              Use Email Instead
-            </span>
-          </Typography>
           <TextField
-            id="outlined-password-input"
             label="Password"
+            name="password"
             type="password"
-            value={password}
+            variant="outlined"
             required
-            onChange={(e) => setPassword(e.target.value)}
-            autoComplete="current-password"
-            size="small"
+            value={formData.password}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
           <TextField
-            id="outlined-password-input"
             label="Confirm Password"
+            name="confirmPassword"
             type="password"
+            variant="outlined"
             required
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            autoComplete="current-password"
-            size="small"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            fullWidth
+            margin="normal"
           />
           <span></span>
           <Typography variant="h7" color="#8D8D93">
@@ -252,6 +176,7 @@ const Registration = () => {
                 backgroundColor: '#dd2c04',
               },
             }}
+            fullWidth
           >
             Create Account
           </Button>
