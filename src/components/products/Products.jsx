@@ -120,7 +120,6 @@ const Products = ({ title, endPoint}) => {
       url: `https://fakestoreapi.com/products`,
     })
       .then((res) => {
-        console.log(res.data);
         setData(res.data);
         setLoading(false);
       })
@@ -145,7 +144,6 @@ const Products = ({ title, endPoint}) => {
         </StyledArrowContainerLeft>
         {data ? (
           data.map((values) => {
-            // console.log(values);
             return <Product product={values} key={values.id} />;
           })
         ) : (

@@ -12,7 +12,7 @@ export const AddDeliveryBoy = () => {
         setCountry(data.data);
       });
   }, [setCountry]);
-  console.log(country);
+  
   return (
     <div className={classes.container}>
       <form className={classes.form_container}>
