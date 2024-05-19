@@ -9,7 +9,7 @@
 /coverage
 
 # production
-# /build
+/build
 
 # misc
 .DS_Store
@@ -25,3 +25,4 @@ yarn-error.log*
 # Sensitive files
 backdate_commits.sh
 update.txt
+
