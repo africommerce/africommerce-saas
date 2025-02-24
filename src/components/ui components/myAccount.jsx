@@ -1,3 +1,4 @@
+import { Divider } from '@mui/material';
 import { Heading, Content, Links, ListItem, Details } from './quickLinks';
 import { ButtonSub } from './subscribe';
 
@@ -5,7 +6,9 @@ export const MyAccount = () => {
   return (
     <Content>
       <Heading>MY ACCOUNT</Heading>
-      <hr></hr>
+      <Divider
+        style={{ color: 'white', background: 'gray', marginTop: '1rem' }}
+      />
       <Details>
         <ListItem>
           <Links to="/auth">Login</Links>
@@ -24,7 +27,9 @@ export const MyAccount = () => {
         </ListItem>
 
         <Heading>BE A SELLER</Heading>
-        <hr></hr>
+        <Divider
+          style={{ color: 'white', background: 'gray', marginBottom: '1rem' }}
+        />
 
         <ButtonSub style={{ marginTop: '5px' }}>Apply Now</ButtonSub>
       </Details>

@@ -1,0 +1,19 @@
+.header {
+    display: flex;
+
+}
+.dashboard1 {
+    color: white;
+    width: 30px;
+    height: 30vh
+}
+
+.dashboard2 {
+    color: white;
+    width: 30px
+}
+
+.dashboard3 {
+    color: white;
+    width: 30px
+}

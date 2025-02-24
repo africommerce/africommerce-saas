@@ -1,0 +1,69 @@
+.SoldBy {
+  background-color: #fff;
+  padding: 1rem;
+  color: #1b1b28;
+
+  font-size: 12px;
+}
+.Name {
+  font-weight: bold;
+  opacity: 1;
+  color: #000;
+  margin-block: 5px;
+  font-size: 14.5px;
+}
+.RevBtn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #e2e5ec;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1b1b28;
+  opacity: 0.7;
+}
+.Stars {
+  margin-bottom: 2px;
+}
+.RelatedHead {
+  padding: 1rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: bold;
+  border-bottom: 1px solid #e2e5ec;
+}
+.Related {
+  margin-top: 16px;
+  background-color: #fff;
+}
+.TopContent {
+  margin-top: 16px;
+}
+.ProductBox {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e5ec;
+  justify-content: space-around;
+}
+.Rating {
+  color: #c3c3bb;
+  margin-block: 10px;
+}
+.Price {
+  color: #e62e04;
+  font-size: 14px;
+  font-weight: bold;
+}
+.ProductImg {
+  flex-basis: 50%;
+}
+.ProductImg img {
+  max-width: 100px;
+}
+.ProductDes {
+  font-size: 13.2px;
+}

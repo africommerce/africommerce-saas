@@ -1,16 +1,34 @@
-<h1 align="center">Africommerce</h4>
-<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+# Africommerce (Repo: `Africommerce`)
 
-<!-- [![All Contributors](https://img.shields.io/badge/all_contributors-51-orange.svg?style=flat-square)](#contributors-) -->
+<!-- ALL PROJECT BADGES:START - Do not remove or modify this section -->
 
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
+<div>
+  
+  [![Contributors][contributors-shield]][contributors-url]
+  [![Forks][forks-shield]][forks-url]
+  [![Stargazers][stars-shield]][stars-url]
+  [![Issues][issues-shield]][issues-url]
+  [![MIT License][license-shield]][license-url]
+</div>
+
+<!-- ALL PROJECT BADGES:END -->
+
+
+<p align="center">
+    <a href="https://github.com/iamkelv/africommerce/issues/new/choose">Report Bug</a>
+    ·
+    <a href="https://github.com/iamkelv/africommerce/issues/new/choose">Request Feature</a>
+</p>
+
+
 ## Introduction
 
 <p> AfriCommerce is a Software As Service E-commerce platform that allows all signed up users in Africa to own their own <mark style="background-color:green">customized store </mark>  and connects buyers to prospective sellers for free. </p>
 
-<!-- <p align="center">
+<p align="center">
   <a href="https://github.com/iamkelv/africommerce" target="blank">
-</a> -->
+</a>
+
 ## 🧰 Technologies Used
 
 - Backend Development
@@ -69,11 +87,6 @@ Here is a quick overview on how to setup the `Africommerce` repository as a cont
    npm install --legacy-peer-deps
    ```
 
-  - ### ⛓️ Create a `.env` file at the root of your project folder with the following content </h3>
-
-    ```bash
-
-    ```
 
 - ### 🦄 Start the Development Mode
 
@@ -107,7 +120,7 @@ Here is a quick overview on how to setup the `Africommerce` repository as a cont
   yarn build
   ```
 
-  THis command builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
+  This command builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
 
 - ### 🚀 Deploy
 
@@ -162,9 +175,10 @@ Contributed to Africommerce? Here is a big **Thank you** from our community to y
 Claim your badge and showcase them with pride on any of your social media profile.
 Let us inspire more folks!
 
-![africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
+[Africommerce Badges](https://aviyel.com/assets/uploads/rewards/share/project/43/512share.png)
 
-### **[Claim Now!](https://aviyel.com/projects/43/africoommerce/rewards)**
+### **[Claim Now!](https://aviyel.com/projects/43/africommerce/rewards)**
+
 
 
 ## Contributors ✨
@@ -182,3 +196,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind are welcome!
+
+<!-- Markdown Links & Images -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/africommerce/africommerce-saas.svg?style=for-the-badge
+[contributors-url]: https://github.com/africommerce/africommerce-saas/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/africommerce/africommerce-saas.svg?style=for-the-badge
+[forks-url]: https://github.com/africommerce/africommerce-saas/network/members
+[stars-shield]: https://img.shields.io/github/stars/africommerce/africommerce-saas.svg?style=for-the-badge
+[stars-url]: https://github.com/africommerce/africommerce-saas/stargazers
+[issues-shield]: https://img.shields.io/github/issues/africommerce/africommerce-saas.svg?style=for-the-badge
+[issues-url]: https://github.com/africommerce/africommerce-saas/issues
+[license-shield]: https://img.shields.io/github/license/africommerce/africommerce-saas.svg?style=for-the-badge
+[license-url]: https://github.com/africommerce/africommerce-saas/blob/main/LICENSE

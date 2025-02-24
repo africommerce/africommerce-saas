@@ -9,6 +9,11 @@ import {
   Typography,
 } from '@mui/material';
 import styled from 'styled-components';
+import axios from 'axios';
+import { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import AuthContext from '../../store/authContext';
+
 
 const TableStyle = styled.table`
   border-collapse: collapse;
@@ -29,6 +34,12 @@ const FlexCol2 = styled.div`
 `;
 
 export const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const navigate = useNavigate();
+  const authCtx = useContext(AuthContext);
+
   const PaperStyle = {
     padding: 30,
     borderRadius: 6,
@@ -36,8 +47,46 @@ export const Login = () => {
     maxWidth: 420,
     margin: '0 auto',
   };
+
+  const onChangeEmail = (e) => {
+    setEmail(e.target.value);
+  };
+  const onChangePassword = (e) => {
+    setPassword(e.target.value);
+  };
+  const submitLogin = (e) => {
+    e.preventDefault();
+    const enteredEmail = email.trim().toLowerCase();
+    const enteredPassword = password.trim();
+    setIsLoading(true);
+    axios
+      .post('https://africommerce.cyclic.app/users/loginuser', {
+        identity: enteredEmail,
+        password: enteredPassword,
+      })
+      .then(function (response) {
+        if (response.status === 200) {
+          return response;
+        }
+      })
+      .then((data) => {
+        const expirationTime = new Date(new Date().getTime() + +3600 * 1000);
+        console.log(expirationTime.toISOString());
+        authCtx.login(data.data.token, expirationTime.toISOString());
+        navigate('/');
+        isLoading(false);
+      })
+      .catch(function (error) {
+        isLoading(false);
+      });
+  };
+
+  const loginAsuser = () => {
+    setEmail('user@test.com');
+    setPassword('User@test.com');
+  };
   return (
-    <form>
+    <form onSubmit={submitLogin}>
       <Grid>
         <Paper elevation={2} style={PaperStyle}>
           <Grid align="center">
@@ -45,13 +94,16 @@ export const Login = () => {
               <h2>Login to your Account</h2>
             </Typography>
           </Grid>
+
           <TextField
-            sx={{ marginBottom: '20px' }}
+            sx={[{ marginBottom: '20px' }]}
             fullWidth
             label="Email"
             id="outlined-basic"
             variant="outlined"
             size="small"
+            onChange={onChangeEmail}
+            value={email}
           />
           <TextField
             sx={{ marginBottom: '25px' }}
@@ -59,8 +111,10 @@ export const Login = () => {
             fullWidth
             label="Password"
             id="outlined-basic"
+            value={password}
             variant="outlined"
             size="small"
+            onChange={onChangePassword}
           />
 
           <FlexCol2>
@@ -85,9 +139,12 @@ export const Login = () => {
             }}
             fullWidth
             disableElevation
+            type="submit"
+            disabled={isLoading}
           >
-            Login
+            {isLoading ? 'Loading' : 'Login'}
           </Button>
+
           <TableStyle>
             <tbody>
               <tr>
@@ -104,6 +161,7 @@ export const Login = () => {
                         backgroundColor: '#17a2b8',
                       },
                     }}
+                    type="button"
                   >
                     Copy credentials
                   </Button>
@@ -123,6 +181,8 @@ export const Login = () => {
                         backgroundColor: '#17a2b8',
                       },
                     }}
+                    type="button"
+                    onClick={loginAsuser}
                   >
                     Copy credentials
                   </Button>
@@ -134,6 +194,7 @@ export const Login = () => {
                 </td>
                 <td>
                   <Button
+                    type="button"
                     variant="contained"
                     sx={{
                       textTransform: 'none',

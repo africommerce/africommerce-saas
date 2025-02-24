@@ -1,3 +1,4 @@
+import { Divider } from '@mui/material';
 import { Heading, Content, ListItem, Details } from './quickLinks';
 
 export const ContactInfo = () => {
@@ -6,7 +7,9 @@ export const ContactInfo = () => {
       <Heading label="div" component="h4">
         CONTACT INFO
       </Heading>
-      <hr></hr>
+      <Divider
+        style={{ color: 'white', background: 'gray', marginTop: '1rem' }}
+      />
       <Details>
         <ListItem>
           <p style={{ marginBottom: '3px', opacity: '0.5' }}>Address:</p>

@@ -1,0 +1,231 @@
+.Main {
+  flex: 1;
+  font-weight: 400;
+  color: black;
+}
+.System {
+  width: 100%;
+}
+.SystemBoxes {
+  display: flex;
+  justify-content: space-between;
+}
+.SystemBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px 0;
+  box-sizing: border-box;
+  width: 345px;
+  height: 135px;
+  cursor: pointer;
+
+  align-items: center;
+  border-radius: 5px;
+}
+.SystemBoxSpecial {
+  background-image: linear-gradient(315deg, #eb4786 0%, #b854a6 74%);
+  color: white;
+}
+.SystemBoxWhite {
+  color: #e62e04;
+  border: 1px solid #ebedf2;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+.PaymentHistory {
+  width: 100%;
+}
+.WithdrawalHistory {
+  width: 100%;
+}
+.Input {
+  background-color: #f7f8fa;
+  padding: 10px;
+  min-height: 108px;
+  width: 80%;
+  font-family: inherit;
+  font-size: 16px;
+  box-sizing: border-box;
+  resize: none;
+  font-weight: 500;
+}
+.Code {
+  background-color: white;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.ButtonCopy {
+  margin-top: 10px;
+  background-color: #e62e04;
+  width: 90px;
+  color: white;
+
+  margin-bottom: 10px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 14.5px;
+  height: 45px;
+}
+.AffiliateStats {
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+.StatsHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 30px;
+  font-weight: 500;
+  border-bottom: 2px solid #ebedf2;
+}
+.StatsContent {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  justify-content: space-between;
+}
+.StatsBox {
+  flex-basis: 25%;
+  margin-right: 10px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 0.5s;
+  justify-content: space-evenly;
+}
+.StatsBox:hover {
+  box-shadow: 0px 13px 2.5px rgba(0, 0, 0, 0.2);
+}
+.Number {
+  background-color: #8f97ab;
+  color: white;
+  font-size: 3px;
+  font-weight: bold;
+  width: 60px;
+  color: #e62e04;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-radius: 50%;
+}
+.Caption {
+  font-size: 20px;
+  color: #e62e04;
+  font-weight: 0;
+  margin-top: 10px;
+}
+.History {
+  background-color: white;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.Tags {
+  display: flex;
+  font-weight: bold;
+  border-bottom: 2px solid #ebedf2;
+  padding-bottom: 20px;
+  justify-content: space-between;
+}
+.HistoryContent {
+  padding: 20px;
+}
+.PaymentHistory {
+  display: flex;
+  justify-content: space-evenly;
+}
+.PaymentHistoryBox {
+  margin-top: 30px;
+  background-color: white;
+
+  border-radius: 5px;
+  /* padding: 15px; */
+}
+.PaymentHistoryBoxHead {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.PaymentMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  font-size: 14px;
+  border-bottom: 2px solid #ebedf2;
+}
+.PaymentContent {
+  background-color: white;
+}
+.PaymentSN {
+  flex-basis: 10%;
+}
+.PaymentDate {
+  flex-basis: 25%;
+}
+.PaymentAmount {
+  flex-basis: 25%;
+}
+.PaymentMethod {
+  flex: 1;
+}
+.pending {
+  background-color: #25bcf1;
+  color: white;
+  padding: 2px;
+  font-size: 11px;
+  box-sizing: border-box;
+  border-radius: 3px;
+  /* justify-self: flex-start; */
+  font-weight: bold;
+  max-width: 80px;
+}
+.approved {
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 11px;
+  box-sizing: border-box;
+  background-color: #0abb75;
+  max-width: 80px;
+  color: white;
+  padding: 2px;
+}
+.AffiliateForm {
+  position: relative;
+  margin-top: 20px;
+}
+.AffiliateFormDiv {
+  display: flex;
+  justify-content: space-between;
+}
+.AffiliateFormDiv label {
+  font-size: 14px;
+}
+.AffiliateFormInput {
+  flex-basis: 70%;
+  border: 1px solid #ebedf2;
+  padding: 5px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 2px;
+}
+
+.AffiliateFormInput:focus {
+  border: 1px solid #ebedf2;
+}
+.AffiliateSubmitButton {
+  position: absolute;
+  right: 50px;
+  margin-top: 10px;
+}

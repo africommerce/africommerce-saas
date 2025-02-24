@@ -12,7 +12,13 @@ const BottomNavbars = styled.div`
     display: flex;
     list-style-type: none;
     gap: 2em;
+    @media only screen and (max-device-width: 780px) and (-webkit-min-device-pixel-ratio: 1) {
+      max-width: 510px;
+      overflow-x: scroll;
+    }
+
     a {
+      flex-shrink: 0;
       text-decoration: none;
       color: gray;
     }

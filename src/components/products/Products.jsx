@@ -1,10 +1,9 @@
-import { Rating } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-
 import { MdKeyboardArrowRight, MdKeyboardArrowLeft } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import Product from './Product';
+import Spinner from '../spinner/spinner';
 
 // styles
 const Head = styled.div`
@@ -44,26 +43,7 @@ const Head = styled.div`
   }
 `;
 
-const Card = styled.div`
-  width: 183px;
-  position: relative;
-  padding: 10px;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-`;
 
-const Image = styled.div`
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-  margin-top: 30px;
-  img {
-    width: 128px;
-    height: 161px;
-  }
-`;
 const Promo = styled.div`
   background: #ffffff;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.08);
@@ -89,32 +69,6 @@ const Promo = styled.div`
     background: red;
     color: #ffff;
     font-size: 14px;
-  }
-`;
-const Price = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-left: 10px;
-  p {
-    text-decoration: line-through;
-    color: #99999f;
-    &:nth-child(2) {
-      text-decoration: none;
-      color: red;
-      font-weight: 600;
-    }
-  }
-`;
-
-const Rate = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  gap: 5px;
-  p {
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 `;
 
@@ -163,22 +117,6 @@ const StyledArrowContainerLeft = styled.div`
     display: none;
   }
 `;
-const Point = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px;
-  background: #fce0d9;
-  border-radius: 5px;
-  text-align: center;
-
-  p {
-    &:nth-child(2) {
-      font-weight: 600;
-    }
-  }
-`;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -186,10 +124,11 @@ const Container = styled.div`
   position: relative;
   overflow: hidden;
   padding: 20px;
+  box-sizing: border-box;
   width: 100%;
 `;
-const Products = () => {
-  // const [loading, setLoading] = useState();
+const Products = ({ title, endPoint}) => {
+  const [loading, setLoading] = useState(false);
   const [data, setData] = useState([]);
   // const [visible, setVisible] = useState(5);
 
@@ -202,25 +141,28 @@ const Products = () => {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
   useEffect(() => {
+    setLoading(true);
     axios({
       method: 'GET',
-      url: 'https://fakestoreapi.com/products?limit=10',
+      url: `https://fakestoreapi.com/products`,
     })
       .then((res) => {
+        console.log(res.data);
         setData(res.data);
+        setLoading(false);
       })
-      .catch((err) => {
-        console.log(err);
-      });
+
     return () => {};
-  }, [setData]);
+  }, [setData, endPoint]);
 
   return (
     <Container>
       <Head>
         <span>
-          <h3>Flash Sale</h3>
-          <p>811</p> : <p>11</p> : <p>11</p> : <p>11</p>
+          <h3>{title}</h3>
+          <span className="Home__flash--buttons">
+            <p>811</p> : <p>11</p> : <p>11</p> : <p>11</p>
+          </span>
         </span>
         <button>View More</button>
       </Head>
@@ -228,43 +170,15 @@ const Products = () => {
         <StyledArrowContainerLeft onClick={slideLeft}>
           <MdKeyboardArrowLeft />
         </StyledArrowContainerLeft>
-        {data.map((values) => {
-          return (
-            <Link
-              key={values.id}
-              to={`/product/${values.id}`}
-              style={{ textDecoration: 'none', color: 'gray' }}
-            >
-              <Card>
-                <Promo>
-                  <h3>OFF</h3>
-                  <p>20%</p>
-                </Promo>
-                <Image>
-                  <img src={values.image} alt="" />
-                </Image>
-
-                <Price>
-                  <p>$90,000</p>
-                  <p>${values.price}</p>
-                </Price>
-                <Rate>
-                  <Rating
-                    name="half-rating"
-                    defaultValue={2.5}
-                    precision={0.5}
-                    size="small"
-                  />
-                  <p>{values.description}</p>
-                  <Point>
-                    <p>Club Point:</p>
-                    <p>{values.rating.count}</p>
-                  </Point>
-                </Rate>
-              </Card>
-            </Link>
-          );
-        })}
+        {data ? (
+          data.map((values) => {
+            // console.log(values);
+            return <Product product={values} key={values.id} />;
+          })
+        ) : (
+          <Spinner />
+        )}
+        { !loading &&<div>No Product Found</div>}
         <StyledArrowContainerRight onClick={slideRight}>
           <MdKeyboardArrowRight />
         </StyledArrowContainerRight>

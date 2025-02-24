@@ -1,0 +1,335 @@
+.Purchase {
+  margin-top: 50px;
+  background-color: white;
+  /* width: 80vw; */
+  flex: 1;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.SystemBoxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Purchase h2 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.ProductPage {
+  background-color: white;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.ProductPage h2 {
+  /* margin-bottom: 40px; */
+  font-size: 20px;
+}
+
+.Headers {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+}
+.Headers div {
+  font-weight: 600;
+  justify-self: flex-end;
+  flex-basis: 20%;
+}
+.Id {
+  margin: 10px 0;
+  display: flex;
+  flex-basis: 10%;
+  align-items: center;
+}
+.Name {
+  margin: 10px 0;
+  display: flex;
+  flex-basis: 85%;
+  align-items: center;
+}
+.Price {
+  margin: 20px 0;
+  display: flex;
+  flex-basis: 15%;
+  align-items: center;
+}
+
+.Toggle {
+  background-Color:#b3b5bba1;
+  width: 20px;
+  height: 10px; 
+  border-radius: 5px;
+  margin-right: 35px;
+  flex-basis: 10%;
+}
+.Status {
+  margin: 15px 0;
+  display: flex;
+  flex-basis: 15%;
+  align-items: center;
+}
+.Admin {
+  margin: 15px 0;
+  display: flex;
+  flex-basis: 15%;
+  align-items: center;
+}
+.Last {
+  margin: 15px 0;
+  display: flex;
+  flex-basis: 20%;
+  align-items: center;
+}
+.Classified {
+  display: flex;
+  align-items: center;
+}
+
+.ProductHeaders {
+  margin: 50px 0;
+  display: flex;
+  align-items: center;
+}
+.ProductHeaders div {
+  font-weight: 600;
+  justify-self: flex-end;
+  flex-basis: 50%;
+}
+
+.BiddedAmount {
+  flex-basis: 20%;
+  text-align: center;
+}
+.Infos {
+  color: rgb(33, 37, 41);
+  flex-basis: 5%;
+  margin-right: 27px;
+}
+.Bid {
+  flex-basis: 20%;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.Amount {
+  flex-basis: 20%;
+}
+.Date {
+  flex-basis: 20%;
+}
+.Code {
+  color: rgb(230, 46, 4);
+  flex-basis: 20%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 19.5px;
+}
+
+.Codes {
+  color: rgb(230, 46, 4);
+  flex-basis: 85%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  margin-right: 20px;
+  line-height: 19.5px;
+}
+
+.AuctionId {
+  color: rgb(33, 37, 41);
+  flex-basis: 20%;
+}
+
+.Product {
+  color: #e62e04;
+  flex-basis: 50%;
+}
+
+.Plus {
+  margin-right: 10px;
+  font-weight: bold;
+  background-color: #ffbd7f;
+}
+.PurchaseBox {
+  padding: 13px 0px;
+  font-size: 12px;
+  align-items: center;
+  border-top: 1px solid #eee;
+  display: flex;
+}
+.Options {
+  display: flex;
+  flex-basis: 20%;
+}
+
+.Opts {
+  display: flex;
+  flex-basis: 15%;
+}
+.Page {
+  display: flex;
+  flex-basis: 20%;
+}
+
+.DownloadOptions {
+  display: flex;
+  flex-basis: 50%;
+}
+
+.Button {
+  background-color: transparent;
+  margin-right: 20px;
+  border: 0;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.Pagination {
+  margin-top: 20px;
+}
+.Button:hover {
+  background-color: #e62e04;
+  color: white;
+}
+
+.Tired {
+  flex-basis: 20%;
+}
+.Tired div {
+  padding: 2px 3px;
+  text-align: center;
+  border-radius: 1.5px;
+  width: 50px;
+  color: white;
+}
+.Btn {
+  flex-basis: 20%;
+  justify-items: center;
+  justify-content: content;
+  align-items: center;
+}
+.Btn div {
+  padding: 2px 3px;
+  text-align: center;
+  border-radius: 1.5px;
+  width: 50px;
+  color: white;
+}
+
+.Btns {
+  margin-right: 30px;
+  flex-basis: 15%;
+  justify-items: center;
+  justify-content: content;
+  align-items: center;
+}
+.Btns div {
+  padding: 2px 3px;
+  text-align: center;
+  border-radius: 1.5px;
+  width: 50px;
+  color: white;
+}
+
+.Pending {
+  background-color: #ef486a;
+  color: white;
+}
+.Delivered {
+  background-color: #0abb75;
+}
+.eye ion-icon {
+  background-color: #dff5fd;
+  color: #25bcf1;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.eye ion-icon:hover {
+  background-color: #25bcf1;
+  color: white;
+}
+
+.create-outline ion-icon {
+  background-color: #dff5fd;
+  color: #e62e04;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.create-outline ion-icon:hover {
+  background-color: #e62e04;
+  color: white;
+}
+
+.download ion-icon {
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #fff6dd;
+  color: #ffc519;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.download ion-icon:hover {
+  color: white;
+
+  background-color: #ffbd7f;
+}
+.trash ion-icon {
+  cursor: pointer;
+  color: #e62e04;
+  margin-right: 10px;
+  border-radius: 50%;
+  background-color: #fde4e9;
+  transition: all 0.2s;
+}
+.trash ion-icon:hover {
+  color: white;
+  background-color: #e62e04;
+}
+
+.System {
+  width: 100%;
+}
+.SystemBoxes {
+  display: flex;
+  justify-content: space-between;
+}
+
+.SystemBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 15px 0;
+  box-sizing: border-box;
+  width: 345px;
+  height: 135px;
+  cursor: pointer;
+
+  align-items: center;
+  border-radius: 5px;
+}
+.SystemBoxSpecial {
+  background-image: linear-gradient(315deg, #eb4786 0%, #b854a6 74%);
+  color: white;
+}
+.SystemBoxWhite {
+  color: #e62e04;
+  border: 1px solid #ebedf2;
+  background-color: #ffffff;
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .Purchase {
+    width: 100vw;
+  }
+}

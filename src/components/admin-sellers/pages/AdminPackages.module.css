@@ -1,0 +1,102 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 96%;
+    padding: 1rem;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.top_wrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.top_title {
+    font-weight: bolder;
+    font-size: 1rem;
+
+}
+
+.top_button button {
+    display: flex;
+    border: none;
+    color: white;
+    border-radius: 1rem;
+    background: rgb(37, 188, 241);
+    padding: 1rem 1rem;
+
+}
+
+
+.top_button button:hover {
+    cursor: pointer;
+    background: rgba(37, 187, 241, 0.508);
+}
+
+
+.body_wrapper {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+
+
+}
+
+.package_container {
+    margin: 0 auto;
+    display: flex;
+    background: white;
+    width: auto;
+    min-width: 350px;
+    cursor: pointer;
+    min-height: 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 1rem;
+    font-weight: bold;
+
+}
+
+.actions_buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.edit,
+.delete {
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 5px;
+
+}
+
+.edit {
+    background: rgb(37, 188, 241);
+    color: white;
+
+    transition: all 300ms ease;
+}
+
+.edit:hover {
+    background: rgba(37, 187, 241, 0.364);
+    cursor: pointer;
+    color: white;
+}
+
+.delete {
+    background: rgb(239, 72, 106);
+    color: white;
+
+    transition: all 300ms ease;
+}
+
+.delete:hover {
+    background: rgba(239, 72, 105, 0.553);
+    cursor: pointer;
+    color: white;
+}

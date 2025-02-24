@@ -1,0 +1,96 @@
+a {
+  text-decoration: none;
+}
+.LinkList {
+  padding: 13px;
+  list-style-type: none;
+}
+
+.ListItem {
+  font-size: 12px;
+  font-weight: 500;
+}
+.Link {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+.Link:hover {
+  background-color: rgba(230, 46, 4, 0.15);
+}
+.LinkName {
+  color: #9191a0;
+  font-weight: 550;
+}
+.Icon ion-icon {
+  margin-right: 20px;
+  font-weight: 550;
+  color: #9191a0;
+}
+.Subs {
+  list-style-type: none;
+  margin-left: 30px;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.ListStyle {
+  width: 4px;
+  margin-right: 4px;
+  height: 4px;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+.Wraps {
+  max-width: 265px;
+  margin: 0 auto;
+  flex-basis: 26%;
+  margin-right: 30px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-family: 'Open Sans', sans-serif !important;
+  max-height: 900px;
+
+  background-color: white;
+}
+@media only screen and (max-width: 1200px) {
+  .ListItemSpecial {
+    margin-bottom: 50px;
+  }
+  .Close {
+    position: fixed;
+    z-index: 25;
+    bottom: 0;
+    background: #fff;
+    box-shadow: 0 -5px 10px rgb(0 0 0 / 0.1);
+    border-top: 1px solid #dee2e6 !important;
+    max-width: 251.5px;
+    padding: 0.7rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+  }
+  .ContainerBox {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    left: 0;
+    z-index: 20;
+    right: 0;
+    bottom: 0;
+    transition: all 0.1s;
+  }
+  .Wraps {
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    height: 100%;
+    padding-bottom: 50px;
+  }
+}

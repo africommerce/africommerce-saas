@@ -1,0 +1,122 @@
+.container {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    position: relative;
+}
+
+.head {
+    display: flex;
+    width: 90%;
+    position: relative;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.head_title {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.head_btn_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.head_btn_wrapper button {
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgb(247, 123, 11);
+    color: white;
+    transition: all 300ms ease;
+
+}
+
+.head_btn_wrapper button:hover {
+    background: rgb(229, 111, 14);
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+
+    width: 95%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+.body_head {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+
+.body_head_left {
+    font-weight: bold;
+}
+
+.body_head_right {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.body_head_action,
+.body_head_sort,
+.body_head_search {
+    display: flex;
+    outline: none;
+    align-items: center;
+    padding: 0.3rem;
+    border: 1px gainsboro solid;
+    border-radius: 5px;
+}
+
+.body_head_search input {
+    border: none;
+    outline: none;
+}
+
+.search_btn {
+    display: flex;
+    align-items: center;
+}
+
+.search_btn button {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgb(247, 123, 11);
+}
+
+.content_wrapper {
+    display: flex;
+    padding: 1rem;
+
+
+
+    flex-direction: column;
+}
+
+.files_wrapper {
+    display: flex;
+
+    padding: 1rem;
+    gap: 1rem;
+    width: auto;
+    margin: 0 auto;
+    flex-wrap: wrap;
+
+}

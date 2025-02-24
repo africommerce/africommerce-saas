@@ -1,0 +1,121 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.product_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    transition: all 300ms ease;
+}
+
+.title {
+    display: flex;
+    font-weight: bolder;
+    color: gray;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: rgb(37, 188, 241);
+    border-radius: 20px;
+    border: none;
+
+}
+
+.button:hover {
+    background: rgb(37, 188, 241, 0.7);
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    background: white;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    width: auto;
+
+    max-width: 100%;
+    font-weight: bolder;
+    justify-content: space-between;
+
+}
+
+.header span {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.steps {
+    background: rgb(204, 229, 255);
+    display: flex;
+    gap: 5px;
+    padding: 1rem;
+    color: rgb(0, 64, 133);
+    flex-direction: column;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+.upload {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+
+}
+
+.upload_wrapper {
+    display: flex;
+    width: 70%;
+    border: 1px solid gainsboro;
+    max-width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.upload_wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+
+}
+
+.choose {
+    display: flex;
+    margin-left: 1rem;
+}
