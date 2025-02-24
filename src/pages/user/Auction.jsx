@@ -1,9 +1,7 @@
-import React from 'react'
-
-export default function Auction() {
+function Auction() {
   return (
-    <div>
-      
-    </div>
+    <div>Auction</div>
   )
 }
+
+export default Auction

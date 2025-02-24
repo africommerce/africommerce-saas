@@ -1,0 +1,138 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    border-radius: 10px;
+}
+
+.left_title {
+    padding: 1rem;
+    font-weight: bolder;
+}
+
+.form_wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.form_wrapper form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.form_contents {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+
+    justify-content: space-between;
+}
+
+.input_wrapper {
+
+
+    width: 100%;
+    max-width: 80%;
+    height: auto !important;
+
+    border-radius: 5px;
+    align-items: center;
+}
+
+.input_body {
+    padding: 0.5rem;
+    background: gainsboro;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input_text {
+    display: flex;
+    align-items: center;
+}
+
+.input_label {
+    display: flex;
+    width: 100%;
+    max-width: 60%;
+    align-items: center;
+}
+
+.input_label input {
+    background: white;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    outline: none;
+}
+
+.input_close {
+    display: flex;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_close .x_icon {
+    font-size: 20px !important;
+    cursor: pointer;
+}
+
+.input_types {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 20%;
+    padding: 0.5rem;
+}
+
+.text,
+.select,
+.radio,
+.file {
+    display: flex;
+    width: 100%;
+    background: white;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    padding: 1rem 0.5rem;
+
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.save_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    align-items: center;
+}
+
+.save_wrapper button {
+    background: rgb(229, 111, 14);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 1rem;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
+.save_wrapper button:hover {
+    background: rgba(229, 111, 14, 0.671);
+}

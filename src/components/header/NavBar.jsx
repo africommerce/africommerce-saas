@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { BottomNavbar } from './BottomNavbar';
 import { TopNavbar } from './TopNavbar';
 import { SearchNavbar } from './SearchNavbar';
+import PhoneNavbar from './PhoneNavbar';
 
 const Navbar = styled.div`
   position: fixed;
@@ -17,11 +18,12 @@ const Navbar = styled.div`
 export const NavBar = () => {
   return (
     <>
+      <PhoneNavbar />
       <Navbar>
         <div style={{ borderBottom: '0.1px solid rgb(204 204 204 / 52)' }}>
           <TopNavbar />
         </div>
-        <hr />
+
         <div style={{ borderBottom: '0.1px solid rgb(204 204 204 / 52)' }}>
           <SearchNavbar />
         </div>

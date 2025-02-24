@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+
+    justify-content: space-between
+}
+
+.left__menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.right__menu {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+}

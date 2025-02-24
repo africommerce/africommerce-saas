@@ -1,0 +1,41 @@
+.HomeContainer {
+  max-width: 1400px;
+  margin: 180px auto;
+
+
+}
+
+.RightHero {
+  display: flex;
+  margin: 0 auto;
+  gap: 5px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 10px;
+  height: 452px;
+}
+
+.RightHero::-webkit-scrollbar {
+  display: none;
+}
+
+@media only screen and (max-width: 1500px) {
+  .HomeContainer {
+    max-width: 1140px;
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .HomeContainer {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .HomeContainer {
+    max-width: 720px;
+  }
+}
