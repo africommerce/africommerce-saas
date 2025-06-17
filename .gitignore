@@ -22,5 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Sensitive files
 backdate_commits.sh
 update.txt
