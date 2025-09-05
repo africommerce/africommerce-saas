@@ -1,19 +1,12 @@
+import React from 'react';
 import { MoreVert, SentimentVeryDissatisfied } from '@mui/icons-material';
-import React, { useState } from 'react';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
 import classes from './AdminPaymentMethod.module.css';
 import { Divider } from '@mui/material';
+
 export const AdminPaymentMethod = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
   return (
     <div className={classes.container}>
       <div className={classes.header_wrapper}>

@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-import useHttp from './adapter/hooks/useHttp';
+import React from 'react';
 import { MasterRoutes } from './routes/MasterRoutes';
 
 function App() {

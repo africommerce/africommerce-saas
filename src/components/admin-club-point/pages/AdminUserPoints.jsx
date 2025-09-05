@@ -1,8 +1,9 @@
+import React from 'react';
 import classes from './AdminUserPoints.module.css';
 import image from '../../../assests/sellers/addidas.jpg';
 import { Link } from 'react-router-dom';
 import { EditOutlined, VisibilityOutlined } from '@mui/icons-material';
-import { Divider, Pagination } from '@mui/material';
+import { Divider as MuiDivider, Pagination } from '@mui/material';
 
 export const AdminUserPoints = () => {
   return (
@@ -41,7 +42,7 @@ export const AdminUserPoints = () => {
                   </span>
                 </td>
               </tr>
-              <Divider />
+              <MuiDivider />
             </Link>
           ))}
           <span className={classes.pagination}>

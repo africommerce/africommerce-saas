@@ -1,5 +1,5 @@
-import { Divider, Stack, Switch } from '@mui/material';
 import React from 'react';
+import { Divider, Stack, Switch } from '@mui/material';
 import classes from './AdminAffliateConfiguration.module.css';
 export const AdminAffliateConfiguration = () => {
   return (

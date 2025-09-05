@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import classes from '../../styles/users.module.css';
 import Paginate from './paginate';
 const PurchaseHistory = () => {
@@ -6,214 +6,217 @@ const PurchaseHistory = () => {
   const [state, setState] = useState([]);
   const [perPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
-  const data = [
-    {
-      id: 1,
-      code: '20220605-10102737',
-      date: '12-09-2022',
-      status: 'Pending',
 
-      amount: '45.00',
+  const data = useMemo(() => {
+    return [
+      {
+        id: 1,
+        code: '20220605-10102737',
+        date: '12-09-2022',
+        status: 'Pending',
 
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 2,
-      code: '20220605-10102738',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 3,
-      code: '20220605-10102739',
-      date: '12-09-2022',
-      status: 'Delivered',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 2,
+        code: '20220605-10102738',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 4,
-      code: '20220605-10102730',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 3,
+        code: '20220605-10102739',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 5,
-      code: '20220605-10102740',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 4,
+        code: '20220605-10102730',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 6,
-      code: '20220605-10102741',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 5,
+        code: '20220605-10102740',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 7,
-      code: '20220605-10102742',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 6,
+        code: '20220605-10102741',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 8,
-      code: '20220605-10102733',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 7,
+        code: '20220605-10102742',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 68,
-      code: '20220605-10102738',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 8,
+        code: '20220605-10102733',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 67,
-      code: '20220605-10102739',
-      date: '12-09-2022',
-      status: 'Pending',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 68,
+        code: '20220605-10102738',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 66,
-      code: '20220605-10102730',
-      date: '12-09-2022',
-      status: 'Pending',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 67,
+        code: '20220605-10102739',
+        date: '12-09-2022',
+        status: 'Pending',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 65,
-      code: '20220605-10102740',
-      date: '12-09-2022',
-      status: 'Pending',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 66,
+        code: '20220605-10102730',
+        date: '12-09-2022',
+        status: 'Pending',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 64,
-      code: '20220605-10102738',
-      date: '12-09-2022',
-      status: 'Pending',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 65,
+        code: '20220605-10102740',
+        date: '12-09-2022',
+        status: 'Pending',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 63,
-      code: '20220605-10102739',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 64,
+        code: '20220605-10102738',
+        date: '12-09-2022',
+        status: 'Pending',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 62,
-      code: '20220605-10102730',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 63,
+        code: '20220605-10102739',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 61,
-      code: '20220605-10102740',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 62,
+        code: '20220605-10102730',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 61,
+        code: '20220605-10102740',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-    {
-      id: 9,
-      code: '20220605-10102744',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 90,
-      code: '20220605-10102738',
-      date: '12-09-2022',
-      status: 'Delivered',
+      {
+        id: 9,
+        code: '20220605-10102744',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 89,
-      code: '20220605-10102739',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 90,
+        code: '20220605-10102738',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 76,
-      code: '20220605-10102730',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 89,
+        code: '20220605-10102739',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-    {
-      id: 43,
-      code: '20220605-10102740',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 76,
+        code: '20220605-10102730',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+      {
+        id: 43,
+        code: '20220605-10102740',
+        date: '12-09-2022',
+        status: 'Delivered',
 
-    {
-      id: 82,
-      code: '20220605-10102745',
-      date: '12-09-2022',
-      status: 'Delivered',
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
 
-      amount: '45.00',
-      options: ['trash', 'download', 'eye'],
-    },
-  ];
+      {
+        id: 82,
+        code: '20220605-10102745',
+        date: '12-09-2022',
+        status: 'Delivered',
+
+        amount: '45.00',
+        options: ['trash', 'download', 'eye'],
+      },
+    ];
+  }, []);
 
   useEffect(() => {
     setState(data);
     setLoading(false);
-  }, []);
+  }, [data]);
 
   const lastIndex = currentPage * perPage;
   const firstIndex = lastIndex - perPage;
