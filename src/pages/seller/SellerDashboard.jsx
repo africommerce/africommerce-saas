@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Performance } from '../../components/sellerDashboard/Performance';
 import { Stats } from '../../components/sellerDashboard/Stats';
 import { OtherActions } from '../../components/sellerDashboard/OtherActions';
+import { UserInfo } from '../../components/sellerDashboard/UserInfo';
 import {
   Typography,
   Paper,
@@ -48,6 +49,7 @@ export const SellerDashboard = () => {
   const screen = window.screen.width;
   return (
     <Container>
+      <UserInfo />
       <Performance />
       <Stats screen={screen} />
       <OtherActions />
