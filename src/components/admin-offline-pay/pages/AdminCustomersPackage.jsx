@@ -1,5 +1,5 @@
 import { SentimentVeryDissatisfied } from '@mui/icons-material';
-import { Divider, Switch } from '@mui/material';
+import { Divider } from '@mui/material';
 import classes from './AdminCustomersPackage.module.css';
 export const AdminCustomersPackage = () => {
   return (

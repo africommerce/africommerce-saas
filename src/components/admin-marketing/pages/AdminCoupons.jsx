@@ -1,6 +1,5 @@
 import { DeleteOutline, EditOutlined } from '@mui/icons-material';
-import banner from '../../../assests/admin/banner.png';
-import { Divider, Switch } from '@mui/material';
+import { Divider } from '@mui/material';
 import classes from './AdminCoupons.module.css';
 export const AdminCoupons = () => {
   return (

@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import Product from './Product';
 import Spinner from '../spinner/spinner';
+import ReviewSection from '../reviews/ReviewSection';
 
 const MainDescription = () => {
   const [description, setDescription] = useState({
@@ -211,9 +212,10 @@ const MainDescription = () => {
             </video>
           ) : null}
           {description.review ? (
-            <div className={classes.Review}>
-              <span>There has been no reviews for this product yet</span>
-            </div>
+            <ReviewSection 
+              productId="63c300bc8c59422d0b45e5e2" 
+              productName="Sample Product"
+            />
           ) : null}
         </div>
       </div>

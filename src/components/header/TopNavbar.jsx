@@ -4,7 +4,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import PhoneIcon from '@mui/icons-material/Phone';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../store/authContext';
-import { NotificationAdd, NotificationsOutlined } from '@mui/icons-material';
+import { NotificationsOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 
 const TopNavbars = styled.div`
@@ -102,7 +102,6 @@ const Span = styled.div`
 export const TopNavbar = () => {
   const authCtx = useContext(AuthContext);
 
-  const isLoggedIn = authCtx.isLoggedIn;
 
   const logoutHandler = () => {
     authCtx.logout();

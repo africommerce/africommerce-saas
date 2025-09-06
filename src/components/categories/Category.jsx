@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { device } from '../../styles/BreackPoints';
-import axios from 'axios';
 
 const Container = styled.section`
   background-color: #fff;
