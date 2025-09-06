@@ -1,6 +1,4 @@
 import {
-  SentimentVeryDissatisfied,
-  VisibilityOff,
   VisibilityOutlined,
 } from '@mui/icons-material';
 import React from 'react';

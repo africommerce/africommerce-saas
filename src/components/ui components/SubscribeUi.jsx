@@ -1,12 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Close } from '@mui/icons-material';
 import subscribe from '../../assests/subscribe.png';
 import styled from 'styled-components';
-import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { subscribeAction } from '../../store/subscribeModal';
 const style = {
@@ -45,7 +43,6 @@ const SubscribeButton = styled.button`
   border-radius: 3px;
 `;
 export default function SubscribeModal() {
-  const [open, setOpen] = React.useState(false);
   const { openModal } = useSelector((state) => state.subscribe);
 
   const handleClose = () => {

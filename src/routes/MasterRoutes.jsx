@@ -1,68 +1,87 @@
 import { Route, Routes } from 'react-router-dom';
+import { Suspense, lazy } from 'react';
 
-import { Login } from '../components/auth/Login';
-import Registration from '../components/auth/Registration';
+// Lazy load components for better performance
+const Login = lazy(() => import('../components/auth/Login').then(module => ({ default: module.Login })));
+const Registration = lazy(() => import('../components/auth/Registration'));
 
-import { AboutUs } from '../pages/AboutUs';
-import { AdminDashboard } from '../pages/admin/AdminDashboard';
-import { AuthSeller } from '../pages/seller/AuthSeller';
-import { AffliatePartner } from '../pages/user/AffliatePartner';
-import { AllBrand } from '../pages/AllBrand';
-import { AllCategories } from '../pages/AllCategories';
-import { AllSellers } from '../pages/AllSellers';
-import { Blog } from '../pages/Blog';
-import { Coupons } from '../pages/Coupons';
-import { FlashSale } from '../pages/FlashSale';
-import { Home } from '../pages/Home';
-import { OrderHistory } from '../pages/OrderHistory';
-import { PrivacyPolicy } from '../pages/PrivacyPolicy';
-import ProductDetail from '../pages/ProductPage';
-import { ReturnPolicy } from '../pages/ReturnPolicy';
-import { Seller } from '../pages/Seller';
-import { SellersPolicy } from '../pages/SellersPolicy';
-import { SupportPolicy } from '../pages/SupportPolicy';
-import { Terms } from '../pages/Terms';
-import { TrackOrder } from '../pages/TrackOrder';
-import { WishList } from '../pages/user/Wishlist';
-import { SellerOrders } from '../pages/seller/SellerOrders';
-import { SellerProducts } from '../pages/seller/SellerProducts';
-import { SellerPos } from '../pages/seller/SellerPos';
-import { SellerUploads } from '../pages/seller/SellerUploads';
-import { SellerAuction } from '../pages/seller/SellerAuctionProducts';
+const AboutUs = lazy(() => import('../pages/AboutUs').then(module => ({ default: module.AboutUs })));
+const AdminDashboard = lazy(() => import('../pages/admin/AdminDashboard').then(module => ({ default: module.AdminDashboard })));
+const AuthSeller = lazy(() => import('../pages/seller/AuthSeller').then(module => ({ default: module.AuthSeller })));
+const AffliatePartner = lazy(() => import('../pages/user/AffliatePartner').then(module => ({ default: module.AffliatePartner })));
+const AllBrand = lazy(() => import('../pages/AllBrand').then(module => ({ default: module.AllBrand })));
+const AllCategories = lazy(() => import('../pages/AllCategories').then(module => ({ default: module.AllCategories })));
+const AllSellers = lazy(() => import('../pages/AllSellers').then(module => ({ default: module.AllSellers })));
+const Blog = lazy(() => import('../pages/Blog').then(module => ({ default: module.Blog })));
+const Coupons = lazy(() => import('../pages/Coupons').then(module => ({ default: module.Coupons })));
+const FlashSale = lazy(() => import('../pages/FlashSale').then(module => ({ default: module.FlashSale })));
+const Home = lazy(() => import('../pages/Home').then(module => ({ default: module.Home })));
+const OrderHistory = lazy(() => import('../pages/OrderHistory').then(module => ({ default: module.OrderHistory })));
+const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy').then(module => ({ default: module.PrivacyPolicy })));
+const ProductDetail = lazy(() => import('../pages/ProductPage'));
+const ReturnPolicy = lazy(() => import('../pages/ReturnPolicy').then(module => ({ default: module.ReturnPolicy })));
+const Seller = lazy(() => import('../pages/Seller').then(module => ({ default: module.Seller })));
+const SellersPolicy = lazy(() => import('../pages/SellersPolicy').then(module => ({ default: module.SellersPolicy })));
+const SupportPolicy = lazy(() => import('../pages/SupportPolicy').then(module => ({ default: module.SupportPolicy })));
+const Terms = lazy(() => import('../pages/Terms').then(module => ({ default: module.Terms })));
+const TrackOrder = lazy(() => import('../pages/TrackOrder').then(module => ({ default: module.TrackOrder })));
+const WishList = lazy(() => import('../pages/user/Wishlist').then(module => ({ default: module.WishList })));
+// Lazy load seller components
+const SellerOrders = lazy(() => import('../pages/seller/SellerOrders').then(module => ({ default: module.SellerOrders })));
+const SellerProducts = lazy(() => import('../pages/seller/SellerProducts').then(module => ({ default: module.SellerProducts })));
+const SellerPos = lazy(() => import('../pages/seller/SellerPos').then(module => ({ default: module.SellerPos })));
+const SellerUploads = lazy(() => import('../pages/seller/SellerUploads').then(module => ({ default: module.SellerUploads })));
+const SellerAuction = lazy(() => import('../pages/seller/SellerAuctionProducts').then(module => ({ default: module.SellerAuction })));
 
-import Compare from '../pages/user/Compare';
-import ClassifiedProduct from '../pages/user/ClassifiedProduct';
-import User from '../pages/user/user';
-import PurchaseHistory from '../pages/user/purchaseHistory';
-import { AuctionBidded } from '../pages/user/AuctionBidded';
-import Conversation from '../pages/user/Conversation';
-import Download from '../pages/user/Download';
-import Wallet from '../pages/user/Wallet';
-import EarningPoint from '../pages/user/EarningPoint';
-import ManageProfile from '../pages/user/ManageProfile';
-import SupportTicket from '../pages/user/SupportTicket';
-import SentRefundRequest from '../pages/user/sentRefundRequest';
-import SellerProductsBulkUpload from '../pages/seller/SellerProductsBulkUpload';
-import SellerDigitalProducts from '../pages/seller/SellerDigitalProducts';
-import SellerProductReview from '../pages/seller/SellerProductReview';
-import { SellerShop } from '../pages/seller/SellerShop';
-import SellerPackages from '../pages/seller/SellerPackages';
-import SellerPurchasePackages from '../pages/seller/SellerPurchasePackages';
-import SellerCoupon from '../pages/seller/SellerCoupon';
-import SellerWholesaleProducts from '../pages/seller/SellerWholesaleProducts';
-import SellerAuctionOrders from '../pages/seller/SellerAuctionOrders';
-import SellerReceivedRefundRequest from '../pages/seller/SellerReceivedRefundRequest';
-import SellerPaymentHistory from '../pages/seller/SellerPaymentHistory';
-import AffiliateSystem from '../pages/user/affiliate/AffiliateSystem';
-import WithdrawalHistory from '../pages/user/affiliate/WithdrawalHistory';
-import PaymentHistory from '../pages/user/affiliate/PaymentHistory';
-import BiddedProduct from '../pages/user/AuctionSystem/BiddedProduct';
-import CustomerProduct from '../pages/user/CustomerProduct';
-import UsersDashboard from '../pages/user/UsersDashboard';
+// Lazy load user components
+const Compare = lazy(() => import('../pages/user/Compare'));
+const ClassifiedProduct = lazy(() => import('../pages/user/ClassifiedProduct'));
+const User = lazy(() => import('../pages/user/user'));
+const PurchaseHistory = lazy(() => import('../pages/user/purchaseHistory'));
+const AuctionBidded = lazy(() => import('../pages/user/AuctionBidded').then(module => ({ default: module.AuctionBidded })));
+const Conversation = lazy(() => import('../pages/user/Conversation'));
+const Download = lazy(() => import('../pages/user/Download'));
+const Wallet = lazy(() => import('../pages/user/Wallet'));
+const EarningPoint = lazy(() => import('../pages/user/EarningPoint'));
+const ManageProfile = lazy(() => import('../pages/user/ManageProfile'));
+const SupportTicket = lazy(() => import('../pages/user/SupportTicket'));
+const SentRefundRequest = lazy(() => import('../pages/user/sentRefundRequest'));
+const SellerProductsBulkUpload = lazy(() => import('../pages/seller/SellerProductsBulkUpload'));
+const SellerDigitalProducts = lazy(() => import('../pages/seller/SellerDigitalProducts'));
+const SellerProductReview = lazy(() => import('../pages/seller/SellerProductReview'));
+const SellerShop = lazy(() => import('../pages/seller/SellerShop').then(module => ({ default: module.SellerShop })));
+const SellerPackages = lazy(() => import('../pages/seller/SellerPackages'));
+const SellerPurchasePackages = lazy(() => import('../pages/seller/SellerPurchasePackages'));
+const SellerCoupon = lazy(() => import('../pages/seller/SellerCoupon'));
+const SellerWholesaleProducts = lazy(() => import('../pages/seller/SellerWholesaleProducts'));
+const SellerAuctionOrders = lazy(() => import('../pages/seller/SellerAuctionOrders'));
+const SellerReceivedRefundRequest = lazy(() => import('../pages/seller/SellerReceivedRefundRequest'));
+const SellerPaymentHistory = lazy(() => import('../pages/seller/SellerPaymentHistory'));
+const AffiliateSystem = lazy(() => import('../pages/user/affiliate/AffiliateSystem'));
+const WithdrawalHistory = lazy(() => import('../pages/user/affiliate/WithdrawalHistory'));
+const PaymentHistory = lazy(() => import('../pages/user/affiliate/PaymentHistory'));
+const BiddedProduct = lazy(() => import('../pages/user/AuctionSystem/BiddedProduct'));
+const CustomerProduct = lazy(() => import('../pages/user/CustomerProduct'));
+const UsersDashboard = lazy(() => import('../pages/user/UsersDashboard'));
+
+// Loading component
+const LoadingSpinner = () => (
+  <div style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    height: '100vh',
+    fontSize: '18px',
+    color: '#666'
+  }}>
+    Loading...
+  </div>
+);
 
 export const MasterRoutes = () => {
   return (
-    <Routes>
+    <Suspense fallback={<LoadingSpinner />}>
+      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/admin/*" element={<AdminDashboard />}>
         <Route path="auction-product/*" element={<AdminDashboard />}>
@@ -162,6 +181,7 @@ export const MasterRoutes = () => {
       </Route>
 
       <Route path="*" element={<p>Page not found</p>} />
-    </Routes>
+      </Routes>
+    </Suspense>
   );
 };
