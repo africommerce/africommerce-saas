@@ -1,18 +1,10 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import classes from '../../styles/DashboardSidebar.module.css';
 import { RiCloseFill } from 'react-icons/ri';
 import styled from 'styled-components';
 import { useState } from 'react';
 
-const Wraps = styled.div`
-  @media only screen and (max-width: 1200px) {
-  }
-`;
-const Close = styled.div`
-  @media only screen and (max-width: 1200px) {
-  }
-`;
 
 const Profilepic = styled.img`
   width: 64px;
@@ -20,10 +12,6 @@ const Profilepic = styled.img`
   border-radius: 50%;
 `;
 
-const Container = styled.div`
-  @media only screen and (max-width: 1200px) {
-  }
-`;
 const PersonDetails = styled.div`
   box-sizing: border-box;
   background-color: #e62e04;
@@ -42,7 +30,6 @@ const PersonDetails = styled.div`
 
 function DashboardSidebar() {
   // const pathName = window.location.pathname;
-  const [showSideBar, setShowSideBar] = useState(true);
   const [show, setShow] = useState(false);
 
   const showAuctionTypesHandler = () => {
@@ -51,7 +38,6 @@ function DashboardSidebar() {
   const showAffiliateTypesHandler = () => {
     setShow(!show);
   };
-  const containerClasses = [classes.ContainerBox];
   const closeDashBoardHandler = () => {
     document.getElementById('sidebar-test').classList.add('Hide');
   };
@@ -261,9 +247,6 @@ function DashboardSidebar() {
               >
                 <li className={classes.ListItem}>
                   <Link
-                    onClick={() => {
-                      setShowSideBar(false);
-                    }}
                     to="affiliate/system"
                     className={classes.Link}
                   >
@@ -275,9 +258,6 @@ function DashboardSidebar() {
                 </li>
                 <li className={classes.ListItem}>
                   <Link
-                    onClick={() => {
-                      setShowSideBar(false);
-                    }}
                     to="affiliate/payment-history"
                     className={classes.Link}
                   >

@@ -9,19 +9,6 @@ const Containers = styled.div`
   flex: 1;
 `;
 
-const Button = styled.button`
-  font-family: 'Open Sans', sans-serif;
-  font-size: 10.4px;
-  font-weight: 500;
-  line-height: 15.6px;
-  color: rgb(255, 255, 255);
-  background: green;
-  color: white;
-  border: none;
-  padding: 2px;
-  border-radius: 2px;
-  align-items: center;
-`;
 
 const BiddedProduct = () => {
   const [state, setState] = useState([]);

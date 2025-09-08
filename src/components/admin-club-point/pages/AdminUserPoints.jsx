@@ -1,8 +1,7 @@
 import React from 'react';
 import classes from './AdminUserPoints.module.css';
-import image from '../../../assests/sellers/addidas.jpg';
 import { Link } from 'react-router-dom';
-import { EditOutlined, VisibilityOutlined } from '@mui/icons-material';
+import { VisibilityOutlined } from '@mui/icons-material';
 import { Divider as MuiDivider, Pagination } from '@mui/material';
 
 export const AdminUserPoints = () => {

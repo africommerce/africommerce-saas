@@ -1,14 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { AdsSection } from '../components/ads/AdsSection';
 import { HeroSection } from '../components/HeroSection';
 import Products from '../components/products/Products';
 import classes from '../styles/Home.module.css';
-import { Close } from '@mui/icons-material';
-import SubscribeModal from '../components/ui components/SubscribeUi';
-import { subscribeAction } from '../store/subscribeModal';
-import { useSelector } from 'react-redux';
-const Containter = styled.div``;
 const ProductsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -21,7 +16,6 @@ const ProductsContainer = styled.div`
 `;
 
 export const Home = () => {
-  const { openModal } = useSelector((state) => state.subscribe);
 
   return (
     <div className={classes.HomeContainer}>
